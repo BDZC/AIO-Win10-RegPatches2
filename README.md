@@ -6,4 +6,4 @@
 	$OEM$\ProgramData		 >> C:\
 	$OEM$\$$			 >> C:\Windows
 	
-AIO-Win10-RegPatches.reg ausführen
+Install.cmd ausführen
