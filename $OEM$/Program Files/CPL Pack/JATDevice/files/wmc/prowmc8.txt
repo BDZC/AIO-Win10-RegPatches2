@@ -1,0 +1,6 @@
+delete '\Windows\System32\spp\store\data.dat' --force
+delete '\Windows\System32\spp\store\tokens.dat' --force
+delete '\Windows\System32\spp\store\cache\cache.dat' --force
+add 'files\wmc\data.dat' '\Windows\System32\spp\store\data.dat'
+add 'files\wmc\tokens.dat' '\Windows\System32\spp\store\tokens.dat'
+add 'files\wmc\cache.dat' '\Windows\System32\spp\store\cache\cache.dat'

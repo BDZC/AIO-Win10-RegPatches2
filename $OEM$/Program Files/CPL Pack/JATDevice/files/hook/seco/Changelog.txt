@@ -1,0 +1,34 @@
+Version 2.4.2
+- Fixed Ndr64AsyncClientCall Hook ( x64 System Issues )
+- faster loop for service ( reduced the sleep interval )
+- Service is waiting until dll injection is successfully injected
+
+Version 2.4.1
+- Fixed buffer issues ( IP  )
+
+Version 2.4
+- More stability and checks
+- fixed some buffer issues
+- Added service support
+- more server emulation customizations
+- removed windows 8.1 check ( >= 2 )
+
+Version 2.3
+- More stability and checks
+- fixed /s issue
+- added direct kms server so no extern kms server is needed ( Using hooks so that no real connection is used , its writing directly to the response buffer... )
+- and more ...
+
+Version 2.2 :
+- Fixed some more bugs in Injection
+- Recoded Injector
+- supports cmdline options
+- dynamic kms redirection ip using registryg
+- force process termination of sppextcomobj.exe
+
+Version 2.1 :
+- Fixed x64 pointer bug
+- fixed ldrloaddll injection
+- removed all hardcoded paths
+- added unload function
+- changed ip to 8.4.8.4

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="title" value="Оберіть мову" version="1" />
+    <string key="btnGo" value="ОК" version="1" />
+    <string key="MinimumWidth" value="317" />
+    <string key="MinimumHeight" value="87" version="3" />
+    <string key="lnkTranslate" value="Допоможіть перекласти EasyBCD на ваш язик!" version="1" />
+  </strings>
+</localization>

@@ -1,0 +1,118 @@
+
+COMMAND LINE: 
+
+RMPARTUSB v2.1.716 (c)2013 RM Education plc [SSi]
+=================================================
+
+
+Syntax:
+ RMPARTUSB [DRIVE=n | FIND | LIST | FILEINFO] [CLEAN | QUICKTEST | SPEEDTEST | ERASE | GETDRV | (copy command)] [SURE][DEBUG]
+Special:
+ [ZIP][CHS][2PTN][FORCELBA][WRITEMBRONLY] [USBFDD]{[NTFS]|[FAT32]|[EXFAT]}[NOACT][SIZE=x][ALLDRIVES][FIRSTPART=n][VOLUME=aaa]
+Volume boot code options:
+ [DOSZIP | FREEDOS | MSDOS | XP/NTLDR | VISTA/WINP/BOOTMGR/WIN7]
+
+
+--------------------------- COPY COMMAND USAGE ----------------------------------------
+
+Copy commands:
+ RMPARTUSB USBTOFILE | FILETOUSB | FILEINFO | USBINFO 
+Copy parameters:
+ DRIVE=n FILE="path\fname" USBSTART=s FILESTART=b LENGTH=b
+Where:
+ b=bytes, s=sectors or use nSEC,nKB,nMB,nGB,MBR,MBR+,P1,P2,P3,PEXT,PALL or DALL
+ MBR   first sector of disk or 512 bytes of file
+ MBR+  up to but not including start of first partition
+ Pn    start or end of partition (P1-P4)
+ PEXT  start or end of extended partition (inc all logical ptns)
+ PALL  up to end of last partition (default)
+ DALL  all sectors on USB drive (default if no partition table)
+ If no partition in source then default is LENGTH=DALL or file length.
+
+------------------------- EXAMPLE FILE PARAMETERS -------------------------------------
+
+ FILEINFO FILE="x.bin" FileStart=P1             (display 512 bytes)
+ USBINFO  DRIVE=1 USBSTART=MBR LENGTH=40SEC     (displays max. of 20 sectors)
+ DRIVE=1  USBTOFILE FILE="x.bin" USBSTART=32 FILESTART=32SEC LENGTH=1024
+ DRIVE=1  USBTOFILE FILE="x.bin" (create file if not already exist)
+ DRIVE=1  FILETOUSB FILE="etherboot.bin" SURE
+ DRIVE=1  FILETOUSB FILE="x.bin" FILESTART=32 USBSTART=P1  LENGTH=4MB
+ DRIVE=1  FILETOUSB FILE="x.bin" FILESTART=P1 USBSTART=P1  LENGTH=P1
+
+--------------------------- NOTES -----------------------------------------------------
+
+Notes: 2PTN, CHS, NTFS, FORCELBA, FAT32, EXFAT, USBFDD and ZIP are override keywords.
+       XP and NTLDR options have same function (used for XP/WinPE v1/BartPE).
+       WINPE/BOOOTMGR/WIN7/VISTA use for VistaPE/WinPEv2/Vista/Win7 (all same!).
+       VOLUME= must always be at very end of command line, if used.
+       CHS for max. BIOS compatibility, uses Type 6 if FAT16, 64hds/32secs if poss.
+       ZIP uses CHS and sets volume boot record parameters to floppy disk type.
+       Use ZIP if boot problems or to boot as A: drive.
+       DOSZIP uses a FAT16 MSWIN4.1 BPB, MSDOS uses a FAT16 MSDOS5.0 BPB.
+       NOACT Set partition as non-bootable (not active)
+       2PTN  For maximum HDD compatibility, try adding '2PTN' which adds
+             a small 2nd ptn to ensure a BIOS recognises the UFD as a hard disk.
+       FORCELBA  Sets CHS params in ptn table to max., even if ptn under 8GB.
+       ZIP  + CHS       - Use for maximum ZIP compatibility.
+       ZIP  + USBFDD    - Use for maximum Floppy compatibility.
+       2PTN + FORCELBA  - Use for maximum HDD compatibility.
+
+  USB-ZIP drives are recognised as 'Removable Storage device' by Windows.
+  USB-HDD drives are recognised as either 'Removable' or 'Hard Disk' by Windows.
+  To change between a Removable and Hard Disk (e.g. on Netac or Lexar UFDs),
+  try BootIt.exe v1.07 'Flip Removable Bit' from http://www.filefront.com.
+  BootIt.exe can change some 'Removable' UFDs into a 'Fixed Disk'.
+
+---------------------------- ABOUT ----------------------------------------------------
+
+   Use RMPREPUSB for a user-friendly front-end GUI interface for RMPARTUSB.
+   For private use only. For commercial use please contact support@rm.com.
+   Unauthorised distribution is strictly prohibited.
+
+   TAKE CARE! RMPARTUSB destroys all data on a drive and creates a
+              bootable partition on storage devices under Windows.
+
+   Note: RMPartUSB must be run with Administrator rights.
+
+
+------------------------- OTHER EXAMPLE  PARAMETERS (default = FAT16) -----------------
+
+ LIST    ALLDRIVES            (list all drives, * indicates first drive)
+ FIND  > RUNDRV.cmd           (find number and letter of first USB drive)
+ DRIVE=1 GETDRV > RUNDRV.cmd  (report drive letter+size+description)
+ DRIVE=1 SURE ALLDRIVES       (ptn as FAT16 unformatted - no prompt - even if non-USB)
+ DRIVE=1 QUICKTEST            (Quick test of whole drive for bad 128K pages)
+ DRIVE=1 ZIP SIZE=900         (900MB unformatted partition ZIP compatible)
+ DRIVE=1 WINPE                (ptn and format as FAT16 WinPE v2 bootable HDD)
+ DRIVE=1 MSDOS ZIP FAT32      (ptn and format as FAT32 MSDOS bootable ZIP)
+ DRIVE=1 FREEDOS ZIP USBFDD   (format as FAT16 FreeDos large floppy - no MBR)
+ DRIVE=1 XP NTFS VOLUME=MYXP  (ptn/format as NTFS XP bootable HDD)
+ DRIVE=1 WIN7  2PTN FAT32     (ptn and format as FAT32 WINPE bootable HDD)
+ DRIVE=1 VISTA 2PTN FORCELBA FAT32  (for most compatible bootable HDD)
+ DRIVE=1 WRITEMBRONLY         (writes MBR boot code but leaves disk sig. and ptn table)
+ DRIVE=1 FIRSTPART=3 SURE     (swaps the 3rd partition table entry with the 1st entry)
+
+-------------------------- INSTRUCTIONS -----------------------------------------------
+
+To make a WinPE, WIN7 or VISTA <2GB bootable FAT32 USB-HDD UFD
+--------------------------------------------------------------
+1. RMPARTUSB LIST                       to find USB drive number, e.g. 3
+2. RMPARTUSB DRIVE=3 WINPE FAT32 2PTN   where 3 was the number returned above
+3. Use Windows Explorer to all copy files to the new drive.
+
+To make a DOS bootable USB-ZIP UFD
+----------------------------------
+1. RMPARTUSB LIST                  find USB drives numbers, e.g. 3
+2. RMPARTUSB DRIVE=3 DOSZIP        format as 512MB MSDOS ZIP bootable
+3. Use Explorer to copy DOS boot files (IO.SYS, COMMAND.COM and MSDOS.SYS).
+
+To make a DOS bootable USB-FDD UFD (A:)
+---------------------------------------
+1. RMPARTUSB LIST                       find USB drives numbers, e.g. 3
+2. RMPARTUSB DRIVE=3 DOSZIP USBFDD      format as MSDOS large floppy
+3. Use Explorer to copy DOS boot files (IO.SYS, COMMAND.COM and MSDOS.SYS).
+
+Errorlevels: 0=OK, 1=Bad param, 2=User abort, 3=Not found, 4=Not a USB device,
+             5=Unknown error, 6=Disk or operational error, 7=Write error.
+Maybe need a DRIVE=n,  FIND, LIST or FILEINFO parameter?
+

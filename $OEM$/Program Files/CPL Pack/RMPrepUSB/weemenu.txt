@@ -1,0 +1,31 @@
+default 0
+#timeout 5
+
+# Comment out if you always want a menu to appear
+find --set-root /grldr
+/grldr
+
+pause --wait=3 Cannot find grldr!
+
+# these menu entries will only appear if there is no grldr file
+title Boot grub4dos
+find --set-root /grldr
+/grldr
+
+title Boot XP
+find --set-root /ntldr
+/ntldr
+
+title Boot NT6
+find --set-root /bootmgr
+/bootmgr
+
+title Boot MS-DOS
+find --set-root /io.sys
+/io.sys
+
+title Boot FreeDOS
+find --set-root /kernel.sys
+/kernel.sys
+
+# Note: Only first 500 bytes will be used - keep menu entries short and remove comments to save characters.

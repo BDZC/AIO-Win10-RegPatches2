@@ -1,0 +1,12 @@
+Mz RAM Booster - Version Hisotry
+
+Version 4.1.0 (19/12/2010)
+--------------------------
+-Minor improvements
+-Updated installer
+-Added Japanese language
+
+
+Version 4.0.0 (27/09/2010)
+--------------------------
+-Complete product rebuild

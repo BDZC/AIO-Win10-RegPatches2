@@ -1,0 +1,1150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>regis3</name>
+    </assembly>
+    <members>
+        <member name="T:com.tikumo.regis3.AbstractFileParser">
+            <summary>
+            This is a generic parser of file content. Both the .REG parser and the .INI parser are concrete implementations of this class.
+            The basic idea is that the parser is always in a well-known state, and in each state only a subset of new states are allowed.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.ParserState">
+            <summary>
+            This is the current parser state. Derived classes initialize and maintain this.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.LineNumber">
+            <summary>
+            Current line number
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.ColumnNumber">
+            <summary>
+            Current column number
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.Buffer">
+            <summary>
+            Buffer used by parser states to collect longer strings
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.CurrentIndex">
+            <summary>
+            Current zero-based offeset in CurrentContent
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.AbstractFileParser.CurrentContent">
+            <summary>
+            Current content being parsed
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.AbstractFileParser.SyntaxError(System.String,System.Object[])">
+            <summary>
+            This function should be used to create SyntaxError exceptions. It provides a generic helptext as well as contextual information
+            (such as line / column number, and file context) in the trace data.
+            
+            Typical use in a parser would be something like this:
+            
+            throw SyntaxError("error message goes here")
+            </summary>
+            <param name="context">Context pattern</param>
+            <param name="args">Context arguments</param>
+            <returns>A System.Data.SyntaxErrorException exception</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.AbstractFileParser.Parse(System.String,com.tikumo.regis3.AbstractFileParser.ExpectFunc)">
+            <summary>
+            Start parsing the given content from an initial state
+            </summary>
+            <param name="content">Text content</param>
+            <param name="initialFunc">Initial parser state</param>
+        </member>
+        <member name="T:com.tikumo.regis3.AbstractFileParser.ExpectFunc">
+            <summary>
+            Callback definition for parser states
+            </summary>
+            <param name="c">Character read at current position in text file</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileExportOptions">
+            <summary>
+            Exporter options for .REG files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileExportOptions.None">
+            <summary>
+            No specific options
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileExportOptions.NoEmptyKeys">
+            <summary>
+            Do not create empty output keys
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.Wow">
+            <summary>
+            Helper class for Windows-on-Windows support (32-bit processes on 64-bit Windows)
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.Wow.Is64BitProcess">
+            <summary>
+            Check if this process is 64-bit
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.Wow.Is64BitOperatingSystem">
+            <summary>
+            Check if this OS is 64-bit
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.XmlRegFileImporter">
+            <summary>
+            This is the importer for .XML files.
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.IRegistryImporter">
+            <summary>
+            This is the import interface supported by all regis3 importer classes: get data from somewhere
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.IRegistryImporter.Import">
+            <summary>
+            Import the registry data from some source (be it the live registry, a different machine, a registry file, an xml file and so on).
+            </summary>
+            <returns>a newly created RegKeyEntry object</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.XmlRegFileImporter.#ctor(System.String)">
+            <summary>
+            The constructor takes the content of a .REG file, the expected header (=first line of the .REG file) and import options (if any)
+            </summary>
+            <param name="content">Content of the .REG file</param>
+        </member>
+        <member name="M:com.tikumo.regis3.XmlRegFileImporter.Import">
+            <summary>
+            Import the content of the .XML file and return the RegKeyEntry created from it
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.tikumo.regis3.ini.IniFile">
+            <summary>
+            This class represents an INI File. INI files are really just a special case of an INI file section.
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.ini.IniFileSection">
+            <summary>
+            This class represents a section in an .INI file. INI files can be organized to have recursive sections, so for example
+            
+            [foo\bar\blub] 
+            
+            could either be represented as a single section named 'foo\bar\blub', or three sections named 'foo', 'bar' and 'blub' respectively.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileSection.Sections">
+            <summary>
+            List of child sections. Can be empty for flat files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileSection.Entries">
+            <summary>
+            List of entries in this section. 
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileSection.Parent">
+            <summary>
+            Parent section or null if this is the root section
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileSection.#ctor">
+            <summary>
+            The default constructor creates an unamed section without a parent. Used only by the public IniFile constructor.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileSection.#ctor(System.String,com.tikumo.regis3.ini.IniFileSection)">
+            <summary>
+            This constructor creates a named section with a parent
+            </summary>
+            <param name="name">Name of this section</param>
+            <param name="parent">Parent section. Must not be null</param>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileSection.ToString">
+            <summary>
+            Create a string description of this instance
+            </summary>
+            <returns>String description of this instance</returns>
+        </member>
+        <member name="P:com.tikumo.regis3.ini.IniFileSection.Name">
+            <summary>
+            Name of this section
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFile.#ctor">
+            <summary>
+            The default constructor creates an empty .INI file
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFile.Read(System.String)">
+            <summary>
+            Read the contents of an .INI file
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="T:com.tikumo.regis3.ini.IniFileEntry">
+            <summary>
+            This class represents a key/value assignment pair in an .INI file
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileEntry.Name">
+            <summary>
+            Name of the value
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileEntry.Data">
+            <summary>
+            Data of the value (can be null if options permit)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileEntry.Comment">
+            <summary>
+            Optional comment (can be null)
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileEntry.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Create a new key/value assignment pair
+            </summary>
+            <param name="name">Name of the value</param>
+            <param name="data">Data of the value (can be null if options permit)</param>
+            <param name="comment">Optional comment (can be null)</param>
+        </member>
+        <member name="P:com.tikumo.regis3.ini.IniFileEntry.HasComment">
+            <summary>
+            Flag indicating whether or not the value has a comment
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.ini.IniFileOptions">
+            <summary>
+            Options for parsing .INI files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileOptions.KeepComments">
+            <summary>
+            Keep comments when reading .INI files. Comments can start with '#' or ';'. This is the default
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileOptions.KeepFlat">
+            <summary>
+            Keep sections flag (i.e. no subsections). This is the default
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.ini.IniFileOptions.StripEmptyLines">
+            <summary>
+            Strip empty lines (NB: that includes lines with only comments). This is the default
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.ini.IniFileParser">
+            <summary>
+            This class implements a parser for .INI files
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileParser.#ctor(com.tikumo.regis3.ini.IniFileSection,com.tikumo.regis3.ini.IniFileOptions)">
+            <summary>
+            The default constructor creates a root section (typically a IniFile instance) and a set of parse options
+            </summary>
+            <param name="rootSection">Root section</param>
+            <param name="options">Parse options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.ini.IniFileParser.Parse(System.String)">
+            <summary>
+            Parse .INI file content
+            </summary>
+            <param name="content">.INI file content</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileParser">
+            <summary>
+            This is the default parser for .REG files. It takes a string as input and produces a valid registry tree from it.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileParser.#ctor(System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            The constructor needs an expected header identifying the version of the .REG file, as well as import options
+            </summary>
+            <param name="expectedHeader">expected header identifying the version of the .REG file</param>
+            <param name="options">import options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileParser.Parse(System.String)">
+            <summary>
+            This method imports a registry key from the text of a .REG file
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.tikumo.regis3.RegEnvReplace">
+            <summary>
+            This class supports replacing $$ variables in .REG files by dynamic content.
+            
+            When reading .REG files, you can use the syntax $$NAME$$ to defer resolution of names / content to runtime.
+            At runtime, variables are declared either as environment variables or by reading them from .XML files / .INI files
+            and replaced back in the registry.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegEnvReplace.Variables">
+            <summary>
+            Dictionary of key/value pairs for replacement
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegEnvReplace.#ctor">
+            <summary>
+            The default constructor creates an empty list of variables
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegEnvReplace.ReadXmlFile(System.String)">
+            <summary>
+            Read variables from an .XML file. It must contain entries of the form
+            
+            &lt;value name="NAME"&gt;CONTENT&lt;/value&gt;
+            </summary>
+            <param name="filename">Filename to read variables from</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegEnvReplace.ReadIniFile(System.String)">
+            <summary>
+            Read variables from an .INI file. It must contain entries of the form
+            
+            NAME=VALUE
+            </summary>
+            <param name="filename">Filename to read variables from</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegEnvReplace.MergeEnvironmentVariables">
+            <summary>
+            Read content of the Environment variables and merge them with this set of variables
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegEnvReplace.Map(System.String)">
+            <summary>
+            Given an input string, try to map it. 
+            </summary>
+            <param name="input">Input string with $$ variables</param>
+            <returns>Mapped result string</returns>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileImportOptions">
+            <summary>
+            Parser options for .REG files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileImportOptions.None">
+            <summary>
+            No specific options
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileImportOptions.AllowHashtagComments">
+            <summary>
+            Allow Hashtag-style line comments.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileImportOptions.AllowSemicolonComments">
+            <summary>
+            Allow Semicolon-style line comments.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileImportOptions.IgnoreWhitespaces">
+            <summary>
+            If this option is set, the parser is more relaxed about whitespaces in the .REG file (Recommended, especially if you manually edit the file yourself.)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileImportOptions.AllowVariableNamesForNonStringVariables">
+            <summary>
+            If this option is set, a .REG file can have a statement like this:
+            
+            "something"=dword:$$VARIABLE$$
+            
+            where $$VARIABLE$$ is replaced at runtime with the respective -numeric- variable. 
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegistryImportRelativeToExistingRegKeyEntry">
+            <summary>
+            This is a special importer that is used when comparing .REG files to values in the registry: rather than specifying an
+            actual registry key to import, only keys existing in the import key are read.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegistryImportRelativeToExistingRegKeyEntry.Import">
+            <summary>
+            Return the newly imported registry key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegistryImportRelativeToExistingRegKeyEntry.#ctor(com.tikumo.regis3.RegKeyEntry,Microsoft.Win32.RegistryView)">
+            <summary>
+            This constructor creates a registry importer for an existing registry key
+            </summary>
+            <param name="existingRegistry">Existing registry key</param>
+            <param name="registryView">Type of registry you want to see (32-bit, 64-bit, default).</param>
+        </member>
+        <member name="T:com.tikumo.regis3.IRegistryExporter">
+            <summary>
+            This is the export interface supported by all regis3 exporter functions: given a RegKeyEntry, create a file or a string.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.IRegistryExporter.Export(com.tikumo.regis3.RegKeyEntry,System.String,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Given a registry key description, create a file
+            </summary>
+            <param name="key">Existing registry key description</param>
+            <param name="filename">Filename to be created</param>
+            <param name="options">Export options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.IRegistryExporter.Export(com.tikumo.regis3.RegKeyEntry,System.IO.TextWriter,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Given a registry key description, write a file to a stream
+            </summary>
+            <param name="key">Existing registry key description</param>
+            <param name="file">Stream to be written to</param>
+            /// <param name="options">Export options</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileFormat5Exporter">
+            <summary>
+            Subclass of RegFileExporter for Version 5 files (=Unicode)
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileExporter">
+            <summary>
+            This is an exporter that takes a RegKeyEntry and exports it. 
+            The class is abstract, because version 4 and version 5 have different text encoding, so you need
+            a derived class to actually export the registry.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileExporter.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            This constructor creates an exporter with a fixed header and encoding
+            </summary>
+            <param name="header"></param>
+            <param name="fileEncoding"></param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileExporter.Export(com.tikumo.regis3.RegKeyEntry,System.String,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Export the given registry key to a file
+            </summary>
+            <param name="key">Registry key previously imported (or constructed in memory)</param>
+            <param name="filename">Filename to save the key in</param>
+            /// <param name="options">Export options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileExporter.Export(com.tikumo.regis3.RegKeyEntry,System.IO.TextWriter,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Export the given registry key to a text stream
+            </summary>
+            <param name="key">Registry key previously imported (or constructed in memory)</param>
+            <param name="file">Output text stream</param>
+            /// <param name="options">Export options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileFormat5Exporter.#ctor">
+            <summary>
+            This constructor creates an exporter for .REG files format 5
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileFormat4Exporter">
+            <summary>
+            Subclass of RegFileExporter for Version 4 files (=ANSI Encoding, Windows NT 4.0)
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileFormat4Exporter.#ctor">
+            <summary>
+            This constructor creates an exporter for .REG files format 4
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegistryImporter">
+            <summary>
+            This is the standard importer to read data from an existing registry (on the local machine, or on a remote machine).
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegistryImporter.Import">
+            <summary>
+            The import function returns the RegKeyEntry imported from the registry
+            </summary>
+            <returns>The key imported from the registry</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegistryImporter.#ctor(System.String,Microsoft.Win32.RegistryView)">
+            <summary>
+            The default constructor takes a registry root path encoded as a string (for example, HKEY_LOCAL_MACHINE\Software\Microsoft) 
+            and reads everything under it.
+            </summary>
+            <param name="rootPath">Root path</param>
+            <param name="registryView">Type of registry you want to see (32-bit, 64-bit, default).</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegistryImporter.#ctor(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            This constructor takes an existing registry root key and a path relative to that key. You acn use this
+            if you've already split the path and identified the root key in a step before that (this is what Regdiff does)
+            </summary>
+            <param name="rootKey">Registry key identifing root (e.g. HKEY_LOCAL_MACHINE)</param>
+            <param name="rootPath">Relative registry path (e.g. "Software\Microsoft")</param>
+        </member>
+        <member name="T:com.tikumo.regis3.KindMismatch">
+            <summary>
+            This is a helper class that represents a value that exists in both keys, but has different value kinds (and by definition
+            different values) in each of them.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.KindMismatch.Key">
+            <summary>
+            Key where the value was located
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.KindMismatch.Value1">
+            <summary>
+            Value as it exists in the 1st key
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.KindMismatch.Value2">
+            <summary>
+            Value as it exists in the 2nd key
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.KindMismatch.#ctor(com.tikumo.regis3.RegKeyEntry,com.tikumo.regis3.RegValueEntry,com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            The constructor creates an object that represents a value that exists in both keys, but has different value kinds (and by definition
+            different values) in each of them.
+            </summary>
+            <param name="key">Key where the value was located</param>
+            <param name="value1">Value as it exists in the 1st key</param>
+            <param name="value2">Value as it exists in the 2nd key</param>
+        </member>
+        <member name="T:com.tikumo.regis3.DataMismatch">
+            <summary>
+            When comparing two registry files, this class identifies a mismatch in the data of two registry values that are located
+            in the same key path.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.DataMismatch.Key">
+            <summary>
+            Parent registry key path (by definition, the same in both registry trees)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.DataMismatch.Value1">
+            <summary>
+            Data in first registry file
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.DataMismatch.Value2">
+            <summary>
+            Data in the second registry file
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.DataMismatch.#ctor(com.tikumo.regis3.RegKeyEntry,com.tikumo.regis3.RegValueEntry,com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            This constructor identifies a mismatch in the data of two registry values that are located
+            in the same key path.
+            </summary>
+            <param name="key">Parent registry key path (by definition, the same in both registry trees)</param>
+            <param name="value1">Data in first registry file</param>
+            <param name="value2">Data in the second registry file</param>
+        </member>
+        <member name="T:com.tikumo.regis3.MissingValue">
+            <summary>
+            This is a helper class that represents a missing value in a key
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.MissingValue.Key">
+            <summary>
+            Key where the value was located
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.MissingValue.Value">
+            <summary>
+            Original value
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.MissingValue.#ctor(com.tikumo.regis3.RegKeyEntry,com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            The constructor creates an object that represents a missing value in a key
+            </summary>
+            <param name="key">Key where the value was located</param>
+            <param name="value">Original value</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegDiff">
+            <summary>
+            This class takes two (named) registry keys and produces a set of differences between the two keys.
+            In regis3, keys can be imported from different sources (the registry, a .REG file, an .XML file) and are represented
+            in memory as RegKeyEntry trees. This class takes two such trees (independently of their origin) and compares them.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.MissingKeysIn1">
+            <summary>
+            Keys missing in 1 but present in 2
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.MissingKeysIn2">
+            <summary>
+            Keys missing in 2 but present in 1
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.MissingValuesIn1">
+            <summary>
+            Values missing in 1 but present in 2
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.MissingValuesIn2">
+            <summary>
+            Values missing in 2 but present in 1 
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.DataMismatches">
+            <summary>
+            Data mismatches: a key/value exists in both files, but the respective data doesn't match
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.KindMismatches">
+            <summary>
+            Kind mismatches: a key/value exists in both files, but the kind doesn't match (for example, its a string in one file and an integer in the other)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.Name1">
+            <summary>
+            Name of the first file / key / source
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.Name2">
+            <summary>
+            Name of the second file / key / source
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.Key1">
+            <summary>
+            First key 
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.Key2">
+            <summary>
+            Second key
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegDiff.Aliases">
+            <summary>
+            Internal list of aliases
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegDiff.#ctor(com.tikumo.regis3.RegKeyEntry,System.String,com.tikumo.regis3.RegKeyEntry,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            The constructor creates two named registry keys and compares them
+            </summary>
+            <param name="key1">First key</param>
+            <param name="name1">Name of first key</param>
+            <param name="key2">Second key</param>
+            <param name="name2">Name of second key</param>
+            <param name="aliases">Dictionary of key aliases</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegDiff.CreateDiffKeyEntry">
+            <summary>
+            This function creates a new RegKeyEntry, that represents the diff information; 
+            assuming that key 1 is the old information, and key 2 the new information
+            
+            That means:
+            - if a key is missing in 1, it is to be added
+            - if a key is missing in 2, it is to be removed
+            - if a value is missing in 1, it is to be added
+            - if a value is missing in 2, it is to be removed
+            - if a value has changed, use the data from 2 
+            </summary>
+            <returns>A newly created RegKeyEntry that describes the differences</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegDiff.CreateMergeKeyEntry">
+            <summary>
+            This function creates a new RegKeyEntry, that represents the merge information; 
+            assuming that key 1 is the old information, and key 2 the new information
+            
+            That means:
+            - includes all information from key 2
+            - if a key is missing in 2, it is to be removed
+            - if a value is missing in 2, it is to be removed
+            - if a value has changed, use the data from 2 
+            </summary>
+            <returns>A newly created RegKeyEntry that describes the merge information</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegDiff.ToString">
+            <summary>
+            Create a string description of this instance
+            </summary>
+            <returns>String description of this instance</returns>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileImporter">
+            <summary>
+            This is the importer for .REG files.
+            The class is abstract, because version 4 and version 5 have different text encoding, so you need
+            a derived class to actually import the registry.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileImporter.#ctor(System.String,System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            The constructor takes the content of a .REG file, the expected header (=first line of the .REG file) and import options (if any)
+            </summary>
+            <param name="content">Content of the .REG file</param>
+            <param name="expectedHeader">Expected header</param>
+            <param name="options">Import options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileImporter.Import">
+            <summary>
+            Import the content of the .REG file and return the RegKeyEntry created from it
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileFormat4Importer">
+            <summary>
+            Importer for version 4 registry files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileFormat4Importer.HEADER">
+            <summary>
+            Header identifying version 4 registry files
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileFormat4Importer.#ctor(System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            Create an importer from given .REG file format 4 file content
+            </summary>
+            <param name="content">Content of a .REG file</param>
+            <param name="options">Import options</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegistryWriteOptions">
+            <summary>
+            Available options when exporting a RegKeyEntry tree back to the registry
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegistryWriteOptions.Recursive">
+            <summary>
+            Export the data recursively. If omitted, export only the top level keys
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegistryWriteOptions.AllAccessForEveryone">
+            <summary>
+            Grant all access to everyone. I know I am lazy and one of these days hackers will probably take me down, but
+            it is a lot easier this way ;)
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegValueEntry">
+            <summary>
+            This class represents a registry value in a 
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntry.Name">
+            <summary>
+            Name of this value. Warning: for default values this is going to be null.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntry.RemoveFlag">
+            <summary>
+            If this flag is set, you really want to remove the registry value rather than add it
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.#ctor(System.String)">
+            <summary>
+            This constructor creates a named value with unknown content
+            </summary>
+            <param name="name">Name of the value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.#ctor(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            This constructor creates a named value from a Windows registry value
+            </summary>
+            <param name="key">Parent registry key</param>
+            <param name="name">Name of the value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.WriteToTheRegistry(Microsoft.Win32.RegistryKey,com.tikumo.regis3.RegEnvReplace)">
+            <summary>
+            Write this value back to the Windows registry
+            </summary>
+            <param name="registryKey">Parent registry key. Must be open with write permissions.</param>
+            <param name="env">Helper class that can map $$-escaped strings.</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.#ctor">
+            <summary>
+            The default constructor creates an unnamed value without contenet.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.AsByteArray">
+            <summary>
+            Describe the content of this value as a byte array. This should be used only 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.#ctor(com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            Copy Constructor
+            </summary>
+            <param name="objectSrc"></param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetStringValue(System.String)">
+            <summary>
+            Define a string value
+            </summary>
+            <param name="value">content</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetExpandedStringValue(System.String)">
+            <summary>
+            Define a expanded string value
+            </summary>
+            <param name="value">content</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetMultiStringValue(System.Collections.Generic.List{System.String})">
+            <summary>
+            Define a multi-string value
+            </summary>
+            <param name="values">content</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetEscapedIntValue(System.String)">
+            <summary>
+            Define an escaped integer value. If you're reading .REG files and you use the RegEnvReplace class to replace 
+            content with variables at runtime, you can specify something like this:
+            
+            "SomeValue"=dword:$$VARIABLE$$
+            
+            </summary>
+            <param name="value">Name of the escaped int variable</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetEscapedLongValue(System.String)">
+            <summary>
+            Define an escaped integer value. If you're reading .REG files and you use the RegEnvReplace class to replace 
+            content with variables at runtime, you can specify something like this:
+            
+            "SomeValue"=qword:$$VARIABLE$$
+            
+            </summary>
+            <param name="value">Name of the escaped int variable</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetIntValue(System.Int32)">
+            <summary>
+            Define an integer value
+            </summary>
+            <param name="value">integer value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetLongValue(System.Int64)">
+            <summary>
+            Define a long value
+            </summary>
+            <param name="value">integer value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetNoneValue">
+            <summary>
+            Associate 'None'-type with empty value
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.SetBinaryType(com.tikumo.regis3.RegValueEntryKind,System.Byte[])">
+            <summary>
+            Given hex-encoded binary data, set a blob type
+            </summary>
+            <param name="kind">Type of registry entry</param>
+            <param name="bytes">Byte representation of the data</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.EscapeString(System.String)">
+            <summary>
+            Escape a string for .REG files (i.e. replace " and \ tokens)
+            </summary>
+            <param name="input">Input string</param>
+            <returns>Escaped string</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegValueEntry.WriteRegFileFormat(System.IO.TextWriter)">
+            <summary>
+            Helper function: Export this function in .REG file format to an output stream
+            </summary>
+            <param name="output">Output stream</param>
+        </member>
+        <member name="P:com.tikumo.regis3.RegValueEntry.Value">
+            <summary>
+            Value data
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.RegValueEntry.Kind">
+            <summary>
+            Type of data encoded in this object
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.RegValueEntry.IsDefaultValue">
+            <summary>
+            Returns true if this object represents the default ("null") value in a registry key
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFileFormat5Importer">
+            <summary>
+            Importer for version 4 registry files
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegFileFormat5Importer.HEADER">
+            <summary>
+            Header identifying version 4 registry files
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFileFormat5Importer.#ctor(System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            Create an importer from given .REG file format 5 file content
+            </summary>
+            <param name="content">Content of a .REG file</param>
+            <param name="options">Import options</param>
+        </member>
+        <member name="T:com.tikumo.regis3.XmlRegFileExporter">
+            <summary>
+            This is an exporter that takes a registry key and exports it in XML format
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.XmlRegFileExporter.Export(com.tikumo.regis3.RegKeyEntry,System.String,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Export the key to a given file
+            </summary>
+            <param name="key">Existing key</param>
+            <param name="filename">Name for .XML file</param>
+            <param name="options">Export options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.XmlRegFileExporter.Export(com.tikumo.regis3.RegKeyEntry,System.IO.TextWriter,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Export the key to a given output stream
+            </summary>
+            <param name="key">Existing key</param>
+            <param name="file">Output stream</param>
+            <param name="options">Export options</param>
+        </member>
+        <member name="T:com.tikumo.regis3.RegFile">
+            <summary>
+            This is a helper class that takes a .REG filename (or the content of a .REG file) and identifies the correct parser.
+            Parsers distinguish between Registry Format 4 (ANSI) and 5 (Unicode)
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFile.CreateImporterFromFile(System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            Given a filename, identify the proper registry importer
+            </summary>
+            <param name="filename">Filename (including path)</param>
+            <param name="options">Registry import options</param>
+            <returns>Registry importer suitable for this file</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegFile.CreateImporterFromString(System.String,com.tikumo.regis3.RegFileImportOptions)">
+            <summary>
+            Given the content of a .REG file, identify the proper registry importer
+            </summary>
+            <param name="content">File content</param>
+            <param name="options">Registry import options</param>
+            <returns>Registry importer suitable for this file</returns>
+        </member>
+        <member name="T:com.tikumo.regis3.Regis3">
+            <summary>
+            Static helper functions of general use when dealing with registry objects
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.Regis3.OpenRegistryHive(System.String,System.String@,Microsoft.Win32.RegistryView,System.String)">
+            <summary>
+            Given a registry path, locate the correct root key and return the relative path. For example, when the user gives the absolute registry path
+            
+            HKEY_LOCAL_MACHINE\Software\Microsoft
+            
+            you really have two parts: HKEY_LOCAL_MACHINE is a "registry hive" root, and "Software\Microsoft" the relative path. 
+            </summary>
+            <param name="rootPath">absolute registry path</param>
+            <param name="rootPathWithoutHive">Returns the relative path</param>
+            <param name="registryView">Type of registry you want to see (32-bit, 64-bit, default).</param>
+            <param name="remoteMachineName">Name of a remote machine. User must ensure that caller has sufficient privileges to access the key</param>
+            <returns>"registry hive" root</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.Regis3.DeleteKeyRecursive(System.String,Microsoft.Win32.RegistryView)">
+            <summary>
+            Given an (absolute) registry key, delete everything under it including subkeys.
+            </summary>
+            <param name="sourcePath">Absolute registry path (i.e. one starting with HKEY_LOCAL_MACHINE or something similar)</param>
+            <param name="registryView">Type of registry you want to see (32-bit, 64-bit, default).</param>
+        </member>
+        <member name="F:com.tikumo.regis3.Regis3.KnownHives">
+            <summary>
+            This is a mapping of all registry hive names to their corresponding values
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegKeyEntry">
+            <summary>
+            This class represents a registry key in memory
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegKeyEntry.Name">
+            <summary>
+            Name of the key (not the complete path name: use the Path member for that)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegKeyEntry.Keys">
+            <summary>
+            Subkeys relative to this key
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegKeyEntry.Values">
+            <summary>
+            Values in this key
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegKeyEntry.DefaultValue">
+            <summary>
+            Default value or null if undefined
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegKeyEntry.RemoveFlag">
+            <summary>
+            Flag indicating wether the .REG file actually asks to REMOVE this value, rather than add it.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.#ctor">
+            <summary>
+            The default constructor creates an empty - unnamed - registry key.
+            </summary>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.#ctor(com.tikumo.regis3.RegKeyEntry,System.String)">
+            <summary>
+            This constructor creates a named registry key, relative to an existing parent
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.#ctor(com.tikumo.regis3.RegKeyEntry)">
+            <summary>
+            Copy constructor: takes an existing RegKeyEntry and creates a full clone of it
+            </summary>
+            <param name="objectSrc"></param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.AskToRemoveKey(com.tikumo.regis3.RegKeyEntry)">
+            <summary>
+            When creating a diff/merge file, asks the key to remove a subkey based on an existing key
+            </summary>
+            <param name="removeThis">Existing key</param>
+            <returns>Key in the diff/merge file with the RemoveFlag set</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.AskToAddKey(com.tikumo.regis3.RegKeyEntry)">
+            <summary>
+            When creating a diff/merge file, asks the key to create a subkey based on an existing key
+            </summary>
+            <param name="addThis">Existing key</param>
+            <returns>Key in the diff/merge file</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.AskToRemoveValue(com.tikumo.regis3.RegKeyEntry,com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            When creating a diff/merge file, asks the key to remove a value based on an existing value
+            </summary>
+            <param name="key">existing key</param>
+            <param name="value">existing value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.AskToAddValue(com.tikumo.regis3.RegKeyEntry,com.tikumo.regis3.RegValueEntry)">
+            <summary>
+            When creating a diff/merge file, asks the key to add a value based on an existing value
+            </summary>
+            <param name="key">existing key</param>
+            <param name="value">existing value</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.ToString">
+            <summary>
+            Create a string description of this instance
+            </summary>
+            <returns>String description of this instance</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.FindOrCreateValue(System.String)">
+            <summary>
+            Find or create a named registry value
+            </summary>
+            <param name="name">Name of the registry value</param>
+            <returns>Newly created registry value or null if it cannot be created</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.FindOrCreateKey(System.String)">
+            <summary>
+            Find or create a subkey relative to this one
+            </summary>
+            <param name="path">Subkey path relative to this one</param>
+            <returns>Newly created subkey</returns>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.WriteRegFileFormat(System.IO.TextWriter,com.tikumo.regis3.RegFileExportOptions)">
+            <summary>
+            Write the content of this key to an output stream in .REG file format
+            </summary>
+            <param name="output">Output stream</param>
+            <param name="options">Export options</param>
+        </member>
+        <member name="M:com.tikumo.regis3.RegKeyEntry.WriteToTheRegistry(com.tikumo.regis3.RegistryWriteOptions,com.tikumo.regis3.RegEnvReplace,Microsoft.Win32.RegistryView)">
+            <summary>
+            Write the contents of this object back to the registry (possibly recursively)
+            </summary>
+            <param name="registryWriteOptions">Options for writing to the registry</param>
+            <param name="env">Optional handler for environment variable replacement</param>
+            <param name="registryView">Type of registry you want to see (32-bit, 64-bit, default).</param>
+        </member>
+        <member name="P:com.tikumo.regis3.RegKeyEntry.Parent">
+            <summary>
+            Parent key or null if this is a root key
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.RegKeyEntry.Path">
+            <summary>
+            Return the complete (recursive) path of this key
+            </summary>
+        </member>
+        <member name="P:com.tikumo.regis3.RegKeyEntry.AllAccessForEveryone">
+            <summary>
+            Helper function: RegistrySecurity object representing "Full control for the Everyone group" 
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regis3.RegValueEntryKind">
+            <summary>
+            This class defines the known registry value types. It includes more types than the standard .Net enum RegistryValueKind
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.Unknown">
+            <summary>
+            Registry value kind unknown or invalid
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.None">
+            <summary>
+            No value kind associated
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.SZ">
+            <summary>
+            "String Zero-Terminated": a string
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.ExpandSZ">
+            <summary>
+            "Expandable String": a string that can include environment variable specifications. By default,
+            Windows will implicitly expand the string when reading it.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.Binary">
+            <summary>
+            Binary data
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.DWord">
+            <summary>
+            A (unsigned) integer (little endian = intel default)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.DWordBigEndian">
+            <summary>
+            A (unsigned) integer (big endian). Not sure if I have ever seen one of these beasts live in the wild
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.Link">
+            <summary>
+            Registry link
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.MultiSZ">
+            <summary>
+            A list of multiple strings.
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.ResourceList">
+            <summary>
+            A Windows NT resource list
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.FullResourceDescriptor">
+            <summary>
+            A Windows NT full resource descriptor
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.ResourceRequirementsList">
+            <summary>
+            A Windows NT resource requirements list
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regis3.RegValueEntryKind.QWord">
+            <summary>
+            A 64-bit integer (little endian = intel default)
+            </summary>
+        </member>
+    </members>
+</doc>

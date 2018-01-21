@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="rdoModeBasic" value="Краткий" version="1" />
+    <string key="rdoModeDetailed" value="Подробный" version="1" />
+    <string key="chkWordWrap" value="Перенос строк" version="1" />
+    <string key="grpDisplayMode" value="Режим просмотра" version="1" />
+    <string key="tabViewSettings" derive="true" />
+    <string key="rdoTimeoutCount" value="Таймаут" version="1" />
+    <string key="numTimeout" derive="true" />
+    <string key="rdoTimeoutNone" value="Ждать выбора пользователя" version="1" />
+    <string key="rdoTimeoutSkip" value="Пропустить меню начальной загрузки" version="1" />
+    <string key="btnSaveBCD" value="Сохранить" version="1" />
+    <string key="grpTimeout" value="Параметры меню" version="2" />
+    <string key="btnUp" value="Вверх" version="1" />
+    <string key="btnDown" value="Вниз" version="1" />
+    <string key="btnRenameEntry" value="Переименовать" version="1" />
+    <string key="btnDelete" value="Удалить" version="1" />
+    <string key="grpModifyEntries" value="Редактирование загрузочного меню" version="1" />
+    <string key="tabEditMenu" derive="true" />
+    <string key="btnBrowse" derive="true" />
+    <string key="lblName" value="Имя:" version="1" />
+    <string key="lblType" value="Тип:" version="1" />
+    <string key="lblPath" value="Путь:" version="1" />
+    <string key="lblDrive" value="Диск:" version="1" />
+    <string key="btnAddNewEntry" value="Добавить" version="1" />
+    <string key="lblMode" value="Режим:" version="1" />
+    <string key="lblFile" value="Файл:" version="1" />
+    <string key="txtVhdName" value="NeoSmart образ VHD" version="1" />
+    <string key="tabPageVhd" value="Образ диска" version="1" />
+    <string key="txtIsoName" value="NeoSmart образ ISO" version="1" />
+    <string key="tabPageIso" derive="true" />
+    <string key="txtPeName" value="NST образ WinPE" version="1" />
+    <string key="chkEms" value="EMS включено" version="1" />
+    <string key="tabPageWinPE" derive="true" />
+    <string key="txtFloppyName" value="NeoSmart образ дискеты" version="1" />
+    <string key="tabPageFloppy" value="Дискета" version="1" />
+    <string key="btnPlopInstall" value="Установить PLoP" version="1" />
+    <string key="btnPlopRemove" value="Удалить PLoP" version="1" />
+    <string key="lblBiosExtend" value="Расширение BIOS от EasyBCD может быть использовано для загрузки по сети или с CD/DVD/USB на компьютерах, которые не поддерживают этого." version="1" />
+    <string key="tabPagePlop" value="Расширение BIOS" version="1" />
+    <string key="grpPortable" value="Съемный\внешний носитель" version="1" />
+    <string key="lblWindowsAuto" value="Определяется автоматически" version="1" />
+    <string key="chkAutoXp" value="Автопоиск диска с исправной ОС" version="1" />
+    <string key="txtWinName" derive="true" />
+    <string key="tabPageWin" derive="true" />
+    <string key="chkGrub" value="Использовать GRUB из EasyBCD" version="1" />
+    <string key="txtLinName" derive="true" />
+    <string key="lblLinAuto" value="Определяется автоматически" version="1" />
+    <string key="tabPageLinux" derive="true" />
+    <string key="txtMacName" derive="true" />
+    <string key="tabPageMac" derive="true" />
+    <string key="btnNeoGrub" value="Установить" version="1" />
+    <string key="btnNeoGrubConfig" value="Настроить" version="1" />
+    <string key="lblNeoGrub" value="Загрузчик NeoGrub может использоваться для загрузки в Linux и устаревшие версии Windows или для скрытия дисков." version="1" />
+    <string key="tabPageNeoGrub" derive="true" />
+    <string key="grpOS" value="Операционные системы" version="1" />
+    <string key="tabAddEntry" derive="true" />
+    <string key="btnSaveSettings" value="Сохранить" version="1" />
+    <string key="lblLocale" value="Язык:" version="1" />
+    <string key="tabEntryBasic" value="Основные" version="1" />
+    <string key="lblSafeMode" value="Безопасный режим:" />
+    <string key="lblPae" value="Поддержка PAE: " version="1" />
+    <string key="lblDep" derive="true" />
+    <string key="chkEntryUnsigned" value="Разрешить использование неподписанных&#xD;&#xA;драйверов на 64 - битных ОС Windows" version="1" />
+    <string key="tabEntryAdvanced" value="Дополнительные" version="1" />
+    <string key="chkEntryKernelDebug" value="Запуск в режиме отладки ядра" version="1" />
+    <string key="chkEntrySos" value="Запуск в режиме SOS/Verbose-Boot Mode" version="1" />
+    <string key="numEntryMemory" derive="true" />
+    <string key="lblDeduct2" value="МБ от физической памяти" version="2" />
+    <string key="numEntryCpu" derive="true" />
+    <string key="lblLimit2" value="Выделить процессоров (ядер) Windows" version="2" />
+    <string key="tabEntryDeveloper" value="Разработчикам" version="1" />
+    <string key="lblAdvancedSettings" value="Примечание! Некоторые настройки, в зависимости от выбранной ОС могут быть недоступны." version="1" />
+    <string key="grpChangeSettings" value="Изменение настроек" version="1" />
+    <string key="lblPickLH" value="Выберите ОС из выпадающего списка" version="1" />
+    <string key="grpSelectLH" value="Выбор операционной системы" version="1" />
+    <string key="tabAdvanced" derive="true" />
+    <string key="btnBackup" value="Архивировать" version="1" />
+    <string key="btnRestore" value="Восстановить" version="1" />
+    <string key="grpBackupRestore" value="Архивация\Восстановление настроек загрузчика" version="1" />
+    <string key="rdoBcdChange" value="Заменить диск загрузки" version="1" />
+    <string key="rdoBcdRepair" value="Обновить файлы загрузки" version="1" />
+    <string key="btnBcdRescue" value="Выполнить" version="1" />
+    <string key="rdoBcdReset" value="Сброс конфигурации BCD" version="1" />
+    <string key="grpDiagnostics" value="Параметры настройки BCD" version="1" />
+    <string key="tabBcdInstall" derive="true" />
+    <string key="btnMakeBootable" value="Установить BCD" version="1" />
+    <string key="lblUsbPartitions" value="Раздел:" version="1" />
+    <string key="lblCreateBootable" value="EasyBCD может автоматизировать создание загрузочного носителя. Выберите раздел из выпадающего списка." version="1" />
+    <string key="grpCreateBootableExternal" value="Создание загрузочного внешнего носителя" version="1" />
+    <string key="btnMbrWrite" value="Переписать MBR" version="1" />
+    <string key="rdoMbrXP" value="Установить загрузчик NTLDR (Windows XP)" version="2" />
+    <string key="rdoMbrVista" value="Установить загрузчик BCD/bootmgr (Windows Vista и выше)" version="2" />
+    <string key="grpBootloader" value="Параметры MBR" version="1" />
+    <string key="tabMbrSetup" derive="true" />
+    <string key="grpUtils" value="Полезные утилиты" version="1" />
+    <string key="tabUtilities" derive="true" />
+    <string key="btnBcdInstall" value="Архивация/Восстановление BCD" version="1" />
+    <string key="btnUtilities" value="Полезные утилиты" version="1" />
+    <string key="btnMbrSetup" value="Установка BCD" version="1" />
+    <string key="btnAdvanced" value="Дополнительные настройки" version="1" />
+    <string key="btnAddEntry" value="Добавить запись" version="1" />
+    <string key="btnEditMenu" value="Редактировать меню загрузки" version="1" />
+    <string key="btnViewSettings" value="Текущее меню" version="1" />
+    <string key="grpToolbox" value="Инструменты EasyBCD" version="1" />
+    <string key="mnuSelectBcd" value="Выбрать BCD" version="1" />
+    <string key="mnuLanguage" value="Выбрать язык" version="1" />
+    <string key="mnuLoadSystemBcd" value="Загрузить системный BCD" version="1" />
+    <string key="mnuRescan" value="Перезагрузить текущие настройки BCD" version="1" />
+    <string key="mnuRegister" value="Регистрация" version="1" />
+    <string key="mnuDonate" value="Пожертвовать" version="1" />
+    <string key="mnuUpdate" value="Проверить наличие обновлений" version="1" />
+    <string key="mnuExit" value="Выход" version="1" />
+    <string key="mnuFile" value="Файл" version="1" />
+    <string key="mnuOptions" value="Настройки" version="1" />
+    <string key="mnuEditLegacy" value="Правка boot.ini" version="1" />
+    <string key="mnuRestart" value="Перезагрузить компьютер" version="1" />
+    <string key="mnuTools" value="Инструменты" version="1" />
+    <string key="mnuDocumentation" value="Документация (OnLine)" version="1" />
+    <string key="mnuSupport" value="Техподдержка" version="1" />
+    <string key="mnuBug" value="Сообщить об ошибке" version="1" />
+    <string key="mnuDonate2" value="Пожертвовать" version="1" />
+    <string key="mnuAbout" value="О программе" version="1" />
+    <string key="mnuHelp" value="Справка" version="1" />
+    <string key="MainUI" derive="true" />
+    <string key="colName" value="Пункты меню" version="1" />
+    <string key="colDefault" value="По умолчанию" version="1" />
+    <string key="cbxVhdType" value="Microsoft VHD&#xD;&#xA;Образ диска&#xD;&#xA;Образ раздела" version="1" />
+    <string key="cbxIsoMode" value="Запуск с диска&#xD;&#xA;Загрузка в память" version="1" />
+    <string key="cbxPeType" value="Образ WIM (Ramdisk)&#xD;&#xA;Извлеченная файловая структура" version="1" />
+    <string key="cbxWinType" derive="true" />
+    <string key="cbxLinType" derive="true" />
+    <string key="cbxMacType" value="EFI (По умолчанию)&#xD;&#xA;MBR" version="1" />
+    <string key="cbxEntryDep" derive="true" />
+    <string key="cbxEntryPae" value="По умолчанию&#xD;&#xA;Включено&#xD;&#xA;Выключено" version="1" />
+    <string key="cbxEntrySafe" value="Обычный&#xD;&#xA;Безопасный режим&#xD;&#xA;Безопасный режим /Сеть&#xD;&#xA;Командная строка&#xD;&#xA;Режим VGA&#xD;&#xA;Active Directory" version="1" />
+    <string key="emptyList" value="Записи не обнаружены!" version="1" />
+    <string key="MinimumWidth" derive="true" />
+    <string key="MinimumHeight" derive="true" />
+    <string key="efiTitle" value="Обнаружен загрузчик EFI!" version="1" />
+    <string key="efiMessage" value="EasyBCD установил, что ваша машина сейчас загружена в режиме EFI. Из-за ограничений, установленных Mikrosoft, многие функции мультизагрузочных конфигураций EasyBCD не могут работать в режиме EFI, и были отключены.&#xD;&#xA;&#xD;&#xA;Нажмите &quot;ОК&quot; для продолжения или &quot;Помощь&quot;, чтобы прочесть об этих ограничениях и возможных путях их устранения." version="1" />
+    <string key="lstFreeDos" derive="true" />
+    <string key="chkMetroUI" value="Использовать загрузчик Metro" version="1" />
+  </strings>
+</localization>

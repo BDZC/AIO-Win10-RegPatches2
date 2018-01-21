@@ -1,0 +1,247 @@
+[Version]
+Signature=$Windows NT$
+
+[defaultinstall]
+copyfiles   =main.copy,prog.copy,@cplbonus.inf
+AddReg	    =CPU-Z,GPU-Z,hdtune,HWMonitor,HP,ieclean,memtest,msconfig,MSI,regedit,remove,Services,smartdriver,start,Task,User
+
+[uninstall]
+BeginPrompt =BeginUnInsPrompt
+EndPrompt   =EndUnInsPrompt
+DelFiles    =main.copy,prog.copy,pnf.file
+delReg	    =CPU-Z,GPU-Z,hdtune,HWMonitor,HP,ieclean,memtest,msconfig,MSI,regedit,remove,Services,smartdriver,start,Task,User
+DelDirs     =Folder.del
+Cleanup     =1
+
+[BeginUnInsPrompt]
+Prompt      =Would you like to uninstall Kels' x64 CPL Bonus Pack?
+Title       =KelCorp Software Uninstaller
+ButtonType  =YESNO
+
+[EndUnInsPrompt]
+Prompt      =Kels' x64 CPL Bonus Pack has been uninstalled!
+
+[DestinationDirs]
+main.copy = 11
+pnf.file  = 17
+Prog.Copy = 16422,CPL
+inf.copy  = 17
+
+[Main.copy]
+Startup.cpl
+
+[Prog.Copy]
+cplbonus.dll
+CPUZ.exe
+CPUZ.ini
+CPUZ.txt
+GPU-Z.exe
+HDTune.exe
+HPUSBFW.EXE
+HP License.rtf
+HWMonitor.exe
+IEClean.exe
+MemTest.exe
+msicuu.exe
+MsiZap.exe
+pserv2.exe
+pserv2_english.dll
+secedit.exe
+SmartDriverBackup.exe
+
+[pnf.file]
+CPLBonus.pnf,,,1
+
+[Sysoc.clean]
+%17%\sysoc.inf,Components,CPLBonus=*
+
+[Folder.del]
+%16422%\CPL
+
+[CPU-Z]
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}"
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}",,,"CPU-Z"
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}","InfoTip",,"Shows detailed CPU and RAM information."
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}\DefaultIcon",,,"%16422%\CPL\CPU-Z.exe,-128"
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,02
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}\Shell\Open"
+HKCR,"CLSID\{4b580a54-0c73-4a05-af1d-3953daef2004}\Shell\Open\command",,,"%16422%\CPL\CPU-Z.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{4b580a54-0c73-4a05-af1d-3953daef2004}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{4b580a54-0c73-4a05-af1d-3953daef2004}",,,"Add CPU-z to The Control Panel"
+
+[gpu-z]
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}"
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}",,,"GPU-Z"
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}","InfoTip",,"Video card information utility."
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}\DefaultIcon",,,"%16422%\CPL\gpu-z.exe"
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,02
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}\Shell\Open"
+HKCR,"CLSID\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}\Shell\Open\command",,,"%16422%\CPL\gpu-z.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{07b3a01f-c33d-4824-9755-bbbd2f8aa809}",,,"Add GPU-Z to The Control Panel"
+HKCU,"Software\techPowerUp\GPU-Z","Interval",0x10001,03
+
+[hdtune]
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}"
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}",,,"HD Tune"
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}","InfoTip",,"Hard drive diagnostics and monitoring tool."
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-15"
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,02
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}\Shell\Open"
+HKCR,"CLSID\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}\Shell\Open\command",,,"%16422%\CPL\hdtune.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{b09dbd5e-5f80-4f99-91a8-d232e8badd08}",,,"Add hdtune to The Control Panel"
+
+[HP]
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}",,,"HP USB Format Tool"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}","InfoTip",,"A super thumb-drive formatting tool!"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,5
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-19"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}\Shell\Open"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}\Shell\Open\command",,,"%16422%\CPL\HPUSBFW.EXE"
+HKCR,"CLSID\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}\ShellFolder","Attributes",0x10001,0
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{D14ED2E1-C75B-443c-BD7C-FC03B2F08C17}",,,"Add HPUSBFW to the control panel"
+
+[HWMonitor]
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}"
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}",,,"Hardware Monitor"
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}","InfoTip",,"Shows monitoring info for your CPU and drives like the current temp."
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}\DefaultIcon",,,"%16422%\CPL\HWMonitor.exe"
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,02
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}\Shell\Open"
+HKCR,"CLSID\{6736cc00-9852-4a6e-a59a-875f36d7b262}\Shell\Open\command",,,"%16422%\CPL\HWMonitor.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{6736cc00-9852-4a6e-a59a-875f36d7b262}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{6736cc00-9852-4a6e-a59a-875f36d7b262}",,,"Add HWMonitor to The Control Panel"
+
+[ieclean]
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}"
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}",,,"Expired Cookies Cleaner"
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}","InfoTip",,"Cleans outdated cookies from your system."
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-16"
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,03
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}\Shell\Open"
+HKCR,"CLSID\{30106e78-baa8-4970-985b-3e5b125618b1}\Shell\Open\command",,,"%16422%\CPL\ieclean.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{30106e78-baa8-4970-985b-3e5b125618b1}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{30106e78-baa8-4970-985b-3e5b125618b1}",,,"Add IEcookiesCleaner to The Control Panel"
+
+[memtest]
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}"
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}",,,"MemTest"
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}","InfoTip",,"Test the stability of your PC's ram."
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-5"
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,02
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}\Shell\Open"
+HKCR,"CLSID\{b87ea05c-a92e-48c1-83e8-cddf07244afe}\Shell\Open\command",,,"%16422%\CPL\memtest.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{b87ea05c-a92e-48c1-83e8-cddf07244afe}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{b87ea05c-a92e-48c1-83e8-cddf07244afe}",,,"Add Memtest to The Control Panel"
+
+[msconfig]
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}"
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}",,,"MSConfig"
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}","InfoTip",,"An internal Windows configuration tool."
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-3"
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}\Shell\Open"
+HKCR,"CLSID\{3978d214-c68d-468a-81c7-9454b188ba4f}\Shell\Open\command",,,"msconfig.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{3978d214-c68d-468a-81c7-9454b188ba4f}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{3978d214-c68d-468a-81c7-9454b188ba4f}",,,"Add msconfig to The Control Panel"
+
+[MSI]
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}"
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}",,,"MSI Clean Up Utility"
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}","InfoTip",,"Cleans the left over msi installation files."
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-6"
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}\Shell\Open"
+HKCR,"CLSID\{662546eb-4737-4f6d-b8ba-cd4e6f390702}\Shell\Open\command",,,"%16422%\CPL\msicuu.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{662546eb-4737-4f6d-b8ba-cd4e6f390702}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{662546eb-4737-4f6d-b8ba-cd4e6f390702}",,,"Add MSI Cleaner to The Control Panel"
+
+[regedit]
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}"
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}",,,"RegEdit"
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}","InfoTip",,"Windows Registry Manager."
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-8"
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}\Shell\Open"
+HKCR,"CLSID\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}\Shell\Open\command",,,"regedt32.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{2d805cd4-85e6-44ad-bb3c-4711941d0ec8}",,,"Add regedit to The Control Panel"
+
+[Remove]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"DisplayName",,"Kels' x64 CPL Bonus Pack!"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"DisplayVersion",0,"%version%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"NoModify",0x00010001,00000001
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"NoRepair",0x00010001,00000001
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"Publisher",0,"Kelsenellenelvian EverDawn"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"Comments",0,"A huge addition of control panel utilities, apps and programs."
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"DisplayIcon",0,"%16422%\CPL\cplbonus.dll, -1"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"URLInfoAbout",0,"http://www.wincert.net/forum/index.php?showtopic=337"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"URLUpdateInfo",0,"http://www.wincert.net/forum/index.php?showtopic=337" 
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"HelpLink",0,"http://www.wincert.net/forum/index.php?showtopic=337" 
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CPLBonus,"UninstallString",,"rundll32.exe advpack.dll,LaunchINFSection CPLBonus.inf,uninstall"
+
+[Services]
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}"
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}",,,"Services and Devices"
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}","InfoTip",,"Allows greater control over Windows services and devices."
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-9"
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}\Shell\Open"
+HKCR,"CLSID\{ad762173-ccd3-4711-9d99-944b9da73373}\Shell\Open\command",,,"%16422%\CPL\pserv2.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{ad762173-ccd3-4711-9d99-944b9da73373}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{ad762173-ccd3-4711-9d99-944b9da73373}",,,"Add PSERV to The Control Panel"
+
+[SmartDriver]
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}"
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}",,,"Smart Driver Backup"
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}","InfoTip",,"A great driver backup tool!"
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}\DefaultIcon",,,"%16422%\CPL\SmartDriverBackup.exe"
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}\Shell\Open"
+HKCR,"CLSID\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}\Shell\Open\command",,,"%16422%\CPL\SmartDriverBackup.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{3ef2d048-6964-4b03-a8e7-b3ca6077affc}",,,"Add Smart Driver Backup to The Control Panel"
+
+[start]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\Extended Properties\{305CA226-D286-468e-B848-2B2E8E697B74} 2","%%SystemRoot%%\sysWOW64\startup.cpl",0x10001,05
+
+[Task]
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}"
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}",,,"Windows Task Manager"
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}","InfoTip",,"Windows running proccess manager."
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-10"
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,05
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}\Shell\Open"
+HKCR,"CLSID\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}\Shell\Open\command",,,"taskmgr.exe"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{a02f63a1-5571-41bc-b2a2-207c1b4677ed}",,,"Add Taskmgr to The Control Panel"
+
+[User]
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}"
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}",,,"User Accounts 2"
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}","InfoTip",,"Win 2K style User Accounts."
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}\DefaultIcon",,,"%16422%\CPL\cplbonus.dll,-11"
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}","{305CA226-D286-468e-B848-2B2E8E697B74} 2",0x10001,09
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}\ShellFolder","Attributes",0x10001,00
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}\Shell\Open"
+HKCR,"CLSID\{18646F66-8C25-0000-BEE4-C2CE1298969D}\Shell\Open\command",,,"Control Userpasswords2"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{18646F66-8C25-0000-BEE4-C2CE1298969D}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{18646F66-8C25-0000-BEE4-C2CE1298969D}",,,"Add Win 2K Style User Accounts Controls"
+
+[Strings]
+Version    ="1.0.2"

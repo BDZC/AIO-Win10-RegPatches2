@@ -1,0 +1,56 @@
+#This file is only of use if you also install grub4dos to your USB drive
+#Lines starting with # are comments
+
+#valid colours are: black, blue, green, cyan, red, magenta, brown, light-gray, dark-gray, light-blue, light-green, light-cyan, light-red, light-magenta, yellow and white
+#color pairs are : NORMAL HIGHLIGHT HELPTEXT HEADING consisting of foreground/background
+color black/cyan red/yellow light-red/light-blue white/light-cyan
+timeout 20
+default 2
+
+#These next two lines overwrites the grub4dos info with a nice title
+write (md)0x220+1 !BAT\necho -n -P:0000 $[0133]                      --- FREEDOS MENU ---                          index=     \0
+initscript (md)0x220+1
+
+#Put a section heading here
+title           ******** MY DOS BOOT DRIVE ********\nPlease user the cursor keys or type a number to select a menu item
+root ()
+
+title ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+root
+
+title ³ 1 Boot FreeDOS as Floppy Disk 0                  ³\n\n Boot from this USB drive as Floppy Disk A:
+map --unhook
+map --unmap=0:0x82
+#Next line checks to see if we booted as a hard disk (80) and if so maps the boot device as a floppy disk
+checkrange 0x80 read 0x8280 && map (hd0,0)+1 (fd0) && map (hd1) (hd0) && map --hook  && find && rootnoverify (fd0) && map --harddrives=1 && echo HDD mapped as FDD
+map --floppies=1
+find
+chainloader /kernel.sys
+clear
+
+   
+title ³ 2 Boot FreeDOS as Hard Disk 0                    ³\n\n Boot from this USB drive as Hard Disk C: with the real hard disk as 2nd disk
+map --unhook
+map --unmap=0:0x82
+#Next line checks if we booted as a floppy drive (0) - if so we cannot convert to a hard disk
+checkrange 0x00 read 0x8280 && clear && find && echo Sorry - cannot map this floppy device as a hard disk! && pause && configfile (bd)/menu.lst
+find
+rootnoverify (hd0,0)
+chainloader /kernel.sys
+clear
+
+
+title ³ 3 Boot FreeDOS as Hard Disk 1                    ³\n\n Boot from this USB drive as Hard Disk C: with the real hard disk as first disk\n\n Type D:\COMFREE.COM to load the Command Interpreter if necessary
+map --unhook
+map --unmap=0:0x82
+#Next line checks if we booted as a floppy drive (0) - if so we cannot convert to a hard disk
+checkrange 0x00 read 0x8280 && clear && find && echo Sorry - cannot map this floppy device as a hard disk! && pause && configfile (bd)/menu.lst
+#Next line checks to see if we booted as a hard disk (80) and if so swaps the boot device with the 2nd hard disk
+checkrange 0x80 read 0x8280 && map (hd0) (hd1) && map (hd1) (hd0)  && map --hook && echo HD0/HD1 swapped
+find
+rootnoverify (hd1,0)
+chainloader /kernel.sys
+clear
+
+title ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+root

@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Classic vertical icon spacing
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"IconSpacing"="-1125"
+"IconVerticalSpacing"="-1150"
+;"IconVerticalSpacing"="-1710" (W10 default)

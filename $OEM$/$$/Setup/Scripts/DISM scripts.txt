@@ -1,0 +1,167 @@
+Enabling Windows 8 Legacy Boot Loader
+=====================================
+bcdedit /set {default} bootmenupolicy legacy
+
+
+Enabling Windows 8 Metro Boot Loader
+=====================================
+bcdedit /set {default} bootmenupolicy standard
+
+
+Rename Windows 8 Boot Entry Description
+=======================================
+bcdedit /set {current} description "Windows 8"
+
+
+Making Windows 7/8 Bootable ISO Image
+=====================================
+oscdimg.exe -betfsboot.com -u2 -h -m -l<Label> <SourcePath> <ISO Name.iso>
+
+oscdimg -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\msmg\Bin\x64\etfsboot.com#pEF,e,bC:\msmg\Bin\x64\efisys.bin C:\msmg\DVD C:\msmg\ISO\de_windows_10_enterprise_10130_x64_dvd.iso
+
+
+Capturing a Drive to a Wim Image
+================================
+Imagex /compress maximum /flags "Professional" /capture <SourceDrive> <DestinationPath\Install.wim> "Windows 8 Pro" 
+
+
+How to Export a specified Image from a Install.wim Image File
+==============================================================
+dism /Export-Image /SourceImageFile:c:\w8\sources\install.wim /SourceIndex:1 /DestinationImageFile:c:\install.wim
+
+
+Adding .Net 3.5 Framework to Windows 8
+======================================
+
+
+Online Method:
+--------------
+dism /Online /Enable-Feature /All /LimitAccess /FeatureName:NetFX3 /Source:E:\sources\sxs
+
+
+Offline Method:
+---------------
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:c:\w8mnt /Enable-Feature /All /LimitAccess /FeatureName:NetFX3 /Source:c:\w8\sources\sxs 
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+Adding Metro Apps to Windows 8 Install.wim Image
+================================================
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:C:\test\offline /Add-ProvisionedAppxPackage /PackagePath:<PackagePath\PackageName.appx> /SkipLicense
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+Removing Metro Apps from the Windows 8 Install.wim Image
+======================================================== 
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:C:\w8mnt /Get-ProvisionedAppxPackages > list.txt
+
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingFinance_2013.809.632.3676_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingFoodAndDrink_2013.820.258.2561_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingHealthAndFitness_2013.813.243.3760_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingMaps_2013.809.2206.5385_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingNews_2013.809.636.2800_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingSports_2013.809.637.2803_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingTravel_2013.809.639.25_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_2013.809.641.3233_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxLIVEGames_2013.808.1749.4769_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsReadingList_2013.822.1053.2868_neutral_~_8wekyb3d8bbwe
+
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.HelpAndTips_2013.822.1026.1520_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Reader_2013.822.1037.621_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.SkypeApp_2013.805.1159.2246_neutral_~_kzf8qxf38zg5c
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsAlarms_2013.822.1056.981_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCalculator_2013.822.1044.4920_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:microsoft.windowscommunicationsapps_2013.822.957.612_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsScan_2013.822.1049.789_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2013.822.1051.1503_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneMusic_2013.809.1658.2765_neutral_~_8wekyb3d8bbwe
+dism /Image:C:\w8mnt /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneVideo_2013.809.1659.3015_neutral_~_8wekyb3d8bbwe
+
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+Removing Default Metro Apps Associations from the Install.wim Image
+========================================================================= 
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /image:c:\w8mnt /Remove-DefaultAppAssociations
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+Importing Default App Associations to Install.wim Image
+=======================================================
+Create a XML file with a notepad as following and save the file as "AppAssoc.xml"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<DefaultAssociations>
+  <Association Identifier=".bmp" ProgId="PhotoViewer.FileAssoc.Bitmap" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".dib" ProgId="PhotoViewer.FileAssoc.Bitmap" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".jfif" ProgId="PhotoViewer.FileAssoc.JFIF" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".jpe" ProgId="PhotoViewer.FileAssoc.Jpeg" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".jpeg" ProgId="PhotoViewer.FileAssoc.Jpeg" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".jpg" ProgId="PhotoViewer.FileAssoc.Jpeg" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".jxr" ProgId="PhotoViewer.FileAssoc.Wdp" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".png" ProgId="PhotoViewer.FileAssoc.Png" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".tif" ProgId="PhotoViewer.FileAssoc.Tiff" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".tiff" ProgId="PhotoViewer.FileAssoc.Tiff" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier=".wdp" ProgId="PhotoViewer.FileAssoc.Wdp" ApplicationName="Windows Photo Viewer" />
+  <Association Identifier="http" ProgId="IE.HTTP" ApplicationName="Internet Explorer" />
+  <Association Identifier="https" ProgId="IE.HTTPS" ApplicationName="Internet Explorer" />
+</DefaultAssociations>
+
+
+Then use the following commands
+
+
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /image:c:\w8mnt /Remove-DefaultAppAssociations
+dism /image:c:\w8mnt /import-DefaultAppAssociations:c:\AppAssoc.xml
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+Applying Unattend.xml Setting to a Windows 8 Install.wim Image
+==============================================================
+
+
+Online Method:
+--------------
+dism /online /Apply-Unattend:<Unattend.xml>
+
+
+Offline Method:
+---------------
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:c:\w8mnt /Apply-Unattend:<Unattend.xml> 
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+How to Make Windows 8.1 Pro With Windows Media Center ISO with Activation files
+=============================================================================
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:c:\w8mnt /Set-Edition:ProfessionalWMC
+xcopy /H /R /K /Y c:\wmc_data\tokens.dat c:\w8mnt\Windows\System32\spp\store\2.0
+xcopy /H /R /K /Y c:\wmc_data\data.dat c:\w8mnt\Windows\System32\spp\store\2.0
+dism /Image:c:\w8mnt /Set-ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+imagex /flags "ProfessionalWMC" /info c:\w8\sources\install.wim 1 "Windows 8.1 Pro with Media Center" "Windows 8.1 Pro with Media Center"
+
+
+How to Integrate a Language Pack to WIM Image
+=============================================
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:c:\mount /Add-Package /PackagePath:"D:\-- AppZ --\-- Systemsoftware --\Windows 10\Updates\Windows10.0-KB3074683-x64.cab"
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit
+
+
+How to Analyze the WinSxS folder
+================================
+dism /Online /Cleanup-Image /AnalyzeComponentStore 
+
+
+How to Cleanup and Remove Old and Unwanted Update Files from a Install.wim Image File Using the /ResetBase switch with the /StartComponentCleanup parameter of DISM.exe on a running version of Windows 8.1 removes all superseded versions of every component in the component store The /ResetBase kill all updates before this version. This makes your current Update the base for all later updates.
+======================================================================================
+dism /Mount-Wim /WimFile:c:\w8\sources\install.wim /index:1 /MountDir:c:\w8mnt
+dism /Image:c:\w8mnt /Cleanup-Image /StartComponentCleanup /ResetBase
+dism /Unmount-Wim /MountDir:c:\w8mnt /commit

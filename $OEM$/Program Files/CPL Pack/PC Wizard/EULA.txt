@@ -1,0 +1,41 @@
+SOFTWARE LICENSE AGREEMENT for
+PC WIZARD 2009
+
+  TERMS AND CONDITIONS :
+
+    * PC WIZARD 2009 is 100% free. 
+
+    * You may distribute PC WIZARD 2009 as you want 
+      (FTP, Magazine, CD-Roms...) but any commercial 
+      use is prohibited. If you distribute PC Wizard 
+      2008 on a magazine with CD or similar, we would 
+      be glad if you send us a specimen copy.
+
+    * You may not alter this software in any way, including 
+      changing help and text files. You may modify only the 
+      strings in the language files located in the "Language" 
+      folder. 
+
+    * PC WIZARD 2009 IS DISTRIBUTED "AS IS".  
+      NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED.
+      YOU USE IT AT YOUR OWN RISK.
+      THE AUTHORS WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, 
+      LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR 
+      MISUSING THIS SOFTWARE.
+
+    * You are hereby licensed to make any number of backup copies
+      of this free software and documentation. You can give the copy 
+      of the software to anyone or distribute the freeware version 
+      of the software providing that no additional fee is charged
+      and the package files are not modified in any way.
+
+    * BY USING THE SOFTWARE YOU ACKNOWLEDGE THAT YOU HAVE 
+      READ AND UNDERSTOOD THIS AGREEMENT AND YOU AGREE TO BE 
+      BOUND BY THIS AGREEMENT'S TERMS AND CONDITIONS.
+      If you do not agree with the terms of this license you must 
+      remove PC WIZARD 2009 files from your storage devices and cease 
+      to use the product.
+
+
+    Copyright (c) 1996-2009 Laurent KUTIL and Franck DELATTRE.
+    All rights reserved.

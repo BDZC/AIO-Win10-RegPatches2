@@ -1,0 +1,38 @@
+[PCWIZ]
+Ver=3.21
+Date=12-august-2012
+
+[MEM]
+0=Intel Arrandale + PC3-8500 7-7-7-20 + Intel Core i7 L640,30461,25414,20501,7200,20894
+1=Intel IMC Bridge + PC3-10600 7-7-7-19 + Intel Core i7 920,30140,25565,24197,11214,22779
+2=Intel Sandy Bridge + PC3-10600 9-9-9-24 + Intel Core i7 2600,81037,58435,30569,16551,46648
+3=Intel IMC Bridge + PC3-10700 9-9-9-24 + Intel Core i5 750,34360,29118,27444,14105,26257
+4=Intel Sandy Bridge + PC3-10600 (CL9.0) + Intel Core i5 2450M,63161,47722,27620,9828,37083
+
+
+
+[CPU]
+0=Intel Core i7 L640,966,112,60,0,379
+1=Intel Core i7 920,2045,274,62,0,794
+2=Intel Core i7 2600,3273,509,126,0,1303
+3=Intel Core i5 750,2040,244,71,0,785
+4=Intel Core i5 2450M,1343,209,102,0,551
+
+
+
+[THD]
+
+
+[DX]
+
+
+[SPIDER]
+0=Intel Core i7 L640 + Intel Arrandale + PC3-8500 7-7-7-20 + Intel(R) HD Graphics,966,26754,7152,451,87,6406
+1=Intel Core i7 920 + Intel IMC Bridge + PC3-10700 7-7-7-19 + NVIDIA GeForce GTX 560 Ti,2045,26631,11258,2640,112,6953
+2=Intel Core i7 2600 + Intel Sandy Bridge + PC3-10600 9-9-9-24 + NVIDIA NVS 300,3273,56166,16487,736,125,15379
+3=Intel Core i5 750 + Intel IMC Bridge + PC3-10700 9-9-9-24 + NVIDIA GeForce 9600 GT,2782,30249,13810,2419,111,4937
+4=Intel Core i5 2450M + Intel Sandy Bridge + PC3-10600 (CL9.0) + Intel(R) HD Graphics Family,65572,46886,9840,405,110,12281
+
+
+[CUDA]
+

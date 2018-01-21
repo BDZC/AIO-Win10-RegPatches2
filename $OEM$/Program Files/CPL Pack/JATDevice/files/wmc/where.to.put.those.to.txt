@@ -1,0 +1,15 @@
+tokens.dat and data.dat (note that the latter is 'HIDDEN'):
+
+Windows 8
+Windows\System32\spp\Store
+
+Windows 8.1
+Windows\System32\spp\Store\2.0
+
+cache.dat:
+
+Windows 8
+Windows\System32\spp\Store\Cache
+
+Windows 8.1
+Windows\System32\spp\Store\2.0\Cache

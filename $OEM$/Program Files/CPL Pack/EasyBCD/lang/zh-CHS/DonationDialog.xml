@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="chkDontRemind" value="不要再提醒我" version="1" />
+    <string key="btnCancel" value="不 谢谢" version="1" />
+    <string key="btnDonate" value="捐赠" version="1" />
+    <string key="lblDonationIntro" derive="true" />
+    <string key="donationTitle" value="支持EasyBCD 帮助你!" version="1" />
+    <string key="lblYouDonate" value="你会帮助EasyBCD拯救更多的PC吗?" version="1" />
+    <string key="DonationDialog" value="EasyBCD帮助到你了吗？" version="1" />
+  </strings>
+</localization>

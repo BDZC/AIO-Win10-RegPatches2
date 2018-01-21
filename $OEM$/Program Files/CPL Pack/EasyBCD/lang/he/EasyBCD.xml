@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="linuxAuto" value="מצא והטען באופן אוטומטי" version="1" />
+    <string key="communityText" value="מהדורה הקהילה easybcd בחופשיות רישיון לשימוש מסחרי. &#xD;&#xA;אם אתה משתמש בתוכנה זו בסביבה מסחרית, נא לחץ על 'ביטול' להלן כדי לרכוש רישיון מסחרי. אחרת, לחץ על 'אישור' כדי להמשיך." version="1" />
+    <string key="communityTitle" value="EasyBCD גרסת קהילה" version="1" />
+    <string key="bcdInUse" value="הקובץ הנוכחי נמצא בשימוש ולא ניתן לפתוח על-ידי easybcd. אם אתה מנסה (מחדש) בחר במאגר מערכת, הקש לא מתחת ולאחר מכן להשתמש באפשרות &quot;טעינת מערכת החנות&quot; מתוך תפריט קובץ.&#xD;&#xA;&#xD;&#xA;האם ברצונך לבחור חנות שונים לשימוש ב- easybcd?" version="1" />
+    <string key="bcdInUseTitle" value="שגיאה של הפרת גישה" version="1" />
+    <string key="accessDenied" value="הגישה נדחתה" version="1" />
+    <string key="uncUnsupported" value="נתיבי רשת אינם נתמכים עבור תכונה זו. נא הזן נתיב אחר ונסה שוב" version="1" />
+    <string key="uncUnsupportedTitle" value="נתיבי unc אינו נתמך" version="1" />
+    <string key="invalidPath" value="קובץ או נתיב שם לא חוקי זוהה. נא הזן נתיב חוקי כדי להמשיך" version="1" />
+    <string key="invalidPathTitle" value="נתיב לא חוקי" version="1" />
+    <string key="updateCheck" value="מחפש עדכונים" version="1" />
+    <string key="updateFailed" value="לא ניתן לחפש עדכונים אנא וודאו כי הינכם מחוברים לאינטרנט" version="1" />
+    <string key="updateFailedSB" value="EasyBCD לא ניתן לבצע עדכונים" version="1" />
+    <string key="updateFound" value="נמצא גרסה חדשה של התוכנה" version="1" />
+    <string key="updateFoundText" value="נמצא גרסה חדשה של התוכנה האם ברצונכם לבצע עדכון כעת?" version="1" />
+    <string key="updateNone" value="ברשותך הגרסה החדישה ביותר" version="1" />
+    <string key="install" value="התקן" version="1" />
+    <string key="remove" value="הסר" version="1" />
+    <string key="adminLine1" value="easybcd נדרשות הרשאות מנהל מערכת כדי לפעול כהלכה, לא ניתן להמשיך" version="1" />
+    <string key="adminLine2" value="נא היכנס או הפעל כמנהל מערכת כדי להמשיך" version="1" />
+    <string key="adminTitle" value="הגישה נדחתה" version="1" />
+    <string key="easybcdBackup" value="EasyBCD גיבוי" version="1" />
+    <string key="yes" value="כן" version="1" />
+    <string key="no" value="לא" version="1" />
+    <string key="registryFailed" value="הרישום נכשל" version="1" />
+    <string key="commercialEdition" value="גרסה מסחרית" version="1" />
+    <string key="communityEdition" value="גרסת קהילה" version="1" />
+    <string key="failedAddTitle" value="הוספת רשומה נכשלה!" version="1" />
+    <string key="msdosHelp" value="על מנת easybcd לבצע אתחול לתוך ms-dos 6. x או ב- windows 3. x, io.sys ו msdos. sys חייב להיות ההתחלה של המחיצה הפעילה.&#xD;&#xA;&#xD;&#xA;לקבלת מידע נוסף אודות כיצד זו מושגת, לחץ על 'כן' כדי לפתוח את הדף בתיעוד easybcd ערכים המבוססות על dos. אם היו מעדיפים לא תצוגה בתיעוד עכשיו, לחץ 'לא' במקום זאת." version="1" />
+    <string key="msdosHelpTitle" value="קרא את התיעוד של ms-dos של easybcd?" version="1" />
+    <string key="addedFormat" value="{0} נוספו לתפריט האתחול בהצלחה!" version="1" />
+    <string key="neogrubRemoved" value="neogrub הוסרו בהצלחה!" version="1" />
+    <string key="vhdErrorTitle" value="שגיאה בהוספת ערך vhd" version="1" />
+    <string key="errorSpaces" value="נתיב התמונה אינה יכולה לכלול רווחים. נא לתקן זאת ונסה שוב." version="1" />
+    <string key="path" value="ספריה:" version="1" />
+    <string key="name" value="שם:" version="1" />
+    <string key="drive" value="כונן:" version="1" />
+    <string key="browseFileTitle" value="חפש קובץ" version="1" />
+    <string key="wimFiles" value="Windows Image קובץ" version="1" />
+    <string key="vhdFiles" value="קובץ כונן וירטואלי" version="1" />
+    <string key="isoFiles" value="ISO קובץ" version="1" />
+    <string key="imgFiles" value="IMG Files" version="1" />
+    <string key="bcdFiles" value="EasyBCD קבצי גיבוי" version="1" />
+    <string key="warning" value="אזהרה!" version="1" />
+    <string key="mbrSuccess" value="MBR נכתב בהצלחה" version="1" />
+    <string key="bcdResetTitle" value="BCD אחזור" version="1" />
+    <string key="unsupportedOSTitle" value="מערכת  הפעלה זו אינה נתמכת!" version="1" />
+    <string key="errorNoRestoreTitle" value="שגיאת אחזור" version="1" />
+    <string key="confirmDelete" value="האם אתם בטוחים כי ברצונכם למחוק זאת?" version="1" />
+    <string key="confirmDeleteTitle" value="מחק?" version="1" />
+    <string key="thankYou" value="תודה על התמיכה" version="1" />
+    <string key="confirmRestart" value="האם ברצונכם לאתחל את המחשב?" version="1" />
+    <string key="confirmRestartTitle" value="אתחול?" version="1" />
+    <string key="sysInfo" value="מידע על המערכת" version="1" />
+    <string key="sysInfoText" value="כאן ניתן לקבל את כל המידע על החומרה ותוכנה של מחשבכם" version="1" />
+    <string key="powerConsole" value="EasyBCD Power Console" version="1" />
+    <string key="powerConsoleText" value="Quick access to a command-line shell with full administrative privileges. Use it for carrying out system functions or quick access to bcdedit and bootsect.exe." version="1" />
+    <string key="sysRestore" value="שיחזור מערכת" version="1" />
+    <string key="sysRestoreText" value="שיחזור המערכת במקרה של בעיה" version="1" />
+    <string key="controlPanel" value="לוח בקרה" version="1" />
+    <string key="controlPanelText" value="הפעל את לוח הבקרה " version="1" />
+    <string key="iRebootText" value="עוזר app neosmart טכנולוגיות עבור easybcd. ireboot יושב בשורת המשימות שלך (תופס רק 400 kb של זיכרון!) ומאפשר לך לבחור באיזו מערכת הפעלה לאתחל לתוך בקלות ובמהירות." version="1" />
+    <string key="errorNoEntriesTitle" value="לא נוצרו רשומות" version="1" />
+    <string key="isoHelpTitle" value="אודות ISO אפשריות" version="1" />
+    <string key="userCancel" value="הפעולה בוטלה ע&quot;י המשתמש" version="1" />
+    <string key="renameSuccess" value="השינוי שם הצליח" version="1" />
+    <string key="entryRemovedFormat" value="{0} הוסרו" version="1" />
+    <string key="drive2" value="כונן" version="1" />
+    <string key="bcdResetStatus" value="החזרת הגדרות לברירת מחדל הצליחה" version="1" />
+    <string key="bcdRepaired" value="התיקון הצליח" version="1" />
+    <string key="configSaved" value="רשות ההגדרות בוצע בהצלחה" version="1" />
+    <string key="backupSuccess" value="הגיבוי בוצע בהצלחה" version="1" />
+    <string key="restoreSuccess" value="השיחזור בוצע בהצלחה" version="1" />
+    <string key="bcdRefresh" value="הנתונים המאוחסנים במטמון של bcd עברה רענון בהצלחה" version="1" />
+    <string key="optionsSaved" value="ההגדרות נשמרו בהצלחה" version="1" />
+    <string key="orderSaved" value="הרשומה שהוזנה נשמרה" version="1" />
+    <string key="easybcdStatus" value="EasyBCD מצב נוכחי" version="1" />
+    <string key="saveFileTitle" value="שמור בשם" version="1" />
+    <string key="updateFoundText2" value="גירסה חדשה של easybcd נמצאה. האם ברצונך easybcd כדי לעדכן באופן אוטומטי את הגרסה?&#xD;&#xA;&#xD;&#xA;הקש &quot;כן&quot; באופן אוטומטי להוריד ולשדרג, 'לא' כדי לראות את רשימת השינויים, שדרוג ידני או 'ביטול' כדי לבטל." version="1" />
+  </strings>
+</localization>

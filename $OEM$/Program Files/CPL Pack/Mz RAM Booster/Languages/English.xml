@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<MzUltimateTools>
+
+
+  <MzServicesManager>
+    <a01>Automatic</a01>
+    <a02>Automatic (Delayed)</a02>
+    <a03>Manual</a03>
+    <a04>Disabled</a04>
+    <refresh>Refresh List</refresh>
+    <start>Start Service</start>
+    <stop>Stop Service</stop>
+    <auto>Automatic Start</auto>
+    <man>Manual Start</man>
+    <auto2>Delayed Auto Start*</auto2>
+    <dsd>Disable Start</dsd>
+    <opt>Optimize Services</opt>
+    <ldp>Load Profile</ldp>
+    <svp>Save Profile</svp>
+    <vwp>View Profile</vwp>
+    <options>Options</options>
+    <tasks>Tasks</tasks>
+    <prof>Profiles</prof>
+    <upd>Check for updates</upd>
+    <about>About</about>
+    <task2>Only for Windows Vista and 7</task2>
+    <scdesc>Service description:</scdesc>
+    <col1>Service Name</col1>
+    <col2>Status</col2>
+    <col3>StartUp Type</col3>
+    <col4>Path</col4>
+    <lang>Language</lang>
+    <theme>Theme</theme>
+    <upd>Check for updates</upd>
+    <exit>Exit</exit>
+    <dlgload>Select a profile created by Mz Services Manager...</dlgload>
+    <dlgsave>Saving profile...</dlgsave>
+    <savedone1>Profile</savedone1>
+    <savedone2>created successfully!</savedone2>
+    <loadtop>Mz Services Manager Profiles...</loadtop>
+    <ldname>Profile Name:</ldname>
+    <ldpath>Profile Path:</ldpath>
+    <ldman>Force 'Manual' services to start</ldman>
+    <ldbut>Load Profile</ldbut>
+    <ldclose>Close</ldclose>
+    <ldok>Profile applied successfully!</ldok>
+    <opttop>Optimize Windows Services</opttop>
+    <optlbl>Please, check the services you want to optimize (=disable):</optlbl>
+    <optcol1>Description</optcol1>
+    <optb1>Optimize</optb1>
+    <optsc1a>Do not allow to share files and printers, through a Local Area Network (LAN)</optsc1a>
+    <optsc2a>I do not want to access other computers file systems</optsc2a>
+    <optsc3a>I do not use IPv6 internet protocol</optsc3a>
+    <optsc4a>I do not have a printer or a camera</optsc4a>
+    <optsc5a>I do not want to send a report to Microsoft each time my pc receives an error</optsc5a>
+    <optsc6a>Disable Windows time synchronization</optsc6a>
+    <optsc7a>Disable Tablet PC pen and ink functionality</optsc7a>
+    <optsc8a>I do not use offline files</optsc8a>
+    <optsc9a>Disable auto-play window, when inserting a USB Disk, CD, removable storage, etc.</optsc9a>
+    <optsc10a>I do not have compatibility issues with software, designed for previous operating systems</optsc10a>
+    <optsc11a>My network does not use NetBIOS and-or WINS</optsc11a>
+    <optsc12a>I have installed a Firewall software and i do not need Windows Firewall</optsc12a>
+    <optsc13a>I have installed an Anti-Spyware and i do not need Windows Defender</optsc13a>
+    <error1>Error, loading profile. Maybe the profile is corrupted.</error1>
+    <error2>Error, service cannot be started.</error2>
+    <error3>Error, service cannot be stopped.</error3>
+    <error4>Error, service stratup type cannot be changed.</error4>
+    <misc1>Optimization completed successfully!</misc1>
+    <misc2>To optimize Windows Xp services, please use Mz Ultimate Tweaker's tweak section.</misc2> 
+ </MzServicesManager>
+
+
+  <MzStartUpManager>
+    <cola>Name</cola>
+    <colb>Starts with</colb>
+    <colc>Path</colc>
+    <allu>All Users</allu>
+    <sts>Status</sts>
+    <enbld>Enabled</enbld>
+    <dbld>Disabled</dbld>
+    <curu>Current User</curu>
+    <pra> Product Name:  </pra>
+    <prb> Product Company:  </prb>
+    <prc> Product Version:  </prc>
+    <prd> Product Description:  </prd>
+    <loc> Entry Location:  </loc>
+    <tsk> Tasks</tsk>
+    <qmn> Right click, for quick menu</qmn>
+    <ref>Refresh StartUp List</ref>
+    <enb>Enable Selected</enb>
+    <dbd>Disable Selected</dbd>
+    <dlt>Delete Selected</dlt>
+    <dld>Are you sure you want to delete this entry?</dld>
+    <run>Run Now</run>
+    <rnd>Error, cannot run the current file.</rnd>
+    <opn>Open Folder</opn>
+    <opd>An error occurred! Cannot retrieve the folder, for the current entry.</opd>
+    <fpr>File Properties</fpr>
+    <ggl>Google it!</ggl>
+    <ggd>Error, cannot open browser, to google the desired entry.</ggd>
+    <add>Add New Entry</add>
+    <abt>About</abt>
+    <opt>Options</opt>
+    <rep>Reports</rep>
+    <wrt>Write entries to a text file</wrt>
+    <exp>Explore older reports</exp>
+    <del>Delete all existing reports</del>
+    <lng>Language</lng>
+    <thm>Theme</thm>
+    <upd>Check for updates</upd>
+    <abt>About</abt>
+    <ext>Exit</ext>
+    <slct>Select file...</slct>
+    <addn>Add new StartUp entry:</addn>
+    <file>File Path:</file>
+    <desr>Desired name to give to the startup entry</desr>
+    <strl>StartUp Location:</strl>
+    <brws>Browse</brws>
+    <addw>Add Now!</addw>
+    <lnga>New StartUp entry added successfully!</lnga>
+    <lera>Please fill the text boxes, with the appropriate information and then try again.</lera>
+    <lerb>Error, the file path you have entered, does not exists. Do you want to continue?</lerb>
+    <lerc>Error, trying creating shortcut. Please, check again the options.</lerc>
+    <lerd>Error, trying creating shortcut. Please, check again the options.</lerd>
+  </MzStartUpManager>
+
+
+  <MzUltimateCleaner>
+    <about>About</about>
+    <psc>Please select the disks you want to scan:</psc>
+    <cola1>Drive name</cola1>
+    <cola2>Total size (MB)</cola2>
+    <cola3>Free space (MB)</cola3>
+    <cola4>Format</cola4>
+    <intl>Use Mz Intelligent Scanning Method (faster)</intl>
+    <opt>Options</opt>
+    <trs>Traces</trs>
+    <cls>Close</cls>
+    <scan>Start Scan</scan>
+    <nscan>New Scan</nscan>
+    <sscan>Stop Scan</sscan>
+    <inp>Please wait, scanning is in progress:</inp>
+    <curd>Currently scanning drive:</curd>
+    <curf>Searching for temporary files in folder:</curf>
+    <ffound>Files found:</ffound>
+    <totp>Total progress:</totp>
+    <tfound>The following files were found:</tfound>
+    <colb1>Name</colb1>
+    <colb2>Found Items</colb2>
+    <colb3>Size (MB)</colb3>
+    <colba>Safe Cleaning</colba>
+    <colbb>Advanced Cleaning</colbb>
+    <sall>Select all</sall>
+    <snone>Select none</snone>
+    <dsel>Delete selected</dsel>
+	<dlting>Please wait, deleting...</dlting>
+    <colc1>File name</colc1>
+    <colc2>Size (KB)</colc2>
+    <colc3>Path</colc3>
+    <done1>Successful</done1>
+    <done2>Cleaned up:</done2>
+    <done3>files</done3>
+    <sopts>Scan options</sopts>
+    <lang>Language</lang>
+    <thm>Theme</thm>
+    <updts>Check for updates</updts>
+    <exit>Exit</exit>
+    <ffindb>Files to find:</ffindb>
+    <addnew>Add new extension</addnew>
+    <extn>Extension:</extn>
+    <ex>Example:</ex>
+    <rems>Remove selected</rems>
+    <dlta>Delete:</dlta>
+    <move>Move files to recycle bin</move>
+    <perm>Delete files permanently</perm>
+    <apply>Apply</apply>
+    <saved>Changes saved successfully!</saved>
+    <error1>Error! Corrupted database. Please, reinstall Mz Ultimate Cleaner.</error1>
+    <errora>Error! Please, enter a valid extension.</errora>
+    <errorb>This extension already exists in extension list!</errorb>
+    <errorc>Extension added! You must click the 'Apply' button, to save changes!</errorc>
+    <dlg2>Clean traces</dlg2>
+    <seltr>Select traces you want to clean...</seltr>
+    <clnow>Clean selected traces now</clnow>
+    <trdone>Traces cleaned successfully!</trdone>
+    <tmp>Temporary Files</tmp>
+    <hst>History</hst>
+    <pass>Passwords</pass>
+    <fdata>Form Data</fdata>
+    <oth>Others...</oth>
+    <wmp>Clear Windows Media Player Recent List</wmp>
+    <recl>Empty Recycle Bin</recl>
+    <dns>Clean DNS Cache</dns>
+    <recu>Windows Recent Used Files</recu>
+    <clin>Cleaning in progress, please wait...</clin>
+    <curcln>Currently cleaning:</curcln>
+    <wintmp>Windows Temporary Files</wintmp>
+    <utmp>User Temporary Files</utmp>
+    <intmp>Internet Temporary Files</intmp>
+    <off>Office Installation Files</off>
+    <pref>Windows Prefetch Files</pref>
+    <winlog>Windows Update Log Files</winlog>
+    <windmp>Windows Dump Files</windmp>
+    <down>Downloaded Installations</down>
+    <winupd>Windows Temporary Update Files</winupd>
+    <moz>Mozilla Firefox Temporary Files</moz>
+	<msn>Received Files</msn>
+  </MzUltimateCleaner>
+  
+  
+  <MzRegistryOptimizer>
+    <l1>Over time data becomes scattered within the registry file and when information</l1>
+	<l2>is deleted from the registry, holes are left which fragment the data within the registry.</l2>
+	<l3>Mz Registry Optimizer, optimizes your registry by removing gaps and wasted space.</l3>
+	<l4>This procedure, will increase applications response time and reduce registry access time!</l4>
+	<reginfo>Registry Information</reginfo>
+	<totalsize>Current Registry Size:</totalsize>
+	<ten>Total Registry Entries:</ten>
+	<last>Last Date Optimized:</last>
+	<dets>View Registry Details</dets>
+	<optns>Options</optns>
+	<bk>Back</bk>
+	<run>Analyze Registry</run>
+	<apply>Apply New Registry</apply>
+	<about>About</about>
+	<wait>Please wait...</wait>
+	<anreg>Analyzing Registry</anreg>
+	<alz>Analyzing:</alz>
+	<path>Path:</path>
+	<curen>Current Registry Entry Size:</curen>
+	<totalp>Total Progress:</totalp>
+	<done>Registry Analyzed Successfully</done>
+	<cs>Current Registry Size:</cs>
+	<ns>New Registry Size:</ns>
+	<tr>Registry Reduced Totally:</tr>
+	<view>View More Details</view>
+	<rem>*Remember to  'Apply New Registry' for changes to take effect!</rem>
+	<regd>Registry Details</regd>
+	<na>Name</na>
+	<paths>Path</paths>
+	<cskb>Current size (KB)</cskb>
+	<nskb>New size (KB)</nskb>
+	<rate>Rate %</rate>
+	<close>Close</close>
+	<exit>Exit</exit>
+	<check>Check for updates</check>
+	<lan>Language</lan>
+	<theme>Theme</theme>
+	<pclose>It is recommended to close any open programs, before continuing!</pclose>
+	<restart>You need to restart Windows, after applying new registry! Restart Now?</restart>
+	<priv>You don't have required privilege to use this program , make sure that you run this program as a member of administrator group.</priv>
+	<newok>New registry activated successfully!</newok>
+ </MzRegistryOptimizer>
+  
+  
+  <MzRAMBooster>
+	<sysinfo>System Information</sysinfo>
+	<speed>System SpeedUp</speed>
+	<opts>Options</opts>
+	<trayopts>Tray Icon Options</trayopts>
+	<raminfo>Physical Memory (RAM) Information:</raminfo>
+	<total>Total Memory:</total>
+	<used>Used Memory:</used>
+	<free>Free Memory:</free>
+	<geninfo>General Information:</geninfo>
+	<totalmb>Total MB Recovered:</totalmb>
+	<totaltr>Total Optimizations:</totaltr>
+	<vitinfo>Virtual Memory Information:</vitinfo>
+	<totalv>Total Memory:</totalv>
+	<freev>Free Memory:</freev>
+	<cpuinfo>Total Cpu Usage:</cpuinfo>
+	<updint>Update Interval:</updint>
+	<sec>sec</sec>
+	<tasks>Tasks</tasks>
+	<smopt>Smart Optimize</smopt>
+	<recover>Recover RAM</recover>
+	<cpubst>Cpu Boost</cpubst>
+	<sets>Settings</sets>
+	<exit>Exit</exit>
+	<optopts>Optimize Options</optopts>
+	<autoram>Automatic optimize, if free RAM is below (MB):</autoram>
+	<pause>Pause between Auto-Optimizations (minutes):</pause>
+	<autoevery>Automatic optimize every (minutes):</autoevery>
+	<optcpu>Optimize when CPU usage is lower than (%):</optcpu>
+	<genopts>General Options</genopts>
+	<load>Load on windows startup</load>
+	<optstart>Optimize on startup</optstart>
+	<systray>Start in system tray</systray>
+	<beep>Beep when optimizing</beep>
+	<check>Check for updates on startup</check>
+	<recopts>Recover Options</recopts>
+	<trymb>Try to recover (MB):</trymb>
+	<no>Number of tries:</no>
+	<recopt>Recommended Values</recopt>
+	<apply>Apply Values</apply>
+	<systweaks>System Tweaks</systweaks>
+	<lau>Disable NTFS 'Last Access Update Stamp'</lau>
+	<fc>Disable 8.3 Filename Creation</fc>
+	<dep>Always Keep Windows Kernel In Memory</dep>
+	<autodlls>Automatic Unload Unused DLLs</autodlls>
+	<cpuprior>Cpu Priority Tweaks</cpuprior>
+	<fore>Boost Foreground Applications</fore>
+	<back>Boost Background Tasks</back>
+	<windef>Windows Default</windef>
+	<shut>Shutdown Tweaks</shut>
+	<autoend>Automatic End Running Tasks</autoend>
+	<hat>Hung Application Timeout:</hat>
+	<kat>Wait To Kill Application Timeout:</kat>
+	<kst>Wait To Kill Service Timeout:</kst>
+	<msec>msec</msec>
+	<numicon>Numeric Tray Icon Color:</numicon>
+	<showfree>Show Free RAM</showfree>
+	<mzramicon>Mz RAM Booster Icon</mzramicon>
+	<color>Numeric Tray Icon Options</color>
+	<icontxt>Free RAM:</icontxt>
+	<dlgapply>Tweaks applied successfully! You must restart your computer, for changes to take effect.</dlgapply>
+	<dlgapply2>New values applied successfully!</dlgapply2>
+	<waitopt>Please wait, optimizing...</waitopt>
+	<dlgerror>You don't have required privilege to use this feature. Please, try running application 'as administrator'.</dlgerror>
+    <lng>Language</lng>
+    <thm>Theme</thm>
+    <upd>Check for updates</upd>
+    <abt>About</abt>
+	<help>Help</help>
+ </MzRAMBooster>
+ 
+ 
+ <MzCPUAccelerator>
+	<help>Help</help>
+	<info>Information</info>
+	<opts>Options</opts>
+	<excl>Exclusions</excl>
+	<cpumng>CPU Manager</cpumng>
+	<global>Global Information:</global>
+	<curopt>Currently Optimizing:</curopt>
+	<accdis>Acceleration is disabled</accdis>
+	<totalapps>Total applications accelerated:</totalapps>
+	<cpuen>CPU manage feature:</cpuen>
+	<en>Enabled</en>
+	<dis>Disabled</dis>
+	<clock>Processor's clock speed(MHz):</clock>
+	<cpus>Number of CPU cores detected:</cpus>
+	<cpusage>Total processor usage:</cpusage>
+	<act>Activate</act>
+	<deact>De-activate</deact>
+	<setts>Settings</setts>
+	<about>About</about>
+	<exit>Exit</exit>
+	<cores>Manage the cores, of your multicore processor</cores>
+	<enmanage>Enable 'CPU Manage' feature</enmanage>
+	<listp>*Run Mz CPU Accelerator as administrator, to list all running processes.</listp>
+	<runew>Run new process</runew>
+	<addnew>Add new process</addnew>
+	<rems>Remove selected</rems>
+	<pname>Process Name</pname>
+	<aff>Processor Affinity</aff>
+	<exclude>Add here applications you want to exclude from optimizing</exclude>
+	<priority>Priority</priority>
+	<level>Priority Level, for the foreground (optimized) application:</level>
+	<genopts>General Options:</genopts>
+	<startup>Load on Windows startup</startup>
+	<acted>Start activated</acted>
+	<mini>Start minimized</mini>
+	<updts>Check for updates on startup</updts>
+	<tray>Tray Icon Options:</tray>
+	<icon>Show Mz CPU Accelerator Icon</icon>
+	<showcpu>Shows CPU usage</showcpu>
+	<fp>File path:</fp>
+	<browse>Browse</browse>
+	<selaff>Select processor affinity</selaff>
+	<startapp>Start Application</startapp>
+	<atleast>Please, select at least one CPU core</atleast>
+	<addexcl>Add process, to exlusion list...</addexcl>
+	<refresh>Refresh Processes</refresh>
+	<desired>Desired priority:</desired>
+	<p0>Idle</p0>
+	<p1>Low</p1>
+	<p2>Normal (Default)</p2>
+	<p3>Above Normal</p3>
+	<p4>High</p4>
+	<p5>Realtime</p5>
+	<selcpu>Select CPU:</selcpu>
+	<totalprcs> Total processes found:</totalprcs>
+	<add>Add</add>
+	<close>Close</close>
+	<addmng>Add process, to CPU manage list...</addmng>
+	<curpaff>Affinity</curpaff>
+	<pd1>Please, make sure that you have selected a 'Priority Level'.</pd1>
+	<pd21>Process</pd21>
+	<pd22>with</pd22>
+	<pd23>priority added successfully to the exclusion list!</pd23>
+	<pd3>already exists in the exlusion list. Do you want to replace it?</pd3>
+	<pd4>added successfully to the exclusion list!</pd4>
+	<cm1>cores added successfully to the CPU manage list!</cm1>
+	<cm2>already exists in the CPU manage list. Do you want to replace it?</cm2>
+    <lng>Language</lng>
+    <thm>Theme</thm>
+    <upd>Check for updates</upd>
+	<exit>Exit</exit>
+	<plevel>Priority Level</plevel>
+ </MzCPUAccelerator>
+ 
+ 
+ <MzGameAccelerator>
+	<normal>Switch to Normal Mode</normal>
+	<game>Switch to Game Acceleration Mode</game>
+	<avlopts>Available Optimizations</avlopts>
+	<serv>Temporary stop unused windows services</serv>
+	<ram>'Smart Optimize' (Clean + Defrag) RAM</ram>
+	<power>Assign more cpu power to the game</power>
+	<usage>Reduce processor usage, for other applications</usage>
+	<rec>For maximum performance, check all the above options!</rec>
+	<load>Load on windows startup</load>
+	<systray>Start in system tray</systray>
+	<sets>Settings</sets>
+	<about>About</about>
+	<exit>Exit</exit>
+	<tonrml>Please wait, switching to Normal Mode:</tonrml>
+	<tprog>Total Progress:</tprog>
+	<wait>Please wait, optimizing...</wait>
+	<report>Optimization Report:</report>
+	<cprog>Current Progress:</cprog>
+	<cnl>Cancel</cnl>
+	<stserv>Stopping Unused Windows Services...</stserv>
+	<sdserv>Stopping service:</sdserv>
+	<stservs>Stopping Unused Windows Services</stservs>
+	<ok>Done!</ok>
+	<redapp>Reducing Processor Usage For Other Applications...</redapp>
+	<sredapp>Reduce Processor Usage For Other Applications</sredapp>
+	<togames>Assigning More CPU Power To Games...</togames>
+	<stogames>Assigning More CPU Power To Games</stogames>
+	<bram>Smart Optimizing RAM...</bram>
+	<sram>Smart Optimizing RAM</sram>
+	<cls>Close</cls>
+	<accok>ACCELERATION MODE ENABLED SUCCESSFULY!</accok>
+	<acchlp>Press OK to minimize or cancel to continue.</acchlp>
+	<ts>Services Stopped:</ts>
+	<tp>Processes Optimized:</tp>
+	<pfg>Priority for games:</pfg>
+	<real>Realtime</real>
+	<tram>RAM Recovered:</tram>
+	<er>Error retrieving services database. Please, re-install!</er>
+	<cinfo>You are about to exit Mz Game Accelerator. Do you want to switch back to 'Normal Mode'?</cinfo>
+	<accmode>(Acceleration Mode)</accmode>
+	<nmode>(Normal Mode)</nmode>
+	<lng>Language</lng>
+    <thm>Theme</thm>
+    <upd>Check for updates</upd>
+ </MzGameAccelerator>
+ 
+ 
+ <MzRegistryBackup>
+	<bckb>Backup Registry</bckb>
+	<rstb>Restore Registry</rstb>
+	<schb>Schedule Backup</schb>
+	<chb>Create complete registry backup</chb>
+	<ccb>Create custom registry backup</ccb>
+	<dsc>Description:</dsc>
+	<bckl>Backup location:</bckl>
+	<crbn>Create Backup Now</crbn>
+	<col0>Name</col0>
+	<col1>Path</col1>
+	<col2>Size (KB)</col2>
+	<cbvp>Creating backup, please wait...</cbvp>	
+	<cbvs>Registry backup will compressed to save space!</cbvs>
+	<bup>Backing up:</bup>
+	<crep>Current Registry Entry Path:</crep>
+	<crbd>Current Backup Description:</crbd>
+	<crbp>Current Registry Backup Path:</crbp>
+	<rspw>Restoring backup, please wait...</rspw>
+	<ring>Restoring:</ring>
+	<curr>Current Restoring:</curr>
+	<totp>Total Progress:</totp>
+	<rreg>Restore Registry</rreg>
+	<rpf>Restore points found:</rpf>
+	<brbk>Browse backup</brbk>
+	<dlts>Delete selected</dlts>
+	<bckd>Backup description:</bckd>
+	<dtcr>Date created:</dtcr>
+	<path>Path:</path>
+	<brn>Restore Registry Now</brn>
+	<srbk>Schedule a registry backup</srbk>	
+	<grp1>Task to perform:</grp1>
+	<grp2>Task options:</grp2>
+	<grp3>Registry backup path:</grp3>
+	<opt1>Daily</opt1>
+	<opt2>Weekly</opt2>
+	<opt3>Monthly</opt3>
+	<opt4>One time only</opt4>
+	<opt5>When my computer starts</opt5>
+	<scnd>Select date:</scnd>
+	<selt>Select time:</selt>
+	<stdo>Select week day</stdo>
+	<seld>Select day:</seld>	
+	<bloc>Backup location:</bloc>
+	<expr>Explore Schedules</expr>
+	<rems>Delete Schedule</rems>
+	<crts>Create Schedule</crts>
+	<d1>Monday</d1>
+	<d2>Tuesday</d2>
+	<d3>Wednesday</d3>
+	<d4>Thursday</d4>
+	<d5>Friday</d5>
+	<d6>Saturday</d6>
+	<d7>Sunday</d7>
+	<dlg1>Please, enter a description.</dlg1>
+	<dlg2>Directory does not exists. Please, select another one.</dlg2>
+	<dlg3>Please, select at least one registry entry.</dlg3>
+	<dlg4>Backup already exists. Do you want to replace it?</dlg4>
+	<dlg5>Backup created successfully!</dlg5>
+	<dlg6>Schedule task created successfully!</dlg6>
+	<dlg7>It is recommended to close any running application before continuing. Proceed?</dlg7>
+	<dlg8>Please restart, before restoring another backup.</dlg8>
+	<dlg9>Please, select a restore point.</dlg9>
+	<dlg10>Restored! You need to restart, for changes to take effect. Restart now?</dlg10>
+	<dlg11>Backup restored successfully!</dlg11>
+	<dlg12>is about to create a backup. Proceed?</dlg12>
+	<dlg13>Done!</dlg13>
+	<dlg14>You don't have required privilege to use this program , make sure that you run this program as a member of administrator group.</dlg14>
+	<dlg15>Searching for restore point:</dlg15>
+	<lng>Language</lng>
+    <thm>Theme</thm>
+    <upd>Check for updates</upd>
+	<about>About</about>
+	<exit>Exit</exit>	
+ </MzRegistryBackup>
+ 
+ 
+ <MzPowerManager>
+	<plans>Power Plans</plans>
+	<opts>Options</opts>
+	<tric>Tray Icon</tric>
+	<avpn>Available Power Plans:</avpn>
+	<stpl>Switch to Power Plan</stpl>
+	<wpow>Power Options</wpow>
+	<tosc>Turn Off Screen</tosc>
+	<sets>Settings</sets>
+	<exit>Exit</exit>
+	<psts>Power Status:</psts>
+	<bcst>Battery Charge Status:</bcst>
+	<brts>Battery Remaining Time:</brts>
+	<ppos>Power Plan Options:</ppos>
+	<plin>When plugged in automatically switch to:</plin>
+	<pout>On unpluggin automatically switch to:</pout>
+	<percn>If battery drops below (%):</percn>
+	<swto>switch to:</swto>
+	<onbat>On Battery Mode:</onbat>
+	<aero>Disable Windows Aero User Interface</aero>
+	<side>Close Windows Sidebar</side>
+	<blih>Disable Backlight (Experimental)</blih>
+	<genr>General Options:</genr>
+	<stup>Run at Windows StartUp</stup>
+	<mini>Start Minimized</mini>
+	<cupd>On Start Check for Updates</cupd>
+	<tiop>Tray Icon Options:</tiop>
+	<icty>Icon Type</icty>
+	<low>Low</low>
+	<mid>Mid</mid>
+	<high>High</high>
+	<colr>Show Coloured Horizontal Bars</colr>
+	<bprc>Show Coloured Battery Percentage</bprc>
+	<mzico>Show Mz Power Manager Icon</mzico>
+	<lang>Language</lang>
+	<thm>Theme</thm>
+	<upd>Check for updates</upd>
+	<about>About</about>
+	<ptsm>Power Plan</ptsm>
+	<qpsm>Quick Options</qpsm>
+	<uknw>Unknown</uknw>
+	<chrg>Charging</chrg>
+	<nchg>Not Charging</nchg>
+ </MzPowerManager>
+ 
+ 
+ <MzShutdownScheduler>
+	<hdr1>Shutdown Method:</hdr1>
+ 	<shtm>Select Shutdown Method:</shtm>
+	<shtdwn>Shutdown</shtdwn>
+	<restrt>Restart</restrt>
+	<hbrnt>Ηibernate</hbrnt>
+	<logoff>Log Off</logoff>
+	<shop>Shutdown Options:</shop>
+	<pcls>When Program(s) Close:</pcls>
+	<cpu>Cpu Usage Lower (%):</cpu>
+	<ram>Free RAM Lower (MB):</ram>
+	<aftr>After (minutes):</aftr>
+	<dtim>Specific Date - Time:</dtim>
+	<for>for</for>
+	<sec>sec</sec>
+	<geno>General Options:</geno>
+ 	<wait>Wait Before Shutdown (sec):</wait>
+	<snd>Play Sound Before Shutdown:</snd>
+	<forc>Force Shutdown</forc>
+	<pbs>Run Program Before Shutdown:</pbs>
+	<sms>Display Message Before Shutdown:</sms>
+	<msg>Message:</msg>
+	<shwo>Options</shwo>
+	<cntd>Countdown Window</cntd>
+	<stry>Send to Tray</stry>
+	<abrt>Abort</abrt>
+	<crt>Create</crt>
+	<addp>Add new process:</addp>
+	<col0>Process Name:</col0>
+	<col1>Description:</col1>
+	<apbt>Add Process</apbt>
+	<pads>Process added successfully!</pads>
+	<cdot>General Options:</cdot>
+	<ngop>Global Options</ngop>
+	<lost>Load On Windows Startup</lost>
+	<sact>Start Activated</sact>
+	<smin>Start Minimized</smin>
+	<cdao>Countdown Window Always On Top</cdao>
+	<opac>Countdown Transparency (%):</opac>
+	<ttl>Countdown Window Title:</ttl>
+	<grpx>Countdown Items Layout Style:</grpx>
+	<horz>Horizontal</horz>
+	<vert>Vertical</vert>
+	<flow>Flow</flow>
+	<tabl>Table</tabl>
+	<shcd>Show Countdown Window</shcd>
+	<cnls>Cancel</cnls>
+	<appy>Apply Changes</appy>
+	<done>Options applied successfully!</done>
+	<prmn>Applications Remaining:</prmn>
+	<cpus>CPU Usage (%):</cpus>
+	<ramu>Free RAM (MB):</ramu>
+	<remtm>Remaining Time:</remtm>
+	<ready>Ready...</ready>
+	<snow>Shutdown Now</snow>
+	<exit>Exit</exit>
+	<lang>Language</lang>
+	<upd>Check for Updates</upd>
+	<thm>Theme</thm>
+	<about>About</about>
+ </MzShutdownScheduler>
+ 
+ 
+ <MzUltimateBooster>
+ <help>Help</help>
+ <mno>Main Options</mno>
+ <oic>Optimize Internet Connection for:</oic>
+ <ocu>Optimize Computer Usage:</ocu>
+ <lom>Last Optimization:</lom>
+ <nvr>Never</nvr>
+ <loadok>Tweaks applied successfully!</loadok>
+ <ado>Advance Options</ado>
+ <ctf>Clean Temporary Files</ctf>
+ <owb>Optimize Windows Boot Files</owb>
+ <dcr>Defrag And Compact Registry</dcr>
+ <sum>SpeedUp Mozilla Firefox Browser</sum>
+ <acb>Automatically Create Restore Point</acb>
+ <sets>Settings</sets>
+ <brs>Backup - Restore</brs>
+ <sbs>Start Boost</sbs>
+ <upto>up to</upto>
+ <for>for</for>
+ <more>more than</more>
+ <cb1a>My computer is connected to the Internet</cb1a>
+ <cb1b>My computer is not connected to the Internet</cb1b>
+ <cb1c>Achieve ultimate performance</cb1c>
+  <cbc>Do not optimize</cbc>
+ <isdn>Analog modem</isdn>
+ <wrls>Wireless Connection</wrls>
+ <cpg>Current Progress:</cpg>
+ <totp>Total Progress:</totp>
+ <pwop>Please wait, optimizing...</pwop>
+ <optd>Optimization Report...</optd>
+ <orest>You have to restart, before running optimization process again.</orest>
+ <priv>You don't have required privilege to use this program , make sure that you run this program as a member of administrator group.</priv>
+ <dws>Detecting Windows Settings...</dws>
+ <dps>Detecting Processor Information...</dps>
+ <dgc>Detecting Graphic Card Information...</dgc>
+ <dmi>Detecting Memory Information...</dmi>
+ <dds>Detecting Disk(s) Information...</dds>
+ <dt1>Operating System:</dt1>
+ <dt2>Operating System Version:</dt2>
+ <dt3>Windows Directory:</dt3>
+ <dt4>Program Files Directory:</dt4>
+ <dt5>Current User Directory:</dt5>
+ <cpun>Processor Name:</cpun>
+ <cpua>Processor Architecture:</cpua>
+ <cpus>Processor Speed:</cpus>
+ <cpuc>Processor Cores:</cpuc>
+ <l2c>Processor L2 Cache:</l2c>
+ <l3c>Processor L3 Cache:</l3c>
+ <gcn>Graphic Card:</gcn>
+ <gcd>Graphic Card Driver Version:</gcd>
+ <tram>Total RAM:</tram>
+ <aram>Available RAM:</aram>
+ <tvm>Total Virtual Memory:</tvm>
+ <avm>Available Virtual Memory:</avm>
+ <size>Size:</size>
+ <free>Free:</free>
+ <frmt>Format:</frmt>
+ <auto>Automatic</auto>
+ <enbd>Enabled</enbd>
+ <dsbd>Disabled</dsbd>
+ <done>Completed</done>
+ <opzd>Optimized</opzd>
+ <opp>Optimizing Proccessor Performance...</opp>
+ <ct1>Setting L2 Cache Size To:</ct1>
+ <ct2>Proccessor Priority Optimized To:</ct2>
+ <ct3>Boost Foreground Applications</ct3>
+ <ct4>IRQ Optimization:</ct4>
+ <ct5>Allocate Processor Resources To:</ct5>
+ <ct6>Programs</ct6>
+ <ct7>Force Windows To Re-Detect Processor on the next boot:</ct7>
+ <krnt1>Applying System Kernel Tweaks...</krnt1>
+ <krnt2>Executive Paging:</krnt2>
+ <krnt3>NTFS Last Access Update:</krnt3>
+ <krnt4>Increase File System Memory Cache Size:</krnt4>
+ <krnt5>Reserve More Space To The MFT:</krnt5>
+ <krnt6>NTFS Creates Short File Names:</krnt6>
+ <krnt7>Optimize Contiguous File Allocation Size:</krnt7>
+ <krnt8>Optimizing IO Page Limit To:</krnt8>
+ <krnt9>Force Unloading Unused DLLs:</krnt9>
+ <krnt10>Optimizing Additional Critical\Delayed Worker Threads To:</krnt10>
+ <krnt11>Entries</krnt11>
+ <strt1>Accelerating Windows StartUp...</strt1>
+ <strt2>Optimize Prefetcher - SuperPrefetcher For:</strt2>
+ <strt3>Applications And Boot</strt3>
+ <strt4>Run Startup Scripts Asynchronously:</strt4>
+ <strt5>Boot Defrag:</strt5>
+ <strt6>Quick Reboot:</strt6>
+ <asdt1>Accelerating Windows Shutdown...</asdt1>
+ <asdt2>Automatic End Tasks:</asdt2>
+ <asdt3>Hung Application Timeout:</asdt3>
+ <asdt4>Wait To Kill Application Timeout:</asdt4>
+ <asdt5>Wait To Kill Service Timeout:</asdt5>
+ <asdt6>Clear Pagefile At Shutdown:</asdt6>
+ <wint1>Optimizing Windows Settings...</wint1>
+ <wint2>Error Reporting:</wint2>
+ <wint3>Thumbnail Quality:</wint3>
+ <wint4>Ballon Tips:</wint4>
+ <wint5>Low Disk Space Checks:</wint5>
+ <wint6>Beep On Errors:</wint6>
+ <wint7>Auto Reboot On BSOD:</wint7>
+ <wint8>Icon Cache Size:</wint8>
+ <wint9>Start Menu Delay:</wint9>
+ <wint10>Speed Up .avi Media Files:</wint10>
+ <wint11>Media Player DVD Menu:</wint11>
+ <wint12>Mouse Sensitivity:</wint12> 
+ <wint13>Mouse Speed:</wint13>
+ <wint14>Keyboard Delay:</wint14>
+ <wint15>USB Selective Suspend:</wint15>
+ <wint16>WMI Logging:</wint16>
+ <wint17>WMI Events:</wint17>
+ <wint18>WMI Backup Interval:</wint18>
+ <wint19>Automatic Window Refresh:</wint19>
+ <wint20>Launch Folder Windows in a Separate Process:</wint20>
+ <wint21>Launch Windows Desktop in a Separate Process:</wint21>
+ <wint22>Launch Browser Windows in a Separate Process:</wint22>
+ <wint23>minutes</wint23>
+ <wxpt1>Enable 48bit LBA Support:</wxpt1>
+ <wxpt2>Windows Online Registration:</wxpt2>
+ <wxpt3>Windows 95 Truncated Extensions:</wxpt3>
+ <wxpt4>Long File Names And Extended Timestamps:</wxpt4>
+ <wxpt5>Open 16-bit Applications In Separated Memory Space:</wxpt5>
+ <wxpt6>Dr. Watchon Automatic Start:</wxpt6>
+ <wxpt7>Dr. Watchon Dump File Creation:</wxpt7>
+ <wxpt8>Restrict Anonymous Users:</wxpt8>
+ <wxpt9>Icon Color Resolution:</wxpt9>
+ <wxpt10>colors</wxpt10>
+ <srvt1>.dat files can not be detected:</srvt1>
+ <srvt2>Postpone sercvices optimization</srvt2>
+ <srvt3>Optimizing Windows Services...</srvt3>
+ <inrt1>Optimizing Internet Connection Speed...</inrt1>
+ <inrt2>Host Resolution Priority:</inrt2>
+ <inrt3>QoS (Quality of Service:</inrt3>
+ <inrt4>DNS Caching:</inrt4>
+ <inrt5>TLL (Time-To-Live) value:</inrt5>
+ <inrt6>MTU (Maximum Transmision Unit) Size:</inrt6>
+ <inrt7>RWIN value:</inrt7>
+ <inrt8>Allow RWIN values above 64KB:</inrt8>
+ <inrt9>MTU (Maximum Transmision Unit) Discovery:</inrt9>
+ <inrt9a>MTU (Maximum Transmision Unit) Black Hole Detection:</inrt9a>
+ <inrt10>SYN Attack Protect:</inrt10>
+ <inrt11>Selective Acknowlegemend:</inrt11>
+ <inrt12>Maximum Recent Requests:</inrt12>
+ <inrt13>TCP Window Size Auto-Tuning:</inrt13>
+ <inrt14>Automatic Detect (by Windows)</inrt14>
+ <inrt15>Internet Explorer Maximum Connections Per Server:</inrt15>
+ <w7int1>Compound TCP</w7int1>
+ <w7int2>Disable Windows Scaling heuristics</w7int2>
+ <w7int3>Direct Cache Access (DCA)</w7int3>
+ <w7int4>NetDMA (TCPA)</w7int4>
+ <bku1>Please wait, backing up registry (time consuming process)</bku1>
+ <sdps>Starting Detection Process</sdps>
+ <sops>Starting Optimization Process:</sops>
+ <clng>Cleaning Temporary Files:</clng> 
+ <tclnd>Totally cleaned:</tclnd>
+ <ofx>Optimizing Firefox:</ofx>
+ <dbf1>Defraging Boot Files (time consuming process):</dbf1>
+ <drf1>Defraging Registry Files (time consuming process):</drf1>
+ <drf2>Registry totally reduced:</drf2>
+ <ok1>Optimization finished successfully!</ok1>
+ <estm>Esplased time:</estm>
+ <resrt>Optimization completed successfully! You have to restart your computer, for changes to take effect. Restart now?</resrt>
+ <rbok>Registry backup created successfully!</rbok>
+ <anyo>It is recommended to close any running application before continuing. Proceed?</anyo>
+ <optrep>Optimization Reports</optrep>
+ <secs>seconds</secs>
+ <lang>Language</lang>
+ <thm>Theme</thm>
+ <upd>Check for updates</upd>
+ <about>About</about>
+ <exit>Exit</exit>
+ </MzUltimateBooster>
+ 
+ 
+ <Mz7Optimizer>
+ <run1>This is the first time you are running Mz 7 Optimizer. It is recommended to take a backup of your registry, before applying any tweaks to your computer. Would you like to take a backup now?</run1>
+ <help>Help</help>
+ <apply>Apply Tweaks</apply>
+ <opts>Options</opts>
+ <mb1>Performance Tweaks</mb1>
+ <mb2>Windows Tweaks</mb2>
+ <mb3>Internet Tweaks</mb3>
+ <mb4>Customization Tweaks</mb4>
+ <mb5>Security Tweaks</mb5>
+ <mb6>Useful Tools</mb6>
+ <mb7>Automatic Optimization</mb7>
+ <mb8>Backup-Restore Center</mb8>
+ <cputw>CPU Tweaks</cputw>
+ <hddtw>Hard Disk Tweaks</hddtw>
+ <memtw>Memory Tweaks</memtw>
+ <csco>CPU System Cache Optimization:</csco>
+ <cpu1a>Enable system cache optimization</cpu1a>
+ <cpu1b>Increase IRQ priority of the CMOS real-time clock</cpu1b>
+ <cpu1c>Force Windows to redetect processor's features on the next Windows startup</cpu1c>
+ <ppc>Processor Priority Control:</ppc>
+ <cpu2a>Determined by system (Windows default)</cpu2a>
+ <cpu2b>Background applications will be more responsive</cpu2b>
+ <cpu2c>Foreground applications will be more responsive</cpu2c>
+ <cpu2d>Foreground applications will have the best response time</cpu2d>
+ <nfso>NTFS File System Optimization:</nfso>
+ <hdd1>Disable NTFS 'Last Access Update Stamp'</hdd1>
+ <hdd2>Disable 8.3 filename creation</hdd2>
+ <hdd3>Increase NTFS memory usage</hdd3>
+ <hdd4>Disable NTFS drive encryption</hdd4>
+ <hdd5>Disable compression on NTFS volumes</hdd5>
+ <hdd6>Disable NTFS Paging File encryption</hdd6>
+ <hdd7>Always keep Windows 7 kernel in memory and never page it to disk</hdd7>
+ <hdd8>Master File Table (MFT) size:</hdd8>
+ <mft1>Default MFT Reservation(~12.5% Of Disk Capacity)</mft1>
+ <mft2>Normal MFT Reservation(~25% Of Disk Capacity)</mft2>
+ <mft3>Large MFT Reservation(~37.5% Of Disk Capacity)</mft3>
+ <mft4>Huge MFT Reservation(~50% Of Disk Capacity)</mft4>
+ <mwco>Memory And Windows Cache Optimization:</mwco>
+ <mem1a>Unload unused dlls from memory when not in use</mem1a>
+ <mem1b>Run 16-bit applications in a separated virtual machine (WDM)</mem1b>
+ <mem1c>Enable file system cache memory optimizations</mem1c>
+ <mem1d>Increase additional worker threads for the running processes</mem1d>
+ <omua>Optimize Memory Usage Allocation For:</omua>
+ <apps>Applications</apps>
+ <sysc>System Cache</sysc>
+ <pref>Windows Prefetch And Superfetch Technologies:</pref>
+ <pft>Enable Prefetcher:</pft>
+ <spft>Enable SuperPrefetcher:</spft>
+ <spft1>Application Launch</spft1>
+ <spft2>Boot</spft2>
+ <spft3>Application Launch + Boot</spft3>
+ <coretw>Core System Tweaks</coretw>
+ <core1>Restart Desktop and Taskbar automatically after errors</core1>
+ <core2>Optimize the hard disk(s) when they are idle</core2>
+ <core3>Launch folder windows in a separate process</core3>
+ <core4>Launch Desktop and Taskbar in a separate process</core4>
+ <core5>Turn off program compatibility assistant</core5>
+ <core6>Disable file caching for the Workstasion service</core6>
+ <core7>Disable WMI event logging</core7>
+ <core8>Disable WMI events</core8>
+ <startw>StartUp Tweaks</startw>
+ <str1>Enable boot defragmention</str1>
+ <str2>Turn off the Windows startup sound</str2>
+ <str3>Run startup scripts asynchronously</str3>
+ <str4>Restore folder windows at startup</str4>
+ <str5>Disable updating Group Policy during startup</str5>
+ <str6>Disable auto-detection on IDE drives during startup</str6>
+ <str7>Delay for check disk scan times at startup:</str7>
+ <sec>seconds</sec>
+ <shutw>Shutdown Tweaks</shutw>
+ <sht1>Power off button action:</sht1>
+ <sht2>Clear the system pagefile on system shutdown</sht2>
+ <sht3>Automatically close non-responding applications</sht3>
+ <sht4>Time to wait when a program hangs:</sht4>
+ <sht5>Time to wait before ending programs with errors:</sht5>
+ <sht6>Time to wait for services to end before killing:</sht6>
+ <poff1>Switch User</poff1>
+ <poff2>Log Off</poff2>
+ <poff3>Lock</poff3>
+ <poff4>Restart</poff4>
+ <poff5>Sleep</poff5>
+ <poff6>Hibernate</poff6>
+ <poff7>Shutdown</poff7>
+ <netw>Network Tweaks</netw>
+ <net1>Limit reserved bandwidth (Quality of Service)</net1>
+ <net2>TCP (Transmission Control Program) window size</net2>
+ <net3>Enable large TCP window (RWIN) support</net3>
+ <net4>Enable CTCP as the default congestion control provider</net4>
+ <net5>Disable windows scaling heuristics</net5>
+ <net6>Enable DCA (Direct Cache Access)</net6>
+ <net7>Enable NetDMA (TCPA)</net7>
+ <net8>Optimize keep alive time</net8>
+ <net9>Optimize DNS error caching</net9>
+ <net10>Optimize host resolution priority</net10>
+ <ietw>Internet Explorer</ietw>
+ <ie1>Internet Explorer Tweaks:</ie1>
+ <ie2>Disable page transitions</ie2>
+ <ie3>Disable Clear Type fonts</ie3>
+ <ie4>Disable smooth scrolling</ie4>
+ <ie5>Disable automatic updates</ie5>
+ <ie6>Place the menu above the taskbar</ie6>
+ <ie7>Disable visual style controls</ie7>
+ <ie8>Always show menus</ie8>
+ <ie9>Maximum simultaneous downloads</ie9>
+ <moztw>Mozilla Firefox</moztw>
+ <ff1>Speed Up Mozilla Firefox:</ff1>
+ <ff2>Easily and fast boost the performace of your Firefox browser!</ff2>
+ <ff3>Mozilla Firefox found:</ff3>
+ <ff3a>True</ff3a>
+ <ff3b>False</ff3b>
+ <ff4>Current Status:</ff4>
+ <ff4a>Optimized!</ff4a>
+ <ff4b>Not Optimized</ff4b>
+ <ff5a>Make Firefox faster now!</ff5a>
+ <ff5b>Restore optimization</ff5b>
+ <ff6>Remember to close Mozilla Firefox browser, before applying tweaks!</ff6>
+ <ffcls>Mozilla Firefox is running. Please, close it and try again.</ffcls>
+ <ffok>Mozilla Firefox has benn optimized successfully!</ffok>
+ <ffer>An error has occured. Please, try again later...</ffer>
+ <tskbtw>Taskbar Tweaks</tskbtw>
+ <tsk1>Enable flashing Taskbar buttons</tsk1>
+ <tsk2>The button in the Taskbar will flash until it clicked</tsk2>
+ <tsk3>Number of times that button in the Taskbar flashes:</tsk3>
+ <tsk4>Make Taskbar icons smaller</tsk4>
+ <tsk5>Disable Taskbar balloon tips</tsk5>
+ <tsk6>Number of items in the Jump Lists:</tsk6>
+ <tsk7>Thumbnails preview display delay time:</tsk7>
+ <tsk8>Taskbar thumbnail live preview delay time:</tsk8>
+ <tskcom>milliseconds</tskcom>
+ <aerotw>Windows Aero Tweaks</aerotw>
+ <aero1>Force enabling Windows Aero effects, by disabling hardware compatibility checking</aero1>
+ <aero2>Disable Aero animations</aero2>
+ <aero3>Disable Aero Snap</aero3>
+ <aero4>Disable Aero Glass transparency</aero4>
+ <aero5>Disable Aero Blur effect</aero5>
+ <aero6>Enable elongated buttons</aero6>
+ <aero7>Enable slow animations when pressing the 'Shift' key</aero7>
+ <aero8>Number of displayed windows in Flip3D:</aero8>
+ <aero9>Windows border width:</aero9>
+ <contw>Context Menu Tweaks</contw>
+ <con1>Create a context menu item to copy the contents of a folder to the clipboard</con1>
+ <con2>Create a context menu item to copy the contents of a '.txt' file to clipboard</con2>
+ <con3>Add 'Command Prompt Here' in folders context menu</con3>
+ <con4>Add 'Copy To' option in files and folders context menu</con4>
+ <con5>Add 'Move To' option in files and folders context menu</con5>
+ <con6>Add 'Take Ownership' option in files and folders context menu</con6>
+ <con7>Add 'Defrag' command to drive(s) context menu</con7>
+ <conhlp1>Copy List to Clipboard</conhlp1>
+ <conhlp2>Copy Contents to Clipboard</conhlp2>
+ <conhlp3>Open Command Prompt Here</conhlp3>
+ <conhlp6>Take Ownership</conhlp6>
+ <conhlp7>Defragment</conhlp7>  
+ <nsectw>Network Security Tweaks</nsectw>
+ <ns1>Prevent administrative shares on cluster nodes</ns1>
+ <ns2>Restrict anonymous user access</ns2>
+ <ns3>Disable recent shares in network places</ns3>
+ <ns4>Hide entire network from neighborhood network</ns4>
+ <ns5>Hide the server's computer name from other computers in the domain</ns5>
+ <ns6>Disallow users to connect remotely using Terminal Services</ns6>
+ <ns7>Disable automatic discovery of media contents in shared network by Windows Media Player</ns7>
+ <wsectw>System Security Tweaks</wsectw>
+ <ws1>Disable Task Manager</ws1>
+ <ws2>Disable Registry Editor</ws2>
+ <ws3>Disable Control Panel</ws3>
+ <ws4>Disable Command Prompt</ws4>
+ <ws5>Disable the Windows Hotkeys</ws5>
+ <ws6>Restrict access to the Windows Update feature</ws6>
+ <ws7>Hide all items on the Desktop</ws7>
+ <ws8>Disable the ability to right-click on the Desktop</ws8>
+ <ws9>Disable the folder options menu</ws9>
+ <uac>UAC Control Center</uac>
+ <mzut>Mz Ultimate Tools</mzut>
+ <mz1>Fine tune your computer to play games faster</mz1>
+ <mz2>Advance CPU optimizer utility</mz2>
+ <mz3>Smart RAM optimization utility</mz3>
+ <mz4>Intelligent PC cleaner for your computer</mz4>
+ <mz5>Defrag and compact Windows registry</mz5>
+ <mz6>Complete Windows services manager tool</mz6>
+ <mz7>Manage Windows start up</mz7>
+ <mz8>Easily schedule shutdowns</mz8>
+ <mz9>Handful power manager for laptops/netbooks</mz9>
+ <wint>Windows Tools</wint>
+ <wt1>Reliability and Performance Monitor</wt1>
+ <wt2>Task Scheduler</wt2>
+ <wt3>Event Viewer</wt3>
+ <ucp>Ultimate Control Panel</ucp>
+ <applyok>Tweaks applied successfully! You must restart your computer, for changes to take effect. Restart now?</applyok>
+ <loading>Loading</loading>
+ <lang>Language</lang>
+ <thm>Theme</thm>
+ <upd>Check for updates</upd>
+ <about>About</about>
+ <exit>Exit</exit>
+ </Mz7Optimizer>
+ 
+ 
+  <AboutDialogs>
+    <version>Version </version>
+    <create>Created by:</create>
+    <trans>Translation by: </trans>
+    <name>Michael Zacharias</name>
+    <donate>DONATE!</donate>
+    <better>For better programs</better>
+    <close>Close</close>
+  </AboutDialogs>
+
+
+  <MzUpdate>
+    <upd>Check for updates</upd>
+    <error1>Cannot find any installed applications.</error1>
+    <error2>Cannot find any available network.</error2>
+    <error3>Cannot create temporary folder.</error3>
+    <error4>Cannot connect with server, to get the appropriate information.</error4>
+    <error41>Please, check your internet connection or your firewall rules.</error41>
+    <ok1>New version is available! Do you want to visit the official Mz Ultimate Tools website to download the latest version?</ok1>
+    <ok2>You have the latest version!</ok2>
+    <col1>Application name</col1>
+    <col2>Current version</col2>
+    <col3>Online version</col3>
+    <found>Found the following applications:</found>
+  </MzUpdate>
+
+  
+</MzUltimateTools>

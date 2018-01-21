@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="OK_Button" value="ОК" version="1" />
+    <string key="Cancel_Button" value="Отмена" version="1" />
+    <string key="Body" value="Для продолжения EasyBCD нужен доступ к дистрибутиву Windows Vista или выше (обычно диск DVD или образ ISO).&#xD;&#xA;&#xD;&#xA;Пожалуйста, вставьте DVD диск или укажите путь к образу ISO и нажмите ОК для продолжения." version="2" />
+    <string key="SdiMaker" value="Вставьте диск с дистрибутивом Windows!" version="1" />
+    <string key="mediaNotFound" value="Дистрибутив Windows не обнаружен!" version="1" />
+    <string key="MinimumWidth" derive="true" />
+    <string key="MinimumHeight" derive="true" />
+  </strings>
+</localization>

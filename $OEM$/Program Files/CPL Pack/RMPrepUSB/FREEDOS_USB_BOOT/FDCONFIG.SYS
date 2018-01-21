@@ -1,0 +1,4 @@
+shell=\COMFREE.COM /E:512 /P=fdauto.bat
+DOS=HIGH
+device=\FREEDOS\himem.exe
+

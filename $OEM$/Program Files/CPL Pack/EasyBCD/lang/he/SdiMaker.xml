@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="OK_Button" value="אשר" version="1" />
+    <string key="Cancel_Button" value="בטל" version="1" />
+    <string key="SdiMaker" value="הכנס מדיה עם התקנת חלונות" version="1" />
+    <string key="mediaNotFound" value="לא נמצאה מדיה עם התקנת חלונות" version="1" />
+    <string key="MinimumWidth" value="381" />
+    <string key="MinimumHeight" value="196" />
+  </strings>
+</localization>

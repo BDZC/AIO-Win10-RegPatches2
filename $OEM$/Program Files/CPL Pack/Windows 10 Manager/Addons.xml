@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+   <ForeignNormal>
+    <add key="12Ghosts Popup Killer" value1="{00000000-0007-5041-4354-0020E48020AF}" />
+    <add key="1ClickPicGrabber" value1="{D593DE91-7B41-45C2-830E-E9A99AB142AA}" />
+    <add key="7FaSSt" value1="{669695BC-A811-4A9D-8CDF-BA8C795F261E}" />
+    <add key="7FaSSt" value1="{06DFEDAA-6196-11D5-BFC8-00508B4A487D}" />
+    <add key="Abitz Translator" value1="{BFC32E1D-EE75-4A48-BC60-104E11EE2431}" />
+    <add key="AbsoluteShield Internet Eraser" value1="{EE9DD090-902D-4623-9360-FB7D8666202B}" />
+    <add key="AbsoluteShield Internet Eraser" value1="{9A23B8A4-C6C9-4A68-8FA6-5F905DC8FF80}" />
+    <add key="Aconti dialer" value1="{6ABC861A-31E7-4d91-B43B-D3C98F22A5C0}" />
+    <add key="ACSearch Toolbar" value1="{F7B040B5-307B-4FAC-BB93-556A08156BAC}" />
+    <add key="ACXInstall" value1="{A4A435CF-3583-11D4-91BD-0048546A1450}" />
+    <add key="Ad Killer" value1="{3D898C55-74CC-4B7C-B5F1-45913F368388}" />
+    <add key="AdBars" value1="{C4CA6559-2CF1-48B6-96B2-8340A06FD129}" />
+    <add key="VX2 Respondmiter" value1="{00000000-5eb9-11d5-9d45-009027c14662}" />
+    <add key="Videogate VG Companion" value1="{00000000-623A-11D4-BCDB-005004131771}" />
+    <add key="FavoriteMan/FOne" value1="{000000F1-34E3-4633-87C6-1AA7A44296DA}" />
+    <add key="AT&amp;T Privacy Bird P3P Client" value1="{00000178-CD4A-447a-BCF9-6FD0096B5527}" />
+    <add key="Ebayband.dll Ebay Toolbar" value1="{001F2570-5DF5-11d3-B991-00A0C9BB0874}" />
+    <add key="Iserv Accelerated Dialup" value1="{02336F51-24CA-4422-AB63-18841ADF35E6}" />
+    <add key="Yahoo Companion" value1="{02478D28-C3F9-4efb-9B51-7695ECA05670}" />
+    <add key="Yahoo Companion" value1="{02478D38-C3F9-4EFB-9B51-7695ECA05670}" />
+    <add key="Kontiki" value1="{029CA12C-89C1-46a7-A3C7-82F2F98635CB}" />
+    <add key="XintianNet toolbar" value1="{051299DE-2CFD-4EA8-A432-F0429B4E7A5D}" />
+    <add key="Friends.fr. toolbar" value1="{08DBDE36-DF28-11D5-8CA5-0050DA44A764}" />
+    <add key="ALiBaBar toolbar" value1="{0A1375E1-56C2-11D6-8E45-8933A0FB5235}" />
+    <add key="HuntBar/Stoolbar" value1="{0A5CF411-F0BF-4AF8-A2A4-8233F3109BED}" />
+    <add key="NetNose toolbar" value1="{0A6A6F79-BBE3-4A8B-8A64-9D1D1100A347}" />
+    <add key="SearchIT toolbar" value1="{0E1230F8-EA50-42A9-983C-D22ABC2E0099}" />
+    <add key="AroundWeb toolbar" value1="{0E1230F8-EA50-42A9-983C-D22ABC2EEB4C}" />
+    <add key="eClickz toolbar" value1="{0E1230F8-EA50-42A9-983C-D22ABC2EED3B}" />
+    <add key="Lexico toolbar" value1="{11359F4A-B191-42D7-905A-594F8CF0387B}" />
+    <add key="MolBiol.Net Toolbar" value1="{120FF052-1C61-4C14-8F54-BBBC4A988590}" />
+    <add key="Doctor Toolbar" value1="{123249EB-F891-44C4-946F-450064F9080E}" />
+    <add key="Bizrate toolbar" value1="{13707362-08A2-11D3-A26D-0060976E9E6A}" />
+    <add key="Flitterbug Toolbar" value1="{1402DF89-8043-44E9-AFE8-CB3DB644EF7D}" />
+    <add key="Gouden Gids toolbar" value1="{165EAF06-A068-4BE1-8418-D92B2A196878}" />
+    <add key="ZippyLookup toolbar" value1="{19E41A2D-BD9D-48bb-9576-27B2CF0877C0}" />
+    <add key="iSearch adware" value1="{1C78AB3F-A857-482e-80C0-3A1E5238A565}" />
+    <add key="Arrow Toolbar" value1="{1D9B10E0-E90C-11D7-A399-B7BAC8911A3F}" />
+    <add key="Groowe Toolbar" value1="{1F326B8F-CE7F-4C98-96A1-AC7A2B61D742}" />
+    <add key="ToolbarCC" value1="{1F48AA48-C53A-4E21-85E7-AC7CC6B5FFA2}" />
+    <add key="ToolbarCC/Rnd" value1="{1F48AA48-C53A-4E21-85E7-AC7CC6B5FFA7}" />
+    <add key="ToolbarCC/Rnd" value1="{1F48AA48-C53A-4E21-85E7-AC7CC6B5FFA7}" />
+    <add key="ToolbarCC/Rnd" value1="{1F48AA48-C53A-4E21-85E7-AC7CC6B5FFA8}" />
+    <add key="ToolbarCC/Rnd" value1="{1F48AA48-C53A-4E21-85E7-AC7CC6B5FFAF}" />
+    <add key="Linkmailer toolbar" value1="{2005F7BA-6189-4607-BF8B-667679251CC0}" />
+    <add key="CustomToolbar" value1="{21301D69-B8F1-46AA-B0B5-09EE2285914C}" />
+    <add key="Intellistopper Toolbar" value1="{21C32A07-0176-4FFE-BCDA-65D4A24F4303}" />
+    <add key="SearchEnhancement hijacker" value1="{22941A26-7033-432C-94C7-6371DE343822}" />
+    <add key="Seek99 adware" value1="{22998D24-B789-4CA2-A7FC-CD7CE7DEB14C}" />
+    <add key="Stumbleupon toolbar" value1="{22D003CE-6952-46C5-80B9-D19B479620AB}" />
+    <add key="Commander toolbar" value1="{29F7B7FA-ADC8-48ea-9E1C-EA87A05AE642}" />
+    <add key="Navigator Toolbar" value1="{2BDEC2E4-819F-11D5-8846-006097B89050}" />
+    <add key="3dna toolbar" value1="{2ECB7FB2-0333-416F-92FD-4904AD49252B}" />
+    <add key="SalmonAnglers toolbar" value1="{3717DF55-0396-463D-98B7-647C7DC6898A}" />
+    <add key="WinGet" value1="{371C6960-302C-45D0-9504-50B820247439}" />
+    <add key="InetSpeak/Iexplorr" value1="{388D7EBB-CBB9-4126-8DB2-86DC6863A206}" />
+    <add key="InetSpeak/Iexplorr" value1="{39AF31DD-EAFC-45EA-A56C-385B52E25CC0}" />
+    <add key="Bugnosis" value1="{3A6514CD-A457-11D4-8AF3-000102686B79}" />
+    <add key="Zero Knowledge Freedom" value1="{3C060EA2-E6A9-4E49-A530-D4657B8C449A}" />
+    <add key="Alexa Toolbar" value1="{3CEFF6CD-6F08-4E4D-BCCD-FF7415288C3B}" />
+    <add key="Popup Remover" value1="{3D2C1DA4-BCD3-4317-9548-2E08BD222FF0}" />
+    <add key="AdKiller" value1="{3D898C55-74CC-4B7C-B5F1-45913F368388}" />
+    <add key="Freedom WebSecure" value1="{3DDF45E0-9271-11D5-B1C2-000255705902}" />
+    <add key="PeoplePC ISP software" value1="{3DE88907-3E38-11D4-BEB2-CBE76C0598DD}" />
+    <add key="Instant Chess" value1="{40D61F04-59E4-4C8D-BF6E-697AB9C21F43}" />
+    <add key="WurldMedia/bpboh" value1="{40ac4d2d-491d-11d4-aaf2-0008c75dcd2b}" />
+    <add key="Bayden PopupPopper" value1="{41353F8B-78CE-48A5-BE44-153ED293D192}" />
+    <add key="Compaq related" value1="{4178A354-348B-11D3-9AB2-00805F1A0ADB}" />
+    <add key="Philips Lightframe3 Monitor related" value1="{43D29D14-460E-4F3A-9037-E60F11EF12F0}" />
+    <add key="E-book systems FlipAlbum" value1="{4401FDC3-7996-4774-8D2B-C1AE9CD6CC25}" />
+    <add key="Najdi.si Toolbar" value1="{442599A9-EB41-4F1F-B999-737BC587F314}" />
+    <add key="Msinfosys/AutoSearch hijacker" value1="{44A23DAB-8D31-43AE-9F68-5AC24CF7CE8C}" />
+    <add key="Dboostie.dll WinBoost" value1="{44AF5221-A43E-224E-56BA-ABCD43C344D1}" />
+    <add key="Desktop Sidebar" value1="{45AD732C-2CE2-4666-B366-B2214AD57A49}" />
+    <add key="Internet Marketing Toolbar Pro" value1="{4647E382-520B-11D2-A0D0-004033D0645D}" />
+    <add key="Ebay Toolbar" value1="{46AE04C0-BCFA-4728-90E7-00EB4A8B3863}" />
+    <add key="Wordz Toolbar" value1="{4708D1EF-3800-4E4E-9948-360BA9164264}" />
+    <add key="iMarkup" value1="{4845C240-1DFD-11D3-97DE-00104B873412}" />
+    <add key="Sony related-Points tracker" value1="{496756A6-05E2-4646-96B5-071EC0394E9C}" />
+    <add key="AOL Toolbar" value1="{4982D40A-C53B-4615-B15B-B5B5E98D167C}" />
+    <add key="W32.Aspam.Trojan.B" value1="{499DB658-1909-420B-931A-4A8CAEFD232F}" />
+    <add key="Download Mage" value1="{49A69FA0-2678-45CD-A069-6ACC372B20F8}" />
+    <add key="IE SEcurity Pro" value1="{49E0E0F0-5C30-11D4-945D-000000000000}" />
+    <add key="Coffeecup Popup Blocker" value1="{49E0E0F0-5C30-11D4-945D-010002000012}" />
+    <add key="NewDotNet" value1="{4A2AACF3-ADF6-11D5-98A9-00E018981B9E}" />
+    <add key="SpywareGuard" value1="{4A368E80-174F-4872-96B5-0B27DDD11DB2}" />
+    <add key="Earthlink Pop-Up blocker" value1="{4B5F2E08-6F39-479A-B547-B2026E4C7EDF}" />
+    <add key="SubSearch" value1="{4C4871FD-30F6-4430-8834-BC75D58F1529}" />
+    <add key="Fastseeker" value1="{4CC0FAF8-6048-421C-9FE2-261A9ECE5F80}" />
+    <add key="CookieCop" value1="{4DF1DB24-A57C-11d3-A180-00A0C90AE44B}" />
+    <add key="RHSI toolbar" value1="{4DF5B116-4FD9-4039-B377-1130953A980F}" />
+    <add key="AltaWindows 8 Toolbar" value1="{4E7BD74F-2B8D-469E-92EA-EC65A294AE31}" />
+    <add key="KeenValue/Powersearch variant" value1="{4E7BD74F-2B8D-469E-A08E-8E1CA787AD2D}" />
+    <add key="Push toolbar" value1="{4E7BD74F-2B8D-469E-A0E8-F76FA694BF2E}" />
+    <add key="Shop n Search toolbar" value1="{4E7BD74F-2B8D-469E-A3F3-E96FF4D5FA7D}" />
+    <add key="MapQuest toolbar" value1="{4E7BD74F-2B8D-469E-A3FA-F363B384B77D}" />
+    <add key="Engineering.com Toolbar" value1="{4E7BD74F-2B8D-469E-C0FB-FA62BD92B438}" />
+    <add key="TrendTrader toolbar" value1="{4E7BD74F-2B8D-469E-C0FB-FB6DA681FA7D}" />
+    <add key="Real One toolbar" value1="{4E7BD74F-2B8D-469E-C0FF-FD60B590A87D}" />
+    <add key="eUniverse Flowgo toolbar" value1="{4E7BD74F-2B8D-469E-C0FF-FD63B29BB37D}" />
+    <add key="Rcabar.dll R/C Toolbar" value1="{4E7BD74F-2B8D-469E-C0FF-FD6DB787FA7D}" />
+    <add key="Morttbar.dll Mortgage Toolbar" value1="{4E7BD74F-2B8D-469E-C0FF-FD78A087B530}" />
+    <add key="Scirus.dll Scirus toolbar" value1="{4E7BD74F-2B8D-469E-C1EB-ED65B786FA7D}" />
+    <add key="Nasdaq Toolbar" value1="{4E7BD74F-2B8D-469E-C3FF-FB7FB59BFA7D}" />
+    <add key="BridalClicks toolbar" value1="{4E7BD74F-2B8D-469E-D3EC-FE6EB89AB529}" />
+    <add key="PowerSearch toolbar" value1="{4E7BD74F-2B8D-469E-D3FA-F27BA787AD2D}" />
+    <add key="ResellerRatings toolbar" value1="{4E7BD74F-2B8D-469E-D3FC-F363BB81A82F}" />
+    <add key="KeenValue/PowerSearch" value1="{4E7BD74F-2B8D-469E-A08D-8F6FA787AD2D}" />
+    <add key="KeenValue/PowerSearch" value1="{4E7BD74F-2B8D-469E-A08D-8F6FA787AD2D}" />
+    <add key="KeenValue/PowerSearch" value1="{4E7BD74F-2B8D-469E-DBFC-ED1CA787AD2D}" />
+    <add key="KeenValue/PowerSearch" value1="{4E7BD74F-2B8D-469E-DFF7-EC7DA787AD2D}" />
+    <add key="SearchCentrix adware variant" value1="{4E7BD74F-2B8D-469E-D6F5-F66EA787AD2D}" />
+    <add key="Netscape toolbar" value1="{4E7BD74F-2B8D-469E-D7EE-FE6FA781BF33}" />
+    <add key="MyGeek/Search-o-Matic2000 - SearchCentrix variant" value1="{4E7BD74F-2B8D-469E-D9FB-FA6BAD98FA7D}" />
+    <add key="Mini Jeeves Toolbar" value1="{4E7D0B40-F575-4A29-9710-4675EAF4686A}" />
+    <add key="Object Desktop Webblinds" value1="{4F92B827-1E56-4E30-A978-A17A7861A606}" />
+    <add key="MacroExpress" value1="{516E2306-7ADF-47EC-AEA8-ACB6B51899F1}" />
+    <add key="WurldMedia" value1="{525BBD23-1863-46C6-86D6-5F9A3715D44E}" />
+    <add key="NetZero toolbar" value1="{52706EF7-D7A2-49AD-A615-E903858CF284}" />
+    <add key="NovaWeb adware" value1="{52D9BB0E-07DF-11D5-AE44-444553540000}" />
+    <add key="SpyBot Search&amp;Destroy" value1="{53707962-6F74-2D53-2644-206D7942484F}" />
+    <add key="HighTraffic" value1="{53E10C2C-43B2-4657-BA29-AAE179E7D35C}" />
+    <add key="i-lookup search bar" value1="{54A85A38-A699-4AEC-8F88-AB542210C93B}" />
+    <add key="Ezula TopText" value1="{55910916-8B4E-4C1E-9253-CCE296EA71EB}" />
+    <add key="TotalVelocity zSearch" value1="{5886A6DC-AAF4-45E9-979A-8E5E6DEE30E7}" />
+    <add key="Merriam-Webster Toolbar" value1="{5ADA9CAC-04F9-4DD2-ABFD-74D673BE8624}" />
+    <add key="PageSurf.com Toolbar" value1="{5B2AD7D7-81E3-4B74-8B74-4600A67BBB8A}" />
+    <add key="Antipop-up UOL toolbar" value1="{5BBFC00A-312C-4777-A5DF-DDA65C67120C}" />
+    <add key="mini eresMas toolbar" value1="{5F6293C0-8686-11d5-9C62-000102117FC3}" />
+    <add key="Kangaroo Toolbar" value1="{663C7429-E454-11D3-B9AE-0000B4C32B4D}" />
+    <add key="NetWorld online toolbar" value1="{6E18F3FD-82DA-46EE-944C-CBEC9071D2F7}" />
+    <add key="Blowsearch adware" value1="{6F8ADBE2-8C92-4362-B0E6-7321AA49EE46}" />
+    <add key="Trellian Toolbar" value1="{71AAABE5-1F0F-11d7-BD6F-004854603DCE}" />
+    <add key="UCmore toolbar" value1="{53cbee82-d747-11d3-9ed0-005004189684}" />
+    <add key="Novell DigitalMe" value1="{72EFCEB7-436E-11D3-93ED-0008C7396667}" />
+    <add key="BuzzOff_toolbar" value1="{769a6fad-c100-4af9-9bf9-439e05ba1542}" />
+    <add key="Veronica toolbar" value1="{76D92AF6-2C25-4667-A54F-F75012BCB7B1}" />
+    <add key="SearchToolbar parasite" value1="{76EC9B95-D244-41F9-A5BE-6896EFFB40CF}" />
+    <add key="Download Toolbar" value1="{777D0B4C-75C9-4874-ABFF-80B4BE8DC532}" />
+    <add key="StartMake.com toolbar" value1="{79049BCB-7C3A-467B-BFA9-0B8C1CD44463}" />
+    <add key="JimWorld Browser Buddy" value1="{7A3BA17E-A5C6-4889-8A78-80A3C3382118}" />
+    <add key="Telstra BigPond toolbar" value1="{7A431EC4-CC21-4DF7-9DB1-A2CF74C4CC98}" />
+    <add key="MolBiol.Net Toolbar" value1="{7A4CB73C-64DF-4155-9EFA-57F86560245E}" />
+    <add key="ProvenTactics toolbar" value1="{7B64270B-1216-47CE-9708-DE9D2D628CC5}" />
+    <add key="Nutshell toolbar" value1="{7BA7B95F-9B92-4132-8012-E19B585CAF21}" />
+    <add key="Seek99 toolbar" value1="{7C24A476-8B03-46ed-8CCF-CE8AE7213C99}" />
+    <add key="Pepesearch toolbar" value1="{7EED2A74-002E-481F-A283-D96B81EA244B}" />
+    <add key="Zonnet toolbar" value1="{81766E08-CE68-4F23-95C4-C1468FDE68AA}" />
+    <add key="DailyToolbar parasite" value1="{8333C319-0669-4893-A418-F56D9249FCA6}" />
+    <add key="Netster Smart Browse Toolbar" value1="{856D6A8E-A24C-498A-A55A-2B25C606A6B4}" />
+    <add key="Wishbone Toolbar" value1="{87B1E57C-FF70-4C69-9CE8-57CB8F67ABA8}" />
+    <add key="Freeserve/Wanadoo Search bar" value1="{8B68564D-53FD-4293-B80C-993A9F3988EE}" />
+    <add key="Yellow Internet Toolba" value1="{8E09B2CC-C2A0-4786-B099-0B9101E92CA1}" />
+    <add key="Nocs/NitroClicks toolbar" value1="{8E1E80F3-A3F0-41d4-BAA7-470442CFC906}" />
+    <add key="Pictures toolbar" value1="{8E929F51-5914-11D6-971F-0050FC3F9161}" />
+    <add key="Ask Jeeves toolbar" value1="{92CBA277-292B-461F-9DEA-67A5C834E101}" />
+    <add key="MSN Toolbar" value1="{9394EDE7-C8B5-483E-8773-474BF36AF6E4}" />
+    <add key="WebCrawler toolbar" value1="{9677F3F1-E994-451F-805F-7148CC8AE040}" />
+    <add key="SCN TOOLBAR PROBLEMS" value1="{96BBDFE1-2951-4F81-811E-31DF6436A329}" />
+    <add key="WWGrapevine Toolbar" value1="{99AFC088-C0DD-40ED-92D8-0C53E8997510}" />
+    <add key="AbsoluteShield IE Popup blocker" value1="{9A23B8A4-C6C9-4A68-8FA6-5F905DC8FF80}" />
+    <add key="RedV Protector Suite" value1="{9C777253-3E17-42D6-897A-11B8617A8F7C}" />
+    <add key="MSN SmartTags" value1="{9DD4258A-7138-49C4-8D34-587879A5C7A4}" />
+    <add key="Accessibility toolbar" value1="{9E0C6AAD-A8E3-4E49-9DBD-786099B599A4}" />
+    <add key="jBrowse toolbar" value1="{9E5BD40E-6287-11D6-9772-0002A5DD2483}" />
+    <add key="Addresses Toolbar" value1="{9EEE0111-E81A-11D6-B1B2-444553540000}" />
+    <add key="BonziBuddy" value1="{A28C2A31-3AB0-4118-922F-F6B3184F5495}" />
+    <add key="Commonname toolbar" value1="{A3E3F04C-F98C-4295-95EF-41C57425B077}" />
+    <add key="Httper" value1="{A5483501-070C-41DD-AF44-9BD8864B3015}" />
+    <add key="ParentPresent" value1="{A586BE00-52AC-11D3-A075-E51A86A6C62B}" />
+    <add key="Adminimizer toolbar" value1="{A8E16533-7A2A-43F1-9EE9-901136EBA5D8}" />
+    <add key="Google Toolbar" value1="{AA58ED58-01DD-4d91-8333-CF10577473F7}" />
+    <add key="HP Explore Toolbar" value1="{B2847E28-5D7D-4DEB-8B67-05D28BCF79F5}" />
+    <add key="Pagego toolbar" value1="{B57F2FF0-F338-4ED0-BD82-FB074FEFAA1F}" />
+    <add key="Winrunner" value1="{B7DB7E5A-81FD-11D1-8B75-0080C83788F7}" />
+    <add key="BonusBar" value1="{B7FDA31E-A16D-47F9-B374-78A866AC813D}" />
+    <add key="SafeguardProtect/Veevo" value1="{B824E7B0-E8E3-4D75-895E-2C309EA4CC5D}" />
+    <add key="Icoo Loader" value1="{BA7270AE-5636-4618-BAF3-F86ADA39F036}" />
+    <add key="CoolWebSearch parasite variant" value1="{B9D90B27-AD4A-413a-88CB-3E6DDC10DC2D}" />
+    <add key="Adware.HungryHands" value1="{BCF96FB4-5F1B-497B-AECC-910304A55011}" />
+    <add key="FastFind.org SubSearch" value1="{BD0BA5CD-7C8E-47ED-935E-1ABBAC9B29E0}" />
+    <add key="IETray" value1="{BD51AEC6-7991-4A60-94D6-D5FEBB655D10}" />
+    <add key="AdRoar" value1="{BDF6CE3D-F5C5-4462-9814-3C8EAC330CA8}" />
+    <add key="Telefonicaonline.com" value1="{BEBF337B-9073-4574-9FC1-E0175BB25292}" />
+    <add key="LookQuick toolbar" value1="{C10A16B7-70FE-4CE3-A261-6FBA7CC3DD5B}" />
+    <add key="Praize toolbar" value1="{C6335B00-E8D9-423e-A691-48D17CBB6C5A}" />
+    <add key="EasyBar/Toolbarcash" value1="{C77E900A-FF55-400E-9BAA-E042C8212898}" />
+    <add key="iWon Co-Pilot toolbar - privacy_policy" value1="{CA0B9B71-C2AF-11D3-B376-0800460222F0}" />
+    <add key="LexLink toolbar" value1="{CBAA6F21-985C-11D4-A02B-00B0D073E889}" />
+    <add key="Lateral Arts Toolbar" value1="{CECFF8DE-C145-4570-B030-10105AA82920}" />
+    <add key="Systran toolbar" value1="{CFB25594-4D5F-11D6-AB7B-00B0D094B576}" />
+    <add key="BrowserPal Toolbar" value1="{5F5564AC-DE7A-4DCD-9296-32E71A35DCB7}" />
+    <add key="De Gule Sider toolbar" value1="{D4003A01-9B2C-4e24-9CD2-8D7DB1BDE096}" />
+    <add key="Power-Linking-Profits.com adware" value1="{D6223CBC-A263-4CB1-B35E-1AE40FEF3B3B}" />
+    <add key="MapStan toolbar" value1="{DB96792F-834A-40FC-97CD-9A8ECDF484FE}" />
+    <add key="Zibb.nl Toolbar" value1="{E01D96AB-DBBD-451D-BDCB-0EE420BC91B1}" />
+    <add key="SearchBoss toolbar" value1="{E2B1672A-DA31-4F7D-A2BF-C18C50BF8F6F}" />
+    <add key="ContentSaver Offline Browser" value1="{E6B64F67-B100-4636-8D51-D113E1F5FF93}" />
+    <add key="Locators Toolbar" value1="{E720B458-B65A-438C-9FF3-B1DF65D7DB3E}" />
+    <add key="AimAtSite Toolbar" value1="{E75B287F-2D04-11D5-BBE0-0050047AA3D1}" />
+    <add key="MapStan toolbar" value1="{DB96792F-834A-40FC-97CD-9A8ECDF484FE}" />
+    <add key="CrackedEarth/CamGirlsLive parasite" value1="{EAD0B31D-9DAE-42CE-9821-EF9794AEC515}" />
+    <add key="SearchAndBrowse toolbar" value1="{EC788B03-A743-4274-AC9E-DB4F2A03F515}" />
+    <add key="iLOR Toolbar" value1="{EDFB8B62-59EE-11d5-86C2-00E02975242F}" />
+    <add key="Yahoo Companion!" value1="{EF99BD32-C1FB-11D2-892F-0090271D4F88}" />
+    <add key="ZyncosMark" value1="{F0DC0CFE-D11A-489B-84C0-63748AFAABF3}" />
+    <add key="eNotes toolbar" value1="{F264E777-7AB7-4BEB-8A42-5C37C8F4B6B4}" />
+    <add key="Pengs Toolbar" value1="{F5528ECB-D64C-479D-AFEB-89C90FA191A3}" />
+    <add key="Netguarder Web Cleaner" value1="{F585D290-1BF4-480A-AEC2-4182593F1E32}" />
+    <add key="Copernic Meta toolbar" value1="{F79AD27F-8140-4E33-8B1D-C4FC6B663CCA}" />
+    <add key="KudoZ.NET toolbar" value1="{F9B9480F-8BE3-4117-985D-350ACEF1897A}" />
+    <add key="SupaSeek toolbar" value1="{FB2961FD-DD24-4F8A-8A92-6F9325FF6F11}" />
+    <add key="CasinoRewards adware" value1="{FF905E0C-CFE9-4A90-AFFF-C13AF5D908F0}" />
+    <add key="MPGcom toolbar" value1="{FFFFFFFF-FFFF-FFFF-FFFF-5F8507C5F4E9}" />
+  </ForeignNormal>
+</configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>regdiff</name>
+    </assembly>
+    <members>
+        <member name="T:com.tikumo.regdiff.Presence">
+            <summary>
+            This enum specifies if a parameter is optional (=can be omitted) or required (=must be present)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regdiff.Presence.Optional">
+            <summary>
+            Parameter is optional (=can be omitted)
+            </summary>
+        </member>
+        <member name="F:com.tikumo.regdiff.Presence.Required">
+            <summary>
+            Parameter is required (=must be present)
+            </summary>
+        </member>
+        <member name="T:com.tikumo.regdiff.regdiff">
+            <summary>
+            This program is a small command line tool to compare two registry files, export the registry, merge .REG files and much more. 
+            Refer to http://p-nand-q.com/download/regdiff.html for a detailed manual.
+            Refer to http://code.google.com/p/regdiff/ for the complete sourcecode.
+            Copyright (C) 2013 by Gerson Kurz
+            BSD-Licensed
+            </summary>
+            <todo>support remove-keys/values when reading .REG File format</todo>
+            <todo>throw syntax error if $$ option cannot be found</todo>
+            <todo>support path aliasing</todo>
+            <todo>LATER: hex dump format to mimic regedit format</todo>
+            <todo>LATER: support multiple locale strings</todo>
+        </member>
+    </members>
+</doc>

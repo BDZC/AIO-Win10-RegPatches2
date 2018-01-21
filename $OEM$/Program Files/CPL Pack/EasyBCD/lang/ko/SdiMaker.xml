@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <strings>
+    <string key="OK_Button" value="확인" version="1" />
+    <string key="Cancel_Button" value="취소" version="1" />
+    <string key="SdiMaker" value="윈도우즈 설치 미디어를 넣으세요" version="1" />
+    <string key="mediaNotFound" value="유효한 윈도우즈 설치 미디어가 발견되지 않음." version="1" />
+  </strings>
+</localization>

@@ -1,0 +1,27 @@
+Eassos PartitionGuru End User License Agreement
+
+NOTICE TO USERS: CAREFULLY READ THE FOLLOWING LEGAL AGREEMENT.  USE OF THE SOFTWARE PROVIDED WITH THIS AGREEMENT (THE "SOFTWARE") CONSTITUTES YOUR ACCEPTANCE OF THESE TERMS.  IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT INSTALL AND/OR USE THIS SOFTWARE.  USER'S USE OF THIS SOFTWARE IS CONDITIONED UPON COMPLIANCE BY USER WITH THE TERMS OF THIS AGREEMENT.
+
+1. LICENSE GRANT.  Eassos Tech. Co.,Ltd. grants you a license to use one copy of the version of this software on any one system for as many licenses as you purchase.  "You" means the company, entity or individual whose funds are used to pay the license fee.  "Use" means storing, loading, installing, executing or displaying the software.  You may not modify the software or disable any licensing or control features of the software except as an intended part of the software's programming features.  This license is not transferable to any other system, or to another organization or individual.  You are expected to use the software on your system and to thoroughly evaluate its usefulness and functionality before making a purchase.  This "try before you buy" approach is the ultimate guarantee that the software will perform to your satisfaction; therefore, you understand and agree that there is no refund policy for any purchase of the software.
+
+2. OWNERSHIP.  The software is owned and copyrighted by Eassos Tech. Co.,Ltd. Your license confers no title or ownership in the software and should not be construed as a sale of any right in the software .  
+
+3. COPYRIGHT.  The software is protected by copyright law and international treaty provisions. You acknowledge that no title to the intellectual property in the software is transferred to you.  You further acknowledge that title and full ownership rights to the software will remain the exclusive property of Eassos Tech. Co.,Ltd. and you will not acquire any rights to the software except as expressly set forth in this license. You agree that any copies of the software will contain the same proprietary notices which appear on and in the software.
+
+4. REVERSE ENGINEERING. You agree that you will not attempt to reverse compile, modify, translate, or disassemble the software in whole or in part.
+
+5. NO OTHER WARRANTIES.  EASSOS TECH. CO.,LTD. DOES NOT WARRANT THAT THE SOFTWARE IS ERROR FREE. THE EASSOS TECH. CO.,LTD. DISCLAIMS ALL OTHER WARRANTIES WITH RESPECT TO THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.  SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY MAY LAST, OR THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU.  THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION. 
+
+6. SEVERABILITY.  In the event of invalidity of any provision of this license, the parties agree that such invalidity shall not affect the validity of the remaining portions of this license.  
+
+7. NO LIABILITY FOR CONSEQUENTIAL DAMAGES.  IN NO EVENT SHALL EASSOS TECH. CO.,LTD. OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL OR INDIRECT DAMAGES OF ANY KIND ARISING OUT OF THE DELIVERY, PERFORMANCE OR USE OF THE SOFTWARE, EVEN IF EASSOS TECH. CO.,LTD. HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT WILL EASSOS TECH. CO.,LTD. LIABILITY FOR ANY CLAIM, WHETHER IN CONTRACT, TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED THE LICENSE FEE PAID BY YOU, IF ANY.
+
+8. TERMINATION.  Any failure by You to comply with the terms and conditions of this agreement will result in automatic and immediate termination of this agreement including the license hereunder. Upon termination of this agreement for any reason, you agree to immediately cease use of this software and destroy all copies of this software.
+
+9. GOVERNING LAW.  This license shall be governed by and interpreted only in accordance with the laws of the People's Republic of China, without reference to conflict of laws principles, and to the maximum extent permitted under applicable law, you expressly waive any rights to the application of any other law or regulation on the effect thereof.
+
+10. ENTIRE AGREEMENT.  This is the entire agreement between you and Eassos Tech. Co.,Ltd. which supersedes any prior agreement or understanding, whether written or oral, relating to the subject matter of this license.
+
+
+Website: http://www.PartitionGuru.com
+Email:  support@eassos.com

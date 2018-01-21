@@ -1,0 +1,2 @@
+\Windows\System32\spp\store\2.0\data.dat
+\Windows\System32\spp\store\2.0\tokens.dat

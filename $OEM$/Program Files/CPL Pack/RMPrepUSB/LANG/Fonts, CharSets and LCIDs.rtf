@@ -1,0 +1,383 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\ri-358\lang2057\b\fs16 RMPrepUSB INI files \b0 can specify the Locale ID (LCID), the font name and the Character Set, as well as the font sizes for the button, label and help text. INI files should be saved as UniCode.\par
+\par
+if possible, test out your INI file on as many different systems as possible.\par
+\par
+Note: For Windows XP, you must install Asian Language support in order to view Chinese and other languages (via Control Panel).\par
+\par
+An example is shown below for \b Chinese Simplified\b0\par
+\par
+LCID=2052\par
+HelpFontName=SimSun\par
+HelpFontCharset=134\par
+HelpFontSize=9\par
+ButtonFontSize=9\par
+LabelFontSize=9\par
+HelpFontBold=false\par
+\par
+\par
+Here is an example for \b Chinese Traditional\b0\par
+\par
+LCID=1028\par
+HelpFontName=PMingLiU\par
+HelpFontCharset=136\par
+HelpFontSize=9\par
+HelpFontBold=false\par
+ButtonFontSize=9\par
+LabelFontSize=8\par
+\par
+\par
+Here is an example for \b Russian\b0\par
+\par
+LCID=1049\par
+\pard\ri-358 HelpFontName=Arial\par
+HelpFontCharset=204\par
+HelpFontSize=8\par
+\pard\ri-358 ButtonFontSize=8\par
+LabelFontSize=8\par
+HelpFontBold=false\par
+\par
+\par
+See the tables below for LCID value(decimal value), Charset and suggested fonts and sizes.\par
+\par
+\ul\b Language        \tab\tab\tab UI font name    \tab UI font size\tab non-UI font name\tab non-UI font size\par
+\pard\ulnone\b0 Western, CE, ME, Vietnamese     \tab Tahoma\tab\tab 8      \tab\tab Arial  \tab\tab  \tab 10\par
+Japanese       \tab\tab\tab MS UI Gothic    \tab 9       \tab\tab MS P Gothic    \tab  \tab 10\par
+Korean  \tab\tab\tab\tab Gulim   \tab\tab 9       \tab\tab Gulim  \tab\tab  \tab  9\par
+Simplified Chinese     \tab\tab Simsun  \tab\tab 9       \tab\tab SimSun \tab\tab  \tab 10\par
+Traditional Chinese     \tab\tab PMingLiU       \tab 9      \tab\tab PMingLiU        \tab\tab  9\par
+Thai    \tab\tab\tab\tab MS Sans Serif   \tab 8       \tab\tab Tahoma  \tab\tab\tab 14\par
+Symbols \tab\tab\tab\tab Wingdings       \tab 8       \tab\tab Wingdings       \tab\tab 10\par
+Devanagari      \tab\tab\tab Mangal  \tab\tab 8       \tab\tab Mangal  \tab\tab\tab 10\par
+Tamil   \tab\tab\tab\tab Latha \tab\tab 8       \tab\tab Latha   \tab\tab\tab 10\par
+Georgian, Armenian      \tab\tab Arial Unicode  \tab 8 \tab\tab Arial Unicode   \tab\tab 10\par
+\par
+\par
+\ul\b Help Fonts and CharSets\par
+\ulnone\b0\par
+\ul\b Language\ulnone\tab\tab\ul suggested font\ulnone\tab\ul charset\ulnone\par
+\b0 CentralEuro\tab\tab Arial\tab\tab 238\par
+Cyrillic\tab\tab\tab Arial \tab\tab 204\par
+Greek\tab\tab\tab Arial \tab\tab 161\par
+Japanese\tab\tab\tab MS UI Gothic  \tab 128\par
+Korean\tab\tab\tab GulimChe \tab 129\par
+Arabic\tab\tab\tab Traditional Arabic\tab 178\par
+Hebrew\tab\tab\tab David \tab\tab 177\par
+Thai\tab\tab\tab Angsana New \tab 222\par
+Chinese Simplified \tab\tab SimSun \tab\tab 134    (or  MS PGothic 128)\par
+Chinese Trad\tab\tab PMingLiu \tab\tab 136\par
+\par
+\b\tab Else use Arial 178\par
+\b0\par
+\ul\b Common Charsets\par
+\ulnone\b0 128     Japanese, Shift_JIS (Japanese Industry Standard)\par
+129     Korean , ks_c_5601\par
+130     Korean , johab\par
+134     Simplified Chinese, gb2312 - Mainland China(PRC) and Singapore LCID 2052\par
+136     Traditional Chinese, big5 - Taiwan and Hong Kong\par
+161     Greek \par
+162     Turkish \par
+163     Vietnamese \par
+177     Hebrew \par
+178     Arabic \par
+186     Baltic \par
+204     Cyrillic - Russia, Belarus, Ukraine...\par
+222     Thai\par
+238     Central/Eastern European\par
+\par
+\par
+\ul\b LCID VALUES\par
+\ulnone\b0\par
+WIndows Local Code at {\field{\*\fldinst{HYPERLINK "http://www.science.co.il/language/Locale-Codes.asp?s=hexadecimal"}}{\fldrslt{\ul\cf1 http://www.science.co.il/language/Locale-Codes.asp?s=hexadecimal}}}\f0\fs16   \par
+\par
+see {\field{\*\fldinst{HYPERLINK "http://msdn.microsoft.com/en-us/goglobal/bb964664.aspx"}}{\fldrslt{\ul\cf1 http://msdn.microsoft.com/en-us/goglobal/bb964664.aspx}}}\f0\fs16   for LCID values (table also show below)\par
+\par
+\par
+\ul\b Language - Country/Region\tab\ulnone\tab\ul LCID Hex\ulnone\tab\tab\ul LCID Decimal\ulnone\par
+\b0 Afrikaans - South Africa\tab\tab 0436\tab\tab 1078\par
+Albanian - Albania\tab\tab\tab 041c\tab\tab 1052\par
+Amharic - Ethiopia\tab\tab\tab 045e\tab\tab 1118\par
+Arabic - Saudi Arabia\tab\tab 0401\tab\tab 1025\par
+Arabic - Algeria\tab\tab\tab 1401\tab\tab 5121\par
+Arabic - Bahrain\tab\tab\tab 3c01\tab\tab 15361\par
+Arabic - Egypt\tab\tab\tab 0c01\tab\tab 3073\par
+Arabic - Iraq\tab\tab\tab 0801\tab\tab 2049\par
+Arabic - Jordan\tab\tab\tab 2c01\tab\tab 11265\par
+Arabic - Kuwait\tab\tab\tab 3401\tab\tab 13313\par
+Arabic - Lebanon\tab\tab\tab 3001\tab\tab 12289\par
+Arabic - Libya\tab\tab\tab 1001\tab\tab 4097\par
+Arabic - Morocco\tab\tab\tab 1801\tab\tab 6145\par
+Arabic - Oman\tab\tab\tab 2001\tab\tab 8193\par
+Arabic - Qatar\tab\tab\tab 4001\tab\tab 16385\par
+Arabic - Syria\tab\tab\tab 2801\tab\tab 10241\par
+Arabic - Tunisia\tab\tab\tab 1c01\tab\tab 7169\par
+Arabic - U.A.E.\tab\tab\tab 3801\tab\tab 14337\par
+Arabic - Yemen\tab\tab\tab 2401\tab\tab 9217\par
+Armenian - Armenia\tab\tab\tab 042b\tab\tab 1067\par
+Assamese\tab\tab\tab 044d\tab\tab 1101\par
+Azeri (Cyrillic)\tab\tab\tab 082c\tab\tab 2092\par
+Azeri (Latin)\tab\tab\tab 042c\tab\tab 1068\par
+Basque\tab\tab\tab\tab 042d\tab\tab 1069\par
+Belarusian\tab\tab\tab 0423\tab\tab 1059\par
+Bengali (India)\tab\tab\tab 0445\tab\tab 1093\par
+Bengali (Bangladesh)\tab\tab 0845\tab\tab 2117\par
+Bosnian (Bosnia/Herzegovina)\tab 141A\tab\tab 5146\par
+Bulgarian\tab\tab\tab\tab 0402\tab\tab 1026\par
+Burmese\tab\tab\tab\tab 0455\tab\tab 1109\par
+Catalan\tab\tab\tab\tab 0403\tab\tab 1027\par
+Cherokee - United States\tab\tab 045c\tab\tab 1116\par
+Chinese Simplified - PRC\tab\tab 0804\tab\tab 2052\par
+Chinese - Singapore\tab\tab 1004\tab\tab 4100\par
+Chinese Traditonal - Taiwan\tab\tab 0404\tab\tab 1028\par
+Chinese - Hong Kong SAR\tab\tab 0c04\tab\tab 3076\par
+Chinese - Macao SAR\tab\tab 1404\tab\tab 5124\par
+Croatian\tab\tab\tab\tab 041a\tab\tab 1050\par
+Croatian (Bosnia/Herzegovina)\tab 101a\tab\tab 4122\par
+Czech\tab\tab\tab\tab 0405\tab\tab 1029\par
+Danish\tab\tab\tab\tab 0406\tab\tab 1030\par
+Divehi\tab\tab\tab\tab 0465\tab\tab 1125\par
+Dutch - Netherlands\tab\tab\tab 0413\tab\tab 1043\par
+Dutch - Belgium\tab\tab\tab 0813\tab\tab 2067\par
+Edo\tab\tab\tab\tab 0466\tab\tab 1126\par
+English - United States\tab\tab 0409\tab\tab 1033\par
+English - United Kingdom\tab\tab 0809\tab\tab 2057\par
+English - Australia\tab\tab\tab 0c09\tab\tab 3081\par
+English - Belize\tab\tab\tab 2809\tab\tab 10249\par
+English - Canada\tab\tab\tab 1009\tab\tab 4105\par
+English - Caribbean\tab\tab\tab 2409\tab\tab 9225\par
+English - Hong Kong SAR\tab\tab 3c09\tab\tab 15369\par
+English - India\tab\tab\tab 4009\tab\tab 16393\par
+English - Indonesia\tab\tab\tab 3809\tab\tab 14345\par
+English - Ireland\tab\tab\tab 1809\tab\tab 6153\par
+English - Jamaica\tab\tab\tab 2009\tab\tab 8201\par
+English - Malaysia\tab\tab\tab 4409\tab\tab 17417\par
+English - New Zealand\tab\tab 1409\tab\tab 5129\par
+English - Philippines\tab\tab 3409\tab\tab 13321\par
+English - Singapore\tab\tab\tab 4809\tab\tab 18441\par
+English - South Africa\tab\tab 1c09\tab\tab 7177\par
+English - Trinidad\tab\tab\tab 2c09\tab\tab 11273\par
+English - Zimbabwe\tab\tab\tab 3009\tab\tab 12297\par
+Estonian\tab\tab\tab\tab 0425\tab\tab 1061\par
+Faroese\tab\tab\tab\tab 0438\tab\tab 1080\par
+Farsi\tab\tab\tab\tab 0429\tab\tab 1065\par
+Filipino\tab\tab\tab\tab 0464\tab\tab 1124\par
+Finnish\tab\tab\tab\tab 040b\tab\tab 1035\par
+French - France\tab\tab\tab 040c\tab\tab 1036\par
+French - Belgium\tab\tab\tab 080c\tab\tab 2060\par
+French - Cameroon\tab\tab\tab 2c0c\tab\tab 11276\par
+French - Canada\tab\tab\tab 0c0c\tab\tab 3084\par
+French - Dem. Rep. of Congo\tab\tab 240c\tab\tab 9228\par
+French - Cote d'Ivoire\tab\tab 300c\tab\tab 12300\par
+French - Haiti\tab\tab\tab 3c0c\tab\tab 15372\par
+French - Luxembourg\tab\tab 140c\tab\tab 5132\par
+French - Mali\tab\tab\tab 340c\tab\tab 13324\par
+French - Monaco\tab\tab\tab 180c\tab\tab 6156\par
+French - Morocco\tab\tab\tab 380c\tab\tab 14348\par
+French - North Africa\tab\tab e40c\tab\tab 58380\par
+French - Reunion\tab\tab\tab 200c\tab\tab 8204\par
+French - Senegal\tab\tab\tab 280c\tab\tab 10252\par
+French - Switzerland\tab\tab 100c\tab\tab 4108\par
+French - West Indies\tab\tab 1c0c\tab\tab 7180\par
+Frisian - Netherlands\tab\tab 0462\tab\tab 1122\par
+Fulfulde - Nigeria\tab\tab\tab 0467\tab\tab 1127\par
+FYRO Macedonian\tab\tab\tab 042f\tab\tab 1071\par
+Gaelic (Ireland)\tab\tab\tab 083c\tab\tab 2108\par
+Gaelic (Scotland)\tab\tab\tab 043c\tab\tab 1084\par
+Galician\tab\tab\tab\tab 0456\tab\tab 1110\par
+Georgian\tab\tab\tab\tab 0437\tab\tab 1079\par
+German - Germany\tab\tab\tab 0407\tab\tab 1031\par
+German - Austria\tab\tab\tab 0c07\tab\tab 3079\par
+German - Liechtenstein\tab\tab 1407\tab\tab 5127\par
+German - Luxembourg\tab\tab 1007\tab\tab 4103\par
+German - Switzerland\tab\tab 0807\tab\tab 2055\par
+Greek\tab\tab\tab\tab 0408\tab\tab 1032\par
+Guarani - Paraguay\tab\tab\tab 0474\tab\tab 1140\par
+Gujarati\tab\tab\tab\tab 0447\tab\tab 1095\par
+Hausa - Nigeria\tab\tab\tab 0468\tab\tab 1128\par
+Hawaiian - United States\tab\tab 0475\tab\tab 1141\par
+Hebrew\tab\tab\tab\tab 040d\tab\tab 1037\par
+Hindi\tab\tab\tab\tab 0439\tab\tab 1081\par
+Hungarian\tab\tab\tab 040e\tab\tab 1038\par
+Ibibio - Nigeria\tab\tab\tab 0469\tab\tab 1129\par
+Icelandic\tab\tab\tab\tab 040f\tab\tab 1039\par
+Igbo - Nigeria\tab\tab\tab 0470\tab\tab 1136\par
+Indonesian\tab\tab\tab 0421\tab\tab 1057\par
+Inuktitut\tab\tab\tab\tab 045d\tab\tab 1117\par
+Italian - Italy\tab\tab\tab 0410\tab\tab 1040\par
+Italian - Switzerland\tab\tab\tab 0810\tab\tab 2064\par
+Japanese\tab\tab\tab\tab 0411\tab\tab 1041\par
+Kannada\tab\tab\tab\tab 044b\tab\tab 1099\par
+Kanuri - Nigeria\tab\tab\tab 0471\tab\tab 1137\par
+Kashmiri\tab\tab\tab\tab 0860\tab\tab 2144\par
+Kashmiri (Arabic)\tab\tab\tab 0460\tab\tab 1120\par
+Kazakh\tab\tab\tab\tab 043f\tab\tab 1087\par
+Khmer\tab\tab\tab\tab 0453\tab\tab 1107\par
+Konkani\tab\tab\tab\tab 0457\tab\tab 1111\par
+Korean\tab\tab\tab\tab 0412\tab\tab 1042\par
+Kyrgyz (Cyrillic)\tab\tab\tab 0440\tab\tab 1088\par
+Lao\tab\tab\tab\tab 0454\tab\tab 1108\par
+Latin\tab\tab\tab\tab 0476\tab\tab 1142\par
+Latvian\tab\tab\tab\tab 0426\tab\tab 1062\par
+Lithuanian\tab\tab\tab 0427\tab\tab 1063\par
+Malay - Malaysia\tab\tab\tab 043e\tab\tab 1086\par
+Malay - Brunei Darussalam\tab\tab 083e\tab\tab 2110\par
+Malayalam\tab\tab\tab 044c\tab\tab 1100\par
+Maltese\tab\tab\tab\tab 043a\tab\tab 1082\par
+Manipuri\tab\tab\tab\tab 0458\tab\tab 1112\par
+Maori - New Zealand\tab\tab 0481\tab\tab 1153\par
+Marathi\tab\tab\tab\tab 044e\tab\tab 1102\par
+Mongolian (Cyrillic)\tab\tab\tab 0450\tab\tab 1104\par
+Mongolian (Mongolian)\tab\tab 0850\tab\tab 2128\par
+Nepali\tab\tab\tab\tab 0461\tab\tab 1121\par
+Nepali - India\tab\tab\tab 0861\tab\tab 2145\par
+Norwegian (Bokm\'e5l)\tab\tab 0414\tab\tab 1044\par
+Norwegian (Nynorsk)\tab\tab 0814\tab\tab 2068\par
+Oriya\tab\tab\tab\tab 0448\tab\tab 1096\par
+Oromo\tab\tab\tab\tab 0472\tab\tab 1138\par
+Papiamentu\tab\tab\tab 0479\tab\tab 1145\par
+Pashto\tab\tab\tab\tab 0463\tab\tab 1123\par
+Polish\tab\tab\tab\tab 0415\tab\tab 1045\par
+Portuguese - Brazil\tab\tab\tab 0416\tab\tab 1046\par
+Portuguese - Portugal\tab\tab 0816\tab\tab 2070\par
+Punjabi\tab\tab\tab\tab 0446\tab\tab 1094\par
+Punjabi (Pakistan)\tab\tab\tab 0846\tab\tab 2118\par
+Quecha - Bolivia\tab\tab\tab 046B\tab\tab 1131\par
+Quecha - Ecuador\tab\tab\tab 086B\tab\tab 2155\par
+Quecha - Peru\tab\tab\tab 0C6B\tab\tab 3179\par
+Rhaeto-Romanic\tab\tab\tab 0417\tab\tab 1047\par
+Romanian\tab\tab\tab 0418\tab\tab 1048\par
+Romanian - Moldava\tab\tab 0818\tab\tab 2072\par
+Russian\tab\tab\tab\tab 0419\tab\tab 1049\par
+Russian - Moldava\tab\tab\tab 0819\tab\tab 2073\par
+Sami (Lappish)\tab\tab\tab 043b\tab\tab 1083\par
+Sanskrit\tab\tab\tab\tab 044f\tab\tab 1103\par
+Sepedi\tab\tab\tab\tab 046c\tab\tab 1132\par
+Serbian (Cyrillic)\tab\tab\tab 0c1a\tab\tab 3098\par
+Serbian (Latin)\tab\tab\tab 081a\tab\tab 2074\par
+Sindhi - India\tab\tab\tab 0459\tab\tab 1113\par
+Sindhi - Pakistan\tab\tab\tab 0859\tab\tab 2137\par
+Sinhalese - Sri Lanka\tab\tab 045b\tab\tab 1115\par
+Slovak\tab\tab\tab\tab 041b\tab\tab 1051\par
+Slovenian\tab\tab\tab\tab 0424\tab\tab 1060\par
+Somali\tab\tab\tab\tab 0477\tab\tab 1143\par
+Sorbian\tab\tab\tab\tab 042e\tab\tab 1070\par
+Spanish - Spain (Modern Sort)\tab 0c0a\tab\tab 3082\par
+Spanish - Spain (Trad. Sort)\tab\tab 040a\tab\tab 1034\par
+Spanish - Argentina\tab\tab\tab 2c0a\tab\tab 11274\par
+Spanish - Bolivia\tab\tab\tab 400a\tab\tab 16394\par
+Spanish - Chile\tab\tab\tab 340a\tab\tab 13322\par
+Spanish - Colombia\tab\tab\tab 240a\tab\tab 9226\par
+Spanish - Costa Rica\tab\tab 140a\tab\tab 5130\par
+Spanish - Dominican Republic\tab\tab 1c0a\tab\tab 7178\par
+Spanish - Ecuador\tab\tab\tab 300a\tab\tab 12298\par
+Spanish - El Salvador\tab\tab 440a\tab\tab 17418\par
+Spanish - Guatemala\tab\tab 100a\tab\tab 4106\par
+Spanish - Honduras\tab\tab\tab 480a\tab\tab 18442\par
+Spanish - Latin America\tab\tab 580a\tab\tab 22538\par
+Spanish - Mexico\tab\tab\tab 080a\tab\tab 2058\par
+Spanish - Nicaragua\tab\tab 4c0a\tab\tab 19466\par
+Spanish - Panama\tab\tab\tab 180a\tab\tab 6154\par
+Spanish - Paraguay\tab\tab\tab 3c0a\tab\tab 15370\par
+Spanish - Peru\tab\tab\tab 280a\tab\tab 10250\par
+Spanish - Puerto Rico\tab\tab 500a\tab\tab 20490\par
+Spanish - United States\tab\tab 540a\tab\tab 21514\par
+Spanish - Uruguay\tab\tab\tab 380a\tab\tab 14346\par
+Spanish - Venezuela\tab\tab 200a\tab\tab 8202\par
+Sutu\tab\tab\tab\tab 0430\tab\tab 1072\par
+Swahili\tab\tab\tab\tab 0441\tab\tab 1089\par
+Swedish\tab\tab\tab\tab 041d\tab\tab 1053\par
+Swedish - Finland\tab\tab\tab 081d\tab\tab 2077\par
+Syriac\tab\tab\tab\tab 045a\tab\tab 1114\par
+Tajik\tab\tab\tab\tab 0428\tab\tab 1064\par
+Tamazight (Arabic)\tab\tab\tab 045f\tab\tab 1119\par
+Tamazight (Latin)\tab\tab\tab 085f\tab\tab 2143\par
+Tamil\tab\tab\tab\tab 0449\tab\tab 1097\par
+Tatar\tab\tab\tab\tab 0444\tab\tab 1092\par
+Telugu\tab\tab\tab\tab 044a\tab\tab 1098\par
+Thai\tab\tab\tab\tab 041e\tab\tab 1054\par
+Tibetan - Bhutan\tab\tab\tab 0851\tab\tab 2129\par
+Tibetan - PRC\tab\tab\tab 0451\tab\tab 1105\par
+Tigrigna - Eritrea\tab\tab\tab 0873\tab\tab 2163\par
+Tigrigna - Ethiopia\tab\tab\tab 0473\tab\tab 1139\par
+Tsonga\tab\tab\tab\tab 0431\tab\tab 1073\par
+Tswana\tab\tab\tab\tab 0432\tab\tab 1074\par
+Turkish\tab\tab\tab\tab 041f\tab\tab 1055\par
+Turkmen\tab\tab\tab\tab 0442\tab\tab 1090\par
+Uighur - China\tab\tab\tab 0480\tab\tab 1152\par
+Ukrainian\tab\tab\tab\tab 0422\tab\tab 1058\par
+Urdu\tab\tab\tab\tab 0420\tab\tab 1056\par
+Urdu - India\tab\tab\tab 0820\tab\tab 2080\par
+Uzbek (Cyrillic)\tab\tab\tab 0843\tab\tab 2115\par
+Uzbek (Latin)\tab\tab\tab 0443\tab\tab 1091\par
+Venda\tab\tab\tab\tab 0433\tab\tab 1075\par
+Vietnamese\tab\tab\tab 042a\tab\tab 1066\par
+Welsh\tab\tab\tab\tab 0452\tab\tab 1106\par
+Xhosa\tab\tab\tab\tab 0434\tab\tab 1076\par
+Yi\tab\tab\tab\tab 0478\tab\tab 1144\par
+Yiddish\tab\tab\tab\tab 043d\tab\tab 1085\par
+Yoruba\tab\tab\tab\tab 046a\tab\tab 1130\par
+Zulu\tab\tab\tab\tab 0435\tab\tab 1077\par
+HID (Human Interface Device)\tab\tab 04ff\tab\tab 1279\par
+\par
+\par
+\par
+\ul\b Standard Windows Fonts\par
+\ulnone\b0\par
+\b Arial\par
+\b0 Languages: Latin1, Greek, Cyrillic, Hebrew, Arabic\par
+\par
+\b Comic Sans MS\par
+\b0 Languages: Latin1, Greek, Cyrillic\par
+\par
+\b Courier New\par
+\b0 Languages: Latin1, Greek, Cyrillic, Hebrew, Arabic\par
+\par
+\b Georgia\par
+\b0 Languages: Latin1, Greek, Cyrillic\par
+\par
+\b Impact\par
+\b0 Languages: Latin1, Greek, Cyrillic\par
+\par
+\b Times New Roman\par
+\b0 Languages: Latin1, Greek, Cyrillic, Hebrew, Arabic\par
+\par
+\b Trebuchet MS\par
+\b0 Languages: Latin1, Greek, Cyrillic\par
+\par
+\b Verdana\par
+\b0 Languages: Latin1, Greek, Cyrillic\par
+\par
+\ul\b Asian and Middle-Eastern Fonts\par
+\ulnone\b0\par
+\b Japanese Fonts:\par
+\b0 MS Gothic, MS Mincho, MS UI Gothic, MS PGothic, MS PMincho\par
+\par
+\b Korean Fonts: \par
+\b0 Batang, BatangChe, (select Hangul for script) \par
+Gulim, GulimChe, Gungsuh, GungsuhChe, Dotum, DotumChe\par
+\par
+\b (GB2312) Simplified Chinese:\par
+\b0 NSimSun, SimSun, SimHei\par
+\par
+\b (Big5) Traditional Chinese:\par
+\b0  MingLiu, PMingLiu\par
+\par
+\b Arabic Fonts: \par
+\b0 Andalus, Arabic Transparent, Simplified Arabic,\par
+Simplified Arabic Fixed, Traditional Arabic\par
+\par
+\b Thai Fonts:\par
+\b0 Angsana New, AngsanaUPC, Browallia New, \par
+BrowalliaUPC, Cordia New, CoridaUPC, IrisUPC, DillenialUPC, \par
+JasmineUPC, EucrosialUPC, FreesialUPC, LilyUPC\par
+\par
+\b Hebrew:\par
+\b0 David, David Transparent, Aharoni, Miriam, Rod, \par
+Rod Transparent, Miriam Fixed, Miriam Transparent, FrankRuehl, \par
+Levenim MT, Narkisim\par
+\par
+\par
+\par
+}
+ 

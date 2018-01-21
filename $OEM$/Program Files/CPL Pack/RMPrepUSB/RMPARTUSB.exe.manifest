@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <!-- Make My Manifest 0.7.300 -->
+  <assemblyIdentity name="RM.Education.plc.RMPARTUSB" processorArchitecture="X86" type="win32" version="2.0.0.554" />
+  <description>Partitions and formats USB flash drives</description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+        <requestedPrivileges>
+          <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+        </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>   

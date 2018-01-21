@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoreTemp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Language>
+    <Name>Deutsch</Name>
+    <Culture>de-DE</Culture>
+    <RightToLeft>false</RightToLeft>
+  </Language>
+  <Menus>
+    <Menu>
+      <Id>109</Id>
+      <IdName>IDC_CoreTempMenu</IdName>
+      <SubMenus>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>&amp;File</OriginalText>
+          <Caption>&amp;Datei</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>&amp;Options</OriginalText>
+          <Caption>&amp;Optionen</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>&amp;Tools</OriginalText>
+          <Caption>&amp;Werkzeuge</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>G15 &amp;applet</OriginalText>
+          <Caption>G15-&amp;Anwendung</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>&amp;Help</OriginalText>
+          <Caption>&amp;Hilfe</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32774</Id>
+          <IdName>ID_FILE_REFRESH</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Erneuern&#9;&#9;(F5)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32773</Id>
+          <IdName>IDM_SHOWHIDE</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Anzeigen/Verbergen</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>105</Id>
+          <IdName>IDM_EXIT</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Beenden</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32772</Id>
+          <IdName>IDM_SETTINGS</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Einstellungen</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32802</Id>
+          <IdName>IDM_ADJUSTOFFSETS</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Temperatur-Offsets justieren</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32800</Id>
+          <IdName>IDM_OVERHEATPROTECTION</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Überhitzungsschutz</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32779</Id>
+          <IdName>IDM_AOT</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Immer im Vordergrund</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32797</Id>
+          <IdName>IDM_MINIMODE</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Mini-Modus</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32785</Id>
+          <IdName>IDM_LOGGING</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Log-File speichern&#9;&#9;(F4)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32793</Id>
+          <IdName>IDM_RESETHILO</IdName>
+          <OriginalText></OriginalText>
+          <Caption>Reset &amp;Max./Min.&#9;&#9;(F6)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32813</Id>
+          <IdName>ID_TOOLS_PLUGINMANAGER</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Plugins verwalten&#9;&#9;(F8)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32804</Id>
+          <IdName>IDM_SYSTEMINFORMATION</IdName>
+          <OriginalText></OriginalText>
+          <Caption>System-&amp;Information&#9;&#9;(F3)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32789</Id>
+          <IdName>IDM_RUNG15APP</IdName>
+          <OriginalText></OriginalText>
+          <Caption>Starte G15-Anwendung</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32790</Id>
+          <IdName>IDM_KILLG15APP</IdName>
+          <OriginalText></OriginalText>
+          <Caption>Erweitere G15-Anwendung</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32780</Id>
+          <IdName>ID_OPTIONS_REGISTERDUMP</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Register speichern&#9;(F7)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32781</Id>
+          <IdName>ID_OPTIONS_SCREENSHOT</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Screenshot machen&#9;&#9;(F9)</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>104</Id>
+          <IdName>IDM_ABOUT</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Über...</Caption>
+        </SubMenu>
+      </SubMenus>
+    </Menu>
+    <Menu>
+      <Id>170</Id>
+      <IdName>IDR_Win7TaskbarColorMenu</IdName>
+      <SubMenus>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>&amp;Color</OriginalText>
+          <Caption>&amp;Farbe</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32808</Id>
+          <IdName>ID_COLOR_GREEN</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Grün</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32809</Id>
+          <IdName>ID_COLOR_YELLOW</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Gelb</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32810</Id>
+          <IdName>ID_COLOR_RED</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Rot</Caption>
+        </SubMenu>
+      </SubMenus>
+    </Menu>
+    <Menu>
+      <Id>182</Id>
+      <IdName>IDR_SystrayColorMenu</IdName>
+      <SubMenus>
+        <SubMenu>
+          <Id>-1</Id>
+          <IdName></IdName>
+          <OriginalText>Color</OriginalText>
+          <Caption>Farbe</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32811</Id>
+          <IdName>ID_COLOR_TRANSPARENT</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Transparent</Caption>
+        </SubMenu>
+        <SubMenu>
+          <Id>32812</Id>
+          <IdName>ID_COLOR_CUSTOMCOLOR</IdName>
+          <OriginalText></OriginalText>
+          <Caption>&amp;Farbe anpassen</Caption>
+        </SubMenu>
+      </SubMenus>
+    </Menu>
+  </Menus>
+  <Dialogs>
+    <Dialog>
+      <Id>103</Id>
+      <IdName>IDD_ABOUTBOX</IdName>
+      <Caption>Over</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1002</Id>
+          <IdName>IDC_APP_TITLE</IdName>
+          <Text>IDS_APP_TITEL_VER</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1120</Id>
+          <IdName>IDC_ACopyright</IdName>
+          <Text>Copyright (C) 2006 - 2013 Alcpu</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>OK</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1121</Id>
+          <IdName>IDC_AAuthor</IdName>
+          <Text>Geschrieben von: Arthur Liberman</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1000</Id>
+          <IdName>IDC_EMAIL</IdName>
+          <Text>Kontakt</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1001</Id>
+          <IdName>IDC_DONATE</IdName>
+          <Text>Spenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1003</Id>
+          <IdName>IDC_HOMEPAGE</IdName>
+          <Text>Homepage</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1122</Id>
+          <IdName>IDC_AThanksRay</IdName>
+          <Text>Besonderen Dank geht an Ray Adams (System-Tray-Anwendung).</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1123</Id>
+          <IdName>IDC_AThanksMichael</IdName>
+          <Text>Besonderer Dank geht an Michael von Char Ness (CoreTemp-Symbol).</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1124</Id>
+          <IdName>IDC_IDC_AThanksCoolIT</IdName>
+          <Text>Besonderer Dank geht an CPUID für die Bereitstellung des signierten Treibers für Windows 7 und Vista.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1004</Id>
+          <IdName>IDC_FORUM</IdName>
+          <Text>Hilfe-Forum</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1005</Id>
+          <IdName>IDC_SCYTHE</IdName>
+          <Text>Offiziell empfohlen von Scythe</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1007</Id>
+          <IdName>IDC_FORUM2</IdName>
+          <Text>FAQ</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1006</Id>
+          <IdName>IDC_GADGET</IdName>
+          <Text>Suche CoreTemp-Plugins (Win-7 &amp;&amp; Vista)</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1008</Id>
+          <IdName>IDC_SCYTHE2</IdName>
+          <Text>Übersetzung: Billy the Kitt, Korrektur: Kris Shred.</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>158</Id>
+      <IdName>IDD_OVERHEAT</IdName>
+      <Caption>Überhitzungsschutz Einstellungen</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>OK</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>2</Id>
+          <IdName>IDCANCEL</IdName>
+          <Text>Beenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1006</Id>
+          <IdName>IDC_ENABLE</IdName>
+          <Text>Überhitzungsschutz aktivieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1007</Id>
+          <IdName>GRP_SETTINGS</IdName>
+          <Text>Einstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1022</Id>
+          <IdName>IDC_ACTAT3</IdName>
+          <Text>Automatisch</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1020</Id>
+          <IdName>IDC_NOTIFYHOT</IdName>
+          <Text>Nur Nachrichten mit kritischen Temperaturen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1023</Id>
+          <IdName>IDC_ACTAT1</IdName>
+          <Text>Aktivieren bei einer bestimmten Temperatur</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1025</Id>
+          <IdName>IDC_Celcius</IdName>
+          <Text>°</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1024</Id>
+          <IdName>IDC_ACTAT2</IdName>
+          <Text>Aktivierung, wenn TjMax erreicht ist (5° sicher)</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1008</Id>
+          <IdName>IDC_BALLOON</IdName>
+          <Text>Sprechblasen-Benachrichtigung</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1009</Id>
+          <IdName>IDC_TBFLASH</IdName>
+          <Text>CoreTemp in die Taskleiste</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1126</Id>
+          <IdName>IDC_OPExecute</IdName>
+          <Text>Starte Programm:</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1012</Id>
+          <IdName>IDC_BROWSE</IdName>
+          <Text>Durchsuchen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1068</Id>
+          <IdName>IDC_OHPExecOnce</IdName>
+          <Text>Starten</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1127</Id>
+          <IdName>IDC_OPShutdownOptions</IdName>
+          <Text>Shutdown-Optionen:</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1010</Id>
+          <IdName>IDC_ENABLESHUTDOWN</IdName>
+          <Text>Aktivieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1015</Id>
+          <IdName>IDC_RADIO_SD3</IdName>
+          <Text>System in den Ruhezustand setzen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1016</Id>
+          <IdName>IDC_RADIO_SD4</IdName>
+          <Text>System ausschalten</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1017</Id>
+          <IdName>IDC_RADIO_SD5</IdName>
+          <Text>Programm schließen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1027</Id>
+          <IdName>IDC_LBLSHUTDOWN</IdName>
+          <Text>Schließen nach</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1026</Id>
+          <IdName>IDC_LBLSECS</IdName>
+          <Text>Sekunden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1125</Id>
+          <IdName>IDC_OPNotification</IdName>
+          <Text>Ankündigungen:</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>159</Id>
+      <IdName>IDD_USREOFFSET</IdName>
+      <Caption>Temperatur Ausgleichen</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>OK</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>2</Id>
+          <IdName>IDCANCEL</IdName>
+          <Text>Beenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1132</Id>
+          <IdName>IDC_TOCpuSelect</IdName>
+          <Text>CPU-Auswahl</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1068</Id>
+          <IdName>IDC_APPLYALL</IdName>
+          <Text>Für alle Kerne</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1069</Id>
+          <IdName>IDC_RESET</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1036</Id>
+          <IdName>IDC_CORE1</IdName>
+          <Text>Kern 0</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1037</Id>
+          <IdName>IDC_CORE2</IdName>
+          <Text>Kern 1</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1038</Id>
+          <IdName>IDC_CORE3</IdName>
+          <Text>Kern 2</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1039</Id>
+          <IdName>IDC_CORE4</IdName>
+          <Text>Kern 3</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1040</Id>
+          <IdName>IDC_CORE5</IdName>
+          <Text>Kern 4</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1041</Id>
+          <IdName>IDC_CORE6</IdName>
+          <Text>Kern 5</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1042</Id>
+          <IdName>IDC_CORE7</IdName>
+          <Text>Kern 6</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1043</Id>
+          <IdName>IDC_CORE8</IdName>
+          <Text>Kern 7</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1044</Id>
+          <IdName>IDC_CORE9</IdName>
+          <Text>Kern 8</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1045</Id>
+          <IdName>IDC_CORE10</IdName>
+          <Text>Kern 9</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1047</Id>
+          <IdName>IDC_CORE11</IdName>
+          <Text>Kern 10</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1046</Id>
+          <IdName>IDC_CORE12</IdName>
+          <Text>Kern 11</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1048</Id>
+          <IdName>IDC_CORE13</IdName>
+          <Text>Kern 12</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1049</Id>
+          <IdName>IDC_CORE14</IdName>
+          <Text>Kern 13</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1050</Id>
+          <IdName>IDC_CORE15</IdName>
+          <Text>Kern 14</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1051</Id>
+          <IdName>IDC_CORE16</IdName>
+          <Text>Kern 15</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>166</Id>
+      <IdName>IDD_SYSTEMINFO</IdName>
+      <Caption>System-Informationen</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>Schließen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1055</Id>
+          <IdName>IDC_TREESYSINFO</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>2</Id>
+          <IdName>ID_CANCEL</IdName>
+          <Text>Beenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>4</Id>
+          <IdName>ID_REFRESH</IdName>
+          <Text>Erneuern</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>169</Id>
+      <IdName>IDD_Win7Taskbar</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>OK</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>2</Id>
+          <IdName>IDCANCEL</IdName>
+          <Text>Beenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1058</Id>
+          <IdName>IDC_W7TBEnable</IdName>
+          <Text>Windows 7 Taskbar-Visualisierungen aktivieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1064</Id>
+          <IdName>IDC_W7TBFrame</IdName>
+          <Text>Anzeige Einstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1059</Id>
+          <IdName>IDC_W7TBTemperature</IdName>
+          <Text>Prozessor-Temperatur</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1060</Id>
+          <IdName>IDC_W7TBFrequency</IdName>
+          <Text>Prozessor-Frequenz</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1061</Id>
+          <IdName>IDC_W7TBLoad</IdName>
+          <Text>Prozessor-Auslastung</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1063</Id>
+          <IdName>IDC_W7TBMinimize</IdName>
+          <Text>Taskleisten-Symbol nicht verstecken, wenn minimiert</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1065</Id>
+          <IdName>IDC_W7TBColor</IdName>
+          <Text>Farbe</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1062</Id>
+          <IdName>IDC_W7TBCycle</IdName>
+          <Text>Umschalten zwischen den Modi alle</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1067</Id>
+          <IdName>IDC_W7TBSPINCycleDelay</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1133</Id>
+          <IdName>IDC_W7TBSecondsLabel</IdName>
+          <Text>Sekunden</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>176</Id>
+      <IdName>IDD_SETTINGS</IdName>
+      <Caption>Einstellungen</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>OK</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>2</Id>
+          <IdName>IDCANCEL</IdName>
+          <Text>Beenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Standard</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>6</Id>
+          <IdName>IDAPPLY</IdName>
+          <Text>Anwenden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1141</Id>
+          <IdName>IDC_TAB1</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>4</Id>
+          <IdName>IDCONFIRM</IdName>
+          <Text>Einstellungen bestätigen</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>177</Id>
+      <IdName>IDD_SETTINGS_GENERAL</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1097</Id>
+          <IdName>IDC_SGSepSettings</IdName>
+          <Text>Einstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1134</Id>
+          <IdName>IDC_SGPollingLabel</IdName>
+          <Text>Temperatur-Abfrage in: </Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1073</Id>
+          <IdName>IDC_SGSpinPolling</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1137</Id>
+          <IdName>IDC_SGMillisecondsLabel</IdName>
+          <Text>Millisekunden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1135</Id>
+          <IdName>IDC_SGLoggingLabel</IdName>
+          <Text>Temeratur-Log Interval:</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1075</Id>
+          <IdName>IDC_SGSpinLogging</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1138</Id>
+          <IdName>IDC_SGSecondsLabel</IdName>
+          <Text>Sekunden</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1136</Id>
+          <IdName>IDC_SGLanguageLabel</IdName>
+          <Text>Sprache:</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1080</Id>
+          <IdName>IDC_SGPlugins</IdName>
+          <Text>Plugins ausführen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1081</Id>
+          <IdName>IDC_SGStartLogging</IdName>
+          <Text>Beim Start Loggen aktivieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1082</Id>
+          <IdName>IDC_SGInstances</IdName>
+          <Text>Erlaube mehrfache Ausführungen von Core Temp</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1079</Id>
+          <IdName>IDC_SGStartWindows</IdName>
+          <Text>Starte Core Temp mit Windows</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>178</Id>
+      <IdName>IDD_SETTINGS_DISPLAY</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1076</Id>
+          <IdName>IDC_SDCheckFahrenheit</IdName>
+          <Text>Temperatur in Fahrenheit</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1077</Id>
+          <IdName>IDC_SDCheckMinimized</IdName>
+          <Text>Core Temp minimiert starten</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1078</Id>
+          <IdName>IDC_SDCheckTray</IdName>
+          <Text>Schließen von Core Temp in die Taskbar</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1093</Id>
+          <IdName>IDC_SDGroupColors</IdName>
+          <Text>Feld Farbeinstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1094</Id>
+          <IdName>IDC_SDSepSettings</IdName>
+          <Text>Einstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1128</Id>
+          <IdName>IDC_DSTextLabel</IdName>
+          <Text>Text</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1129</Id>
+          <IdName>IDC_DSHotLabel</IdName>
+          <Text>Heiß</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1130</Id>
+          <IdName>IDC_DSCriticalLabel</IdName>
+          <Text>Kritisch</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1098</Id>
+          <IdName>IDC_SDStaticPreview1</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1099</Id>
+          <IdName>IDC_SDStaticPreview2</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1100</Id>
+          <IdName>IDC_SDStaticPreview3</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1065</Id>
+          <IdName>IDC_SDBtnChange1</IdName>
+          <Text>Ändern</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1066</Id>
+          <IdName>IDC_SDBtnReset1</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1067</Id>
+          <IdName>IDC_SDBtnChange2</IdName>
+          <Text>Ändern</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1068</Id>
+          <IdName>IDC_SDBtnReset2</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1069</Id>
+          <IdName>IDC_SDBtnChange3</IdName>
+          <Text>Ändern</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1070</Id>
+          <IdName>IDC_SDBtnReset3</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1131</Id>
+          <IdName>IDC_SDLabels</IdName>
+          <Text>Beschriftungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1101</Id>
+          <IdName>IDC_SDStaticPreview4</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1071</Id>
+          <IdName>IDC_SDBtnChange4</IdName>
+          <Text>Ändern</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1072</Id>
+          <IdName>IDC_SDBtnReset4</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>179</Id>
+      <IdName>IDD_SETTINGS_G15</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1089</Id>
+          <IdName>IDC_SGCheckShowTime</IdName>
+          <Text>Datum und Uhrzeit anzeigen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1085</Id>
+          <IdName>IDC_SGRadio12Hour</IdName>
+          <Text>12-Stunden Zeitanzeige</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1086</Id>
+          <IdName>IDC_SGRadio24Hour</IdName>
+          <Text>24-Stunden Zeitanzeige</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1087</Id>
+          <IdName>IDC_SGRadioUserFont</IdName>
+          <Text>Benutzerdefinierte</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1088</Id>
+          <IdName>IDC_SGRadioBuiltInFont</IdName>
+          <Text>Schriftart von Core Temp</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>5</Id>
+          <IdName>IDC_SGBtnFont</IdName>
+          <Text>Schriftart wählen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1092</Id>
+          <IdName>IDC_SGStaticPreview</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1095</Id>
+          <IdName>IDC_SGSepTimes</IdName>
+          <Text>Zeit-Anzeige</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1096</Id>
+          <IdName>IDC_SGSepFonts</IdName>
+          <Text> Einstellung Schriftart</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>-1</Id>
+          <IdName>IDC_STATIC</IdName>
+          <Text>*</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1139</Id>
+          <IdName>IDC_SGRestarted</IdName>
+          <Text>Core Temp muss neugestartet werden, damit die Änderungen wirksam werden.</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>180</Id>
+      <IdName>IDD_SETTINGS_ADVANCED</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1091</Id>
+          <IdName>IDC_SACheckTjMax</IdName>
+          <Text>Zeige Temperatur als Grenzwert zu TjMax an</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1092</Id>
+          <IdName>IDC_SACheckOnFlyFsb</IdName>
+          <Text>On-the-fly FSB-Erkennung (ressourcen-lastig)</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1096</Id>
+          <IdName>IDC_SASepSettings</IdName>
+          <Text>Einstellungen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1093</Id>
+          <IdName>IDC_SACheckSnmp</IdName>
+          <Text>Gemeinsam-genutzten Speicher aktivieren (SNMP)</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>181</Id>
+      <IdName>IDD_SETTINGS_SYSTRAY</IdName>
+      <Caption></Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>3</Id>
+          <IdName>IDDEFAULTS</IdName>
+          <Text>Zurücks.</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1099</Id>
+          <IdName>IDC_SSSepSettings</IdName>
+          <Text>Taskbar Symbol</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1100</Id>
+          <IdName>IDC_SSRdoAll</IdName>
+          <Text>Alle Kerne</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1101</Id>
+          <IdName>IDC_SSRdoHighestCpu</IdName>
+          <Text>Höchste Temperatur pro Prozessor</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1102</Id>
+          <IdName>IDC_SSRdoHighest</IdName>
+          <Text>Höchste Temperatur</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1103</Id>
+          <IdName>IDC_SSRdoIcon</IdName>
+          <Text>Nur das Symbol</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1104</Id>
+          <IdName>IDC_SSCheckSpeed</IdName>
+          <Text>Prozessor-Frequenz</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1105</Id>
+          <IdName>IDC_SSCheckLoad</IdName>
+          <Text>Prozessor-Auslastung</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1108</Id>
+          <IdName>IDC_SSStaticPreview</IdName>
+          <Text>Beispiel</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1065</Id>
+          <IdName>IDC_SSBtnTextColor</IdName>
+          <Text>Text</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1110</Id>
+          <IdName>IDC_SSSepColors</IdName>
+          <Text>Farbe</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1111</Id>
+          <IdName>IDC_SSSepExtra</IdName>
+          <Text> Extra Symbol</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1066</Id>
+          <IdName>IDC_SSBtnFont</IdName>
+          <Text>Schriftart auswählen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1113</Id>
+          <IdName>IDC_SSBtnBackgroundColor</IdName>
+          <Text>Hintergrund</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+    <Dialog>
+      <Id>183</Id>
+      <IdName>IDD_PLUGINMANAGER</IdName>
+      <Caption>Plugins-Verwaltung</Caption>
+      <Controls>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1</Id>
+          <IdName>IDOK</IdName>
+          <Text>Schließen</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1114</Id>
+          <IdName>IDC_PMList</IdName>
+          <Text></Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1115</Id>
+          <IdName>IDC_PMStart</IdName>
+          <Text>Start</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1116</Id>
+          <IdName>IDC_PMStop</IdName>
+          <Text>Stop</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1117</Id>
+          <IdName>IDC_PMConfigure</IdName>
+          <Text>Konfigurieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1118</Id>
+          <IdName>IDC_PMRemove</IdName>
+          <Text>De-installeren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1119</Id>
+          <IdName>IDC_PMEnable</IdName>
+          <Text>Plugins aktivieren</Text>
+        </Control>
+        <Control RightAlignText="false" RightToLeft="false">
+          <Id>1120</Id>
+          <IdName>IDC_PMRefresh</IdName>
+          <Text>Erneuern</Text>
+        </Control>
+      </Controls>
+    </Dialog>
+  </Dialogs>
+  <Strings>
+    <String>
+      <Id>109</Id>
+      <IdName>IDC_CoreTempMenu</IdName>
+      <Value>CORETEMP</Value>
+    </String>
+    <String>
+      <Id>103</Id>
+      <IdName>IDS_APP_TITLE</IdName>
+      <Value>Core Temp 1.0</Value>
+    </String>
+    <String>
+      <Id>104</Id>
+      <IdName>IDS_APP_TITLE_VER</IdName>
+      <Value>Core Temp Version 1.0</Value>
+    </String>
+    <String>
+      <Id>168</Id>
+      <IdName>IDS_CoreTempMiscRegistryEntryNotFound</IdName>
+      <Value>Registry-Einstellung wurde nicht gefunden.&#10;&#13;'Starte Core Temp mit Windows' Einstellung nicht beibehalten.</Value>
+    </String>
+    <String>
+      <Id>167</Id>
+      <IdName>IDS_CoreTempMiscScheduledTask</IdName>
+      <Value>Geplanter Core Temp Task automatisch mit Windows starten kann nicht erstellt / geöffnet werden die Einstellung nicht beibehalten.</Value>
+    </String>
+    <String>
+      <Id>162</Id>
+      <IdName>IDS_InitializeMessageDataInitFailed</IdName>
+      <Value>Core Temp kann nicht initialisiert werden.&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>161</Id>
+      <IdName>IDS_InitializeMessageDriverFailed</IdName>
+      <Value>De driver kan niet geladen worden.&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>164</Id>
+      <IdName>IDS_InitializeMessageDriverOutdated</IdName>
+      <Value>Die aktuell geladenen Treiber sind zu alt.&#10;&#13;Stellen Sie sicher, dass keine andere Software läuft, und starten Sie ALCPU Core Temp erneut.&#10;&#13;Core Temp kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>157</Id>
+      <IdName>IDS_InitializeMessageDuplicateInstance</IdName>
+      <Value>Es wir bereits eine Version von Core Temp ausgeführt!</Value>
+    </String>
+    <String>
+      <Id>165</Id>
+      <IdName>IDS_InitializeMessageInternalError</IdName>
+      <Value>Core Temp hat ein interner Fehler!&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>166</Id>
+      <IdName>IDS_InitializeMessageOsNotSupported</IdName>
+      <Value>Dieses Programm ist nur für Windows 2000/XP/2003/Vista/7 .&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>163</Id>
+      <IdName>IDS_InitializeMessageProcessorNotFound</IdName>
+      <Value>Core Temp findet keinen unterstützten Prozessoren.&#10;&#13;Das Programm kann nicht fortgesetzt werden.&#10;&#13;&#10;&#13;Sind Sie sicher, dass Sie CPU in der Liste der unterstützten Prozessoren aufgeführt ist? Möchten Sie einen Fehler melden, um mit dem Programmierer dieses Problem zu klären?</Value>
+    </String>
+    <String>
+      <Id>159</Id>
+      <IdName>IDS_InitializeMessageUnsupportedCpuAmd</IdName>
+      <Value>Diese AMD-Prozessoren werden nicht unterstützt.&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>160</Id>
+      <IdName>IDS_InitializeMessageUnsupportedCpuIntel</IdName>
+      <Value>Diese Intel-Prozessoren werden nicht unterstützt.&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>158</Id>
+      <IdName>IDS_InitializeMessageUnsupportedVendor</IdName>
+      <Value>Diese Prozessoren werden nicht unterstützt.&#10;&#13;Das Programm kann nicht fortgesetzt werden.</Value>
+    </String>
+    <String>
+      <Id>124</Id>
+      <IdName>IDS_MainGuiCoreLoad</IdName>
+      <Value>Last</Value>
+    </String>
+    <String>
+      <Id>129</Id>
+      <IdName>IDS_MainGuiCoreNum</IdName>
+      <Value>Kern #%d:</Value>
+    </String>
+    <String>
+      <Id>105</Id>
+      <IdName>IDS_MainGuiCores</IdName>
+      <Value>Kern(e)</Value>
+    </String>
+    <String>
+      <Id>108</Id>
+      <IdName>IDS_MainGuiCpuid</IdName>
+      <Value>CPUID:</Value>
+    </String>
+    <String>
+      <Id>128</Id>
+      <IdName>IDS_MainGuiCpuNum</IdName>
+      <Value>CPU #%d:</Value>
+    </String>
+    <String>
+      <Id>193</Id>
+      <IdName>IDS_MainGuiDataClockSpeed</IdName>
+      <Value>CPU-Frequenz</Value>
+    </String>
+    <String>
+      <Id>194</Id>
+      <IdName>IDS_MainGuiDataLoad</IdName>
+      <Value>Kern-Last</Value>
+    </String>
+    <String>
+      <Id>196</Id>
+      <IdName>IDS_MainGuiDataShortTemperature</IdName>
+      <Value>Temp</Value>
+    </String>
+    <String>
+      <Id>195</Id>
+      <IdName>IDS_MainGuiDataToTjMax</IdName>
+      <Value>Nähe zur TjMax</Value>
+    </String>
+    <String>
+      <Id>197</Id>
+      <IdName>IDS_MainGuiDataWatts</IdName>
+      <Value>Watt</Value>
+    </String>
+    <String>
+      <Id>126</Id>
+      <IdName>IDS_MainGuiFreq</IdName>
+      <Value>Freq #%d:</Value>
+    </String>
+    <String>
+      <Id>114</Id>
+      <IdName>IDS_MainGuiFrequency</IdName>
+      <Value>Frequenz:</Value>
+    </String>
+    <String>
+      <Id>123</Id>
+      <IdName>IDS_MainGuiHighTemp</IdName>
+      <Value>Max.</Value>
+    </String>
+    <String>
+      <Id>113</Id>
+      <IdName>IDS_MainGuiLithography</IdName>
+      <Value>Fertigungs-Prozess:</Value>
+    </String>
+    <String>
+      <Id>122</Id>
+      <IdName>IDS_MainGuiLowTemp</IdName>
+      <Value>Min.</Value>
+    </String>
+    <String>
+      <Id>110</Id>
+      <IdName>IDS_MainGuiMaxTdp</IdName>
+      <Value>TDP:</Value>
+    </String>
+    <String>
+      <Id>112</Id>
+      <IdName>IDS_MainGuiModel</IdName>
+      <Value>Model:</Value>
+    </String>
+    <String>
+      <Id>120</Id>
+      <IdName>IDS_MainGuiModulation</IdName>
+      <Value>Modulation:</Value>
+    </String>
+    <String>
+      <Id>111</Id>
+      <IdName>IDS_MainGuiPlatform</IdName>
+      <Value>Platform:</Value>
+    </String>
+    <String>
+      <Id>125</Id>
+      <IdName>IDS_MainGuiProcessorNum</IdName>
+      <Value>Prozessor #%d</Value>
+    </String>
+    <String>
+      <Id>121</Id>
+      <IdName>IDS_MainGuiProcInfo</IdName>
+      <Value>Prozessor-Information</Value>
+    </String>
+    <String>
+      <Id>115</Id>
+      <IdName>IDS_MainGuiRevision</IdName>
+      <Value>Version:</Value>
+    </String>
+    <String>
+      <Id>107</Id>
+      <IdName>IDS_MainGuiSelectCpu</IdName>
+      <Value>CPU Auswahl:</Value>
+    </String>
+    <String>
+      <Id>117</Id>
+      <IdName>IDS_MainGuiTCaseMax</IdName>
+      <Value>TCase Max:</Value>
+    </String>
+    <String>
+      <Id>118</Id>
+      <IdName>IDS_MainGuiTdp</IdName>
+      <Value>Verbrauch:</Value>
+    </String>
+    <String>
+      <Id>127</Id>
+      <IdName>IDS_MainGuiTemperatureReadings</IdName>
+      <Value>Prozessor #%d: Temperaturen</Value>
+    </String>
+    <String>
+      <Id>130</Id>
+      <IdName>IDS_MainGuiTemperatureReadings2</IdName>
+      <Value>Temperatur auslesen</Value>
+    </String>
+    <String>
+      <Id>106</Id>
+      <IdName>IDS_MainGuiThreads</IdName>
+      <Value>Thread(s)</Value>
+    </String>
+    <String>
+      <Id>116</Id>
+      <IdName>IDS_MainGuiTjMax</IdName>
+      <Value>Tj. Max:</Value>
+    </String>
+    <String>
+      <Id>119</Id>
+      <IdName>IDS_MainGuiVid</IdName>
+      <Value>VID:</Value>
+    </String>
+    <String>
+      <Id>150</Id>
+      <IdName>IDS_MsgBoxTitleError</IdName>
+      <Value>Fehler</Value>
+    </String>
+    <String>
+      <Id>152</Id>
+      <IdName>IDS_MsgBoxTitleInfo</IdName>
+      <Value>Information</Value>
+    </String>
+    <String>
+      <Id>153</Id>
+      <IdName>IDS_MsgBoxTitleQuestion</IdName>
+      <Value>Fragen</Value>
+    </String>
+    <String>
+      <Id>151</Id>
+      <IdName>IDS_MsgBoxTitleWarning</IdName>
+      <Value>Warnung</Value>
+    </String>
+    <String>
+      <Id>203</Id>
+      <IdName>IDS_OverheatProtectionCritical</IdName>
+      <Value>ist kritisch!</Value>
+    </String>
+    <String>
+      <Id>189</Id>
+      <IdName>IDS_OverheatProtectionDelay</IdName>
+      <Value>Möchten Sie 60 Sekunden warten?</Value>
+    </String>
+    <String>
+      <Id>187</Id>
+      <IdName>IDS_OverheatProtectionHibernate</IdName>
+      <Value>Der Computer wird in %lu Sekunden in den Ruhezustand versetzt.</Value>
+    </String>
+    <String>
+      <Id>204</Id>
+      <IdName>IDS_OverheatProtectionHot</IdName>
+      <Value>ist heiß.</Value>
+    </String>
+    <String>
+      <Id>185</Id>
+      <IdName>IDS_OverheatProtectionOverheatDetected</IdName>
+      <Value>Überhitzung erkannt!</Value>
+    </String>
+    <String>
+      <Id>188</Id>
+      <IdName>IDS_OverheatProtectionShutDown</IdName>
+      <Value>Der Computer wird in %lu Sekunden ausgeschaltet.</Value>
+    </String>
+    <String>
+      <Id>186</Id>
+      <IdName>IDS_OverheatProtectionStandby</IdName>
+      <Value>Der Computer geht in %lu Sekunden in den Standby-Modus.</Value>
+    </String>
+    <String>
+      <Id>205</Id>
+      <IdName>IDS_OverheatProtectionThreshold</IdName>
+      <Value>über den Benutzer eingestellten Grenzwert.</Value>
+    </String>
+    <String>
+      <Id>182</Id>
+      <IdName>IDS_PluginErrorHandlerErrorInvalidPlugin</IdName>
+      <Value>Ungültiges Plugin.</Value>
+    </String>
+    <String>
+      <Id>181</Id>
+      <IdName>IDS_PluginErrorHandlerErrorLoad</IdName>
+      <Value>Kann das Plugin nicht laden.</Value>
+    </String>
+    <String>
+      <Id>184</Id>
+      <IdName>IDS_PluginErrorHandlerErrorNameUnknown</IdName>
+      <Value>Unbekannt</Value>
+    </String>
+    <String>
+      <Id>180</Id>
+      <IdName>IDS_PluginErrorHandlerErrorPath</IdName>
+      <Value>Kann das Plugin nicht finden oder es ist falsch.</Value>
+    </String>
+    <String>
+      <Id>183</Id>
+      <IdName>IDS_PluginErrorHandlerErrorUnknown</IdName>
+      <Value>Unbekannter Fehler.</Value>
+    </String>
+    <String>
+      <Id>176</Id>
+      <IdName>IDS_PluginErrorHandlerOnConfig</IdName>
+      <Value>Fehler beim Konfigurieren des Plugins</Value>
+    </String>
+    <String>
+      <Id>177</Id>
+      <IdName>IDS_PluginErrorHandlerOnDeinit</IdName>
+      <Value>Ein Fehler beim Initialisieren des Plugins</Value>
+    </String>
+    <String>
+      <Id>179</Id>
+      <IdName>IDS_PluginErrorHandlerOnException</IdName>
+      <Value>Ein Fehler ist aufgetreten in</Value>
+    </String>
+    <String>
+      <Id>170</Id>
+      <IdName>IDS_PluginErrorHandlerOnInitiate</IdName>
+      <Value>Ein Fehler beim Initialisieren des Plugins</Value>
+    </String>
+    <String>
+      <Id>171</Id>
+      <IdName>IDS_PluginErrorHandlerOnLoad</IdName>
+      <Value>Fehler beim Laden des Plugins</Value>
+    </String>
+    <String>
+      <Id>178</Id>
+      <IdName>IDS_PluginErrorHandlerOnRemove</IdName>
+      <Value>Ein Fehler verhindert das Plugin</Value>
+    </String>
+    <String>
+      <Id>173</Id>
+      <IdName>IDS_PluginErrorHandlerOnStart</IdName>
+      <Value>Fehler beim Starten des Plugin</Value>
+    </String>
+    <String>
+      <Id>174</Id>
+      <IdName>IDS_PluginErrorHandlerOnStop</IdName>
+      <Value>Fehler beim Stopen des Plugin</Value>
+    </String>
+    <String>
+      <Id>172</Id>
+      <IdName>IDS_PluginErrorHandlerOnUnload</IdName>
+      <Value>Fehler beim Beenden des Plugin</Value>
+    </String>
+    <String>
+      <Id>175</Id>
+      <IdName>IDS_PluginErrorHandlerOnUpdate</IdName>
+      <Value>Fehler beim Updaten des Plugin</Value>
+    </String>
+    <String>
+      <Id>169</Id>
+      <IdName>IDS_PluginErrorHandlerSystemError</IdName>
+      <Value>System Fehler</Value>
+    </String>
+    <String>
+      <Id>190</Id>
+      <IdName>IDS_PluginManagerConfigurationNotImplemented</IdName>
+      <Value>Dieses Plugin hat keine Konfigurationsoptionen.</Value>
+    </String>
+    <String>
+      <Id>192</Id>
+      <IdName>IDS_PluginManagerConfirmRemove</IdName>
+      <Value>Löschen des Plugin bestätigen</Value>
+    </String>
+    <String>
+      <Id>132</Id>
+      <IdName>IDS_PluginManagerDescription</IdName>
+      <Value>Beschreibung</Value>
+    </String>
+    <String>
+      <Id>131</Id>
+      <IdName>IDS_PluginManagerName</IdName>
+      <Value>Name</Value>
+    </String>
+    <String>
+      <Id>135</Id>
+      <IdName>IDS_PluginManagerPath</IdName>
+      <Value>Pfad</Value>
+    </String>
+    <String>
+      <Id>191</Id>
+      <IdName>IDS_PluginManagerRemovePlugin</IdName>
+      <Value>Sind Sie sicher, dass Sie dieses Plugin entfernen möchten?</Value>
+    </String>
+    <String>
+      <Id>136</Id>
+      <IdName>IDS_PluginManagerStarted</IdName>
+      <Value>Gestartet</Value>
+    </String>
+    <String>
+      <Id>134</Id>
+      <IdName>IDS_PluginManagerStatus</IdName>
+      <Value>Status</Value>
+    </String>
+    <String>
+      <Id>137</Id>
+      <IdName>IDS_PluginManagerStopped</IdName>
+      <Value>Gestopt</Value>
+    </String>
+    <String>
+      <Id>133</Id>
+      <IdName>IDS_PluginManagerVersion</IdName>
+      <Value>Version</Value>
+    </String>
+    <String>
+      <Id>142</Id>
+      <IdName>IDS_SettingsDialogAdvanced</IdName>
+      <Value>Fortgeschritten</Value>
+    </String>
+    <String>
+      <Id>200</Id>
+      <IdName>IDS_SettingsDialogAdvancedK8Unsupported</IdName>
+      <Value>Diese Option wird nicht für AMD K8-Prozessoren unterstützt.</Value>
+    </String>
+    <String>
+      <Id>201</Id>
+      <IdName>IDS_SettingsDialogAdvancedSnmp</IdName>
+      <Value>Nur wichtig für Multiprozessor-und / oder Server-Systemen.</Value>
+    </String>
+    <String>
+      <Id>139</Id>
+      <IdName>IDS_SettingsDialogDisplay</IdName>
+      <Value>Anzeige</Value>
+    </String>
+    <String>
+      <Id>138</Id>
+      <IdName>IDS_SettingsDialogGeneral</IdName>
+      <Value>Standard</Value>
+    </String>
+    <String>
+      <Id>140</Id>
+      <IdName>IDS_SettingsDialogSystemTray</IdName>
+      <Value>System Symbol</Value>
+    </String>
+    <String>
+      <Id>145</Id>
+      <IdName>IDS_SettingsDialogSystemTrayCpu</IdName>
+      <Value>CPU %d</Value>
+    </String>
+    <String>
+      <Id>144</Id>
+      <IdName>IDS_SettingsDialogSystemTrayCpuCore</IdName>
+      <Value>CPU %d / Kern %d</Value>
+    </String>
+    <String>
+      <Id>147</Id>
+      <IdName>IDS_SettingsDialogSystemTrayFrequency</IdName>
+      <Value>Frequenz</Value>
+    </String>
+    <String>
+      <Id>148</Id>
+      <IdName>IDS_SettingsDialogSystemTrayLoad</IdName>
+      <Value>Belastung</Value>
+    </String>
+    <String>
+      <Id>146</Id>
+      <IdName>IDS_SettingsDialogSystemTrayTemperature</IdName>
+      <Value>Temperatur</Value>
+    </String>
+    <String>
+      <Id>141</Id>
+      <IdName>IDS_SettingsDialogWin7Taskbar</IdName>
+      <Value>Windows 7 Taskbar</Value>
+    </String>
+    <String>
+      <Id>149</Id>
+      <IdName>IDS_SharedMemoryCreateMutexFailed</IdName>
+      <Value>Mutexobjekt kann nicht erstellt werden&#10;&#13;.</Value>
+    </String>
+    <String>
+      <Id>155</Id>
+      <IdName>IDS_ShareMemoryAccessMappingFailed</IdName>
+      <Value>Kein Zugriff auf den Dateiordner</Value>
+    </String>
+    <String>
+      <Id>154</Id>
+      <IdName>IDS_ShareMemoryCreateMappingFailed</IdName>
+      <Value>Kann Dateiordner nicht erstellen</Value>
+    </String>
+    <String>
+      <Id>202</Id>
+      <IdName>IDS_SystemTrayBackground</IdName>
+      <Value>Hintergrund</Value>
+    </String>
+    <String>
+      <Id>198</Id>
+      <IdName>IDS_SystemTrayCore</IdName>
+      <Value>Kern</Value>
+    </String>
+    <String>
+      <Id>199</Id>
+      <IdName>IDS_SystemTrayCpu</IdName>
+      <Value>CPU</Value>
+    </String>
+    <String>
+      <Id>206</Id>
+      <IdName>IDS_TaskbarButoonTemperature</IdName>
+      <Value>CPU-Temperatur</Value>
+    </String>
+    <String>
+      <Id>208</Id>
+      <IdName>IDS_TaskbarButtonClockSpeed</IdName>
+      <Value>CPU-Frequenz</Value>
+    </String>
+    <String>
+      <Id>207</Id>
+      <IdName>IDS_TaskbarButtonCpuLoad</IdName>
+      <Value>CPU-Auslastung</Value>
+    </String>
+    <String>
+      <Id>156</Id>
+      <IdName>IDS_TxtDumpFileCreateFailed</IdName>
+      <Value>Datei kann nicht hergestellt werden!</Value>
+    </String>
+    <String>
+      <Id>216</Id>
+      <IdName>IDS_UnitsAmpere</IdName>
+      <Value>A</Value>
+    </String>
+    <String>
+      <Id>217</Id>
+      <IdName>IDS_Unitsbyte</IdName>
+      <Value>byte</Value>
+    </String>
+    <String>
+      <Id>218</Id>
+      <IdName>IDS_Unitsbytes</IdName>
+      <Value>Bytes</Value>
+    </String>
+    <String>
+      <Id>211</Id>
+      <IdName>IDS_UnitsGHz</IdName>
+      <Value>GHz</Value>
+    </String>
+    <String>
+      <Id>221</Id>
+      <IdName>IDS_UnitsGigabytes</IdName>
+      <Value>GiB</Value>
+    </String>
+    <String>
+      <Id>214</Id>
+      <IdName>IDS_UnitsGTs</IdName>
+      <Value>GT/s</Value>
+    </String>
+    <String>
+      <Id>219</Id>
+      <IdName>IDS_UnitsKilobytes</IdName>
+      <Value>KiB</Value>
+    </String>
+    <String>
+      <Id>220</Id>
+      <IdName>IDS_UnitsMegabytes</IdName>
+      <Value>MiB</Value>
+    </String>
+    <String>
+      <Id>210</Id>
+      <IdName>IDS_UnitsMHz</IdName>
+      <Value>MHz</Value>
+    </String>
+    <String>
+      <Id>213</Id>
+      <IdName>IDS_UnitsMTs</IdName>
+      <Value>MT/s</Value>
+    </String>
+    <String>
+      <Id>209</Id>
+      <IdName>IDS_UnitsNanometers</IdName>
+      <Value>nm</Value>
+    </String>
+    <String>
+      <Id>223</Id>
+      <IdName>IDS_UnitsPetabytes</IdName>
+      <Value>PiB</Value>
+    </String>
+    <String>
+      <Id>222</Id>
+      <IdName>IDS_UnitsTerabytes</IdName>
+      <Value>TiB</Value>
+    </String>
+    <String>
+      <Id>215</Id>
+      <IdName>IDS_UnitsVolts</IdName>
+      <Value>v</Value>
+    </String>
+    <String>
+      <Id>143</Id>
+      <IdName>IDS_UserOffsetProcessorNum</IdName>
+      <Value>Prozessor #%d</Value>
+    </String>
+  </Strings>
+</CoreTemp>

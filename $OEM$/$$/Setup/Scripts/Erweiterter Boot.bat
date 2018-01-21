@@ -1,0 +1,1 @@
+%windir%\system32\shutdown.exe /o /r /t 0

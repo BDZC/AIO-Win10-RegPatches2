@@ -1,0 +1,6 @@
+delete '\Windows\System32\spp\store\data.dat' --force
+delete '\Windows\System32\spp\store\tokens.dat' --force
+delete '\Windows\System32\spp\store\cache\cache.dat' --force
+add 'data.dat' '\Windows\System32\spp\store\data.dat'
+add 'tokens.dat' '\Windows\System32\spp\store\tokens.dat'
+add 'cache.dat' '\Windows\System32\spp\store\cache\cache.dat'

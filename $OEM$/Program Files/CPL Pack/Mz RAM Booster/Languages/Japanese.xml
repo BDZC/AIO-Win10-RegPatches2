@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<MzUltimateTools>
+
+
+  <MzServicesManager>
+    <a01>自動</a01>
+    <a02>自動 (遅延)</a02>
+    <a03>手動</a03>
+    <a04>無効</a04>
+    <refresh>リストを更新</refresh>
+    <start>サービスを開始</start>
+    <stop>サービスを停止</stop>
+    <auto>自動起動</auto>
+    <man>手動起動</man>
+    <auto2>遅延自動起動*</auto2>
+    <dsd>開始を無効化</dsd>
+    <opt>サービスの最適化</opt>
+    <ldp>プロファイルの読み込み</ldp>
+    <svp>プロファイルを保存</svp>
+    <vwp>プロファイルを表示</vwp>
+    <options>オプション</options>
+    <tasks>タスク</tasks>
+    <prof>プロファイル</prof>
+    <upd>アップデートの確認</upd>
+    <about>情報</about>
+    <task2>Windows Vista 及び 7 のみ</task2>
+    <scdesc>サービスの説明:</scdesc>
+    <col1>サービス名</col1>
+    <col2>ステータス</col2>
+    <col3>起動の種類</col3>
+    <col4>パス</col4>
+    <lang>言語</lang>
+    <theme>テーマ</theme>
+    <upd>アップデートの確認</upd>
+    <exit>終了</exit>
+    <dlgload>Mz Services Manager 作成したプロファイルを選択..</dlgload>
+    <dlgsave>プロファイルを保存中...</dlgsave>
+    <savedone1>プロファイル</savedone1>
+    <savedone2>正常に作成されました!</savedone2>
+    <loadtop>Mz Services Manager プロファイル...</loadtop>
+    <ldname>プロファイル名:</ldname>
+    <ldpath>プロファイルパス:</ldpath>
+    <ldman>サービスを強制的に '手動' 起動に変更</ldman>
+    <ldbut>プロファイルの読み込み</ldbut>
+    <ldclose>閉じる</ldclose>
+    <ldok>プロファイルの適用に成功!</ldok>
+    <opttop>Windows サービスの最適化</opttop>
+    <optlbl>最適化したいサービスにチェックを入れてください (チェックなし=無効):</optlbl>
+    <optcol1>説明</optcol1>
+    <optb1>最適化</optb1>
+    <optsc1a>ローカルエリア・ネットワーク(LAN)経由でファイル、プリンタの共有を許可しない</optsc1a>
+    <optsc2a>他のコンピュータ・システムにはアクセスしない</optsc2a>
+    <optsc3a>インターネットプロトコル IPv6 を使用しない</optsc3a>
+    <optsc4a>プリンタ、カメラを使用しない</optsc4a>
+    <optsc5a>エラーの度に Microsoft にエラー報告を送信しない(無効を推奨)</optsc5a>
+    <optsc6a>Windows 時刻の同期機能を使用しない</optsc6a>
+    <optsc7a>タブレット、PC ペンを利用する機能は使わない</optsc7a>
+    <optsc8a>オフラインファイル機能を使用しない</optsc8a>
+    <optsc9a>USB メモリや CD-ROM、リムーバブルストレージ等を挿入した時の自動再生を無効にする</optsc9a>
+    <optsc10a>以前のOS用に設計された、互換性に問題のあるソフトウェアは使用していません</optsc10a>
+    <optsc11a>ネットワークで NetBIOS / WINS は使用しない</optsc11a>
+    <optsc12a>ファイアウォールソフトは自分で導入したので、Windows のファイアウォール機能は使用しない</optsc12a>
+    <optsc13a>アンチスパイウェアは、自分で導入したので Windows Defender は使用しない</optsc13a>
+    <error1>エラー, プロファイルの読み込みに失敗、ファイルが破損しています</error1>
+    <error2>エラー, サービスの開始に失敗</error2>
+    <error3>エラー, サービスの停止に失敗</error3>
+    <error4>エラー, サービスの起動方法を変更できませんでした</error4>
+    <misc1>すべての最適化が正常に完了しました!</misc1>
+    <misc2>Windows Xp のサービスを最適化したい場合は、Mz Ultimate Tweaker's をご利用ください。</misc2> 
+ </MzServicesManager>
+
+
+  <MzStartUpManager>
+    <cola>名前</cola>
+    <colb>起動</colb>
+    <colc>パス</colc>
+    <allu>すべてのユーザ</allu>
+    <sts>ステータス</sts>
+    <enbld>有効</enbld>
+    <dbld>無効</dbld>
+    <curu>現在のユーザ</curu>
+    <pra> 製品の名前:  </pra>
+    <prb> 製品の会社:  </prb>
+    <prc> 製品バージョン:  </prc>
+    <prd> 製品の説明:  </prd>
+    <loc> 位置エントリ:  </loc>
+    <tsk> タスク</tsk>
+    <qmn> 右クリックでメニューを表示</qmn>
+    <ref>スタートアップリストを更新</ref>
+    <enb>選択項目を有効化</enb>
+    <dbd>選択項目を無効化</dbd>
+    <dlt>選択項目を削除</dlt>
+    <dld>本当にこのエントリを削除しますか?</dld>
+    <run>起動する</run>
+    <rnd>現在のファイルは起動出来ません</rnd>
+    <opn>フォルダを開く</opn>
+    <opd>エラー!、このエントリに含まれているパスは存在しないか無効です</opd>
+    <fpr>ファイルのプロパティ</fpr>
+    <ggl>Google で検索!</ggl>
+    <ggd>エラー、ブラウザを開けませんでした</ggd>
+    <add>新規エントリを追加</add>
+    <abt>情報</abt>
+    <opt>オプション</opt>
+    <rep>レポート</rep>
+    <wrt>エントリをテキストファイルに書き出す</wrt>
+    <exp>過去のレポートを閲覧</exp>
+    <del>既存のレポートをすべて削除</del>
+    <lng>言語</lng>
+    <thm>テーマ</thm>
+    <upd>アップデートの確認</upd>
+    <abt>情報</abt>
+    <ext>終了</ext>
+    <slct>ファイルを選択...</slct>
+    <addn>新規スタートアップエントリを追加:</addn>
+    <file>ファイルのパス:</file>
+    <desr>スタートアップエントリの名前</desr>
+    <strl>スタートアップ位置:</strl>
+    <brws>参照</brws>
+    <addw>すぐに追加!</addw>
+    <lnga>新規スタートアップエントリが登録されました!</lnga>
+    <lera>テキストボックスに入力してから再試行してください</lera>
+    <lerb>エラー,入力されたファイルパスは存在しません、本当に続行しますか?</lerb>
+    <lerc>エラー,ショートカット作成に失敗、オプションをもう一度確認してください</lerc>
+    <lerd>エラー,ショートカット作成に失敗、オプションをもう一度確認してください</lerd>
+  </MzStartUpManager>
+
+
+  <MzUltimateCleaner>
+    <about>情報</about>
+    <psc>スキャンしたいディスクを選択してください:</psc>
+    <cola1>ドライブ名</cola1>
+    <cola2>合計サイズ (MB)</cola2>
+    <cola3>空き領域 (MB)</cola3>
+    <cola4>フォーマット</cola4>
+    <intl>独自のスキャンメソッドを使用(高速)</intl>
+    <opt>オプション</opt>
+    <trs>痕跡</trs>
+    <cls>閉じる</cls>
+    <scan>スキャン開始</scan>
+    <nscan>新規スキャン</nscan>
+    <sscan>スキャン停止</sscan>
+    <inp>お待ちください, スキャンの進行状況:</inp>
+    <curd>現在スキャン中のドライブ:</curd>
+    <curf>フォルダ内のテンポラリファイルを検索中:</curf>
+    <ffound>検出したファイル:</ffound>
+    <totp>全体の進捗:</totp>
+    <tfound>以下のファイルが検出されました:</tfound>
+    <colb1>名前</colb1>
+    <colb2>検出したアイテム</colb2>
+    <colb3>サイズ (MB)</colb3>
+    <colba>安全なクリーニング</colba>
+    <colbb>拡張クリーニング</colbb>
+    <sall>すべて選択</sall>
+    <snone>選択解除</snone>
+    <dsel>選択項目を削除</dsel>
+	<dlting>お待ちください,削除しています...</dlting>
+    <colc1>ファイル名</colc1>
+    <colc2>サイズ (KB)</colc2>
+    <colc3>パス</colc3>
+    <done1>成功</done1>
+    <done2>クリーンアップ:</done2>
+    <done3>ファイル</done3>
+    <sopts>スキャン設定</sopts>
+    <lang>言語</lang>
+    <thm>テーマ</thm>
+    <updts>アップデートを確認</updts>
+    <exit>終了</exit>
+    <ffindb>検索するファイル:</ffindb>
+    <addnew>新規拡張子を追加</addnew>
+    <extn>拡張子:</extn>
+    <ex>入力例:</ex>
+    <rems>選択項目を除去</rems>
+    <dlta>削除:</dlta>
+    <move>ファイルをゴミ箱に移動</move>
+    <perm>ファイルを完全に消去</perm>
+    <apply>適用</apply>
+    <saved>変更の保存に成功!</saved>
+    <error1>エラー! データベースが破損しています、Mz Ultimate Cleaner を再インストールしてください</error1>
+    <errora>エラー! 有効な拡張子を入力してください.</errora>
+    <errorb>この拡張子は既に使用されています!</errorb>
+    <errorc>拡張子が追加されました! '適用'ボタンを押して変更を保存してください!</errorc>
+    <dlg2>痕跡のクリーン</dlg2>
+    <seltr>クリーンしたい痕跡を選択してください</seltr>
+    <clnow>選択した痕跡をクリーン</clnow>
+    <trdone>痕跡のクリーンが完了!</trdone>
+    <tmp>一時ファイル</tmp>
+    <hst>履歴</hst>
+    <pass>パスワード</pass>
+    <fdata>入力したフォーム</fdata>
+    <oth>その他...</oth>
+    <wmp>Windows Media Player の履歴リストをクリア</wmp>
+    <recl>ゴミ箱を空にする</recl>
+    <dns>DNS キャッシュをクリーン</dns>
+    <recu>Windows 最近使用したファイル履歴</recu>
+    <clin>クリーンを実行中, お待ちください...</clin>
+    <curcln>現在クリーン中:</curcln>
+    <wintmp>Windows の一時ファイル</wintmp>
+    <utmp>ユーザの一時ファイル</utmp>
+    <intmp>インターネット一時ファイル</intmp>
+    <off>Office インストールファイル</off>
+    <pref>Windows 先読みファイル</pref>
+    <winlog>Windows アップデートのログファイル</winlog>
+    <windmp>Windows ダンプファイル</windmp>
+    <down>ダウンロードされたインストーラ</down>
+    <winupd>Windows アップデート一時ファイル</winupd>
+    <moz>Mozilla Firefox の一時ファイル</moz>
+	<msn>受信済ファイル</msn>
+  </MzUltimateCleaner>
+  
+  
+  <MzRegistryOptimizer>
+    <l1>レジストリには、登録データが削除される際に残されたデータの断片化が発生</l1>
+	<l2>する事が多く、時間の経過と共にそれらのデータが散在、肥大化していく傾向があります。</l2>
+	<l3>Mz Registry Optimizer では散在したデータ間のギャップ、及び無駄な部分を分析して除去することで</l3>
+	<l4>最適化を行います。その結果レジストリへのアクセスが大幅に高速化され、アプリケーションのレスポンスも向上します!</l4>
+	<reginfo>レジストリ情報</reginfo>
+	<totalsize>現在のレジストリ・サイズ:</totalsize>
+	<ten>レジストリ・エントリの合計数:</ten>
+	<last>最後に最適化された日時:</last>
+	<dets>レジストリの詳細を表示</dets>
+	<optns>オプション</optns>
+	<bk>戻る</bk>
+	<run>レジストリの分析</run>
+	<apply>変更を適用</apply>
+	<about>情報</about>
+	<wait>お待ちください...</wait>
+	<anreg>レジストの分析中</anreg>
+	<alz>分析中:</alz>
+	<path>パス:</path>
+	<curen>現在のレジストリ・エントリのサイズ:</curen>
+	<totalp>全体の進行状況:</totalp>
+	<done>レジストリの分析が完了</done>
+	<cs>現在のレジストリ・サイズ:</cs>
+	<ns>最新のレジストリ・サイズ:</ns>
+	<tr>減少されたレジストリ合計値:</tr>
+	<view>更に詳細を表示</view>
+	<rem>*注意 すべての変更は '変更を適用' を押さないと反映されません!</rem>
+	<regd>レジストリの詳細</regd>
+	<na>名前</na>
+	<paths>パス</paths>
+	<cskb>現在のサイズ (KB)</cskb>
+	<nskb>処理後のサイズ (KB)</nskb>
+	<rate>比率 %</rate>
+	<close>閉じる</close>
+	<exit>終了</exit>
+	<check>アップデートの確認</check>
+	<lan>言語</lan>
+	<theme>テーマ</theme>
+	<pclose>続行する前に、開かれたすべてのアプリケーションを閉じることをお勧めします!</pclose>
+	<restart>レジストリに変更を適用するためには、Windows の再起動が必要です! すぐに再起動しますか?</restart>
+	<priv>このプログラムを実行するためには、管理者として実行する必要があります</priv>
+	<newok>レジストリの変更は正常に適用されました!</newok>
+ </MzRegistryOptimizer>
+ 
+ 
+    <MzRAMBooster>
+	<sysinfo>システム情報</sysinfo>
+	<speed>システムの速度向上</speed>
+	<opts>オプション</opts>
+	<trayopts>トレイアイコン</trayopts>
+	<raminfo>物理メモリ(RAM) 情報:</raminfo>
+	<total>合計メモリ:</total>
+	<used>使用中のメモリ:</used>
+	<free>利用可能なメモリ:</free>
+	<geninfo>全般的な情報:</geninfo>
+	<totalmb>回復された合計(MB):</totalmb>
+	<totaltr>最適化後の合計:</totaltr>
+	<vitinfo>仮想メモリ情報:</vitinfo>
+	<totalv>合計メモリ:</totalv>
+	<freev>利用可能なメモリ:</freev>
+	<cpuinfo>合計 CPU 使用率:</cpuinfo>
+	<updint>更新の間隔:</updint>
+	<sec>秒</sec>
+	<tasks>タスク</tasks>
+	<smopt>最適化(スマート)</smopt>
+	<recover>メモリの回復</recover>
+	<cpubst>CPU ブースト</cpubst>
+	<sets>設定</sets>
+	<exit>終了</exit>
+	<optopts>最適化設定</optopts>
+	<autoram>RAM の空き容量が右の値以下で自動実行 (MB):</autoram>
+	<pause>自動的に最適化を行う間隔 (分):</pause>
+	<autoevery>常にメモリの自動最適化を行う (分):</autoevery>
+	<optcpu>CPU 使用率が指定値以下になった時 (%):</optcpu>
+	<genopts>全般設定</genopts>
+	<load>スタートアップに登録</load>
+	<optstart>起動時に最適化を行う</optstart>
+	<systray>トレイ内で起動する</systray>
+	<beep>最適化実行時にビープ音を鳴らす</beep>
+	<check>起動時にアップデートの確認をする</check>
+	<recopts>回復設定</recopts>
+	<trymb>回復するサイズ (MB):</trymb>
+	<no>再試行数:</no>
+	<recopt>推奨値</recopt>
+	<apply>値を適用</apply>
+	<systweaks>システムの最適化</systweaks>
+	<lau>NTFS 最終アクセスの更新を無効</lau>
+	<fc>8.3 ファイル名の作成を無効</fc>
+	<dep>メモリ内の Windows カーネルは常に維持</dep>
+	<autodlls>未使用のDLLをアンロード</autodlls>
+	<cpuprior>CPU の優先度設定</cpuprior>
+	<fore>フォアグラウンド・アプリを優先</fore>
+	<back>バックグラウンド・タスクを優先</back>
+	<windef>Windows デフォルト</windef>
+	<shut>シャットダウンの最適化</shut>
+	<autoend>実行中のタスクを自動的に終了する</autoend>
+	<hat>応答のないアプリケーションのタイムアウト:</hat>
+	<kat>アプリケーションを強制終了するまでの待機時間:</kat>
+	<kst>サービスを強制終了するまでの待機時間:</kst>
+	<msec>ミリ秒</msec>
+	<numicon>トレイアイコン色(数値):</numicon>
+	<showfree>利用可能な RAM を表示</showfree>
+	<mzramicon>Mz RAM Booster アイコン</mzramicon>
+	<color>トレイアイコン設定(数値)</color>
+	<icontxt>利用可能な RAM:</icontxt>
+	<dlgapply>最適化が適用されました! 変更を反映させるためには、PC を再起動する必要があります。</dlgapply>
+	<dlgapply2>変更された値の適用が完了しました!</dlgapply2>
+	<waitopt>お待ちください, 最適化中...</waitopt>
+	<dlgerror>このプログラムを実行するためには、管理者として実行する必要があります</dlgerror>
+    <lng>言語</lng>
+    <thm>テーマ</thm>
+    <upd>アップデートの確認</upd>
+    <abt>情報</abt>
+	<help>ヘルプ</help>
+ </MzRAMBooster>
+ 
+ 
+ <MzCPUAccelerator>
+	<help>ヘルプ</help>
+	<info>情報</info>
+	<opts>オプション</opts>
+	<excl>除外</excl>
+	<cpumng>CPU マネージャー</cpumng>
+	<global>全般的な情報:</global>
+	<curopt>現在の状況:</curopt>
+	<accdis>アクセラレーション無効</accdis>
+	<totalapps>適用中のアプリケーション合計数:</totalapps>
+	<cpuen>CPU 管理機能:</cpuen>
+	<en>有効</en>
+	<dis>無効</dis>
+	<clock>プロセッサのクロック速度(MHz):</clock>
+	<cpus>検出された CPU コア数:</cpus>
+	<cpusage>プロセッサの合計:</cpusage>
+	<act>アクティブ</act>
+	<deact>非アクティブ</deact>
+	<setts>設定</setts>
+	<about>情報</about>
+	<exit>終了</exit>
+	<cores>マルチコア・プロセッサのコアを管理</cores>
+	<enmanage>'CPU 管理' 機能を有効化</enmanage>
+	<listp>*Mz CPU アクセラレータは、管理者権限で実行してください</listp>
+	<runew>新規プロセスの起動</runew>
+	<addnew>新規プロセスを追加</addnew>
+	<rems>選択項目を除去</rems>
+	<pname>プロセス名</pname>
+	<aff>プロセッサの親和性</aff>
+	<exclude>最適化の適用を除外したいアプリケーションを選択</exclude>
+	<priority>優先度</priority>
+	<level>フォアグラウンド(最適化中)アプリケーションの優先度:</level>
+	<genopts>全般設定:</genopts>
+	<startup>Windows のスタートアップに登録</startup>
+	<acted>アクティブな状態で起動</acted>
+	<mini>最小化で起動</mini>
+	<updts>起動時にアップデートを確認</updts>
+	<tray>トレイアイコン設定:</tray>
+	<icon>CPU アクセラレータ・アイコンを表示</icon>
+	<showcpu>CPU 使用率を表示</showcpu>
+	<fp>ファイルパス:</fp>
+	<browse>参照</browse>
+	<selaff>プロセッサの親和性を選択</selaff>
+	<startapp>アプリケーションを開始</startapp>
+	<atleast>少なくともひとつの CPU コアを選択してください</atleast>
+	<addexcl>追加処理, 除外リストに追加...</addexcl>
+	<refresh>プロセスを更新</refresh>
+	<desired>指定された優先度:</desired>
+	<p0>アイドル</p0>
+	<p1>低</p1>
+	<p2>標準 (既定)</p2>
+	<p3>標準以上</p3>
+	<p4>高</p4>
+	<p5>リアルタイム</p5>
+	<selcpu>CPU を選択:</selcpu>
+	<totalprcs> 検出されたプロセッサの合計数:</totalprcs>
+	<add>追加</add>
+	<close>閉じる</close>
+	<addmng>追加処理, CPU 管理リストに追加...</addmng>
+	<curpaff>親和性</curpaff>
+	<pd1>選択した '優先度レベル' を確認してください</pd1>
+	<pd21>プロセス</pd21>
+	<pd22>with</pd22>
+	<pd23>優先度は除外リストに追加されました!</pd23>
+	<pd3>既にリストに存在します、置き換えますか?</pd3>
+	<pd4>除外リストに正常に追加されました!</pd4>
+	<cm1>CPU 管理リストにコアが追加されました!</cm1>
+	<cm2>CPU 管理リストに既に存在します、上書きしますか?</cm2>
+    <lng>言語</lng>
+    <thm>テーマ</thm>
+    <upd>アップデートの確認</upd>
+	<exit>終了</exit>
+	<plevel>優先度レベル</plevel>
+ </MzCPUAccelerator>
+ 
+ 
+ <MzGameAccelerator>
+	<normal>標準モードに切替</normal>
+	<game>ゲーム用モードに切替</game>
+	<avlopts>利用可能な最適化設定</avlopts>
+	<serv>未使用の Windows サービスを一時停止</serv>
+	<ram> RAM の'スマート最適化' (クリーン + デフラグ)</ram>
+	<power>このゲームに更に多くの CPU パワーを割り当てる</power>
+	<usage>他のアプリケーションのプロセッサ使用率を減少</usage>
+	<rec>上記オプションすべてにチェックを入れると最大のパフォーマンスになります!</rec>
+	<load>Windows のスタートアップに登録</load>
+	<systray>システムトレイで起動</systray>
+	<sets>設定</sets>
+	<about>情報</about>
+	<exit>終了</exit>
+	<tonrml>標準モードに切り替えています..お待ちください:</tonrml>
+	<tprog>全体の進行状況:</tprog>
+	<wait>お待ちください, 最適化中...</wait>
+	<report>最適化レポート:</report>
+	<cprog>現在の進捗:</cprog>
+	<cnl>中止</cnl>
+	<stserv>未使用の Windows サービスを停止しています...</stserv>
+	<sdserv>停止しているサービス:</sdserv>
+	<stservs>未使用の Windows サービスを停止中</stservs>
+	<ok>完了!</ok>
+	<redapp>他のアプリケーションの CPU 割り当てを減少中...</redapp>
+	<sredapp>他のアプリケーションの CPU 割り当てを減少</sredapp>
+	<togames>更に多くの CPU パワーをゲームに割り当て中...</togames>
+	<stogames>更に多くの CPU パワーをゲームに割り当て中</stogames>
+	<bram>RAM のスマート最適化中...</bram>
+	<sram>RAM のスマート最適化中</sram>
+	<cls>閉じる</cls>
+	<accok>アクセラレータ・モードへの切替が完了しました!</accok>
+	<acchlp>「OK」 で最小化、「中止」で続行します</acchlp>
+	<ts>一時停止中のサービス:</ts>
+	<tp>最適化中のプロセス:</tp>
+	<pfg>ゲームの優先度:</pfg>
+	<real>リアルタイム</real>
+	<tram>回復された RAM:</tram>
+	<er>サービス・データベースを取得できませんでした、再インストールしてください!</er>
+	<cinfo>本当に Mz Game Accelerator を終了しますか?(終了すると '標準モード'に戻ります)</cinfo>
+	<accmode>(アクセラレーションモード)</accmode>
+	<nmode>(標準モード)</nmode>
+	<lng>言語</lng>
+    <thm>テーマ</thm>
+    <upd>アップデートの確認</upd>
+ </MzGameAccelerator>
+ 
+ 
+ <MzRegistryBackup>
+	<bckb>レジストリのバックアップ</bckb>
+	<rstb>レジストリの復元</rstb>
+	<schb>スケジュールバックアップ</schb>
+	<chb>完全なレジストリのバックアップを作成</chb>
+	<ccb>カスタムレジストリバックアップを作成</ccb>
+	<dsc>説明:</dsc>
+	<bckl>バックアップ保存先:</bckl>
+	<crbn>バックアップを作成</crbn>
+	<col0>名前</col0>
+	<col1>パス</col1>
+	<col2>サイズ (KB)</col2>
+	<cbvp>バックアップを作成中, お待ちください...</cbvp>	
+	<cbvs>レジストリのバックアップ、及び圧縮が完了しました!</cbvs>
+	<bup>バックアップ:</bup>
+	<crep>現在のレジストリ・エントリパス:</crep>
+	<crbd>現在のバックアップの説明:</crbd>
+	<crbp>現在のバックアップ保存先:</crbp>
+	<rspw>バックアップの復元中, お待ちください...</rspw>
+	<ring>復元:</ring>
+	<curr>現在の復元処理:</curr>
+	<totp>全体の進行状況:</totp>
+	<rreg>レジストリの復元</rreg>
+	<rpf>検出された復元ポイント:</rpf>
+	<brbk>バックアップを参照</brbk>
+	<dlts>選択項目を削除</dlts>
+	<bckd>バックアップの説明:</bckd>
+	<dtcr>作成された日時:</dtcr>
+	<path>パス:</path>
+	<brn>レジストリの復元を開始</brn>
+	<srbk>バックアップのスケジュール</srbk>	
+	<grp1>実行するタスク:</grp1>
+	<grp2>オプションタスク:</grp2>
+	<grp3>バックアップ保存先:</grp3>
+	<opt1>毎日</opt1>
+	<opt2>毎週</opt2>
+	<opt3>毎月</opt3>
+	<opt4>一回のみ</opt4>
+	<opt5>コンピュータの起動時</opt5>
+	<scnd>日付を選択:</scnd>
+	<selt>時刻を選択:</selt>
+	<stdo>週日を選択</stdo>
+	<seld>日付を選択:</seld>	
+	<bloc>バックアップ位置:</bloc>
+	<expr>スケジュールを閲覧</expr>
+	<rems>スケジュールを削除</rems>
+	<crts>スケジュールを作成</crts>
+	<d1>月曜</d1>
+	<d2>火曜</d2>
+	<d3>水曜</d3>
+	<d4>木曜</d4>
+	<d5>金曜</d5>
+	<d6>土曜</d6>
+	<d7>日曜</d7>
+	<dlg1>説明を入力してください</dlg1>
+	<dlg2>ディレクトリが存在しません、別のパスを選択してください</dlg2>
+	<dlg3>少なくともひとつのレジストリ・エントリを選択してください</dlg3>
+	<dlg4>バックアップは既に存在します、置き換えますか?</dlg4>
+	<dlg5>バックアップが正常に作成されました!</dlg5>
+	<dlg6>スケジュールタスクが作成されました!</dlg6>
+	<dlg7>続行する前に、起動中のプログラムを終了することをお勧めします、続行しますか?</dlg7>
+	<dlg8>別のバックアップを復元する場合は、先に再起動する必要があります</dlg8>
+	<dlg9>復元ポイントを選択してください</dlg9>
+	<dlg10>復元に成功! 変更を適用するためには、PC の再起動が必要です、すぐに再起動しますか?</dlg10>
+	<dlg11>バックアップの復元に成功!</dlg11>
+	<dlg12>バックアップの作成を実行します、続行しますか?</dlg12>
+	<dlg13>完了!</dlg13>
+	<dlg14>このプログラムを実行するためには、管理者として実行する必要があります</dlg14>
+	<dlg15>復元ポイントを検索中:</dlg15>
+	<lng>言語</lng>
+    <thm>テーマ</thm>
+    <upd>アップデートの確認</upd>
+	<about>情報</about>
+	<exit>終了</exit>	
+ </MzRegistryBackup>
+ 
+ 
+ <MzPowerManager>
+	<plans>電源管理プラン</plans>
+	<opts>オプション</opts>
+	<tric>トレイアイコン</tric>
+	<avpn>利用可能な電源管理プラン:</avpn>
+	<stpl>電源管理を切替</stpl>
+	<wpow>電源管理オプション</wpow>
+	<tosc>画面を切替</tosc>
+	<sets>設定</sets>
+	<exit>終了</exit>
+	<psts>電源ステータス:</psts>
+	<bcst>バッテリー充電ステータス:</bcst>
+	<brts>バッテリーの残り時間:</brts>
+	<ppos>電源管理オプション:</ppos>
+	<plin>プラグ差し込み時に自動的に切替:</plin>
+	<pout>プラグを抜いた時に自動的に切替:</pout>
+	<percn>バッテリーが次の値より低下した場合 (%):</percn>
+	<swto>切替:</swto>
+	<onbat>単一バッテリーモード:</onbat>
+	<aero>Windows Aero ユーザインタフェースを無効化</aero>
+	<side>Windows サイドバーを閉じる</side>
+	<blih>バックライトを無効化 (実験的な機能)</blih>
+	<genr>全般的な設定:</genr>
+	<stup>Windows のスタートアップに登録</stup>
+	<mini>最小化で起動</mini>
+	<cupd>起動時にアップデートの確認</cupd>
+	<tiop>トレイアイコン設定:</tiop>
+	<icty>アイコンの種類</icty>
+	<low>低</low>
+	<mid>中</mid>
+	<high>高</high>
+	<colr>カラー水平バーを表示</colr>
+	<bprc>カラー垂直バーを表示</bprc>
+	<mzico>Mz Power Manager アイコンを表示</mzico>
+	<lang>言語</lang>
+	<thm>テーマ</thm>
+	<upd>アップデートの確認</upd>
+	<about>情報</about>
+	<ptsm>電源管理プラン</ptsm>
+	<qpsm>クイック設定</qpsm>
+	<uknw>不明</uknw>
+	<chrg>充電率</chrg>
+	<nchg>非充電時</nchg>
+ </MzPowerManager>
+ 
+ 
+ <MzShutdownScheduler>
+	<hdr1>シャットダウンメソッド:</hdr1>
+ 	<shtm>シャットダウン方法を選択:</shtm>
+	<shtdwn>シャットダウン</shtdwn>
+	<restrt>再起動</restrt>
+	<hbrnt>休止状態</hbrnt>
+	<logoff>ログオフ</logoff>
+	<shop>シャットダウンの開始設定:</shop>
+	<pcls>指定プログラムが終了した時:</pcls>
+	<cpu>CPU 使用率の最低値(%):</cpu>
+	<ram>空き RAM の最低値(MB):</ram>
+	<aftr>時間を指定(分):</aftr>
+	<dtim>日付 - 時刻 を指定:</dtim>
+	<for>から</for>
+	<sec>秒後</sec>
+	<geno>全般的な設定:</geno>
+ 	<wait>シャットダウン開始までの待機時間 (秒):</wait>
+	<snd>シャットダウン開始前に効果音を再生:</snd>
+	<forc>強制的にシャットダウンを実行</forc>
+	<pbs>シャットダウン前にプログラムを起動:</pbs>
+	<sms>シャットダウンの前にメッセージを表示:</sms>
+	<msg>メッセージ:</msg>
+	<shwo>設定</shwo>
+	<cntd>カウントダウン表示</cntd>
+	<stry>トレイに移動</stry>
+	<abrt>中断</abrt>
+	<crt>作成</crt>
+	<addp>新規プロセスを追加:</addp>
+	<col0>プロセス名:</col0>
+	<col1>説明:</col1>
+	<apbt>プロセスを追加</apbt>
+	<pads>プロセスが追加されました!</pads>
+	<cdot>全般的な設定:</cdot>
+	<ngop>全般オプション</ngop>
+	<lost>Windows のスタートアップに登録</lost>
+	<sact>アクティブな状態で起動</sact>
+	<smin>最小化で起動</smin>
+	<cdao>カウントダウン表示を常に最前面に表示</cdao>
+	<opac>カウントダウンの透明度 (%):</opac>
+	<ttl>カウントダウン表示のタイトル:</ttl>
+	<grpx>カウントダウンアイテムの配置:</grpx>
+	<horz>水平</horz>
+	<vert>垂直</vert>
+	<flow>フロー</flow>
+	<tabl>テーブル</tabl>
+	<shcd>カウントダウンを表示</shcd>
+	<cnls>中止</cnls>
+	<appy>変更を適用</appy>
+	<done>変更が適用されました!</done>
+	<prmn>残りのアプリケーション:</prmn>
+	<cpus>CPU 使用率 (%):</cpus>
+	<ramu>利用可能な RAM (MB):</ramu>
+	<remtm>残り時間:</remtm>
+	<ready>待機...</ready>
+	<snow>すぐにシャットダウン</snow>
+	<exit>終了</exit>
+	<lang>言語</lang>
+	<upd>アップデートの確認</upd>
+	<thm>テーマ</thm>
+	<about>情報</about>
+ </MzShutdownScheduler>
+ 
+ 
+ <MzUltimateBooster>
+ <help>ヘルプ</help>
+ <mno>メイン設定</mno>
+ <oic>インターネット接続の最適化:</oic>
+ <ocu>コンピュータの最適化:</ocu>
+ <lom>前回の最適化:</lom>
+ <nvr>なし</nvr>
+ <loadok>最適化設定が適用されました!</loadok>
+ <ado>拡張設定</ado>
+ <ctf>一時ファイルをクリーン</ctf>
+ <owb>Windows ブートファイルの最適化</owb>
+ <dcr>レジストリのデフラグと圧縮</dcr>
+ <sum>Mozilla Firefox ブラウザの高速化</sum>
+ <acb>自動的にシステムの復元ポイントを作成</acb>
+ <sets>設定</sets>
+ <brs>バックアップ - 復元</brs>
+ <sbs>ブースト開始</sbs>
+ <upto>up to</upto>
+ <for>for</for>
+ <more>more than</more>
+ <cb1a>コンピュータをインターネットに接続します</cb1a>
+ <cb1b>>コンピュータをインターネットに接続しません</cb1b>
+ <cb1c>最大の効果を得る</cb1c>
+  <cbc>最適化を行わない</cbc>
+ <isdn>アナログモデム</isdn>
+ <wrls>ワイヤレス接続</wrls>
+ <cpg>現在の進行状況:</cpg>
+ <totp>全体の進行状況:</totp>
+ <pwop>お待ちください, 最適化中...</pwop>
+ <optd>最適化レポート...</optd>
+ <orest>最適化処理を実行する前に再起動する必要があります</orest>
+ <priv>このプログラムを実行するためには、管理者として実行する必要があります</priv>
+ <dws>Windows 設定を検出中...</dws>
+ <dps>プロセッサに関する情報を検出中...</dps>
+ <dgc>グラフィックカードに関する情報を検出中...</dgc>
+ <dmi>メモリ情報を検出中...</dmi>
+ <dds>ディスク情報を検出中...</dds>
+ <dt1>オペレーティングシステム:</dt1>
+ <dt2>OS のバージョン:</dt2>
+ <dt3>Windows ディレクトリ:</dt3>
+ <dt4>Program Files ディレクトリ:</dt4>
+ <dt5>現在のユーザ・ディレクトリ:</dt5>
+ <cpun>プロセッサの名前:</cpun>
+ <cpua>プロセッサ・アーキテクチャ:</cpua>
+ <cpus>プロセッサ・速度:</cpus>
+ <cpuc>プロセッサ・コア:</cpuc>
+ <l2c>プロセッサ L2 キャッシュ:</l2c>
+ <l3c>プロセッサ L3 キャッシュ:</l3c>
+ <gcn>グラフィックカード:</gcn>
+ <gcd>グラフィックカード・ドライバのバージョン:</gcd>
+ <tram>RAM の合計:</tram>
+ <aram>利用可能な RAM:</aram>
+ <tvm>仮想メモリ合計:</tvm>
+ <avm>利用可能な仮想メモリ:</avm>
+ <size>サイズ:</size>
+ <free>空き:</free>
+ <frmt>フォーマット:</frmt>
+ <auto>自動</auto>
+ <enbd>有効化</enbd>
+ <dsbd>無効化</dsbd>
+ <done>完了済</done>
+ <opzd>最適化済</opzd>
+ <opp>プロセッサのパフォーマンスを最適化中...</opp>
+ <ct1>L2 キャッシュサイズの設定:</ct1>
+ <ct2>プロセッサの優先度の最適化:</ct2>
+ <ct3>フォアグラウンド・アプリケーションをブースト</ct3>
+ <ct4>IRQ の最適化:</ct4>
+ <ct5>プロセッサのリソース割り当て:</ct5>
+ <ct6>プログラム</ct6>
+ <ct7>次回の Windows 起動時に強制的にプロセッサの再検出を試みる:</ct7>
+ <krnt1>システム・カーネルの最適化を適用中...</krnt1>
+ <krnt2>ページング処理の実行:</krnt2>
+ <krnt3>NTFS 最終アクセス更新日:</krnt3>
+ <krnt4>ファイルシステムのメモリキャッシュサイズを増加:</krnt4>
+ <krnt5>MFT 予約領域を更に増加:</krnt5>
+ <krnt6>NTFS で作成されたショートファイル名:</krnt6>
+ <krnt7>隣接ファイルに割り当てるサイズを最適化:</krnt7>
+ <krnt8>IO ページ制限の最適化:</krnt8>
+ <krnt9>未使用の DLLを強制アンロード:</krnt9>
+ <krnt10>追加の重要な最適化を実行\ワーカスレッドの遅延:</krnt10>
+ <krnt11>エントリ</krnt11>
+ <strt1>Windows のスタートアップを高速化中...</strt1>
+ <strt2>先読みの最適化 - SuperPrefetcher を適用:</strt2>
+ <strt3>アプリケーションとブート</strt3>
+ <strt4>スタートアップ・スクリプトを非同期で起動させる:</strt4>
+ <strt5>ブートデフラグ:</strt5>
+ <strt6>クイック再起動:</strt6>
+ <asdt1>Windows のシャットダウンを高速化中...</asdt1>
+ <asdt2>タスクの自動終了:</asdt2>
+ <asdt3>応答のないアプリケーションの待機時間:</asdt3>
+ <asdt4>アプリケーションの強制終了までの待機時間:</asdt4>
+ <asdt5>サービスの強制終了までの待機時間:</asdt5>
+ <asdt6>シャットダウン時にページファイルをクリア:</asdt6>
+ <wint1>Windows の設定を最適化中...</wint1>
+ <wint2>エラー報告:</wint2>
+ <wint3>サムネイル品質:</wint3>
+ <wint4>バルーンヒント:</wint4>
+ <wint5>ディスク容量不足のチェック:</wint5>
+ <wint6>エラー時のビープ音:</wint6>
+ <wint7>BSOD 時の自動再起動:</wint7>
+ <wint8>アイコンキャッシュサイズ:</wint8>
+ <wint9>スタートメニューの遅延:</wint9>
+ <wint10>.avi メディアファイルの高速処理:</wint10>
+ <wint11>メディアプレイヤーの DVDメニュー:</wint11>
+ <wint12>マウスの感度:</wint12> 
+ <wint13>マウスの速度:</wint13>
+ <wint14>キーボードの遅延:</wint14>
+ <wint15>USB 選択のサスペンド:</wint15>
+ <wint16>WMI ログ記録:</wint16>
+ <wint17>WMI イベント:</wint17>
+ <wint18>WMI バックアップ間隔:</wint18>
+ <wint19>ウィンドウの自動更新:</wint19>
+ <wint20>Windows でフォルダを開く時に別プロセスとして起動:</wint20>
+ <wint21>Windows のデスクトップ・プロセスを別のプロセスとする:</wint21>
+ <wint22>Windows でブラウザを起動する時に別プロセスとして起動:</wint22>
+ <wint23>分間</wint23>
+ <wxpt1>48bit LBA への対応を有効化:</wxpt1>
+ <wxpt2>Windows のオンライン認証:</wxpt2>
+ <wxpt3>Windows 95 で切り詰められた拡張子:</wxpt3>
+ <wxpt4>ロングファイル名と拡張タイムスタンプ:</wxpt4>
+ <wxpt5>16-bit アプリケーションをメモリの別領域で開く:</wxpt5>
+ <wxpt6>ワトソン博士の自動起動:</wxpt6>
+ <wxpt7>ワトソン博士で作成されたダンプファイル:</wxpt7>
+ <wxpt8>Anonymous ユーザの制限:</wxpt8>
+ <wxpt9>アイコンのカラー解像度:</wxpt9>
+ <wxpt10>色</wxpt10>
+ <srvt1>.dat ファイルを検出できません:</srvt1>
+ <srvt2>延期サービスの最適化</srvt2>
+ <srvt3>Windows サービスの最適化...</srvt3>
+ <inrt1>インターネット接続速度の最適化中...</inrt1>
+ <inrt2>ホストの名前解決優先度:</inrt2>
+ <inrt3>QoS (Quality of Service):</inrt3>
+ <inrt4>DNS キャッシュ:</inrt4>
+ <inrt5>TLL (Time-To-Live) 値:</inrt5>
+ <inrt6>MTU 最大パケットサイズ:</inrt6>
+ <inrt7>RWIN 値:</inrt7>
+ <inrt8>64KB 以上の RWIN 値を許可:</inrt8>
+ <inrt9>MTU (最大パケット) ディスカバリ:</inrt9>
+ <inrt9a>MTU (最大パケット) ブラックホールの検出:</inrt9a>
+ <inrt10>SYN 攻撃からの保護:</inrt10>
+ <inrt11>選択的 ACK パケット:</inrt11>
+ <inrt12>リクエストの最大値:</inrt12>
+ <inrt13>TCP ウィンドウサイズの自動調整:</inrt13>
+ <inrt14>自動検出 (Windows)</inrt14>
+ <inrt15>サーバ当たりの IE 最大接続数:</inrt15>
+ <w7int1>複合 TCP</w7int1>
+ <w7int2>ヒューリスティック・スケーリングを無効化</w7int2>
+ <w7int3>ダイレクトキャッシュアクセス (DCA)</w7int3>
+ <w7int4>NetDMA (TCPA)</w7int4>
+ <bku1>レジストリのバックアップ中..お待ちください(処理には時間が掛かります)</bku1>
+ <sdps>検出されたプロセスを開始中</sdps>
+ <sops>最適化処理を開始中:</sops>
+ <clng>一時ファイルのクリーニング:</clng> 
+ <tclnd>クリーンされた総計:</tclnd>
+ <ofx>Firefox の最適化:</ofx>
+ <dbf1>ブートファイルのデフラグ中..(処理には時間が掛かります):</dbf1>
+ <drf1>レジストリファイルのデフラグ中..(処理には時間が掛かります):</drf1>
+ <drf2>レジストリの合計減少値:</drf2>
+ <ok1>最適化が完了しました!</ok1>
+ <estm>経過時間:</estm>
+ <resrt>すべての最適化が完了しました! この変更を完全に完了するためには PC の再起動が必要です。今すぐに再起動しますか?</resrt>
+ <rbok>レジストリのバックアップが作成されました!</rbok>
+ <anyo>続行する前にすべてのアプリケーションを閉じることをお勧めします。続行しますか?</anyo>
+ <optrep>最適化レポート</optrep>
+ <secs>秒</secs>
+ <lang>言語</lang>
+ <thm>テーマ</thm>
+ <upd>アップデートの確認</upd>
+ <about>情報</about>
+ <exit>終了</exit>
+ </MzUltimateBooster>
+ 
+ 
+ <Mz7Optimizer>
+ <run1>Mz 7 Optimizer の最初の起動です。このツールで最適化を実行する前にレジストリのバックアップを作成することを強くお勧めします。今すぐにバックアップを作成しますか?</run1>
+ <help>ヘルプ</help>
+ <apply>最適化を適用</apply>
+ <opts>設定</opts>
+ <mb1>パフォーマンスの最適化</mb1>
+ <mb2>Windows の最適化</mb2>
+ <mb3>インターネットの最適化</mb3>
+ <mb4>最適化カスタマイズ</mb4>
+ <mb5>セキュリティの最適化</mb5>
+ <mb6>便利なツール</mb6>
+ <mb7>自動最適化</mb7>
+ <mb8>バックアップと復元</mb8>
+ <cputw>CPU の最適化</cputw>
+ <hddtw>ハードディスクの最適化</hddtw>
+ <memtw>メモリの最適化</memtw>
+ <csco>CPU システム・キャッシュの最適化:</csco>
+ <cpu1a>システムキャッシュの最適化を有効</cpu1a>
+ <cpu1b>CMOS リアルタイム・クロックの IRQ 優先度を増加</cpu1b>
+ <cpu1c>次回の Windows 起動時に強制的にプロセッサの再検出を試みる</cpu1c>
+ <ppc>プロセッサ優先度の制御:</ppc>
+ <cpu2a>システムで決定する (Windows 既定値)</cpu2a>
+ <cpu2b>バックグラウンド・アプリケーションの応答感度を更に上げる</cpu2b>
+ <cpu2c>フォアグラウンド・アプリケーションの応答感度を更に上げる</cpu2c>
+ <cpu2d>フォアグラウンド・アプリケーションの応答時間を最良にする</cpu2d>
+ <nfso>NTFS ファイルシステムの最適化:</nfso>
+ <hdd1>NTFS '最終アクセス日時の更新' を無効化</hdd1>
+ <hdd2>8.3 ファイル名の作成を無効化</hdd2>
+ <hdd3>NTFS メモリ使用率を増加</hdd3>
+ <hdd4>NTFS ドライブの暗号可機能を無効化</hdd4>
+ <hdd5>NTFS ボリュームの圧縮機能を無効化</hdd5>
+ <hdd6>NTFS ページングファイルの暗号可機能を無効化</hdd6>
+ <hdd7>Windows 7 カーネルを常にメモリ上に保持してディスクにページングしない</hdd7>
+ <hdd8>MFT(Master File Table)サイズ:</hdd8>
+ <mft1>デフォルトの MFT 予約領域(ディスク容量 ~ 12.5%)</mft1>
+ <mft2>MFT 予約領域 - 標準(ディスク容量 ~ 25%)</mft2>
+ <mft3>MFT 予約領域 - 高(ディスク容量 ~37.5%)</mft3>
+ <mft4>MFT 予約領域 - 最大(ディスク容量 ~50%)</mft4>
+ <mwco>メモリと Windows キャッシュの最適化:</mwco>
+ <mem1a>未使用の DLLファイルをメモリから解放</mem1a>
+ <mem1b>16-bit アプリケーションは別の仮想マシン(WDM)上で実行</mem1b>
+ <mem1c>ファイルシステムキャッシュ・メモリの最適化を有効</mem1c>
+ <mem1d>稼働中のプロセスに対するワーカースレッドを増加</mem1d>
+ <omua>メモリ使用率の割り当てを最適化:</omua>
+ <apps>アプリケーション</apps>
+ <sysc>システムキャッシュ</sysc>
+ <pref>Windows 先読みキャッシュと Superfetch テクノロジ:</pref>
+ <pft>先読みを有効:</pft>
+ <spft>SuperPrefetcher を有効:</spft>
+ <spft1>アプリケーションの起動時</spft1>
+ <spft2>ブート時</spft2>
+ <spft3>アプリケーションの起動時 + ブート時</spft3>
+ <coretw>システム・コアの最適化</coretw>
+ <core1>エラーの際は、デスクトップとタスクバーを自動的に再起動する</core1>
+ <core2>ハードディスクのアイドル(待機)時に最適化を行う</core2>
+ <core3>Windows でフォルダを開く時に別プロセスとして起動</core3>
+ <core4>デスクトップとタスクバーを別プロセスとして起動</core4>
+ <core5>プログラムの互換性アシスタント機能を無効化</core5>
+ <core6>ワークステーション・サービス用のキャッシュ機能を無効化</core6>
+ <core7>WMI のイベントログ記録を無効化</core7>
+ <core8>WMI イベントを無効化</core8>
+ <startw>スタートアップの最適化</startw>
+ <str1>ブート時のデフラグを有効化</str1>
+ <str2>Windows スタートアップ時の効果音をオフにする</str2>
+ <str3>スタートアップ・スクリプトを非同期で起動させる</str3>
+ <str4>スタートアップ時にフォルダウィンドウを復元</str4>
+ <str5>スタートアップ時のグループポリシーの更新を無効化</str5>
+ <str6>スタートアップ時の IDE ドライブ自動検出を無効化</str6>
+ <str7>スタートアップ時の CHK ディスク・スキャンタイムの遅延:</str7>
+ <sec>秒後</sec>
+ <shutw>シャットダウンの最適化</shutw>
+ <sht1>「電源を切る」ボタンの動作:</sht1>
+ <sht2>システムシャットダウン時にページファイルをクリア</sht2>
+ <sht3>応答のないアプリケーションを自動的に終了</sht3>
+ <sht4>応答なしと判断するまでの待機時間:</sht4>
+ <sht5>プログラムの終了エラーと判断するまでの待機時間:</sht5>
+ <sht6>サービスを強制的に終了するまでの待機時間:</sht6>
+ <poff1>ユーザの切り替え</poff1>
+ <poff2>ログオフ</poff2>
+ <poff3>ロック</poff3>
+ <poff4>再起動</poff4>
+ <poff5>スリープ</poff5>
+ <poff6>休止状態</poff6>
+ <poff7>シャットダウン</poff7>
+ <netw>ネットワークの最適化</netw>
+ <net1>予約帯域幅の制限 (Quality of Service)</net1>
+ <net2>TCP (Transmission Control Program) ウィンドウサイズ</net2>
+ <net3>Large TCP ウィンドウ(RWIN) への対応を有効</net3>
+ <net4>デフォルトコンジェクション調整プロバイダとして CTCP を有効</net4>
+ <net5>Windows ヒューリスティック・スケーリングを無効化</net5>
+ <net6>DCA (ダイレクトキャッシュアクセス)を有効化</net6>
+ <net7>NetDMA (TCPA) を有効化</net7>
+ <net8>Keep alive time の最適化</net8>
+ <net9>DNS エラーキャッシュの最適化</net9>
+ <net10>ホストの名前解決優先度を最適化</net10>
+ <ietw>インターネット・エクスプローラ</ietw>
+ <ie1>インターネット・エクスプローラの最適化:</ie1>
+ <ie2>ページのトランジション効果を無効化</ie2>
+ <ie3>クリアタイプフォントを無効化</ie3>
+ <ie4>スムーズスクローリングを無効化</ie4>
+ <ie5>自動更新機能を無効化</ie5>
+ <ie6>タスクバーの上にメニューを配置</ie6>
+ <ie7>Visual Style コントロールを無効化</ie7>
+ <ie8>常にメニューを表示</ie8>
+ <ie9>最大同時ダウンロード数</ie9>
+ <moztw>Mozilla Firefox</moztw>
+ <ff1>Mozilla Firefox の高速化:</ff1>
+ <ff2>Firefox ブラウザのパフォーマンスを簡単に高速化できます!</ff2>
+ <ff3>Mozilla Firefox を検出:</ff3>
+ <ff3a>True</ff3a>
+ <ff3b>False</ff3b>
+ <ff4>現在のステータス:</ff4>
+ <ff4a>最適化!</ff4a>
+ <ff4b>最適化しない</ff4b>
+ <ff5a>Firefox 高速化を実行!</ff5a>
+ <ff5b>最適化を元に戻す</ff5b>
+ <ff6>変更した最適化設定は Mozilla Firefox の再起動後に有効になります!</ff6>
+ <ffcls>Mozilla Firefox が実行中です! 閉じてから再試行してください</ffcls>
+ <ffok>Mozilla Firefox の最適化が正常に完了しました!</ffok>
+ <ffer>エラーが起こりました、少し時間をおいてから再試行してください...</ffer>
+ <tskbtw>タスクバーの最適化</tskbtw>
+ <tsk1>タスクバーボタンの点滅を有効化</tsk1>
+ <tsk2>タスクバーボタンをクリックするまで点滅が続きます</tsk2>
+ <tsk3>タスクバーボタンを点滅させる回数:</tsk3>
+ <tsk4>タスクバーアイコンを小さく表示</tsk4>
+ <tsk5>タスクバーのバルーンヒントを有効化</tsk5>
+ <tsk6>ジャンプリストに含めるアイテム数:</tsk6>
+ <tsk7>サムネイルプレビューの遅延:</tsk7>
+ <tsk8>タスクバーサムネイルのライブプレビューの遅延時間:</tsk8>
+ <tskcom>ミリ秒</tskcom>
+ <aerotw>Windows Aero の最適化</aerotw>
+ <aero1>ハードウェア互換性のチェック機能を無効にして、強制的に Windows Aero 効果を有効化</aero1>
+ <aero2>Aero アニメーションを無効化</aero2>
+ <aero3>Aero スナップ効果を無効化</aero3>
+ <aero4>Aero グラス透過処理を無効化</aero4>
+ <aero5>Aero ぼかし効果を無効化</aero5>
+ <aero6>細長いタイプのボタンを有効化</aero6>
+ <aero7>'Shift' キーを押している時のアニメーションのスロー再生効果を有効化</aero7>
+ <aero8>Flip3D ウィンドウの表示数:</aero8>
+ <aero9>Windows 境界線の幅:</aero9>
+ <contw>コンテキストメニューの最適化</contw>
+ <con1>コンテキストメニュー項目に、フォルダの内容をクリップボードにコピーする項目を追加</con1>
+ <con2>コンテキストメニュー項目に、'.txt' ファイルをクリップボードにコピーする項目をを追加</con2>
+ <con3>フォルダコンテキストメニューに 'コマンドプロンプトで開く' を追加</con3>
+ <con4>ファイル/フォルダのコンテキストメニューに 'ここにコピー' を追加</con4>
+ <con5>ファイル/フォルダのコンテキストメニューに 'ここに移動' を追加</con5>
+ <con6>ファイル/フォルダのコンテキストメニューに '管理者として実行' を追加</con6>
+ <con7>ドライブの コンテキストメニューに 'デフラグ' コマンドを追加</con7>
+ <conhlp1>リストをクリップボードにコピー</conhlp1>
+ <conhlp2>内容をクリップボードにコピー</conhlp2>
+ <conhlp3>コマンドプロンプトで開く</conhlp3>
+ <conhlp6>管理者として実行</conhlp6>
+ <conhlp7>デフラグ</conhlp7>  
+ <nsectw>ネットワーク・セキュリティの最適化</nsectw>
+ <ns1>クラスタ・ノードの管理者共有を防止</ns1>
+ <ns2>Anonymous ユーザのアクセスを防止</ns2>
+ <ns3>ネットワークプレースの共有履歴を無効化</ns3>
+ <ns4>近隣のネットワークからネットワーク・エントリ隠す</ns4>
+ <ns5>同ドメインの他のサーバから自分のサーバ・コンピュータ名を隠す</ns5>
+ <ns6>ターミナル・サービスを経由したユーザのリモート接続を拒否する</ns6>
+ <ns7>Windows Media Player の共有ネットワークから自動的にメディア内容が検出されないようにする</ns7>
+ <wsectw>システム・セキュリティの最適化</wsectw>
+ <ws1>タスクマネージャーを無効化</ws1>
+ <ws2>レジストリ・エディタ(Regedit) を無効化</ws2>
+ <ws3>コントトールパネルを無効化</ws3>
+ <ws4>コマンド・プロンプトを無効化</ws4>
+ <ws5>Windows ホットキーを無効化</ws5>
+ <ws6>Windows アップデート機能からのアクセスを抑制</ws6>
+ <ws7>デスクトップからすべてのアイテムを隠す</ws7>
+ <ws8>デスクトップでの右クリック機能を無効にする</ws8>
+ <ws9>フォルダ・オプション項目を無効にする</ws9>
+ <uac>UAC コントロールセンター</uac>
+ <mzut>Mz Ultimate Tools</mzut>
+ <mz1>ゲームの使用に特化した環境に設定することが出来ます</mz1>
+ <mz2>高度な CPU 最適化ユーティリティ</mz2>
+ <mz3>RAM 最適化ユーティリティ</mz3>
+ <mz4>インテリジェント PC クリーナー</mz4>
+ <mz5>Windows レジストリのデフラグと圧縮</mz5>
+ <mz6>完璧な Windows サービス管理ツール</mz6>
+ <mz7>Windows スタートアップの管理</mz7>
+ <mz8>シャットダウンのスケジュール処理、及び管理</mz8>
+ <mz9>ラップトップ/Netbooks 向けの電源管理マネージャー</mz9>
+ <wint>Windows ツール</wint>
+ <wt1>モニターのパフォーマンス関連ツール</wt1>
+ <wt2>タスクスケジューラ</wt2>
+ <wt3>イベントビューワ</wt3>
+ <ucp>Ultimate コントロールパネル</ucp>
+ <applyok>最適化の適用が完了しました!  変更を完全に適用するためには、PC を再起動する必要があります。  今すぐに再起動しますか?</applyok>
+ <loading>読み込み中</loading>
+ <lang>言語</lang>
+ <thm>テーマ</thm>
+ <upd>アップデートの確認</upd>
+ <about>情報</about>
+ <exit>終了</exit>
+ </Mz7Optimizer>
+ 
+ 
+  <AboutDialogs>
+    <version>バージョン </version>
+    <create>作成者:</create>
+    <trans>翻訳者: </trans>
+    <name>Tilt</name>
+    <donate>寄付する!</donate>
+    <better>プログラムの開発支援の為</better>
+    <close>閉じる</close>
+  </AboutDialogs>
+
+
+  <MzUpdate>
+    <upd>アップデートの確認</upd>
+    <error1>インストールされたアプリケーションが見つかりません</error1>
+    <error2>利用可能なネットワークが見つかりません</error2>
+    <error3>一時フォルダを作成出来ません</error3>
+    <error4>情報を取得するためのサーバに接続できません</error4>
+    <error41>インターネット接続、ファイアウォールの設定等を再度確認してください</error41>
+    <ok1>最新バージョンが利用可能です! 入手するために Mz Ultimate Tools サイトを開きますか?</ok1>
+    <ok2>あなたは最新版を利用中です!</ok2>
+    <col1>アプリケーション名</col1>
+    <col2>現在のバージョン</col2>
+    <col3>オンラインバージョン</col3>
+    <found>以下のアプリケーションを検出しました:</found>
+  </MzUpdate>
+
+  
+</MzUltimateTools>

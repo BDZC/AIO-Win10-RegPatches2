@@ -1,0 +1,2930 @@
+                             Benutzerhandbuch
+                             ~~~~~~~~~~~~~~~~
+                     RAR 5.50 Version für die Konsole
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                       =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                       Willkommen zum Archivierer RAR!
+                       -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ Einführung
+ ~~~~~~~~~~
+
+    RAR ist eine Anwendung für die Konsole zur Bearbeitung und
+  Verwaltung von Archivdateien im Befehlszeilenmodus. RAR unterstützt
+  Komprimierung, Verschlüsselung, Datenwiederherstellung und viele
+  weitere Funktionen, die in diesem Handbuch beschrieben sind.
+
+    RAR unterstützt nur Archive im RAR-Format, die standardmäßig
+  die Erweiterung ".rar" haben. Das ZIP-Format sowie andere Archivformate
+  werden nicht unterstützt. Auch wenn man die Erweiterung ".zip"
+  beim Erstellen eines Archivs angibt, hat das erstellte Archiv
+  das RAR-Archivformat. Windows-Benutzer können WinRAR installieren,
+  das neben dem RAR- und dem ZIP-Format weitere Archivtypen unterstützt.
+
+    WinRAR bietet sowohl eine grafische Benutzeroberfläche als auch
+  einen Befehlszeilenmodus. Obwohl RAR für die Konsole und WinRAR
+  mit grafischer Oberfläche eine ähnlichen Befehlszeilen-Syntax haben,
+  gibt es doch einige Unterschiede. Daher sollte man dieses
+  Benutzerhandbuch rar.txt für die Konsolenversion von RAR (rar.exe
+  in der Version für Windows) und die WinRAR-Hilfedatei winrar.chm
+  für WinRAR (winrar.exe) verwenden.
+
+
+ Konfigurationsdatei
+ ~~~~~~~~~~~~~~~~~~~
+
+  RAR und UnRAR für Unix lesen die Konfigurationsinformationen aus der
+  Datei ".rarrc" im Home-Verzeichnis eines Benutzers (welches in der
+  Umgebungsvariablen HOME gespeichert ist) oder im Verzeichnis "/etc".
+
+  RAR und UnRAR lesen die Konfigurationsinformationen aus der Datei
+  "rar.ini", die sich im selben Verzeichnis wie "rar.exe" befindet.
+
+  Die Datei kann eine Zeile folgender Form enthalten:
+
+  switches=<beliebige RAR-Schalter, durch Leerzeichen voneinander getrennt>
+
+  Zum Beispiel:
+
+  switches=-m5 -s
+
+  Es ist auch möglich, für einzelne RAR-Befehle unterschiedliche
+  Schalterkombinationen mit folgendem Syntax anzugeben:
+
+  switches_<Befehl>=<beliebige RAR-Schalter, durch Leerzeichen
+                                                  voneinander getrennt>
+
+  Zum Beispiel:
+
+  switches_a=-m5 -s
+  switches_x=-o+
+
+
+ Umgebungsvariable
+ ~~~~~~~~~~~~~~~~~
+
+    Standardparameter können zur Kommandozeile von RAR hinzugefügt werden,
+    indem eine Umgebungsvariable mit dem Namen "RAR" eingerichtet wird.
+
+    Zum Beispiel können Sie unter Unix folgende Zeilen zu Ihrem
+    Benutzerprofil hinzufügen:
+
+      RAR='-s -md1024'
+      export RAR
+
+    Dann wird RAR die in der Umgebungsvariablen angegebenen Optionen
+    als Standardparameter verwenden. In diesem Fall wird RAR "solide"
+    Archive mit einer Wörterbuchgröße von 1024 kB erstellen.
+
+    RAR behandelt Optionen in der folgenden Reihenfolge:
+
+       Kommandozeilenschalter                    Höchste Priorität
+       Schalter in der Umgebungsvariable RAR     geringe Priorität
+       Schalter in der Konfigurationsdatei       geringste Priorität
+
+
+ Protokolldatei
+ ~~~~~~~~~~~~~~
+
+  Wenn der Schalter "-ilog" in der Kommandozeile oder Konfigurationsdatei
+  angegeben ist, schreibt RAR Statusmeldungen über Fehler, die während
+  der Verarbeitung von Archiven auftraten, in eine Protokolldatei.
+  Lesen Sie die Beschreibung des Schalters "-ilog" für weitere Details.
+
+
+ Festlegen der Dateireihenfolge in soliden Archiven - rarfiles.lst
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Die Datei "rarfiles.lst" enthält eine vom Benutzer festgelegte Liste
+  von Dateien, welche die Reihenfolge definiert, mit der RAR Dateien
+  zu einem soliden Archiv hinzufügt. Diese Datei kann Dateinamen,
+  Wildcards und den speziellen Eintrag $default enthalten. Der Eintrag
+  $default legt den Platz in der Reihenfolgenliste für Dateien fest,
+  die nicht zu anderen Einträgen in der Datei "rarfiles.lst" passen.
+  Das Kommentarzeichen ist ";".
+
+  Unter Windows sollte diese Datei im gleichen Verzeichnis wie RAR
+  oder im Verzeichnis %APPDATA%\WinRAR befinden, unter UNIX im
+  Home-Verzeichnis oder im Verzeichnis "/etc".
+
+  Tipps zum Verbessern der Kompression und der Geschwindigkeit
+  beim Archivieren:
+
+  - Ähnliche Dateien sollten im Archiv, wenn möglich,
+    zusammengefasst werden;
+  - Dateien, auf die sehr häufig zugegriffen wird, sollten an den
+    Anfang gestellt werden.
+
+  Normalerweise haben Dateimasken eine höhere Priorität, je weiter sie
+  an der Spitze der Liste stehen. Es gibt jedoch eine Ausnahme dieser
+  Regel. Wenn rarfiles.lst mehrere Dateimasken enthält, sodass alle
+  Dateien sowohl zur ersten als auch zu anderen Masken passen, hat die
+  Dateimaske eine höhere Priorität, welche eine kleinere Menge von
+  möglichen Dateinamen repräsentiert, gleichgültig an welcher Position
+  sich diese Maske in der Liste befindet. Im Falle die beiden Masken
+  *.cpp und d*.cpp zum Beispiel hat d*.cpp eine höhere Priorität, die
+  Position von 'dateiname.cpp' wird nach der Maske 'd*.cpp' gewählt
+  und nicht nach '*.cpp'.
+
+
+ Die Syntax der RAR-Kommandozeile
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Syntax
+
+    RAR <Befehl>  [ -<Schalter> ]  <Archiv>  [ <@Dateilisten...> ]
+        [ <Dateien...> ]  [ <Zielverzeichnis\> ]
+
+ Beschreibung
+
+    Die Kommandozeilenoptionen (Befehle und Schalter) bestimmen, wie
+    RAR Archive erstellt oder verwaltet. Der Befehl ist eine Zeichenkette
+    (oder ein einzelner Buchstabe), die RAR veranlasst, die entsprechende
+    Aktion auszuführen. Schalter dienen dazu, die Art und Weise zu ändern,
+    mit der RAR die Aktion ausführt. Die anderen Parameter sind der
+    Archivname, die zu archivierenden Dateien oder die aus dem Archiv zu
+    entpackenden Dateien.
+
+    Dateilisten sind reine Textdateien, die Namen von zu verarbeitenden
+    Dateien enthalten. Die Dateinamen sollten an den Zeilenanfängen
+    beginnen. Es ist möglich, Kommentare in diese Datei einzufügen. Diese
+    beginnen mit "//". Zum Beispiel können Sie die Datei "backup.lst" mit
+    folgendem Inhalt erstellen:
+
+    c:\Arbeit\Dokumente\*.txt      //Textdokumente sichern
+    c:\Arbeit\Bilder\*.bmp         //Bilder sichern
+    c:\Arbeit\Verschiedenes
+
+    und dann folgenden Befehl ausführen:
+
+       rar a backup @backup.lst
+
+    Wenn Sie die Dateinamen von stdin (Standardeingabe, normalerweise
+    ist das die Tastatur) einlesen möchten, geben Sie keinen Dateinamen
+    für die Listendatei an (also nur ein "@").
+
+    Standardmäßig verwendet die Konsolenversion von RAR die Single-
+    Byte-Kodierung des Betriebssystems in den Listendateien. Die
+    Kodierung kann jedoch mit dem Schalter -sc<Zeichensatz>l neu
+    festgelegt werden.
+
+    Sie können sowohl normale Dateinamen als auch Dateilisten in der
+    selben Kommandozeile angeben. Wenn weder Dateien noch Dateilisten
+    angegeben sind, wird "*.*" angenommen. Dann verarbeitet RAR alle
+    Dateien.
+
+    Bei vielen RAR-Befehlen, wie für das Entpacken, Testen oder Auflisten
+    von Archivinhalten, dürfen Wildcards im Archivnamen verwendet werden.
+    Wird bei der Archivmaske keine Archiverweiterung angegeben, nimmt
+    RAR automatisch .rar als Erweiterung an. Die Maske * bedeutet dann
+    alle Archive mit der Erweiterung .rar. Möchten Sie alle Archive ohne
+    eine Erweiterung verarbeiten, wählen Sie *. als Maske. Die Maske *.*
+    wählt alle Dateien aus. Beim Packen und Löschen sind Wildcards im
+    Archivnamen nicht erlaubt.
+
+    Unter UNIX müssen Sie Wildcards in einfache oder doppelte Anführungs-
+    striche einschließen, damit diese nicht vom UNIX-Shell ausgewertet
+    werden. Zum Beispiel entpackt dieser Befehl alle Dateien "*.asm"
+    aus allen RAR-Archiven im aktuellen Verzeichnis:
+
+       rar e '*.rar' '*.asm'
+
+
+    Der Befehl kann einer der folgenden sein:
+
+    a       Dateien zu einem Archiv hinzufügen.
+
+            Beispiele
+
+            1) Füge alle Dateien *.hlp aus dem aktuellen Verzeichnis zum Archiv
+            hilfedateien.rar hinzu:
+
+            rar a hilfedateien *.hlp
+
+            2) Archiviere alle Dateien aus dem aktuellen Verzeichnis und seinen
+            Unterverzeichnissen in 363200 Byte große, solide selbstentpackende
+            Volumen und füge Wiederherstellungsdaten zu jedem Volumen hinzu:
+
+            rar a -r -v362 -s -sfx -rr sicherung
+
+            Da keine Dateinamen angegeben sind, werden alle Dateien (*) gepackt.
+
+            3) Es gibt einen Sonderfall: Wird ein Verzeichnisname als Argument
+            angegeben und der Verzeichnisname enthält weder Wildcards noch
+            Backslashes am Ende, so wird der gesamte Inhalt des Verzeichnisses
+            und aller Unterverzeichnisse zum Archiv hinzugefügt, obwohl der
+            Schalter -r nicht angegeben wurde.
+
+            Der folgende Befehl fügt alle Dateien aus dem Verzeichnis Bitmaps
+            und aus dessen Unterverzeichnissen zum RAR-Archiv Bilder hinzu:
+
+            rar a -r Bilder.rar Bitmaps
+
+            4) Enthält der Verzeichnisname Wildcards oder Backslashes am Ende,
+            gelten die normalen Regeln und es muss der Schalter -r angegeben
+            werden, damit auch die Unterverzeichnisse verarbeitet werden.
+
+            Der folgende Befehl fügt alle Dateien aus dem Verzeichnis Bitmaps
+            zum RAR-Archiv Bilder hinzu. Dateien aus den Unterverzeichnissen
+            von Bitmaps werden nicht hinzugefügt, weil der Schalter -r nicht
+            angegeben wurde:
+
+            rar a Bilder.rar Bitmaps\*
+
+
+    c       Archivkommentar hinzufügen. Kommentare werden angezeigt, während
+            das Archiv verarbeitet wird. Die Länge eines Kommentars ist auf
+            256 kB begrenzt.
+
+            Beispiele:
+
+            rar c distrib.rar
+
+            Kommentare können auch mit dem Schalter -z[Datei] aus einer
+            Datei gelesen werden. Der folgende Befehl fügt ein Kommentar
+            aus der Datei info.txt zum Archiv dummy hinzu:
+
+            rar c -zinfo.txt dummy
+
+
+    ch      Archivparameter ändern.
+
+            Dieser Befehl kann zusammen mit den meisten Schaltern
+            verwendet werden, die Archive verändern. Besonders praktisch
+            ist die Verwendung des Befehls mit den Schaltern -cl,
+            -cu, -tl, da es für diese Schalter keine entsprechenden
+            Befehle gibt.
+
+            Der Befehl kann Archivdaten nicht neu komprimieren,
+            verschlüsseln oder entschlüsseln und es ist damit auch nicht
+            möglich, gesplittete Archive (Volumen) zu erstellen oder
+            diese zusammenzuführen. Wird der Befehl 'ch' ohne Schalter
+            verwendet, so werden die Archivdaten ohne irgendwelche
+            Veränderungen kopiert.
+
+            Beispiel:
+
+            Setze die Archivzeit auf die Zeit der neusten Datei
+            im Archiv:
+
+            rar ch -tl dateiarchiv.rar
+
+
+    cw      Archivkommentar in eine Datei schreiben.
+
+            Das Format der Datei hängt vom Schalter -sc ab.
+
+            Wird der Dateiname nicht angegeben, werden die Archivkommentardaten
+            an stdout geschickt.
+
+            Beispiele:
+
+            1) rar cw archiv kommentar.txt
+
+            2) rar cw -scuc archiv unicode.txt
+
+            3) rar cw archiv
+
+
+    d       Dateien aus einem Archiv löschen. Beachten Sie: Wenn die
+            Bearbeitung des Befehls zur Folge hat, dass alle Dateien im
+            Archiv gelöscht werden, wird auch das leere Archiv selbst
+            gelöscht.
+
+
+    e       Dateien ohne archivierte Verzeichnisnamen aus einem
+            Archiv entpacken.
+
+            Entpackt alle Dateien aus einem Archiv in das aktuelle oder
+            in das angegebene Verzeichnis, ohne die Verzeichnisstrukturen
+            wiederherzustellen. 
+
+            Verwenden Sie den Befehl 'x', wenn Sie die Verzeichnis-
+            strukturen beim Entpacken wiederherzustellen möchten.
+
+            Beispiel:
+
+            rar e -or html.rar *.css css\
+
+            Entpackt alle *.css-Dateien aus dem Archiv html.rar in das
+            Verzeichnis 'css', ohne die Verzeichnisstrukturen
+            wiederherzustellen. Benenne dabei die entpackten Dateien
+            automatisch um, falls einige Dateien denselben Namen haben.
+
+
+    f       Im Archiv vorhandene Dateien erneuern. Erneuert nur die
+            Dateien in einem Archiv, die älter als die zu archivierenden
+            Dateien sind. Dieser Befehl fügt keine neuen Dateien zum Archiv
+            hinzu.
+
+
+    i[i|c|h|t]=<Zeichenkette>
+            Sucht und findet eine Zeichenkette in Archiven.
+
+            Unterstützt folgende optionale Parameter:
+
+              i - Suche unter Missachtung der Groß- und Kleinschreibung
+                  (Standard);
+
+              c - Suche unter Berücksichtigung der Groß- und Kleinschreibung;
+
+              h - hexadezimale Suche;
+
+              t - Verwende bei der Suche die ANSI-, Unicode- und
+                  OEM-Zeichensätze (Nur in der Windows-Version);
+
+            Werden keine Parameter angegeben, ist es möglich, die vereinfachte
+            Befehls-Syntax i<string> anstelle von i=<string> zu verwenden.
+
+            Es ist möglich, beim Parameter 't' weitere Parameter anzugeben,
+            zum Beispiel löst "ict=Zeichenkette" eine Suche unter Beachtung
+            der Groß- und Kleinschreibung aus, wobei alle oben erwähnten
+            Zeichensätze verwendet werden.
+
+            Beispiel:
+
+            1) rar "ic=erste Stufe" -r c:\*.rar *.txt
+
+            Sucht nach der Zeichenkette "erste Stufe" unter Beachtung der
+            Groß- und Kleinschreibung in den Dateien *.txt in den Archiven
+            *.rar auf dem Laufwerk C:.
+
+            2) rar ih=f0e0aeaeab2d83e3a9 -r e:\texte
+
+            Sucht nach der hexadezimalen Zeichenkette f0 e0 ae ae ab 2d 83 e3 a9
+            in allen RAR-Archiven im Verzeichnis e:\texte.
+
+
+    k       Archiv abschließen. Jeder Befehl, der das Archiv verändern
+            würde, wird zukünftig ignoriert.
+
+            Beispiel:
+
+            rar k final.rar
+
+
+    l[t[a],b]
+            Archivinhalt auflisten [technisch [alles], einfach].
+
+            'l' listet für jede archivierte Datei die Attribute, die
+            Größe, Datum, Zeit und den Namen in einer Zeile pro Datei
+            auf. Ist die Datei verschlüsselt, beginnt die Zeile mit
+            dem Zeichen '*'.
+
+            'lt' zeigt detaillierte Dateiinformationen in mehreren Zeilen
+            pro Datei an. Diese Informationen umfassen den Wert der
+            Dateiprüfsumme, ursprüngliches Betriebssystem,
+            Komprimierungsoptionen und andere Parameter der Komprimierung.
+
+            'lta' zeigt detaillierte Informationen nicht nur für Dateien
+            an, sondern auch für Service-Header wie NTFS-Datenströme
+            oder Dateisicherheitsdaten.
+
+            'lb' zeigt den Dateinamen und den Dateipfad aller
+            archivierten Dateien ohne zusätzliche Informationen in
+            einer Zeile pro Datei an.
+
+            Mit Hilfe des Schalters -v lässt sich der Inhalt aller
+            Volumen eines gesplitteten Archivs auflisten:
+            rar l -v vol.part1.rar
+
+            Die Befehle 'lt', 'lta' und 'lb' entsprechen jeweils den
+            Befehlen 'vt', 'vta' und 'vb'.
+
+
+    m[f]    Dateien und Verzeichnisse in ein Archiv verschieben [nur
+            Dateien]. Nach erfolgreicher Archivierung werden die Dateien
+            und Verzeichnisse gelöscht. Wird zusätzlich "f" mit angegeben
+            und/oder der Schalter "-ed" angewendet, werden die
+            Verzeichnisse nicht gelöscht.
+
+
+    p       Dateien nach stdout ausgeben (Normalerweise ist das der Bildschirm)
+
+            Sie können diesen Befehl zusammen mit dem Schalter -inul verwenden,
+            um alle Ausgaben von RAR zu unterbinden und nur Dateidaten
+            auszugeben. Das kann wichtig sein, wenn Sie eine Datei an stdout
+            zur Verwendung in Pipes senden.
+
+
+    r       Archiv reparieren. Eine Archivreparatur besteht aus zwei
+            Schritten. Zuerst wird im beschädigten Archiv nach einem
+            "recovery record" gesucht (lesen Sie dazu: Befehl "rr"). Wenn
+            das Archiv diese vorher zugefügten Wiederherstellungsdaten
+            enthält, die beschädigten Daten fortlaufend sind und die Größe
+            der beschädigten Daten kleiner ist als die Größe, die durch die
+            Wiederherstellungsdaten repariert werden kann, ist die Chance
+            einer erfolgreichen Wiederherstellung des Archivs sehr hoch.
+            Wenn dieser Schritt beendet wurde, wird ein neues Archiv mit
+            dem Namen "fixed.archivname.rar" erzeugt, wobei 'archivname'
+            der Name des ursprünglich (beschädigten) Archivs ist.
+
+            Wenn ein beschädigtes Archiv keine Wiederherstellungsdaten
+            enthält oder ein Archiv wegen starker Beschädigung nicht ganz
+            wiederhergestellt werden kann, wird ein zweiter Schritt
+            eingeleitet. In diesem Schritt wird nur die Archivstruktur
+            rekonstruiert und es ist unmöglich, Dateien wiederherzustellen,
+            bei denen die Überprüfung der Prüfsumme fehlgeschlagen ist,
+            aber es ist immerhin noch möglich, unbeschädigte Dateien
+            wiederherzustellen, auf die wegen der beschädigten Archivstruktur
+            nicht mehr zugegriffen werden konnte. Dies ist allerdings nur
+            für nicht-solide Archive sinnvoll. In einem beschädigten
+            soliden Archiv kann im zweiten Schritt häufig nur die erste
+            Datei wiederhergestellt werden. Bei Archiven mit verschlüsselten
+            Dateinamen wird dieser zweite Schritt nicht ausgeführt, da
+            solche Archive nur dann wiederhergestellt werden können, wenn
+            sie Wiederherstellungsdaten enthalten.
+
+            Wenn dieser Schritt beendet ist, wird ein neues Archiv mit
+            dem Namen rebuilt.archivname.rar erstellt, wobei 'archivname'
+            der Name des ursprünglichen Archivs ist.
+
+            Standardmäßig werden reparierte Archive im aktuellen Verzeichnis
+            erstellt. Durch zusätzliche Angabe des optionalen Parameters
+            zielverzeichnis\ kann ein anderes Zielverzeichnis festgelegt
+            werden.
+
+            Beispiel:
+
+            RAR r fehlerhaft.rar c:\repariert\
+
+            Repariere das Archiv fehlerhaft.rar und schreibe das Ergebnis
+            in das Verzeichnis 'c:\repariert':
+
+
+    rc      Fehlende und beschädigte Volumen mit Hilfe von
+            Wiederherstellungs-Volumen (".rev"-Dateien) wiederherstellen.
+            Als Archivnamen müssen Sie eins der noch vorhandenen
+            Volumennamen angeben, zum Beispiel "rar rc backup.part03.rar".
+
+            Für Informationen über Wiederherstellungs-Volumen lesen Sie
+            die Beschreibung des Befehls "rv".
+
+
+    rn      Benennt Dateien innerhalb von Archiven um.
+
+            Die Syntax des Befehls ist:
+
+            rar rn <archivname> <alter_name1> <neuer_name1> ... <alter_nameN> <neuer_nameN>
+
+            Zum Beispiel benennt der folgende Befehl:
+
+            rar rn daten.rar liesmich.txt liesmich.bak info.txt info.bak
+
+            im Archiv daten.rar die Datei liesmich.txt zu liesmich.bak und
+            die Datei info.txt zu info.bak um.
+
+            Es ist möglich, Wildcards in den Parametern <alter_name> bzw.
+            <neuer_name> zu verwenden, um einfache Änderungen an Dateinamen
+            vorzunehmen, wie das Ändern von Dateiendungen. Zum Beispiel:
+
+            rar rn daten.rar *.txt *.bak
+
+            Benennt alle Dateien *.txt nach *.bak um.
+
+            RAR prüft nicht, ob der neue Dateiname bereits im Archiv
+            vorhanden ist. Sie müssen vorsichtig sein, um zwei gleiche
+            Dateinamen zu vermeiden, besonders wenn Sie Wildcards verwenden.
+            Ein derartiger Befehl ist potenziell gefährlich, weil ein
+            falscher Wildcard die Dateinamen aller archivierten Dateien
+            zerstören kann.
+
+
+    rr[N]   Wiederherstellungsdaten hinzufügen. Fügt redundante Daten
+            für die Wiederherstellung von beschädigten Archivdaten
+            ("recovery record") zu einem RAR-Archiv hinzu. Diese
+            zusätzlichen Daten vergrößern zwar ein Archiv, ermöglichen
+            jedoch im Fall eines Datenträgerfehlers oder bei anderen
+            Datenverlusten die Wiederherstellung der archivierten Dateien,
+            sofern die Beschädigungen des Archivs nicht zu schwerwiegend
+            sind. Die Reparatur eines beschädigten Archivs kann mit dem
+            Befehl "r" durchgeführt werden. 
+
+            Die Wiederherstellungsdaten bei RAR-4.x- und RAR-5.0-Archiven
+            unterscheiden sich grundlegend: Die Datenstrukturen und die
+            verwendeten Algorithmen für die Wiederherstellung sind
+            unterschiedlich.
+
+            Die RAR-4.x-Wiederherstellungsdaten basieren auf einem
+            XOR-Algorithmus. Die Größe der 4.x-Wiederherstellungsdaten
+            lässt sich als Anzahl von Wiederherstellungs-Sektoren oder
+            als Prozentwert von der Archivgröße angeben. Um eine
+            Sektorenanzahl anzugeben, gibt man die Anzahl direkt
+            hinter 'rr' an, wie z.B. 'rr1000' für 1000 Sektoren. Für
+            einen Prozentwert fügt man hinter der Prozentzahl das
+            Zeichen 'p' oder '%' an, also z.B. 'rr5p' oder 'rr5%'
+            für 5%. Beachten Sie, dass Sie unter Windows bei der Ausführung
+            dieses Befehls in einer ".bat"- oder ".cmd"-Datei den
+            Befehl "rr3%%" statt "rr3%" angeben müssen, weil der
+            Befehlsinterpreter das einzelne "%"-Zeichen als Beginn
+            eines Batchdatei-Parameters ansieht. In diesem Fall ist es
+            praktischer, gleich 'p' statt '%' zu verwenden.
+
+            RAR-4.x-Wiederherstellungs-Sektoren sind 512 Bytes lang.
+            Wenn die Daten in einem Bereich fortlaufend beschädigt sind,
+            kann mit Hilfe eines Wiederherstellungs-Sektors 512 Bytes
+            an Daten wiederhergestellt werden. Dieser Wert kann abnehmen,
+            wenn in einem Bereich die Daten an mehreren unterschiedlichen
+            Stellen beschädigt sind. Die Wiederherstellungsdaten eines
+            RAR-4.x-Archivs können bis zu 524288 Wiederherstellungs-Sektoren
+            groß sein.
+
+            Die ungefähre Größe des RAR-4.x-"recovery records" kann durch
+            folgende Formel bestimmt werden: <Archivgröße>/256 +
+            <Anzahl der Wiederherstellungs-Sektoren>*512 Bytes.
+
+            Die RAR-5.0-Wiederherstellungsdaten verwenden Reed-Solomon-
+            Fehlerkorrektur-Codes. Bei einer fortlaufenden Beschädigung
+            in einem Archiv ist die Leistungsfähigkeit des alten und des
+            neuen Fehlerkorrekturverfahrens ungefähr gleich. Wie bei
+            RAR-4.x ist es mit den RAR-5.0-Wiederherstellungsdaten möglich,
+            beschädigte Archivdaten mit einer etwas geringeren Größe als
+            die Wiederherstellungsdaten zu reparieren. Die RAR-5.0-
+            Wiederherstellungsdaten sind jedoch bei der Wiederherstellung
+            von mehrfachen Beschädigungen an verschiedenen Stellen eines
+            Archivs wesentlich effizienter als die RAR-4.x-
+            Wiederherstellungsdaten.
+
+            RAR-5.0-Wiederherstellungsdaten setzen sich nicht mehr aus
+            512-Byte-Sektoren zusammen und man kann die Größe nur noch
+            in Prozent der Archivgröße angeben. Auch wenn das Zeichen '%'
+            oder 'p' fehlt, behandelt RAR den angegebenen Wert beim
+            RAR-5.0-Archivformat als Prozentwert. Daher bedeuten 'rr5' und
+            'rr5p' dasselbe: 5%. Wegen dem Servicedaten-Overhead entspricht
+            die sich ergebende Größe der Wiederherstellungsdaten nur
+            ungefähr der vom Anwender angegebenen Größe in Prozent. Der
+            Unterschied zwischen der angegebenen und der wirklichen Größe
+            ist bei kleinen Archiven größer als bei großen Archiven.
+
+            Die Größe der RAR-5.0-Wiederherstellungsdaten kann die Größe
+            des zu schützenden Archivs nicht übersteigen. Daher kann man
+            als Parameterwert nicht mehr als 100% angeben. Je größer die
+            Wiederherstellungsdaten sind, desto länger dauert die
+            Erstellung beim Hinzufügen zu einem Archiv und die Verarbeitung
+            bei der Archivreparatur.
+
+            Sowohl die 4.x- als auch die 5.0-Wiederherstellungsdaten sind
+            dann am leistungsfähigsten und funktionieren am besten, wenn
+            die Positionen der Daten im beschädigten Archiv sich nicht
+            verschoben haben, also unverändert geblieben sind. Wenn Sie
+            spezielle Software zum Kopieren von Archiven von beschädigten
+            Datenträgern einsetzen, und Sie wählen können, ob die
+            beschädigten Stellen mit Nullen gefüllt oder komplett entfernt
+            werden sollen, sollten Sie einen Modus wählen, der beschädigte
+            Stellen mit Nullen oder anderen Werten auffüllt. Dadurch
+            bleiben die Archivdaten an ihren ursprünglichen Positionen.
+            Auch wenn es nicht die beste Voraussetzung für eine
+            Wiederherstellung ist, sind beide Versionen in der Lage,
+            Archivdaten zu reparieren, bei denen Daten gelöscht oder
+            eingefügt wurden, sich die Positionen der Archivdaten also
+            verschoben haben. Mit RAR-5.0-Wiederherstellungsdaten können
+            Blöcke eingefügter oder gelöschter Daten besser wiederhergestellt
+            werden als mit den RAR-4.x-Wiederherstellungsdaten. In diesen
+            Fällen arbeitet der RAR-5.0-"recovery record" effizienter.
+
+            Wird der Befehl 'rr' ohne den Parameter verwendet, setzt RAR
+            die Größe der Wiederherstellungsdaten standardmäßig auf 3%
+            der Archivgröße.
+
+            Beispiel:
+
+            rar rr5p archivname
+
+            Füge Wiederherstellungsdaten zum Archiv hinzu und setze die
+            Größe der Wiederherstellungsdaten auf 5% der Archivgröße.
+
+
+    rv[N]   Wiederherstellungs-Volumen erstellen. Erstellt
+            Wiederherstellungs-Volumen (".rev"-Dateien), die später zur
+            Wiederherstellung von fehlenden und beschädigten Volumen
+            eines gesplitteten Archivs verwendet werden können.
+            Dieser Befehl ist nur für gesplittete Archive sinnvoll. Sie
+            müssen den Namen des ersten Volumens eines gesplitteten Archivs
+            angeben. Zum Beispiel:
+
+            rar rv3 daten.part01.rar
+
+            Dieses Merkmal kann für Backups sehr nützlich sein. Wenn Sie
+            zum Beispiel ein gesplittetes Archiv in einer Newsgroup
+            gepostet haben und ein Teil der Abonnenten hat einige der
+            Dateien nicht erhalten, dann kann das Posten von
+            Wiederherstellungs-Volumen anstelle gewöhnlicher Volumen
+            die Anzahl der erneut zu postenden Dateien senken.
+
+            Jedes Wiederherstellungs-Volumen ist in der Lage, ein
+            fehlendes oder beschädigtes RAR-Volumen wiederherzustellen.
+            Wenn Sie zum Beispiel 30 Volumen und 3 Wiederherstellungs-
+            Volumen haben, sind Sie in der Lage, 3 beliebige fehlende
+            Volumen wiederherzustellen. Ist die Anzahl der ".rev"-
+            Dateien kleiner als die Anzahl der fehlenden Volumen, dann
+            ist eine Wiederherstellung unmöglich. Die Anzahl der normalen
+            und der Wiederherstellungs-Volumen darf beim RAR-4.x-
+            Archivformat 255 und beim RAR-5.0-Archivformat 65535 nicht
+            überschreiten.
+
+            Nach dem Erstellen der Wiederherstellungs-Volumen dürfen
+            die ursprünglichen RAR-Volumen nicht mehr verändert werden.
+            Der Wiederherstellungsalgorithmus verwendet sowohl die in
+            den REV-Dateien als auch die in den RAR-Volumen gespeicherten
+            Daten, um fehlende RAR-Volumen wiederherzustellen. Verändern
+            Sie nach der Erstellung der REV-Dateien die RAR-Volumen -
+            z.B. indem Sie die RAR-Volumen abschließen - wird die
+            Wiederherstellung fehlender RAR-Volumen nicht gelingen.
+
+            In RAR-5.0-Wiederherstellungs-Volumen werden nicht nur
+            Wiederherstellungsdaten gespeichert, sondern auch weitere
+            wichtige Serviceinformationen, wie z.B. die Prüfsummen der
+            geschützten RAR-Dateien. Daher sind die REV-Dateien etwas
+            größer als die geschützten RAR-Volumen. Darauf muss man
+            achten, wenn man einzelne RAR- und REV-Dateien auf
+            Wechseldatenträger kopieren möchte. Bei der Erstellung muss
+            dann eine Volumengröße angegeben werden, die ein paar
+            Kilobyte kleiner ist als der verfügbare Speicherplatz auf
+            dem Wechseldatenträger.
+
+            Der optionale Parameter <N> gibt die Anzahl der zu
+            erstellenden Wiederherstellungs-Volumen an und muss kleiner
+            als die Anzahl der Volumen des gesplitteten Archivs sein. Sie
+            können auch ein Prozentzeichen oder den Buchstaben 'p' an diesen
+            Parameter anhängen. In diesem Fall wird die Anzahl der
+            erstellten ".rev"-Dateien gleich dem Prozentsatz der Anzahl
+            aller RAR-Volumen sein. Zum Beispiel:
+
+            rar rv15% daten.part01.rar
+
+            RAR stellt fehlende und beschädigte Volumen durch die Anwendung
+            des Befehls "rc" wieder her. Automatisch erfolgt die
+            Wiederherstellung, wenn RAR beim Entpacken das nächste Volumen
+            nicht findet, dafür aber eine ausreichende Anzahl von
+            ".rev"-Dateien.
+
+            Originale Kopien von beschädigten Volumen werden vor der
+            Rekonstruktion nach *.bad umbenannt. Zum Beispiel wird
+            Volumenname.part03.rar umbenannt nach Volumenname.part03.rar.bad.
+
+
+    s[Name] Archiv in ein selbstentpackendes Archiv konvertieren. Das
+            Archiv wird an ein SFX-Modul angehängt (Das Modul in der Datei
+            "default.sfx" oder das mit dem Schalter angegebene Modul wird
+            verwendet). In der Windows-Version sollte sich die Datei
+            "default.sfx" im selben Verzeichnis wie "rar.exe" befinden,
+            unter Unix im Home-Verzeichnis des Benutzers, im Verzeichnis
+            "/usr/lib" oder "/usr/local/lib".
+
+    s-      SFX-Modul entfernen. Entfernt ein SFX-Modul von einem
+            vorhandenen selbstentpackenden Archiv (SFX). RAR erstellt ein
+            neues Archiv ohne das SFX-Modul, das ursprüngliche
+            selbstentpackende Archiv wird nicht gelöscht.
+
+    t       Archivierte Dateien testen. Dieser Befehl entpackt alle Dateien
+            im Archiv, ohne dass irgendwelche Dateien auf den Datenträger
+            geschrieben werden, nur um die Integrität der angegebenen
+            Dateien im Archiv zu überprüfen.
+
+            Beispiel:
+
+            Teste alle Archive im aktuellen Verzeichnis:
+
+            rar t *
+
+            oder für Unix:
+
+            rar t '*'
+
+            Man kann auch Archive in allen Unterverzeichnissen testen
+            (beginnend mit dem aktuellen Verzeichnis):
+
+            rar t -r *
+
+            oder für Unix:
+
+            rar t -r '*'
+
+
+    u       Dateien im Archiv erneuern und hinzufügen. Fügt Dateien hinzu,
+            die noch nicht im Archiv vorhanden sind, und erneuert Dateien
+            im Archiv, die älter als die zu archivierenden Dateien sind.
+
+
+    v[t[a],b]
+            Archivinhalt ausführlich auflisten [technisch [alles], einfach].
+
+            'v' listet für jede archivierte Datei die Attribute, die
+            Größe, gepackte Größe, Kompressionsrate, Datum, Zeit,
+            Prüfsumme und den Namen in einer Zeile pro Datei auf.
+            Ist die Datei verschlüsselt, beginnt die Zeile mit
+            dem Zeichen '*'. Bei BLAKE2sp-Prüfsummen werden nur die
+            ersten zwei und das letzte Zeichen angezeigt.
+
+            'vt' zeigt detaillierte Dateiinformationen in mehreren Zeilen
+            pro Datei an. Diese Informationen umfassen den Wert der
+            Dateiprüfsumme, ursprüngliches Betriebssystem,
+            Komprimierungsoptionen und andere Parameter der Komprimierung.
+
+            'vta' zeigt detaillierte Informationen nicht nur für Dateien
+            an, sondern auch für Service-Header wie NTFS-Datenströme
+            oder Dateisicherheitsdaten.
+
+            'vb' zeigt den Dateinamen und den Dateipfad aller
+            archivierten Dateien ohne zusätzliche Informationen in
+            einer Zeile pro Datei an.
+
+            Mit Hilfe des Schalters -v lässt sich der Inhalt aller
+            Volumen eines gesplitteten Archivs auflisten:
+            rar v -v vol.part1.rar
+
+            Die Befehle 'vt', 'vta' und 'vb' entsprechen jeweils den
+            Befehlen 'lt', 'lta' und 'lb'.
+
+
+    x       Dateien mit vollen Verzeichnisnamen entpacken.
+
+            Beispiele:
+
+            1) Entpacke die Datei 10cent.txt in das aktuelle Verzeichnis
+               und zeige den Archivkommentar nicht an:
+
+               rar x -c- us_muenzen 10cent.txt
+
+            2) Entpacke *.txt-Dateien aus dem Archiv dokumente.rar in
+               das Verzeichnis c:\dokumente:
+
+               rar x dokumente.rar *.txt c:\dokumente\
+
+            3) Entpacke den gesamten Inhalt des Archivs dokumente.rar
+               ins aktuelle Verzeichnis:
+
+               rar x dokumente.rar
+
+
+    Schalter (werden zusammen mit einem Befehl verwendet):
+
+
+    -?      Zeigt eine Hilfe zu den Befehlen und Schaltern. Die Hilfe wird
+            auch angezeigt, wenn keine oder eine ungültige
+            Kommandozeilenoption angegeben wurde.
+
+
+    --      Schalterbearbeitung abbrechen
+
+            Dieser Schalter teilt RAR mit, dass es keine weiteren Schalter
+            in der Befehlszeile gibt. Dies kann von Nutzen sein, wenn ein
+            Archivname oder ein Dateiname mit dem Zeichen "-" beginnt.
+            Ohne den Schalter "--" würde so ein Name als Schalter
+            interpretiert werden.
+
+            Beispiel:
+
+            Füge alle Dateien aus dem aktuellen Verzeichnis zum soliden
+            Archiv "-SeltsamerName" hinzu.
+
+            RAR a -s -- -SeltsamerName
+
+
+    -@[+]   Dateilisten deaktivieren [aktivieren]
+
+            RAR behandelt Befehlszeilenparameter, die mit dem Zeichen '@'
+            beginnen, als Dateilisten. Daher versucht RAR standardmäßig,
+            die Dateiliste 'dateiname' einzulesen, wenn als Parameter
+            '@dateiname' angegeben wurde. Existiert gleichzeitig jedoch
+            die Datei '@dateiname', so behandelt RAR den Parameter als
+            Datei mit dem Namen '@dateiname', anstatt die Dateiliste aus
+            der Datei 'dateiname' einzulesen.
+
+            Mit dem Schalter -@[+] kann diese Zweideutigkeit verhindert
+            werden. Der Schalter legt eindeutig fest, wie Parameter
+            behandelt werden, die mit dem Zeichen '@' beginnen.
+
+            Gibt man -@ auf der Befehlszeile an, werden die nach diesem
+            Schalter angegebenen Parameter mit dem Zeichen '@' am Anfang
+            als Dateinamen angesehen und nicht als Dateilisten.
+
+            Gibt man -@+ auf der Befehlszeile an, werden die nach diesem
+            Schalter angegebenen Parameter mit dem Zeichen '@' am Anfang
+            als Dateilisten angesehen und nicht als Dateinamen.
+
+            Dieser Schalter wirkt sich nicht auf die Parameter aus, die
+            vor diesem Schalter auf der Befehlszeile angegeben wurden.
+
+            Beispiel:
+
+            Überprüfe die archivierte Datei '@home'
+
+            rar t -@ notes.rar @home
+
+
+    -ac     Archivattribut nach dem Packen oder Entpacken löschen (nur
+            in der Windows-Version verfügbar).
+
+            Wird der Schalter -ac beim Archivieren benutzt, wird das
+            Archivattribut bei Dateien nach dem erfolgreichen Packen
+            gelöscht. Wird der Schalter -ac beim Entpacken verwendet,
+            löscht RAR das Archivattribut der entpackten Dateien.
+            Der Schalter wirkt sich nicht auf die Attribute von
+            Verzeichnissen aus.
+
+
+    -ad     Archivname an das Zielverzeichnis anhängen.
+
+            Diese Option kann sehr nützlich beim Entpacken von mehreren
+            Archiven sein. Standardmäßig legt RAR die Dateien aus allen
+            Archiven im selben Verzeichnis ab. Dieser Schalter dagegen
+            legt für die entpackten Dateien aus jedem Archiv ein eigenes
+            Verzeichnis an.
+
+            Beispiel:
+
+            rar x -ad *.rar daten\
+
+            Für jedes zu entpackende Archiv legt RAR ein Unterverzeichnis
+            im Verzeichnis "daten" an.
+
+
+    -ag[Format]
+            Archivnamen aus aktuellem Datum und aktueller Zeit erzeugen.
+
+            Hängt das aktuelle Datum an den Archivnamen an, wenn ein
+            Archiv bearbeitet oder ein neues Archiv erzeugt wird. Nützlich
+            für tägliche Backups.
+
+            Das Format des angehängten Datums wird definiert durch den
+            optionalen Parameter "Format" oder durch "YYYYMMDDHHMMSS",
+            wenn dieser Parameter fehlt. Der Parameter "Format" kann die
+            folgenden Zeichen enthalten:
+
+            Y   - Jahr
+            M   - Monat
+            MMM - Monatsnamen als Zeichenkette (Jan, Feb, usw.)
+            W   - Kalenderwoche (eine Woche beginnt mit einem Montag)
+            A   - Tag der Woche (Montag ist 1, Sonntag ist 7)
+            D   - Tag des Monats
+            E   - Tag des Jahres
+            H   - Stunden
+            M   - Minuten (wird als Minuten behandelt, wenn es nach
+                  Stunden auftritt)
+            I   - Minuten (wird als Minuten behandelt, unabhängig von
+                  der Position von Stunden)
+            S   - Sekunden
+            N   - Archivnummer. RAR sucht nach einem bereits vorhandenen
+                  Archiv mit dem erzeugten Namen und erhöht im Falle der
+                  Existenz die Archivnummer, bis ein eindeutiger Name
+                  erzeugt wurde. Das Formatzeichen 'N' wird beim Erstellen
+                  von mehrteiligen Archiven (Volumen) nicht unterstützt.
+                  Bei allen Nicht-Archivierungsvorgängen, wie z. B. beim
+                  Entpacken, wählt RAR das existierende Archiv mit dem
+                  Namen, das dem ersten nicht verwendeten Namen vorausgeht,
+                  oder setzt N auf 1, wenn dieses Archiv nicht existiert.
+
+            Jedes einzelne Zeichen der oben angegebenen Zeichenketten
+            für das Formatieren repräsentiert genau ein Zeichen, was
+            dem Archivnamen hinzugefügt wird. Verwenden Sie zum Beispiel
+            WW für die Kalenderwoche mit zwei Ziffern oder YYYY für die
+            Jahreszahl mit vier Ziffern.
+
+            Wenn das erste Zeichen von Format ein "+" ist, werden die
+            Positionen von Datum und Archivnamen vertauscht, sodass das
+            Datum vor dem Archivnamen steht.
+
+            Die Zeichenkette Format kann in '{' und '}' eingeschlossenen
+            optionalen Text enthalten. Dieser Text wird in den Archivnamen
+            eingefügt.
+
+            Alle anderen Zeichen werden zum Archivnamen ohne Änderungen
+            hinzugefügt.
+
+            Wenn Sie eine bereits existierendes Archiv bearbeiten möchten,
+            verwenden Sie den Schalter -ag mit Vorsicht. Abhängig von der
+            Zeichenkette Format und der Zeit, die seit der vorherigen
+            Verwendung von -ag vergangen ist, kann es passieren, dass die
+            erzeugten und bestehenden Archivnamen nicht übereinstimmen.
+            In diesem Fall erstellt oder öffnet RAR ein neues Archiv,
+            anstatt das bestehende Archiv zu erneuern. Sie können mit dem
+            Schalter -log den erzeugten Archivnamen in eine Datei schreiben
+            und ihn für die weitere Verarbeitung aus der Datei lesen.
+
+            Beispiel:
+
+            1) Benutze das Standardformat YYYYMMDDHHMMSS
+
+               rar a -ag backup
+
+            2) Benutze das Format DD-MMM-YY
+
+               rar t -agDD-MMM-YY backup
+
+            3) Benutze das Format YYYYMMDDHHMM und setze das Datum vor
+               den Archivnamen "backup"
+
+               rar a -ag+YYYYMMDDHHMM backup
+
+            4) Benutze das Format YYYY-WW-A und verwende zusätzliche
+               Feldbeschreibungen
+
+               rar a -agYYYY{Jahr}-WW{Woche}-A{WTag} backup
+
+            5) Benutze das Format YYYYMMDD und die Archivnummer. Das
+               erlaubt die Erzeugung von eindeutigen Namen, auch wenn
+               das Format YYYYMMDD mehr als einmal am gleichen Tag
+               verwendet wird.
+
+               rar a -agYYYYMMDD-NN backup
+
+
+    -ai     Dateiattribute ignorieren
+
+            Wird dieser Schalter beim Entpacken verwendet, setzt RAR die
+            Dateiattribute der entpackten Dateien nicht auf die im Archiv
+            gespeicherten Attributwerte. Mit diesem Schalter bleiben die
+            Dateiattribute erhalten, die vom Betriebssystem einer neu
+            erstellten Datei zugewiesen werden.
+
+            Wird dieser Schalter beim Archivieren verwendet, werden
+            vordefinierte Werte, die typisch für Dateien und Verzeichnisse
+            sind, anstelle der aktuellen Attributwerte im Archiv gespeichert.
+
+            Unter Windows betrifft das die Dateiattribute "Archiv", "System",
+            "Versteckt" und "Schreibgeschützt". Unter Unix betrifft das die
+            Dateirechte für "Benutzer", "Gruppe" und "Andere".
+
+
+    -ao     Dateien mit gesetztem Archivattribut hinzufügen
+            (nur in der Windows-Version verfügbar).
+            Wird der Schalter -ao beim Archivieren benutzt, werden nur
+            Dateien mit gesetztem Archivattribut zum Archiv hinzugefügt.
+            Der Schalter bewirkt bei Verzeichnissen nichts. Das heißt,
+            es werden alle passenden Verzeichnisse unabhängig von ihren
+            Attributen hinzugefügt. Es ist auch möglich, zusätzlich den
+            Schalter -ed anzugeben. Dann werden alle Verzeichniseinträge
+            übersprungen und nicht im Archiv gespeichert.
+
+            Beispiel:
+
+            Füge alle Dateien auf Laufwerk C: mit gesetztem Archivattribut
+            zum Archiv "f:backup" hinzu und lösche das Archivattribut
+            der Dateien
+
+            rar a -r -ac -ao f:backup c:\*.*
+
+
+    -ap     Verzeichnis innerhalb des Archivs setzen. Beim Hinzufügen zu
+            einem Archiv wird das angegebene Verzeichnis allen Dateinamen
+            vorangehängt. Beim Entpacken hingegen wird das angegebene
+            Verzeichnis von den Dateinamen entfernt.
+
+            Wenn Sie zum Beispiel die Datei "liesmich.txt" ins das
+            Verzeichnis "DOKUMENTE\DEU" des Archivs "release" hinzufügen
+            möchten, können Sie diesen Befehl benutzen:
+
+            rar a -apDOKUMENTE\DEU release liesmich.txt
+
+            Oder um alle Dateien im Verzeichnis "DEU" innerhalb des Archivs
+            in das aktuelle Verzeichnis zu entpacken:
+
+            rar x -apDOKUMENTE release DOKUMENTE\DEU\*.*
+
+
+    -as     Archivinhalt synchronisieren
+
+            Wenn dieser Schalter während des Archivierens benutzt wird,
+            werden die Dateien aus dem Archiv entfernt, die nicht in der
+            Liste der Dateien sind, die zum Archiv hinzugefügt werden
+            sollen. Es ist sinnvoll, diesen Schalter in Kombination mit
+            dem Schalter "-u" (Erneuern) zu verwenden, um den Inhalt
+            eines Archivs mit einem Verzeichnis abzugleichen.
+
+            Zum Beispiel bewirkt der Befehl:
+
+            rar a -u -as backup quelltexte\*.cpp
+
+            dass das Archiv "backup.rar" nur noch "*.cpp"-Dateien aus dem
+            Verzeichnis "quelltexte" enthält. Alle anderen Dateien werden
+            aus dem Archiv gelöscht. Es läuft ähnlich ab wie beim Erstellen
+            eines neuen Archivs, jedoch mit einem wichtigen Unterschied:
+            Wenn keine Dateien seit dem letzten Backup verändert wurden,
+            läuft der Vorgang bedeutend schneller ab als das Erstellen
+            eines neuen Archivs.
+
+
+    -cfg-   Ignoriert die Konfigurationsdatei und die Umgebungsvariable RAR.
+
+
+    -cl     Dateinamen in Kleinbuchstaben umwandeln.
+
+
+    -cu     Dateinamen in Großbuchstaben umwandeln.
+
+
+    -c-     Verhindert die Anzeige von Kommentaren.
+
+
+    -df     Dateien nach dem Archivieren löschen
+
+            Verschiebt Dateien in ein Archiv. Dieser Schalter zusammen mit
+            dem Befehl "a" bewirkt das Gleiche wie der Befehl "m".
+
+
+    -dh     Von anderen Anwendungen gesperrte Dateien öffnen
+
+            Erlaubt die Verarbeitung von Dateien, die von anderen
+            Programmen zum Schreiben geöffnet sind.
+
+            Dieser Schalter ist dann eine Hilfe, wenn eine Anwendung
+            einen lesenden Zugriff auf eine Datei erlaubt, aber wenn
+            jegliche Arten des Dateizugriffs verboten sind, wird auch
+            jede "Datei öffnen"-Operation scheitern.
+
+            Dieser Schalter kann gefährlich sein, weil er die Archivierung
+            von Dateien erlaubt, die vielleicht gerade von anderen
+            Programmen geändert werden. Benutzen Sie den Schalter
+            mit großer Vorsicht.
+
+
+    -dr     Dateien beim Löschen in den Papierkorb verschieben
+
+            Löscht die Dateien nach dem Archivieren und verschiebt sie
+            in den Papierkorb.
+            Nur in der Windows-Version verfügbar.
+
+
+    -ds     Dateien beim Hinzufügen zu einem soliden Archiv
+            nicht sortieren
+
+
+    -dw     Dateien nach dem Archivieren sicher löschen
+
+            Löscht die Dateien nach dem Archivieren. Vor dem Löschen
+            werden die Dateien mit Null-Bytes überschrieben, sodass
+            eine Wiederherstellung der Dateien (genauer: der
+            Dateiinhalte) verhindert wird, die Dateien werden auf 0 Byte
+            Größe verkleinert und erhalten einen temporären Dateinamen.
+
+            Beachten Sie, dass dieser Ansatz für das sichere Überschreiben
+            nur für normale Festplatten funktioniert. Auf Solid-State-
+            Drives ist aufgrund von Methoden zur Nutzungsverteilung (SSD
+            Wear Leveling) und komplizierter Datenadressierung nicht
+            sichergestellt, dass die ursprünglichen Dateidaten wirklich
+            überschrieben werden.
+
+
+    -ed     Leere Verzeichnisse nicht hinzufügen
+
+            Dieser Schalter zeigt an, dass Verzeichnisse nicht im zu
+            erstellenden Archiv gespeichert werden. Wenn so ein Archiv
+            entpackt wird, erstellt RAR die nichtleeren Verzeichnisse
+            aufgrund der Pfadinformationen der in den Verzeichnissen
+            enthaltenen Dateien. Informationen über leere Verzeichnisse
+            gehen verloren. Alle Eigenschaften von nichtleeren Verzeich-
+            nissen außer dem Namen (Zugriffsrechte, Datenströme, usw.)
+            gehen ebenfalls verloren. Verwenden Sie daher diesen Schalter
+            nur, wenn Sie solche Informationen nicht speichern möchten.
+
+            Wird -ed zusammen mit dem Befehl m oder dem Schalter -df
+            verwendet, entfernt RAR leere Verzeichnisse nicht.
+
+
+    -en     "Archivende"-Block nicht hinzufügen
+
+            Wird bei RAR-Archiven im Format RAR 5.0 nicht unterstützt.
+
+            Normalerweise fügt RAR den "Archivende"-Block an das Ende
+            eines neuen oder erneuerten Archivs an. Das macht es möglich,
+            andere Daten, wie z.B. digitale Signaturen, ohne Probleme zu
+            überspringen. In einigen Spezialfällen kann es allerdings
+            nützlich sein, den "Archivende"-Block nicht hinzuzufügen.
+            Wenn zum Beispiel ein Archiv zwischen zwei Systemen über
+            eine unzuverlässige Verbindung übertragen wird, und zur
+            gleichen Zeit der Sender neue Dateien zu dem Archiv hinzufügt,
+            kann es wichtig sein, sicherzustellen, dass der bereits
+            empfangene Teil der Datei am anderen Ende während der
+            Übertragung nicht verändert wird.
+
+            Dieser Schalter kann nicht mit Volumen verwendet werden, weil
+            der "Archivende"-Block wichtige Informationen für die korrekte
+            Verarbeitung von Volumen enthält.
+
+
+    -ep     Pfadangabe aus Namen entfernen. Mit diesem Schalter werden
+            Dateien ohne die Pfadinformationen zu einem Archiv hinzugefügt.
+            Das kann dazu natürlich führen, dass mehrere Dateien mit
+            demselben Namen in einem Archiv existieren.
+
+            Wird der Schalter beim Entpacken verwendet, werden die
+            archvierten Pfade für die entpackten Daten ignoriert. Alle
+            Dateien werden daher im selben Zielverzeichnis erstellt.
+
+
+    -ep1    Stammverzeichnis aus Namen entfernen. Speichert oder entpackt
+            nicht den Pfad, der in der Kommandozeile angegeben wurde.
+            Wird ignoriert, wenn der Pfad Wildcards enthält.
+
+            Beispiele:
+
+            1) Füge alle Dateien und Verzeichnisse aus dem Verzeichnis
+               'tmp' zum Archiv 'test' hinzu, speichere aber im Archiv
+               bei den Namen nicht die Pfadinformation 'tmp\':
+
+               rar a -ep1 -r test tmp\*
+
+               Das ist gleichwertig zu den Befehlen:
+
+               cd tmp
+               rar a -r ..\test
+               cd ..
+
+            2) Entpacke alle Dateien, die zu der Dateimaske images\*
+               passen, in das Verzeichnis dest\, entferne jedoch
+               'images\' von den Pfaden der zu erstellenden Dateien:
+
+               rar x -ep1 data images\* dest\
+
+
+    -ep2    Auf vollständige Pfadangabe erweitern. Speichert beim
+            Archivieren die vollständigen Dateipfade (ohne den
+            Laufwerksbuchstaben und dem führenden Backslash).
+
+
+    -ep3    Auf vollständige Pfadangabe inklusive Laufwerksbuchstaben
+            erweitern. Nur in der Windows-Version verfügbar.
+
+            Speichert beim Archivieren die vollständigen Dateipfade
+            einschließlich dem Laufwerksbuchstaben. Die Trennzeichen
+            zwischen Laufwerksbuchstaben und Pfadangaben (die
+            Doppelpunkte) werden durch Unterstriche ersetzt.
+
+            Wird der Schalter -ep3 beim Entpacken verwendet, ersetzt
+            RAR die Unterstriche wieder durch Doppelpunkte und erstellt
+            die entpackten Dateien in ihren ursprünglichen Verzeichnissen
+            und auf den ursprünglichen Laufwerken. Ein vom Benutzer
+            ebenfalls angegebenes Zielverzeichnis wird ignoriert.
+
+            Der Schalter ersetzt beim Archivieren in UNC-Netzwerkpfaden
+            die führenden Backslashes durch Unterstriche. \\server\freigabe
+            wird also beim Archivieren zu __server\freigabe.
+            Beim Entpacken werden die beiden Unterstriche wieder zu zwei
+            Backslashes, der ursprüngliche Netzwerkpfad wird
+            beim Entpacken so wiederhergestellt.
+
+            Dieser Schalter kann für ein Backup mehrerer Laufwerke
+            in ein und dasselbe Archiv hilfreich sein. Zum Beispiel
+            können Sie folgenden Befehl ausführen:
+
+            rar a -ep3 -r backup.rar c:\ d:\ e:\
+
+            um ein Backup zu erstellen, und
+
+            rar x -ep3 backup.rar
+
+            um es wiederherzustellen.
+
+            Aber seien Sie vorsichtig und verwenden Sie -ep3 nur dann,
+            wenn Sie absolut sicher sind, dass das zu entpackende Archiv
+            nicht irgendwelche schädlichen Dateien enthält. Mit anderen
+            Worten: Verwenden Sie den Schalter nur, wenn Sie ein Archiv
+            selbst erstellt haben oder dem Ersteller vollständig
+            vertrauen. Dieser Schalter ermöglicht es, jede beliebige
+            Datei an jedem beliebigen Ort auf Ihrem Computer
+            einschließlich wichtiger Systemdateien zu überschreiben.
+            Normalerweise sollte er nur für Backups und für die
+            Wiederherstellung derselben verwendet werden.
+
+
+    -e[+]<Attr>
+            Angabe einer Attributmaske <Attr>, die festlegt, welche
+            Dateien und Verzeichnisse von der Verarbeitung ein- und
+            ausgeschlossen werden.
+
+            <Attr> ist eine dezimale, oktale (mit einer vorangestellten
+            '0') oder eine hexadezimale (mit vorangestelltem '0x') Zahl.
+
+            Standardmäßig, ohne das Zeichen '+' vor <Attr>, definiert
+            dieser Schalter die Attributmaske der auszuschließenden
+            Dateien. Wenn also das Ergebnis der bitweisen UND-Operation
+            zwischen <Attr> und den Dateiattributen nicht Null ist, wird
+            die Datei nicht verarbeitet.
+
+            Ist das Zeichen '+' vorhanden, definiert der Schalter die
+            Attributmaske der einzuschließenden Dateien. Nur Dateien,
+            die mindestens eins der in der Attributmaske angegebenen
+            Attribute haben, werden verarbeitet.
+
+            In der Windows-Version können auch die Symbole D, S, H, A
+            und R verwendet werden, um Verzeichnisse und Dateien (D) mit
+            den Attributen "System" (S), "Versteckt" (H), "Archiv" (A)
+            und "Schreibgeschützt" (R) auszuschließen. Die Reihenfolge,
+            in der die Symbole angegeben werden, ist nicht wichtig.
+            Die Unix-Versionen unterstützen noch weitere Attribute:
+            "Verzeichnisse" (D) und "Gerät" (V).
+
+            -e<Attr> und -e+<Attr> können gleichzeitig in derselben
+            Kommandozeile verwendet werden.
+
+            Beispiele:
+
+            1) Nur Verzeichnisnamen ohne deren Inhalte archivieren:
+
+               rar a -r -e+d verzeichnisse
+
+            2) Packe weder Systemdateien noch versteckte Dateien:
+
+               rar a -esh dateien
+
+            3) Entpacke nur nicht schreibgeschützte Dateien:
+
+               rar x -er files
+
+
+    -f      Bereits vorhandene Dateien erneuern. Der Schalter kann beim
+            Entpacken oder Erstellen von Archiven verwendet werden. Die
+            Befehls-/Schalterkombination "a -f" entspricht dem Befehl "f".
+            Sie können den Schalter "-f" auch mit dem Befehl "m" oder "mf"
+            benutzen. Wenn der Schalter "-f" zusammen mit den Befehlen "x"
+            oder "e" verwendet wird, werden nur ältere Dateien durch die
+            neueren Versionen aus dem Archiv ersetzt. Archivierte Dateien
+            ohne eine Entsprechung außerhalb des Archivs werden nicht
+            entpackt.
+
+
+    -hp[p]  Dateidaten und Dateiköpfe verschlüsseln.
+
+            Der Schalter ist vergleichbar mit dem Schalter "-p[p]",
+            jedoch verschlüsselt der Schalter "-p" nur die Dateidaten,
+            während die anderen Informationen wie Dateinamen sichtbar
+            bleiben. Dieser Schalter verschlüsselt alle wichtigen Bereiche
+            eines Archivs: Dateidaten, Dateinamen, Dateigrößen,
+            Dateiattribute, Dateikommentare und andere Datenblöcke. Das
+            bedeutet eine höhere Sicherheitsstufe.
+            Ohne das Passwort ist es dann sogar unmöglich, die Liste der
+            Dateien in einem Archiv anzuschauen, das mit dem Schalter
+            "-hp" verschlüsselt wurde.
+
+            Beispiel:
+
+            rar a -hpfGzq5yKw geheim report.txt
+
+            Fügt die Datei "report.txt" zum verschlüsselten Archiv
+            "geheim.rar" hinzu unter Verwendung des Passworts "fGzq5yKw".
+
+
+    -ht[b|c]
+            Hashverfahren [BLAKE2,CRC32] für Dateiprüfsumme wählen.
+
+            In RAR-Archiven wird die Unversehrtheit von Dateidaten durch
+            Prüfsummen sichergestellt. Für jede Datei im Archiv wird eine
+            Prüfsumme berechnet und gespeichert.
+
+            Standardmäßig verwendet RAR die CRC32-Funktion zu Berechnung
+            der Prüfsumme. Beim RAR-5.0-Archivformat kann auch die BLAKE2-
+            Hashfunktion anstelle der CRC32-Funktion gewählt werden.
+
+            Geben Sie den Schalter -htb für den BLAKE2-Hash und -htc für
+            die CRC32-Funktion an. Da CRC32 der Standardalgorithmus ist,
+            wird der Schalter -htc nur gebraucht, um den Modus -htb in
+            der RAR-Konfiguration zu überschreiben.
+
+            Das Ergebnis der CRC32-Funktion ist ein 32 Bit breiter Wert.
+            Die Eigenschaften von CRC32 ermöglichen es, die meisten
+            unbeabsichtigten Datenfehler zu erkennen. Allerdings ist
+            CRC32 nicht für die zuverlässige Identifizierung von
+            Dateiinhalten geeignet. Anders ausgedrückt: Wenn zwei Dateien
+            denselben CRC32-Wert haben, ist nicht gewährleistet, dass
+            auch die Dateiinhalte übereinstimmen.
+
+            Das Ergebnis der BLAKE2sp-Hashfunktion ist ein 256 Bit
+            breiter Wert. Da BLAKE2sp aus kryptografischer Sicht eine
+            starke Hashfunktion darstellt, ist praktisch sichergestellt,
+            dass bei zwei Dateien mit derselben BLAKE2sp-Prüsumme auch
+            die Dateiinhalte übereinstimmen. Eine BLAKE2sp-Prüfsumme
+            ermöglicht eine zuverlässigere Erkennung von Fehlern in
+            den Dateidaten als eine kürzere CRC32-Prüfsumme.
+
+            Da das Ergebnis der BLAKE2sp-Funktion länger ist und somit
+            mehr Speicherplatz benötigt, wird ein Archiv bei der
+            Verwendung von BLAKE2sp (Schalter -htb) etwas größer als
+            bei der Verwendung von CRC32.
+
+            Wenn die Archivheader nicht verschlüsselt sind (Schalter -hp
+            nicht angegeben), werden die Prüfsummen bei verschlüsselten
+            Dateien in RAR-5.0-Archiven mit Hilfe eines speziellen
+            passwortabhängigen Algorithmus verändert. Dadurch ist es
+            nicht mehr möglich, von den Prüfsummen auf die Inhalte der
+            Dateien zu schließen. Die Prüfsummen von verschlüsselten
+            Dateien in RAR-5.0-Archiven stimmen daher nicht mit echten
+            CRC32- oder BLAKE2sp-Hashwerten überein.
+
+            Dieser Schalter wird nur für RAR-5.0-Archive unterstützt.
+            Er muss daher zusammen mit dem Schalter -ma verwendet werden.
+
+            Mit den Befehlen 'vt' oder 'lt' lassen sich die Prüfsummen
+            der archivierten Dateien anschauen.
+
+            Beispiel:
+
+            rar a -ma -htb listen.rar *.lst
+
+            Füge alle Dateien, die zu der Maske *.lst passen, zum Archiv
+            listen.rar hinzu und verwende BLAKE2sp für die Dateiprüfsummen.
+
+
+    -id[c,d,p,q]
+            Unterdrückt Meldungen.
+
+            Der Schalter -idc unterdrückt die Anzeige des Copyrights.
+
+            Der Schalter -idd unterdrückt die Meldung "Fertig" am Ende
+            von Archivoperationen.
+
+            Der Schalter -idp unterdrückt die Fortschrittsanzeige (die
+            Prozentanzeige).
+
+            Der Schalter -idq schaltet alle Hinweismeldungen ab (Quiet-
+            Mode), nur Fehlermeldungen und Fragen werden angezeigt.
+
+            Es ist möglich mehrere Buchstaben auf einmal zu verwenden,
+            demnach ist der Schalter -idcdp richtig.
+
+
+    -ieml[.][Adr]
+            Archiv als E-Mail versenden. Nur in der Windows-Version
+            verfügbar.
+
+            Hängt ein Archiv, das mit dem Befehl "Hinzufügen" erstellt
+            oder erneuert wurde, an eine E-Mail-Nachricht an. Sie müssen
+            ein MAPI-fähiges E-Mail-Programm installiert haben, um diesen
+            Schalter benutzen zu können (Die meisten modernen E-Mail-
+            Programme unterstützen die MAPI-Schnittstelle).
+
+            Sie können die E-Mail-Adresse des Empfängers direkt im
+            Schalter angeben oder auch weglassen. Im letzteren Fall wird
+            Ihr E-Mailprogramm nach der Mailadresse verlangen. Es ist
+            möglich, mehrere E-Mail-Adressen anzugeben (durch Kommata
+            oder Semikolons getrennt).
+
+            Wenn Sie ein Punkt "." an den Schalter "-ieml" anhängen, wird
+            das Archiv gelöscht, nachdem es erfolgreich an ein E-Mail
+            angehängt wurde. Wird der Schalter bei der Erstellung eines
+            gesplitteten Archivs benutzt, so wird jedes Volumen an ein
+            eigenes E-Mail angehängt.
+
+
+    -ierr   Alle Fehlermeldungen an stderr senden.
+
+
+    -ilog[Name]
+            Fehler in eine Datei protokollieren (Nur in der registrierten
+            Version verfügbar).
+
+            Schreibt Fehlermeldungen in die Datei "rar.log". Wird der
+            optionale Parameter <Name> nicht angegeben, wird die
+            Protokolldatei mit folgenden Standardwerten erstellt:
+
+            Unix:    Datei .rarlog im HOME-Verzeichnis des Benutzers;
+            Windows: Datei rar.log im Verzeichnis %APPDATA%\WinRAR.
+
+            Enthält der Parameter <Name> ein Dateinamen ohne Pfad,
+            erstellt RAR die Protokolldatei im oben angegebenen
+            Standardverzeichnis mit dem angegebenen Namen.
+            Um den Ort der Protokolldatei zu ändern, geben Sie für
+            <Name> einen Dateinamen mit Pfad an.
+
+            Standardmäßig wird für die Protokolldatei die Textkodierung
+            UTF-16 Little Endian verwendet. Die Kodierung lässt sich
+            mit dem Schalter -sc<Zeichensatz>g ändern, wie zum
+            Beispiel -scag für die Single-Byte-Kodierung des
+            Betriebssystems.
+
+            Beispiel:
+
+            rar a -ilogc:\log\backup.log backup d:\dokumente
+
+            Erstellt die Protokolldatei c:\log\backup.log falls bei der
+            Verarbeitung Fehler auftreten.
+
+    -inul   Schaltet alle Meldungen ab.
+
+
+    -ioff   Fährt den PC nach dem Ende der Archivoperation herunter und
+            schaltet ihn aus. Die Hardware muss die "Power Off"-Funktion
+            unterstützen. Nur in der Windows-Version verfügbar.
+
+
+    -isnd   Schaltet die Klänge an.
+
+
+    -iver   Zeigt die Versionsnummer an und beendet RAR. Dazu muss man
+            nur "RAR -iver" aufrufen.
+
+
+    -k      Archiv abschließen. Jeder Befehl, der das Archiv verändern
+            würde, wird zukünftig ignoriert.
+
+
+    -kb     Defekte entpackte Dateien behalten.
+
+            Standardmäßig löscht RAR Dateien, die nach dem Entpacken
+            eine fehlerhafte Prüfsumme haben. Der Schalter "-kb"
+            bestimmt, dass Dateien mit Prüfsummen-Fehlern nicht
+            gelöscht werden sollen.
+
+
+    -log[Format][=Name]
+            Schreibe Datei- / Archivnamen in eine Protokolldatei
+
+            Dieser Schalter schreibt bei Archivierungs-, Entpack-, Lösch-,
+            und Auflistbefehlen die Archiv- und Dateinamen in die
+            angegebene Textdatei. Das Verhalten des Schalters lässt sich
+            mit der Zeichenkette 'Format' festlegen. 'Format' kann aus
+            einem oder mehreren der folgenden Zeichen bestehen:
+
+            A - Schreibe Archivnamen in die Protokolldatei. Wenn RAR
+                Volumen erstellt oder bearbeitet, werden alle
+                Volumennamen protokolliert.
+
+            F - Schreibe die Dateinamen aller verarbeiteten Dateien in
+                die Protokolldatei. Es werden die Dateinamen beim
+                Hinzufügen zu einem Archiv, beim Entpacken aus einem
+                Archiv, beim Löschen und beim Auflisten von Dateien in
+                einem Archiv protokolliert.
+
+            P - Wenn die Protokolldatei mit dem angegebenen Dateinamen
+                existiert, hänge die Daten an die bestehende Datei an
+                und erstelle keine neue Datei.
+
+            U - Schreibe die Daten im Unicode-Format.
+
+            Ist weder 'A' noch 'F' angegeben, wird automatisch 'A'
+            angenommen.
+
+            Mit dem Paramter 'Name' kann der Name der Protokolldatei
+            angegeben werden. Der 'Name' muss von der 'Format'-Zeichenfolge
+            durch ein '='-Zeichen getrennt sein. Ist 'Name' nicht vorhanden,
+            verwendet RAR den Standard-Dateinamen rarinfo.log.
+
+            Die mehrfache Verwendung des Schalters -log in derselben
+            Befehlszeile ist erlaubt.
+
+            Dieser Schalter kann sehr nützlich sein, wenn man ein Archiv
+            weiterverarbeiten möchte, das mit den Schaltern -ag oder -v
+            in einem Batchskript erstellt wurde. Dazu gibt man beim
+            Erstellen eines Archivs -loga=archivname.txt an und liest
+            anschließend mit einem geeigneten Batch-Befehl den von RAR
+            erzeugten Archivnamen aus der Textdatei archivname.txt wieder
+            ein. In einer Windows-Batchdatei geht das zum Beispiel so:
+            set /p name=<archivname.txt.
+
+            Beispiele:
+
+            1) Schreibe die Namen der erstellen Volumen in die Textdatei
+               volumenliste.txt:
+
+               rar a -v100m -loga=volumenliste.txt volume.rar c:\data
+
+            2) Schreibe die erzeugten Archivnamen im Unicode-Format in
+               die Textdatei backup.txt:
+
+               rar a -ag -logau=backup.txt backup.rar meinedateien\*
+
+            3) Schreibe die Namen der überprüften Volumen in die Textdatei
+               volumenliste.txt und die Namen der überprüften archivierten
+               Dateien in den Volumen in die Textdatei dateiliste.txt:
+
+               rar t -log=volumenliste.txt -logf=dateiliste.txt volume.part01.rar
+
+
+    -m<n>   Kompressionsmethode angeben:
+
+       -m0   speichern   Dateien ohne Kompression zum Archiv
+                         hinzufügen
+       -m1   schnellste  Schnellstes Verfahren (geringste Kompression)
+       -m2   schnell     Schnelles Kompressionsverfahren
+       -m3   normal      Normales Kompressionsverfahren (Standard)
+       -m4   gut         Gutes Kompressionsverfahren (stärkere
+                         Kompression, aber langsamer)
+       -m5   beste       Bestes Kompressionsverfahren (stärkste
+                         Kompression, aber am langsamsten)
+
+            Wird der Schalter nicht angegeben, benutzt RAR das
+            "-m3"-Verfahren (Normale Kompression).
+
+
+    -ma[4|5]
+            Version des Archivformats festlegen.
+
+            Standardmäßig erstellt RAR Archive im RAR-5.0-Format.
+            Verwendet man den Schalter -ma4, so werden Archive im
+            RAR-4.x-Format erstellt. Verwenden Sie den Schalter -ma5
+            oder nur -ma, um den in der Konfiguration gespeicherten
+            Schalter -ma4 zu überschreiben und RAR zu zwingen,
+            das RAR-5.0-Format zu verwenden.
+
+            Dieser Schalter wird nur beim Erstellen von Archiven
+            verwendet. Beim Erneuern eines bereits vorhandenen
+            Archivs wird er ignoriert.
+
+
+    -mc<Par>
+            Erweiterte Komprimierungsparameter einstellen.
+
+            Dieser Schalter ist hauptsächlich für Benchmarkzwecke und
+            Experimente gedacht. Im Normalfall ist es besser, RAR die
+            optimalen Parameter automatisch wählen zu lassen. Beachten
+            Sie, dass der unsachgemäße Gebrauch dieses Schalters zu
+            einer Verschlechterung der Performance und Kompressionsrate
+            führen kann. Benutzen Sie den Schalter nur, wenn Sie genau
+            verstehen, was Sie tun.
+
+            Der Schalter hat folgende Syntax:
+
+            -mc[Param1][:Param2][Modul][+ oder -]
+
+            wobei <Modul> ein Zeichen ist, das den Teil des Kompressions-
+            algorithmus angibt, welcher konfiguriert werden soll.
+
+            Es kann folgende Werte annehmen:
+
+              A       - Audiokomprimierung;
+              C       - Echtfarben(RGB)-Daten-Komprimierung;
+              D       - Deltakomprimierung;
+              E       - x86-Programmcode-Komprimierung;
+              I       - Intel-Itanium-Programmcode-Komprimierung;
+              T       - Textkomprimierung.
+
+            Beim RAR-5.0-Archivformat werden nur die Werte 'D' und 'E'
+            unterstützt.
+
+            Das Zeichen "+" am Ende des Schalters wendet das ausgewählte
+            Algorithmenmodul auf alle zu verarbeitenden Daten an, "-"
+            schaltet das Modul vollständig ab. Wird kein Zeichen
+            angegeben, wählt RAR basierend auf den aktuellen Daten und
+            der Kompressionsmethode die Module automatisch aus.
+
+            Der Schalter "-mc-" schaltet alle optionalen
+            Algorithmenmodule ab und erlaubt nur die Anwendung des
+            allgemeinen Kompressionsalgorithmus.
+
+            Die Parameter <Param1> und <Param2> haben je nach gewähltem
+            Algorithmenmodul verschiedene Bedeutungen. Sie werden unten
+            beschrieben.
+
+            Audiokomprimierung, Deltakomprimierung
+
+            <Param1> ist die Anzahl der Bytekanäle (kann 1 - 31 sein).
+            RAR unterteilt Multibyte-Kanäle in einzelne Byte-Kanäle,
+            zum Beispiel werden zwei 16-Bit Audiokanäle von RAR als
+            vier Ein-Byte-Kanäle angesehen.
+
+            <Param2> wird ignoriert.
+
+
+            x86-Intel-Programmcode-Komprimierung,
+            Intel-Itanium-Programmcode-Komprimierung,
+            Echtfarben(RGB)-Daten-Komprimierung:
+
+            <Param1> und <Param2> werden ignoriert.
+
+
+            Textkomprimierung:
+
+            Der Algorithmus zur Textkomprimierung ermöglicht eine
+            erhebliche Verbesserung der Kompressionsrate bei reinen
+            Textdaten. Im Vergleich zu allgemeinen Komprimierungs-
+            algorithmen in Multicore- und Multiprozessor-Umgebungen ist
+            die Geschwindigkeit der Textkomprimierung beim Packen 
+            erheblich niedriger, da der Algorithmus mehrere CPU-Kerne
+            nicht effizient nutzen kann. Auch die Geschwindigkeit beim
+            Entpacken ist viel langsamer als bei allgemeinen
+            Komprimierungsalgorithmen, sie ist unabhängig von der
+            Anzahl der vorhandenen CPU-Kerne. Darum ist die
+            Textkomprimierung standardmäßig abgeschaltet.
+            Der Schalter -mct erlaubt RAR, den Textkomprimierungs-
+            algorithmus auf geeignete Daten anzuwenden. Dann
+            entscheidet RAR aufgrund der aktuellen Daten automatisch,
+            ob der Textkomprimierungs-Algorithmus angewendet wird oder
+            nicht. Der Schalter -mct+ wendet den Algorithmus zur
+            Textkomprimierung auf alle zu komprimierenden Daten an.
+
+            Der Schalter -mct kann die Parameter <Param1> und <Param2>
+            enthalten. Die vollständige Syntax lautet daher
+            -mc[Param1][:Param2]t[+ oder -].
+
+            <Param1> ist der Grad des PPM-Algorithmus (kann 2 - 63 sein).
+            Höhere Werte erhöhen normalerweise leicht die Kompressionsrate
+            von redundanten Daten, aber nur, wenn genügend Speicherplatz
+            für den PPM-Algorithmus zur Verfügung steht. Speichermangel
+            kann sich dagegen negativ auswirken. Höhere Werte für den
+            Vorhersagegrad verlangsamen die Pack- und die
+            Entpackgeschwindigkeit.
+
+            <Param2> ist der Speicher in Megabyte, der vom PPM-Algorithmus
+            verwendet wird (1-128). Höhere Werte können die
+            Kompressionsrate verbessern, denken Sie jedoch daran, dass der
+            PPM-Algorithmus sowohl für die Komprimierung als auch für die
+            Dekomprimierung die gleiche Menge an Speicher benötigt. Wenn
+            Sie also eine zu große Speichermenge beim Erzeugen eines
+            Archivs verwenden, können andere Leute beim Entpacken Probleme
+            bekommen, wenn sie dazu ein Computer mit kleinerem Speicher
+            verwenden. Entpacken wird zwar mit virtuellem Speicher
+            möglich sein, der Vorgang wird aber sehr langsam ablaufen.
+
+
+            Beispiele:
+
+            1) Der Schalter "-mc1a+" erzwingt die Verwendung der 8-Bit
+               Mono Audiokomprimierung für alle Daten.
+
+            2) Der Schalter "-mc10:40t+" erzwingt die Verwendung des
+               Textkomprimierungsalgorithmus für alle Daten, setzt den
+               Grad der Komprimierung auf 10 und verwendet dabei
+               40 MB Speicher.
+
+            3) Der Schalter "-mc12t" setzt den Textkomprimierungsgrad
+               auf 12, wenn die Textkomprimierung verwendet wird,
+               überlässt aber RAR die Entscheidung, wann die
+               Textkomprimierung eingesetzt wird.
+
+            4) Die Schalter "-mct -mcd-" erlaubt RAR, den
+               Textkomprimierungsalgorithmus auf geeignete Daten
+               anzuwenden, und schaltet die Deltakomprimierung ab.
+
+
+    -md<n>[k,m,g]
+            Wörterbuchgröße wählen.
+
+            Das Wörterbuch ist der Speicherbereich, der vom Komprimierungs-
+            algorithmus verwendet wird, um sich wiederholende Datenmuster
+            zu finden und zu komprimieren. Ist die Größe der zu
+            komprimierenden Datei (oder die Gesamtgröße aller zu
+            komprimierenden Dateien bei solider Archivierung) größer als
+            die Wörterbuchgröße, führt eine Erhöhung der Wörterbuchgröße
+            normalerweise zu einer Verbesserung der Kompressionsrate. Dann
+            ist jedoch die Geschwindigkeit beim Packen geringer und der
+            Speicherbedarf erhöht sich.
+
+            Beim RAR-4.x-Archivformat kann das Wörterbuch folgende Größen
+            haben: 64 kB, 128 kB, 256 kB, 512 kB, 1 MB, 2 MB, 4 MB.
+
+            Beim RAR-5.0-Archivformat kann das Wörterbuch folgende Größen
+            haben: 128 kB, 256 kB, 512 kB, 1 MB, 2 MB, 4 MB, 8 MB, 16 MB,
+            32 MB, 64 MB, 128 MB, 256 MB, 512 MB, 1 GB.
+
+            Durch Anhängen der Buchstaben 'k', 'm' und 'g' lässt sich die
+            Größe in Kilo-, Mega- und Gigabyte angeben, z.B. -md64m für
+            eine Wörterbuchgröße von 64 MB. Wird kein Buchstabe verwendet,
+            wird automatisch Megabyte gewählt, der Schalter -md64m ist
+            daher gleichwertig zu -md64.
+
+            Beim Archivieren benötigt RAR ungefähr das Sechsfache der
+            angegebenen Wörterbuchgröße an Hauptspeicher. Die
+            Wörterbuchgrößen 512 MB und 1 GB stehen daher nur in der
+            64-Bit-Version von RAR zur Verfügung. Beim Entpacken wird
+            etwas mehr als die einfache Wörterbuchgröße an Hauptspeicher
+            benötigt. Daher kann man sowohl mit der 32-Bit-Version als
+            auch mit der 64-Bit-Version von RAR Archive mit beliebigen
+            Wörterbuchgrößen bis zu 1 GB entpacken.
+
+            Ist bei einem soliden Archiv die Gesamtgröße aller Dateien
+            oder bei einem nicht soliden Archiv die Dateigröße der
+            größten Datei weniger als halb so groß oder genauso groß wie
+            die Größe des Wörterbuches, so kann RAR die Wörterbuchgröße
+            herabsetzen. Das führt zu einem verringerten Speicherbedarf,
+            ohne dass die Kompressionsrate sinkt.
+
+            Beim RAR-4.x-Archivformat beträgt die Standardgröße für
+            das Wörterbuch 4 MB und beim RAR-5.0-Archivformat 32 MB.
+
+            Beispiel:
+
+            RAR a -s -ma -md128 lib *.dll
+
+            Erstelle ein solides Archiv im RAR-5.0-Format mit einer
+            Wörterbuchgröße von 128 MB.
+
+
+    -ms[Liste]
+            Dateitypen angeben, die ohne Komprimierung im Archiv
+            gespeichert werden.
+
+            Gibt Dateitypen an, die ohne Komprimierung gespeichert
+            werden. Richtig eingesetzt, wird sich die Archivierungs-
+            geschwindigkeit erhöhen, ohne dass die Kompressionsrate
+            merklich geringer wird.
+
+            Der optionale Parameter <Liste> legt die Liste der
+            Dateiendungen (durch Semikolons getrennt) fest. Zum Beispiel
+            zwingt die Angabe von "-msrar;zip;jpg" RAR, alle RAR- und
+            ZIP-Archive und alle JPG-Bilder ohne Komprimierung zu
+            speichern. Es ist ebenfalls erlaubt, Wildcard-Dateimasken
+            in der Liste anzugeben. So wird "-ms*.rar;*.zip;*.jpg" auch
+            funktionieren. Die Angabe mehrerer Schalter -ms ist erlaubt,
+            zum Beispiel -msrar -mszip statt -msrar;zip.
+
+            Unter Unix muss beim Schalter -ms die <Liste> in Hochkommata
+            eingeschlossen werden, wenn mehr als ein Dateityp angegeben
+            wird. Dadurch wird verhindert, dass das Semikolon durch die
+            Unix-Shell verarbeitet wird. Eine andere Lösung ist die
+            Angabe jeweils eines Schalters -ms für jeden einzelnen
+            Dateityp.
+
+            Wird <Liste> nicht angegeben, wird der Schalter "-ms" die
+            Standardmenge von Dateierweiterungen verwenden. Diese enthält
+            folgende Dateitypen:
+
+            7z, ace, arj, bz2, cab, gz, jpeg, jpg, lha, lz, lzh, mp3,
+            rar, taz, tgz, xz, z, zip, zipx
+
+
+    -mt<Threads>
+            Anzahl der Threads festlegen.
+
+            Der Parameter <Threads> kann Werte von 1 bis 32 annehmen.
+            Der Parameter setzt einen Richtwert für die maximale
+            Anzahl der aktiven Threads. Die angegebenen Anzahl gilt
+            für den Komprimierungsalgorithmus und für andere
+            RAR-Module, die mehrere Threads starten können. Obwohl
+            RAR versucht, sich an den Richtwert zu halten, kann es
+            manchmal vorkommen, dass die Anzahl der in Wirklichkeit
+            verwendeten aktiven Threads größer ist als der
+            angegebene Wert.
+
+            Eine Veränderung des Parameters <Threads> beeinflusst
+            geringfügig die Komprimierungsrate. Das hat zur Folge, dass
+            Archive, die mit unterschiedlichen -mt Schaltern erstellt
+            werden, nicht exakt übereinstimmen - selbst dann nicht,
+            wenn alle anderen Komprimierungseinstellungen gleich sind.
+
+            Wird der Schalter -mt nicht angegeben, versucht RAR die
+            Anzahl der verfügbaren Prozessoren zu ermitteln und wählt
+            anschließend automatisch die optimale Anzahl von Threads.
+
+
+    -n<Dateimaske>
+            Zusätzlichen Filter auf die zu verarbeitenden Dateien
+            anwenden.
+
+            Wendet die Dateimaske als zusätzlichen Filter auf die zu
+            verarbeitenden Dateien an. Im Namen und Endung der
+            Dateimaske können Wildcards verwendet werden. Für weitere
+            Details zum Syntax von Dateimasken lesen Sie die Beschreibung
+            zum Schalter -x. Es ist möglich, den Schalter '-n' mehrmals
+            in derselben Kommandozeile einzugeben.
+
+            Der Schalter ersetzt nicht die normalen Dateimasken; diese
+            müssen immer noch in der Kommandozeile eingegeben werden.
+            Mit dem Schalter ist eine zusätzliche Filterung möglich, der
+            die zu verarbeitenden Dateien auf die Dateien beschränkt,
+            die zu der Dateimaske des angegebenen Schalters -n passen.
+            Dadurch ist es manchmal möglich, die Länge der Kommandozeile
+            zu verkürzen.
+
+            Wenn Sie zum Beispiel alle *.txt und *.lst Dateien in den
+            Verzeichnissen Projekt und Info packen möchten, können Sie
+            Folgendes eingeben:
+
+            rar a -r text Projekt\*.txt Projekt\*.lst Info\*.txt Info\*.lst
+
+            oder mit dem Schalter -n:
+
+            rar a -r -n*.txt -n*.lst text Projekt Info
+
+
+    -n@<Liste> 
+            Dateimasken für zusätzliche Filterung aus der
+            Datei <Liste> lesen.
+
+            Ähnlich wie der Schalter -n<Dateimaske>, im Gegensatz
+            dazu werden die Masken für die einzuschließenden Dateien
+            aus einer Datei gelesen. Wird -n@ ohne Angabe des
+            Parameters <Liste> verwendet, werden die Dateimasken
+            von stdin gelesen.
+
+            Der Schalter ersetzt nicht normale Dateimasken-Listen in einer
+            Datei oder die normalen Dateimasken; diese müssen immer noch
+            in der Kommandozeile eingegeben werden. Mit dem Schalter ist
+            eine zusätzliche Filterung möglich, der die zu verarbeitenden
+            Dateien auf die Dateien beschränkt, die zu der beim Schalter -n
+            angegebenen Dateimaske passen.
+
+            Beispiel:
+
+            rar a -r -n@liste.txt text Projekt Info @listendatei.txt
+
+
+    -oc     NTFS-Attribut "Komprimiert" setzen. Nur in der
+            Windows-Version verfügbar.
+
+            Dieser Schalter ermöglicht es, beim Entpacken von Dateien
+            den Status des NTFS-Attributs "Komprimiert" wiederherzustellen.
+            RAR speichert beim Erstellen eines Archivs immer das Attribut
+            "Komprimiert", aber stellt es erst dann wieder her, wenn der
+            Schalter -oc angegeben wird.
+
+
+    -oh     Harte Links als Links und nicht als Dateien speichern.
+
+            Wenn sich unter den zu archivierenden Dateien einige harte
+            Links (Hard Links) befinden, wird der erste harte Link als
+            Datei im Archiv gespeichert, die anderen harten Links in
+            derselben Gruppe jedoch als Links auf die erste Datei. Beim
+            Entpacken solcher Dateien erstellt RAR harte Links anstelle
+            von normalen Dateien.
+
+            Nachdem das Archiv erstellt wurde, darf der erste harte Link
+            im Archiv weder gelöscht noch umbenannt werden, weil sonst
+            das Entpacken der folgenden Links nicht mehr möglich ist.
+            Wird der erste Link geändert, werden auch die folgenden Links
+            nach dem Entpacken den geänderten Inhalt haben. Der Befehl
+            zum Entpacken muss den ersten harten Link beinhalten, nur
+            dann werden die folgenden harten Links erfolgreich erstellt.
+
+            Der Schalter wird nur für RAR-5.0-Archive unterstützt. Er
+            muss daher zusammen mit dem Schalter -ma verwendet werden.
+
+
+    -oi[0-4][:<minGröße>]
+            Gleiche Dateien als Verweise speichern.
+
+            Der Schalter -oi0 (oder nur -oi-) deaktiviert die
+            Speicherung von gleichen Dateien als Verweise, sodass
+            gleiche Dateien als nomale Dateien gespeichert werden.
+            Mit dem Schalter -oi- kann ein in der RAR-Konfiguration
+            gespeicherter Wert überschrieben werden.
+
+            Wird der Schalter -oi1 (oder nur -oi) angegeben, analysiert
+            RAR die Inhalte aller zu archivierenden Dateien und beginnt
+            erst dann mit der Archivierung. Werden identische Dateien
+            gefunden (Dateien mit demselben Inhalt), wird nur die erste
+            Datei als normale Datei im Archiv gespeichert, alle weiteren
+            Dateien als Verweise auf die erste Datei. Damit ist eine
+            Verringerung der Archivgröße möglich, für das resultierende
+            Archiv ergeben sich jedoch einige Einschränkungen. Nachdem
+            das Archiv erstellt wurde, darf die erste gespeicherte
+            identische Datei weder umbenannt noch gelöscht werden, weil
+            sonst das Entpacken der folgenden Dateien nicht mehr möglich
+            ist, da diese als Verweise auf die erste Datei gespeichert
+            sind. Wird die erste Datei geändert, werden auch die folgenden
+            Dateien nach dem Entpacken den geänderten Inhalt haben. Der
+            Befehl zum Entpacken muss die erste identische Datei beinhalten,
+            nur dann werden die folgenden Dateien erfolgreich erstellt.
+
+            Der Schalter -oi sollte nur dann verwendet werden, wenn viele
+            identische Dateien zu packen sind, das Archiv danach nicht
+            mehr verändert und als Ganzes komplett entpackt wird oder
+            es nicht notwendig ist, auch einzelne Dateien aus dem Archiv
+            zu entpacken oder einzelne Dateien im Archiv beim Entpacken
+            auszuschließen. Sind die identischen Dateien klein genug,
+            sodass sie ins Wörterbuch passen, das mit dem Schalter -md<n>
+            angegeben wurde, kann der Schalter -s eine anpassungsfähigere
+            Lösung als -oi sein.
+
+            Der Schalter -oi2 ist ähnlich zum Schalter -oi1, aber mit einem
+            einzigen Unterschied: Bevor das Archivieren beginnt, werden
+            alle gefundenen identischen Dateien angezeigt.
+
+            Die Schalter -oi3 und -oi4 erlauben die Erstellung von Listen
+            identischer Dateien. Obwohl für die Gültigkeit der Befehlssyntax
+            man ein Dummy-Archivnamen angegeben muss, wird in diesem Modus
+            kein Archiv erstellt und nichts komprimiert.
+            Beim Schalter -oi3 werden Dateinamen und Dateigrößen
+            identischer Dateien angezeigt, zwischen den Gruppen von
+            identischer Dateien wird eine Leerzeile ausgegeben.
+            Beim Schalter -oi4 werden nur die Dateinamen angezeigt, die
+            erste identische Datei in den Gruppen identischer Dateien
+            wird nicht angezeigt. Es werden also nur die Dateinamen
+            von Duplikaten aufgelistet.
+
+            Der optionale Wert <minGröße> ermöglicht die Angabe einer
+            unteren Grenze für die Dateigröße. Dateien kleiner als
+            <minGröße> werden nicht analysiert und nicht in die Suche
+            nach identischen Dateien einbezogen. Fehlt der Parameter,
+            wird standardmäßig ein Wert von 64 kB angenommen. Wird ein
+            zu kleiner Wert <minGröße> gewählt, kann das die Zeit für
+            die Erkennung identischer Dateien erhöhen.
+
+            Die Schalter -oi1 und -oi2 werden nur für RAR-5.0-Archive
+            unterstützt. Sie müssen daher zusammen mit dem Schalter -ma
+            verwendet werden.
+
+            Beispiele:
+
+            1) rar a -oi -ma archiv
+
+            Speichere alle Dateien im aktuellen Verzeichnis im Archiv
+            archiv. Speichere gleiche Dateien als Verweise.
+
+            2) rar a -oi3:1000000 -r dummy c:\fotos\*.jpg
+
+            Liste alle doppelten *.jpg-Dateien im Verzeichnis c:\fotos
+            und allen Unterverzeichnissen auf, die größer als
+            1000000 Bytes sind.
+
+
+    -ol[a]  Symbolische Links als Links verarbeiten [absolute Pfade]
+
+            Speichere symbolische Links (Symbolic Links) als Links im
+            Archiv. Die Inhalte, auf welche die Links verweisen, werden
+            in diesem Fall nicht im Archiv gespeichert. In der Windows-
+            Version werden auch Analysepunkte (Reparse Points) als Links
+            im Archiv gespeichert. Solche Archiveinträge werden beim
+            Entpacken als symbolische Links oder Analysepunkte
+            wiederhergestellt.
+
+            Der Schalter wird von RAR für Unix bei RAR-4.x- und
+            RAR-5.0-Archiven unterstützt, in RAR für Windows nur bei
+            RAR-5.0-Archiven.
+
+            Um symbolische Links beim Entpacken zu erstellen, kann es
+            unter Windows notwendig sein, RAR als Administrator ausführen.
+
+            RAR fügt beim Archivieren mit dem Schalter -ol alle Links
+            unabhängig vom Link-Ziel hinzu. Standardmäßig entpackt RAR
+            beim Entpacken symbolische Links nicht, deren Link-Ziel außerhalb
+            des Zielverzeichisses liegt, die einen absoluten Pfad aufweisen,
+            zu viele ".." im Link-Ziel haben oder andere möglicherweise
+            gefährliche Link-Parameter enthalten. Mit dem Schalter -ola kann
+            das Entpacken solcher Links aktiviert werden.
+
+            Links, die auf Verzeichnisse außerhalb des Zielverzeichnisses
+            beim Entpacken verweisen, können ein Sicherheitsrisiko darstellen.
+            Aktivieren Sie das Entpacken solcher Links nur, wenn Sie sicher
+            sind, dass der Inhalt des zu entpackenden Archivs sicher ist,
+            wie z. B. Ihre eigenen Backups.
+
+            Symbolische Links, die RAR für ungefährlich hält, werden
+            unabhängig vom Schalter -ol oder -ola immer entpackt.
+
+
+    -oni    Möglicherweise inkompatible Namen erlauben.
+
+            Obwohl das NTFS-Dateisystem Dateinamen erlaubt, die mit
+            Leerzeichen oder Punkten enden, können viele Windowsprogramme
+            mit solchen Dateinamen nicht richtig umgehen. Wird der Schalter
+            nicht angegeben, entfernt RAR beim Entpacken alle Leerzeichen
+            und Punkte am Ende von Dateinamen, sofern welche vorhanden sind.
+            Geben Sie diesen Schalter immer dann an, wenn solche Dateinamen
+            genauso entpackt werden sollen wie sie sind.
+
+            Nur in der Windows-Version verfügbar.
+
+
+    -or     Benennt entpackte Dateien automatisch um, wenn eine Datei mit
+            dem selben Namen bereits existiert. Die umbenannten Dateien
+            erhalten Namen nach dem Muster 'dateiname(N).txt', wobei
+            'dateiname.txt' der ursprüngliche Dateiname und 'N' eine
+            Zahl ist, die bei 1 beginnt und erhöht wird, wenn die
+            entsprechende Datei existiert.
+
+
+    -os     NTFS-Datenströme speichern. Nur in der Windows-Version
+            verfügbar.
+
+            Dieser Schalter hat nur für NTFS-Dateisysteme eine Bedeutung
+            und erlaubt das Speichern alternativer Datenströme, die mit
+            einer Datei verknüpft sind. Es ist empfehlenswert, den
+            Schalter anzugeben, wenn Sie Software einsetzen, die Daten
+            in alternativen Datenströmen ablegt, und Sie diese
+            Datenstöme später wiederherstellen möchten.
+
+            Alternative Datenströme von NTFS-verschlüsselten Dateien
+            werden nicht gespeichert.
+
+
+    -ow     Dateisicherheitsdaten speichern oder wiederherstellen.
+            Benutzen Sie diesen Schalter beim Packen, um die
+            Sicherheitsdaten (Berechtigungen) jeder Datei zu speichern,
+            und beim Entpacken, um diese wiederherzustellen.
+
+            Die RAR-Versionen für Unix speichern bei der Verwendung
+            dieses Schalters den Dateibesitzer und die Gruppeninformation
+            der Datei.
+
+            Die Windows-Version speichert Dateibesitzer, Gruppe,
+            Zugriffsrechte und Revisionsinformationen, aber nur, wenn Sie
+            die notwendigen Rechte zum Lesen dieser Informationen
+            besitzen. Beachten Sie, dass nur das NTFS-Dateisystem
+            dateibasierende Sicherheitseinstellungen unter Windows
+            unterstützt.
+
+
+    -o[+|-] Überschreibmodus festlegen. Dieser Schalter kann sowohl beim
+            Entpacken als auch beim Erneuern von archivierten Dateien
+            verwendet werden. Folgende Modi sind vorhanden:
+
+              -o           Vor dem Überschreiben nachfragen
+                           (Standardvorgabe beim Entpacken von Dateien);
+
+              -o+          Vorhandene Dateien überschreiben
+                           (Standardvorgabe beim Erneuern archivierter Dateien);
+
+              -o-          Vorhandene Dateien überspringen.
+
+
+    -p[pwt] Passwort setzen.
+
+            Setzt ein Passwort <Pwt>, das beim Packen zum Verschlüsseln und
+            beim Entpacken zum Entschlüsseln von Dateien verwendet wird.
+
+            Beim Passwort wird zwischen Groß- und Kleinschreibung
+            unterschieden. Die maximale Länge des Passworts beträgt 127 Zeichen.
+            Längere Passwörter werden nach 127 Zeichen abgeschnitten und somit
+            gekürzt. Wenn Sie das Passwort in der Kommandozeile
+            weglassen, werden Sie mit der Meldung "Passwort eingeben"
+            aufgefordert, es einzugeben. Wird der Schalter ohne den
+            optionalen Parameter <pwt> verwendet, kann das Passwort
+            auch per Dateiumleitung oder Pipe gesetzt werden.
+
+            Beispiele:
+
+            1) rar a -pgeheimnis texte *.txt
+
+            Fügt alle "*.txt"-Dateien zum Archiv "texte" hinzu und
+            verschlüsselt sie mit dem Passwort "geheimnis".
+
+            2) rar -p texte.rar *.txt < psw.txt
+
+            Setzt den Inhalt der Datei psw.txt als Passwort.
+
+
+    -p-     Nicht nach dem Passwort fragen
+
+            Frage beim Entpacken bei verschlüsselten Dateien nicht nach
+            einem Passwort. Um die Frage nach einem Passwort zu
+            unterdrücken, kann man derzeit einfach irgendein ungültiges
+            Passwort angeben. Dann meldet RAR jedoch jedes Mal beim
+            Entpacken einer verschlüsselten Datei "Ungültiges Passwort!".
+            Der Schalter -p- setzt nur '-' als Passwort.
+
+
+    -qo[-|+]
+            Daten zum schnellen Öffnen hinzufügen [nie|immer]
+
+            In RAR-Archiven wird jeder Dateiheader, der u. a.
+            Informationen wie den Dateinamen, Dateizeiten, Dateigröße
+            und Dateiattribute enthält, direkt vor den eigentlichen Daten
+            der durch den Header beschriebenen Datei gespeichert. Durch
+            dieses Vorgehen ist das Archiv besser gegen Beschädigungen
+            geschützt als bei der Speicherung aller Dateiheader in einem
+            zusammenhängenden Bereich. Wird nämlich dieser
+            zusammenhängende Bereich mit den Headerdaten beschädigt oder
+            teilweise entfernt, so kann auf den Archivinhalt nicht mehr
+            zugegriffen werden, das ganze Archiv ist dann zerstört. Auch
+            wenn das Speichern der Dateiheader direkt vor den Dateidaten
+            zuverlässiger ist, hat das einen Nachteil. Wenn man den
+            Archivinhalt schnell auslesen und anzeigen lassen möchte,
+            wie zum Beispiel in der WinRAR-Benutzeroberfläche, dauert
+            der Zugriff auf alle Dateiheader relativ lang und ist
+            langsam, da die Dateiheader über das gesamte Archiv
+            verteilt sind.
+
+            Um die Geschwindigkeit beim Öffnen von Archiven zu erhöhen
+            und wie bisher auch das Archiv nicht von einem für
+            Beschädigungen anfälligen Datenblock abhängig zu machen,
+            können zu RAR-5.0-Archiven wahlweise Daten für das schnelle
+            Öffnen hinzugefügt werden. Dieser Datensatz wird am Ende
+            eines Archivs in einem zusammenhängenden Bereich gespeichert
+            und enthält genau wie die über das gesamte Archiv verteilten
+            Dateiheader die Dateinamen und weitere Dateiinformationen
+            von Dateien im Archiv. Da dieser Bereich zusammenhängend
+            ist, kann der Archivinhalt sehr schnell gelesen werden,
+            ohne dass dafür sehr viele Spurwechselvorgänge auf dem
+            Datenträger notwendig sind. Jeder Dateiheader in diesem
+            Bereich ist durch eine Prüfsumme geschützt. Erkennt RAR,
+            dass die Daten zum schnellen Öffnen einer Datei beschädigt
+            sind, greift RAR auf den Dateiheader im Archiv zurück und
+            liest diesen ein. Daher ist ein Archiv mit Daten zum
+            schnellen Öffnen genauso gut gegen Beschädigungen geschützt
+            wie eins ohne diese Daten.
+
+            Der Datensatz mit den Daten zum schnellen Öffnen enthält
+            vollständige Dateiheader von Dateien im Archiv. Ein
+            Dateiheader kann einige Zehn oder Hundert Bytes groß sein.
+            Daher erhöht sich die Archivgröße beim Hinzufügen von Daten
+            zum schnellen Öffnen um die Summe der Größe der
+            hinzugefügten Dateiheader. Bemerkbar macht sich die Erhöhung
+            der Archivgröße besonders beim Archivieren von sehr vielen
+            kleinen Dateien, wenn diese ungefähr die gleiche Größe haben
+            wie ihre Dateiheader. Wenn der Schalter -qo nicht angegeben
+            oder ohne Parameter verwendet wird, kopiert RAR nur bei
+            relativ großen Dateien die Dateiheader in den Datensatz für
+            das schnelle Öffnen. Bei kleineren Dateien werden weiterhin
+            die Dateiheader im Archiv verwendet. Dieses Vorgehen stellt
+            einen guten Kompromiss zwischen der Geschwindigkeit beim
+            Öffnen und der Archivgröße dar. Der Schwellenwert der
+            Dateigröße, ab wann der Dateiheader zu den Daten für das
+            schnelle Öffnen hinzugefügt wird, kann von der RAR-Version
+            abhängen. Die höchstmögliche Geschwindigkeit beim Öffnen
+            eines Archiv unabhängig von der Archivgröße erreicht man
+            durch Angabe des Schalters -qo+. Dann werden alle Archiv-
+            header in den Datensatz zum schnellen Öffnen kopiert. Soll
+            das Archiv jedoch möglichst klein sein und ist auch die
+            Zeit nicht wichtig, die verschiedene Anwendungen zum Öffnen
+            des Archivs benötigen, gibt man den Schalter -qo- an. Dann
+            werden überhaupt keine Daten zum schnellen Öffnen
+            hinzugefügt.
+
+            Möchten Sie den Performancegewinn dieses Schalters messen,
+            achten Sie darauf, dass der Archivinhalt nicht im Cache des
+            Datenträgers gehalten wird. Bei gecachten Archiven werden
+            nämlich keine echten Spurwechsel auf dem Datenträger
+            ausgeführt, die Zugriffe auf die Dateiheader laufen dann
+            ebenfalls sehr schnell ab, auch wenn die Daten zum schnellen
+            Öffnen nicht vorhanden sind.
+
+
+    -r      Unterverzeichnisse rekursiv durchsuchen. Kann mit folgenden
+            Befehlen verwendet werden: a, u, f, m, x, e, t, k, rr,
+            c und s.
+
+            Wird der Schalter mit den Befehlen "a", "u", "f" oder "m"
+            verwendet, so werden sowohl alle Dateien in den
+            Unterverzeichnissen als auch die Dateien im aktuellen
+            Arbeitsverzeichnis verarbeitet.
+
+            Zusammen mit den Befehlen x, e, t, k, rr, c oder s werden
+            alle Archive in den Unterverzeichnissen und alle Archive
+            im aktuellen Arbeitsverzeichnis verarbeitet.
+
+
+    -r-     Rekursion abschalten
+
+            Auch ohne den Schalter -r schaltet RAR in manchen Situationen
+            die Rekursion automatisch ein. Durch den Schalter -r- wird
+            das unterbunden.
+
+            Wird beim Archivieren ein Verzeichnisname ohne Wildcards
+            angegeben, so fügt RAR standardmäßig auch den Inhalt dieses
+            Verzeichnisses zum Archiv hinzu, obwohl der Schalter -r nicht
+            angegeben wurde. RAR schaltet die Rekursion ebenfalls automatisch
+            an, wenn als Dateimaske das Wurzelverzeichnis eines Laufwerks
+            ohne Wildcards angegeben wurde. Der Schalter -r- unterbindet
+            dieses Verhalten.
+
+            Zum Beispiel fügt der Befehl
+
+            rar a -r- archiv verzeichnisname
+
+            nur das leere Verzeichnis mit dem Namen 'verzeichnisname' zum
+            Archiv hinzu. Der Inhalt des Verzeichnisses wird komplett
+            ignoriert. Der Befehl
+
+            rar a -r- archiv c:\
+
+            komprimiert nur die Dateien im Wurzelverzeichnis des Laufwerks c:.
+            Dort vorhandene Unterverzeichnisse werden nicht rekursiv
+            durchsucht und auch nicht zum Archiv hinzugefügt.
+
+
+    -r0     Vergleichbar mit dem Schalter "-r", allerdings werden bei
+            den Befehlen "a", "u", "f" und "m" die Unterverzeichnisse
+            nur bei Dateimasken rekursiv durchsucht, die die Wildcards
+            '*' und '?' enthalten.
+
+            Dieser Schalter arbeitet nur mit Dateinamen. Verzeichnisnamen,
+            die kein Dateinamen-Teil enthalten, wie zum Beispiel
+            'Ordnername', sind vom Schalter -r0 nicht betroffen. Die
+            Inhalte dieser Verzeichnisse werden komplett zum Archiv
+            hinzugefügt, wenn nicht der Schalter -r- angegeben wurde.
+
+            Beispiel:
+
+            rar a -r0 dokumente.rar *.doc liesmich.txt
+
+            Füge alle *.doc-Dateien aus dem aktuellen Verzeichnis und
+            dessen Unterverzeichnissen sowie die Datei liesmich.txt nur
+            aus dem aktuellen Verzeichnis zu dem Archiv dokumente.rar
+            hinzu. Wäre der Schalter -r statt -r0, würde RAR auch in den
+            Unterverzeichnissen nach liesmich.txt suchen.
+
+
+    -ri<p>[:<s>]
+            Setzt die Priorität und die Ruhezeit. Nur in der RAR-Version
+            für Windows verfügbar. Dieser Schalter wird verwendet, um
+            die Systemauslastung durch RAR in einer Multitasking-Umgebung
+            einzustellen. Die möglichen Werte für die Task-Priorität
+            gehen von 0 bis 15.
+
+            Wenn <p> gleich 0 ist, wird die Standardtaskpriorität benutzt,
+            1 entspricht der geringsten Task-Priorität, 15 der höchsten.
+
+            Die Ruhezeit <s> ist ein Wert zwischen 0 und
+            1000 (Millisekunden). Dies ist die Zeitperiode, in der RAR
+            nach Lese- oder Schreibvorgängen während einer Pack- oder
+            Entpackoperation pausiert und die Kontrolle an das System
+            übergibt. Werte von <s> ungleich 0 sind immer dann nützlich,
+            wenn man die Systemauslastung weiter absenken muss, als es
+            nur mit dem Parameter <p> erreicht werden könnte.
+
+            Beispiel:
+
+            Führe RAR mit der Standardpriorität und einer Ruhepause
+            von 10 ms nach jedem Lese- und Schreibvorgang aus.
+
+            rar a -r -sfx -ri0:10 backup *.*
+
+
+    -rr[N]  Wiederherstellungsdaten hinzufügen. Dieser Schalter wird
+            bei der Erstellung oder Änderung eines Archivs verwendet,
+            um Wiederherstellungsdaten zum Archiv hinzuzufügen. Lesen
+            Sie die Beschreibung zum Befehl "rr[N]", um weitere Details
+            zu erfahren.
+
+
+    -rv[N]  Wiederherstellungs-Volumen erstellen. Dieser Schalter wird
+            beim Erstellen eines gesplitteten Archivs verwendet, um
+            Wiederherstellungs-Volumen zu erstellen. Lesen Sie die
+            Beschreibung zum Befehl "rv[N]", um weitere Details
+            zu erfahren.
+
+
+    -s      Solides Archiv erstellen. Ein solides Archiv ist ein Archiv,
+            das mit einer speziellen Kompressionsmethode, die einige oder
+            alle Dateien in diesem Archiv als einen einzigen Datenstrom
+            ansieht, gepackt wurde.
+
+            Solides Archivieren erhöht die Kompressionsrate erheblich,
+            wenn viele kleine, gleichartige Dateien archiviert werden.
+            Aber es gibt auch ein paar Nachteile: Langsamere Erneuerung
+            von existierenden soliden Archiven, langsamerer Zugriff auf
+            die einzelnen Dateien, geringe Reparaturwahrscheinlichkeit
+            bei Archivbeschädigungen.
+
+            Normalerweise werden Dateien in soliden Archiven nach ihrer
+            Erweiterung sortiert. Es ist jedoch möglich, die Sortierung
+            mit dem Schalter -ds auszuschalten oder eine andere
+            Sortierreihenfolge für die Dateien mit Hilfe einer speziellen
+            Datei festzulegen: rarfiles.lst.
+
+            Beispiel:
+
+            Erstelle ein solides Archiv mit dem Namen "quelltexte.rar",
+            verwende ein Wörterbuch der Größe 512 kB und durchsuche alle
+            Unterverzeichnisse rekursiv und beginne beim aktuellen
+            Verzeichnis. Füge nur ".asm"-Dateien hinzu:
+
+            rar a -s -md512 quelltexte.rar *.asm -r
+
+
+    -s<N>   Solide Dateigruppen unter Verwendung einer bestimmten
+            Dateianzahl erstellen
+
+            Vergleichbar mit dem Schalter -s, jedoch wird die solide
+            Statistik nach dem Packen von <N> Dateien zurückgesetzt.
+            Normalerweise sinkt dadurch die Kompressionsrate, dafür
+            sinkt aber auch der Verlust an Daten im Falle eines
+            defekten soliden Archivs.
+
+
+    -sc<Zeichensatz>[Objekte]
+            Angabe des Zeichensatzes.
+
+            Die Angabe des Parameters <Zeichensatz> ist zwingend
+            erforderlich. Der Parameter <Zeichensatz> kann eins der
+            folgenden Werte haben:
+
+              U - Unicode UTF-16;
+              F - Unicode UTF-8;
+              A - Single-Byte-Kodierung des Betriebssystems. Unter
+                  Windows ist das die ANSI-Kodierung;
+              O - OEM-Kodierung (DOS). Nur in der Windows-Version.
+
+            Die Bytereihenfolge von Quell-UTF-16-Dateien, wie z. B.
+            Listendateien oder Kommentare, wird mit Hilfe der
+            Bytereihenfolge-Markierung (Byte Order Mark) erkannt.
+            Fehlt die Bytereihenfolge-Markierung, wird Little-Endian
+            als Bytereihenfolge angenommen.
+
+            Am Anfang von Unicode-Dateien muss sich das Unicode-Zeichen
+            FFFE oder FEFF befinden (Unicode Byte Order Mark). Fehlt es,
+            ignoriert RAR diesen Schalter und verarbeitet die Datei
+            als ASCII-Text.
+
+            Die Angabe des Parameters 'Objekte' ist optional. Der
+            Parameter 'Objekte' kann eins der folgenden Werte haben:
+
+              G - Protokolldateien, die durch den Schalter -ilog
+                  erzeugt werden.
+              L - Listendateien
+              C - Kommentardateien
+              R - Meldungen, die zu Dateien oder an Pipes umgeleitet werden
+                  (Nur in der Windows-Version).
+
+            Es ist möglich, mehr als ein Objekt anzugeben, zum
+            Beispiel -scolc. Fehlt der Parameter 'Objekte', wird der
+            Parameter 'Zeichensatz' auf alle Objekte angewandt.
+
+            Dieser Schalter erlaubt die Angabe des Zeichensatzes für
+            Dateien des Schalters "-z<Datei>", für Dateien mit Dateiliste
+            und Kommentardateien, die mit dem Befehl "cw" geschrieben
+            werden.
+
+            Beispiele:
+
+            1) rar a a -scol daten @liste
+
+            Lese Dateiliste aus der Datei "liste" und verwende
+            die OEM-Kodierung.
+
+            2) rar c -scuc -kommentar.txt daten
+
+            Lese die Datei kommentar.txt als Unicode-Datei.
+
+            3) rar cw -scuc daten kommentar.txt
+
+            Schreibe die Datei kommentar.txt als Unicode-Datei.
+
+            4) rar lb -scur daten > liste.txt
+
+            Speichere die Dateinamen im Archiv daten.rar in die Datei
+            liste.txt und verwende dafür den Unicode-Zeichensatz.
+
+
+    -se     Solide Dateigruppen unter Verwendung der
+            Dateierweiterungen erstellen
+
+            Vergleichbar mit dem Schalter -s, jedoch wird die solide
+            Statistik zurückgesetzt, sobald sich die Dateierweiterung
+            ändert. Normalerweise sinkt dadurch die Kompressionsrate,
+            dafür sinkt aber auch der Verlust an Daten im Falle eines
+            defekten soliden Archivs.
+
+
+    -sfx[Name]
+            Selbstentpackendes Archiv erstellen. Wenn dieser Schalter
+            bei der Erstellung eines neuen Archivs verwendet wird, wird
+            ein selbstentpackendes Archiv (SFX) erstellt. Standardmäßig
+            verwendet RAR das SFX-Modul in der Datei "default.sfx".
+            In der Windows-Version sollte sich die Datei "default.sfx"
+            im selben Verzeichnis wie "rar.exe" befinden, unter Unix im
+            Home-Verzeichnis des Benutzers, im Verzeichnis "/usr/lib"
+            oder "/usr/local/lib".
+
+            Beispiel:
+
+            rar a -sfxwincon.sfx meineinstallation
+
+            Erstellt ein selbstentpackendes Archiv mit dem SFX-Modul
+            "wincon.sfx".
+
+
+    -si[Name]
+            Liest bei der Erstellung eines Archivs die Daten von
+            stdin (Standardeingabe). Der optionale Parameter <Name>
+            gibt den Dateinamen für die komprimierten von stdin
+            gelesenen Daten im erstellten Archiv an. Fehlt dieser
+            Parameter, wird der Dateiname auf 'stdin' gesetzt.
+
+            Beispiel:
+
+            type Baum.Far | rar a -siBaum.Far baum.rar
+
+            Komprimiert die Ausgabe von "type Baum.Far" als Datei
+            "Baum.Far" in das Archiv "baum.rar".
+
+
+    -sl<Größe>
+            Nur die Dateien verarbeiten, die kleiner sind als im
+            Parameter <Größe> dieses Schalters angegeben.
+            Der Parameter <Größe> muss in Bytes angegeben werden.
+
+
+    -sm<Größe>
+            Nur die Dateien verarbeiten, die größer sind als im
+            Parameter <Größe> dieses Schalters angegeben.
+            Der Parameter <Größe> muss in Bytes angegeben werden.
+
+
+    -sv     Unabhängige solide Volumen erstellen
+
+            Normalerweise versucht RAR, die solide Statistik so schnell
+            wie möglich nach dem Beginn eines neuen Volumens
+            zurückzusetzen. Das passiert aber nur, wenn nach einem
+            vorangegangenen Zurücksetzen genügend Daten gepackt wurden
+            (wenigstens ein paar Megabytes).
+
+            Dieser Schalter zwingt RAR, die Größe der gepackten Daten
+            zu ignorieren und die Statistik bei Volumen beliebiger Größe
+            immer zurückzusetzen. Das senkt zwar die Kompressionsrate,
+            aber erhöht die Chancen, ein Teil der Daten entpacken zu
+            können, wenn ein Volumen eines soliden gesplitteten Archivs
+            verloren gegangen ist oder beschädigt wurde.
+
+            Beachten Sie, dass RAR manchmal trotz Angabe dieses Schalters
+            die Statistik nicht zurücksetzen kann. Zum Beispiel ist dies
+            nicht möglich, wenn eine große Datei auf mehrere Volumen
+            aufgeteilt wird. RAR kann die solide Statistik nur zwischen
+            getrennten Dateien zurücksetzen, aber nicht innerhalb einer
+            einzelnen Datei.
+
+            Wird kein gesplittetes Archiv erstellt, wird der Schalter
+            ignoriert.
+
+
+    -sv-    Abhängige solide Volumen erstellen
+
+            Verhindert, dass die solide Statistik zwischen Volumen
+            zurückgesetzt wird.
+
+            Dies erhöht zwar die Kompressionsrate geringfügig, aber die
+            Chancen sinken erheblich, ein Teil der Daten entpacken zu
+            können, wenn ein Volumen eines soliden gesplitteten Archivs
+            verloren gegangen ist oder beschädigt wurde.
+
+            Wird kein gesplittetes Archiv erstellt, wird der Schalter
+            ignoriert.
+
+
+    -s-     Keine solide Archivierung
+
+
+    -t      Dateien nach der Archivierung auf Fehler testen. Der
+            Schalter ist besonders nützlich in Kombination mit dem
+            Befehl "Verschieben". Dann werden die Dateien nur gelöscht,
+            wenn das Archiv erfolgreich getestet wurde.
+
+
+    -ta<Datum>
+            Dateien verarbeiten, die nach dem angegebenen Datum
+            geändert wurden.
+
+            Das Format von <Datum> ist YYYYMMDDHHMMSS (YYYY=Jahreszahl,
+            MM=Monat, DD=Tag, HH=Stunden, MM=Minuten, SS=Sekunden). Es
+            ist möglich, Trennzeichen wie "-" oder ":" in das Datum
+            einzufügen und nachfolgende Felder wegzulassen. Zum Beispiel
+            ist der folgende Schalter korrekt: -ta2001-11-20. Intern
+            wird er auf -ta20011120000000 erweitert und interpretiert
+            als "Dateien, die nach der Uhrzeit 00:00:00 Uhr des
+            20. November 2001 geändert wurden".
+
+
+    -tb<Datum>
+            Dateien verarbeiten, die vor dem angegebenen Datum
+            geändert wurden. Das Format des Schalters ist derselbe wie
+            beim Schalter "-ta<Datum>".
+
+
+    -tk     Originale Archivzeit beibehalten. Verhindert, dass RAR bei
+            einer Archivänderung die Archivzeit verändert.
+
+
+    -tl     Archivzeit auf die Dateizeit der neusten Datei setzen.
+            Zwingt RAR, die Zeit eines veränderten Archivs auf die Zeit
+            der neusten Datei im Archiv zu setzen.
+
+
+    -tn<Zeit>
+            Dateien verarbeiten, die neuer als die angegebene
+            Zeitspanne sind. Das Format der Zeitangabe <Zeit> ist:
+
+            [<Tage>d][<Stunden>h][<Minuten>m][<Sekunden>s]
+
+            Verwenden Sie zum Beispiel den Schalter "-tn15d", um Dateien
+            zu verarbeiten, die neuer als 15 Tage sind, und den Schalter
+            "-tn2h30m", um Dateien zu verarbeiten, die neuer als
+            2 Stunden und 30 Minuten sind.
+
+
+    -to<Zeit>
+            Dateien verarbeiten, die älter als die angegebene
+            Zeitspanne sind. Das Format des Schalters ist derselbe wie
+            beim Schalter "-tn<Zeit>".
+
+
+    -ts[m|c|a][+|-|1]
+            Dateizeit (Änderung, Erstellung, Zugriff) speichern
+            oder wiederherstellen.
+
+            Bei Angabe des Schalters -tsm wird die Zeit der letzten
+            Änderung, bei -tsc die Zeit der Erstellung und bei -tsa
+            die Zeit des letzten Zugriffs einer Datei gespeichert.
+            Die mehrfache Verwendung von -ts Schaltern ist möglich, wie
+            z. B. -tsc -tsa. Wird 'm', 'c' oder 'a' beim Schalter nicht
+            angegeben, werden alle drei Zeiten angenommen.
+
+            Hängen Sie ein '+' an, um eine Dateizeit mit maximal möglicher
+            Präzision zu speichern. Der konkrete Wert der höchsten
+            Genauigkeit hängt vom Betriebssystem und dem Dateisystem ab.
+            Unter Windows kann das bis 100 Nanosekunden und unter Unix
+            1 Nanosekunde sein. Hängen Sie '1' an, um eine Präzision von
+            1 Sekunde vorzugeben, oder '-', um die Dateizeit nicht zu
+            speichern. Sind '+', '-' oder '1' nicht vorhanden, wird '+'
+            angenommen. Die Schalter -ts+ und -ts speichern demnach alle
+            drei Dateizeiten mit höchster Präzision.
+
+            RAR-4.x-Archive enthalten immer die Zeit der letzten Änderung.
+            Bei RAR-4.x-Archiven speichert der Schalter -tsm- weiterhin
+            die Zeit der letzten Änderung, allerdings mit der niedrigsten
+            möglichen Präzision von 2 Sekunden. Nur die Speicherung der
+            zwei anderen Dateizeiten kann unterbunden werden, also die
+            Speicherung der Zeit der Erstellung und des letzten Zugriffs.
+            Bei RAR-5.0-Archiven hingegen ist es möglich, die Speicherung
+            aller Dateizeiten einschließlich der Zeit der letzten Änderung
+            zu verhindern. Bei den entpackten Dateien werden dann die
+            Dateizeiten auf die aktuelle Zeit des Betriebssystems gesetzt.
+            Die Schalterkombination -tsm- -tsc- -tsa- oder kurz -ts-
+            speichert also bei RAR-4.x-Archiven die Zeiten der letzten
+            Änderung mit geringer Präzision und bei RAR-5.0-Archiven
+            überhaupt keine Dateizeiten.
+
+            Wird der Schalter -ts nicht angegeben, speichert RAR die Zeit
+            der letzten Änderung mit höchster Präzision, die zwei anderen
+            Dateizeiten werden nicht gespeichert.
+
+            Es ist notwendig, die Schalter -tsc and -tsa anzugeben, um
+            beim Entpacken von Dateien die Zeit der Erstellung und die
+            Zeit des letzten Zugriffs zu setzen. Standardmäßig setzt RAR
+            nur die Zeit der letzten Änderung, selbst wenn ein Archiv
+            die Zeit der Erstellung und die Zeit des letzten Zugriffs
+            enthält. Verwenden Sie dann den Schalter -tsm- oder nur -ts-,
+            um bei den entpackten Dateien die Zeiten der letzten Änderung
+            auf die aktuelle Zeit des Betriebssystems statt auf die im
+            Archiv gespeicherten Zeiten zu setzen.
+
+            Windows erlaubt das Setzen aller drei Zeiten beim Entpacken.
+            Unter Unix kann die Zeit der letzten Änderung und des letzten
+            Zugriffs, aber nicht die Zeit der Erstellung gesetzt werden.
+
+            Beipiele:
+
+            1) rar a -ts backup
+
+            Speichere alle Dateizeiten mit der höchstmöglichen
+            Genauigkeit.
+
+            2) rar x -tsa backup
+
+            Stelle die Zeit der letzten Änderung und die Zeit des
+            letzten Zugriffs wieder her. Der Schalter -tsm braucht
+            nicht angegeben zu werden, weil RAR die Zeit der letzten
+            Änderung standardmäßig setzt. Soll ausschließlich die Zeit
+            der letzten Änderung wiederhergestellt werden, müssen
+            die beiden Schalter -tsm- -tsa verwendet werden.
+
+            3) rar a -tsm1 -tsc1 backup
+
+            Speichere die Zeiten der letzten Änderung und die Zeiten
+            der Erstellung mit geringer Genauigkeit.
+
+
+    -u      Dateien erneuern. Kann sowohl beim Entpacken als auch bei
+            der Erstellung von Archiven verwendet werden.
+            Die Befehls/Schalterkombination "a -u" entspricht dem
+            Befehl "u". Sie können den Schalter "-u" auch mit den
+            Befehlen "m" oder "mf" verwenden. Wird der Schalter "-u"
+            zusammen mit den Befehlen "x" oder "e" benutzt, werden ältere
+            Dateien durch die neueren Versionen aus dem Archiv ersetzt.
+            Im Gegensatz zum Schalter "-f" werden archivierte Dateien ohne
+            eine entsprechende ungepackte Datei trotzdem entpackt.
+
+
+    -v      Gesplittetes Archiv (Volumen) mit automatischer Erkennung der
+            Größe erstellen oder den Inhalt aller Volumen auflisten.
+
+            Dieser Schalter kann beim Erstellen oder Auflisten des Inhalts
+            von Volumen verwendet werden.
+
+            Im ersten Fall wird die automatische Erkennung der Volumengröße
+            aktiviert, sodass neue Volumen immer den gesamten verfügbaren
+            Speicherplatz auf dem Zielspeichermedium ausnutzen. Dies ist
+            besonders nützlich, wenn man gesplittete Archive auf Wechsel-
+            datenträgern erstellt. Mehr über gesplittete Archive (Volumen)
+            können Sie in der Beschreibung des Schalters -v<n> lesen.
+
+            Im zweiten Fall, wenn der Schalter zusammen mit den Befehlen
+            'V' oder 'L' verwendet wird, wird RAR gezwungen, die Inhalte
+            aller Volumen anzuzeigen, beginnend mit dem Volumen, der in der
+            Kommandozeile angegeben wurde. Ohne diesen Schalter zeigt RAR
+            nur den Inhalt des einen angegebenen Volumens an.
+
+
+    -v<n>[k|b|f|m|M|g|G]
+            Gesplittetes Archiv (Volumen) erstellen.
+            Erstellt ein gesplittetes Archiv mit Volumen der
+            Größe=<n>*1000 [*1024 | *1] Bytes. Standardmäßig wird bei
+            diesem Schalter <n> mit tausend (1000) Bytes multipliziert
+            (nicht mit 1024 Bytes). Sie können die Größe auch durch
+            Anhängen verschiedener Buchstaben in anderen Maßeinheiten
+            angeben: "k" für Kilobyte, "b" für Byte, "m" für Megabyte,
+            "M" für Millionen von Bytes, 'g' für Gigabyte, 'G' für
+            Milliarden von Bytes. Oder Sie wählen eines der vordefinierten
+            Werte mit dem Buchstaben "f" und anschließender Größenangabe
+            aus. Die vordefinierten Größen können 360, 720, 1200, 1440
+            oder 2880 sein. Diese werden dann durch die entsprechenden
+            Diskettengrößen ersetzt.
+
+            Wird keine Größe angegeben, wird die automatische
+            Größenerkennung verwendet.
+
+            Die Angabe von Nachkommastellen ist erlaubt. Als
+            Dezimaltrennzeichen wird der Punkt "." verwendet.
+            -v1.5g bedeutet zum Beispiel 1,5 Gigabytes.
+
+            Sie können mehrere -v Schalter angeben, um unterschiedliche
+            Größen für verschiedene Volumen festzulegen. Zum Beispiel:
+
+              rar a -v100k -v200k -v300k archivname
+
+            setzt die Größe des ersten Volumen auf 100 kB, des zweiten
+            Volumen auf 200 kB und für alle folgenden Volumen auf 300 kB.
+
+            Werden Volumen auf Wechseldatenträgern erstellt, so erscheint
+            nach der Erstellung des ersten Volumens folgender Dialog:
+
+              Nächstes Volumen erstellen? Ja/Nein/Alle
+
+            Jetzt sollten Sie den Datenträger wechseln. Wenn Sie mit
+            "Alle" antworten, werden alle Volumen ohne Pause dazwischen
+            erstellt.
+
+            Standardmäßig haben RAR-Volumen Namen der Form
+            "volumenname.partNNN.rar", wobei NNN die Nummer des Volumens
+            ist. Beim RAR-4.x-Format ist es mit dem Schalter -vn möglich,
+            ein anderes, auf der Dateierweiterung basierendes
+            Nummerierungssystem zu verwenden. In diesem Fall hat das
+            erste Volumen in der Folge die Erweiterung ".rar", die
+            nachfolgenden Volumen-Erweiterungen sind nummeriert von
+            ".r00" bis ".r99". Bei RAR-5.0-Archiven wird der Schalter
+            -vn und das auf der Dateierweiterung basierende Namensschema
+            nicht unterstützt.
+
+            Um gesplittete Archive zu entpacken oder zu testen, müssen
+            Sie nur den ersten Volumennamen verwenden. Existiert das
+            nächste Volumen im aktuellen Laufwerk nicht, und liegt das
+            Laufwerk auf einem Wechselmedium, so erscheint
+            folgender Dialog:
+
+              Diskette mit <nächster Volumenname> einlegen.
+
+            Legen Sie nun den Datenträger mit dem richtigen Volumen ein
+            und drücken Sie eine beliebige Taste.
+
+            Wenn beim Entpacken das nächste Volumen nicht gefunden wird
+            und sich die Volumen auf einem nicht wechselbaren Medium
+            befinden, bricht RAR den Vorgang mit folgender
+            Fehlermeldung ab:
+
+              Kann Volumen <Volumenname> nicht finden.
+
+            Archiv-Volumen, d.h. Teile eines gesplitteten Archivs, können
+            nicht verändert werden. Die Befehle "d", "f", "u", "s" können
+            daher nicht auf ein gesplittetes Archiv angewendet werden.
+            Der Befehl "a" kann ausschließlich zur Erstellung eines neuen
+            gesplitteten Archivs (Multi-Volumen-Archiv) benutzt werden.
+
+            Es ist möglich, wenn auch unwahrscheinlich, dass einzelne
+            gepackte Dateien in einem Volumen größer sein können als im
+            unkomprimierten Zustand. Das ist auf den Umstand
+            zurückzuführen, dass die Kompressionsmethode "speichern"
+            (keine Komprimierung, wenn die gepackte Datei größer als die
+            ungepackte Datei ist) in gesplitteten Archiven nicht zur
+            Verfügung steht.
+
+            Gesplittete Archive können solide sein. So ein Archiv wird
+            mit den Schaltern "-v" und "-sfx" erstellt.
+
+            Beispiel:
+
+            Erstelle ein gesplittetes Archiv mit einer
+            festen Volumengröße:
+
+            rar a -s -v1440 floparch.rar *.*
+
+            Erstellt ein solides Archiv mit einer Volumengröße von
+            1440000 Bytes.
+
+
+    -vd     Laufwerksinhalt von Wechselmedien beim Erstellen von
+            Volumen löschen
+
+            Alle Dateien und Verzeichnisse auf dem Zieldatenträger
+            werden gelöscht, wenn der Schalter "-vd" verwendet wird.
+            Der Schalter lässt sich nur auf Wechseldatenträger anwenden,
+            Festplatten können durch die Verwendung des Schalters nicht
+            gelöscht werden.
+
+
+    -ver[n] Verschiedene Versionen einer Datei in einem
+            Archiv ermöglichen
+
+            Zwingt RAR, vorherige Dateiversionen beim Erneuern eines
+            vorhandenen Archivs darin zu belassen. Alte Versionen werden
+            zu "dateiname;n" umbenannt, wobei 'n' die Versionsnummer ist.
+
+            Entpackt man ein Archiv ohne Angabe des Schalters "-ver", so
+            entpackt RAR standardmäßig nur die zuletzt hinzugefügte
+            Dateiversion (die Version ohne Versionsnummer am Ende des
+            Dateinamens). Wenn Sie jedoch den Dateinamen mit der
+            Versionsnummer exakt angeben, wird auch nur diese Version
+            entpackt. Zum Beispiel entpackt der Befehl "rar x archivname"
+            nur die neusten Versionen, während der Befehl
+            "rar x archivname aufsatz.txt;5" nur die Datei "aufsatz.txt;5"
+            entpackt, wenn diese Version im Archiv vorhanden ist.
+
+            Gibt man den Parameter 'n' beim Archivieren an, so begrenzt
+            das die maximale Anzahl von Dateiversionen, die im Archiv
+            gespeichert werden. Alte Dateiversionen, die über dieser
+            Grenze liegen, werden gelöscht.
+
+
+    -vn     Alte Volumennamen verwenden
+
+            Standardmäßig haben RAR-Volumen Namen der Form
+            "volumenname.partNNN.rar", wobei NNN die Nummer des Volumens
+            ist. Beim RAR-4.x-Format ist es mit dem Schalter -vn möglich,
+            ein anderes, auf der Dateierweiterung basierendes
+            Nummerierungssystem zu verwenden. In diesem Fall hat das
+            erste Volumen in der Folge die Erweiterung ".rar", die
+            nachfolgenden Volumen-Erweiterungen sind nummeriert von
+            ".r00" bis ".r99". Bei RAR-5.0-Archiven wird der Schalter
+            -vn und das auf der Dateierweiterung basierende
+            Namensschema nicht unterstützt.
+
+
+    -vp     Pause vor jedem Volumen
+
+            Standardmäßig fragt RAR vor dem Verarbeiten des nächsten
+            Volumens nur dann nach einer Bestätigung, wenn Volumen auf
+            Wechseldatenträgern erstellt werden sollen und der verfügbare
+            Speicherplatz auf dem Wechseldatenträger kleiner als die
+            Volumengröße ist. Dieser Schalter zwingt RAR, diese
+            Bestätigung immer vor dem Erstellen und Entpacken des
+            nächsten Volumens anzufordern. Das kann zum Beispiel nützlich
+            sein, wenn Sie jedes neue Volumen sofort nach der Erstellung
+            auf einen anderen Datenträger kopieren möchten.
+
+
+    -w<p>   Das Verzeichnis <p> als Arbeitsverzeichnis festlegen. Dieser
+            Schalter kann verwendet werden, um das Verzeichnis für
+            temporäre Dateien festzulegen.
+
+
+    -x<f>   Schließt die angegebene Datei <f> oder das angegebene
+            Verzeichnis <f> von der Verarbeitung aus. Wildcards können
+            sowohl im Dateinamen als auch in der Verzeichnisangabe der
+            Dateimaske verwendet werden. Sie können den Schalter -x
+            mehrmals in derselben Befehlszeile angeben, um mehrere
+            Dateimasken anzugeben.
+
+            Enthält die Dateimaske Wildcards, wird sie auf alle Dateien
+            im aktuellen Verzeichnis und dessen Unterverzeichnissen
+            angewendet. Ohne Wildcards ist die Dateimaske nicht rekursiv:
+            Die Dateimaske "dateiname" schließt beim Archivieren nur die
+            Datei 'dateiname' im aktuellen Verzeichnis und beim Entpacken
+            nur die Datei 'dateiname' im Stammverzeichnis des Archivs aus.
+
+            Verwenden Sie die Syntax "*\dateiname", um die
+            Datei 'dateiname' rekursiv in allen Verzeichnissen und
+            Unterverzeichnissen auszuschließen.
+
+            Kennen Sie den genauen Pfad einer Datei, können Sie mit dem
+            Syntax "pfad\dateiname" diese eine Datei 'dateiname' im
+            Verzeichnis "pfad" von der Verarbeitung ausschließen. Wird
+            beim Entpacken eines Archiv die Syntax "-xpfad\dateiname"
+            verwendet, muss "pfad" der Pfad innerhalb des Archivs sein
+            und nicht der Dateipfad auf dem Datenträger nach dem Entpacken.
+
+            Standardmäßig werden Dateimasken, die Wildcards enthalten,
+            nur auf Dateien angewendet. Benötigen Sie hingegen eine
+            Maske mit Wildcards, die mehrere Verzeichnisse ausschließen
+            soll, ist die Verwendung einer bestimmten Syntax erforderlich.
+            Verzeichnismasken müssen das Pfadtrennzeichen ('\' unter
+            Windows und '/' unter Unix) an der letzten Stelle haben.
+            Die Verzeichnismaske "*tmp*\" zum Beispiel schließt alle
+            Verzeichnisse aus, die zu "*tmp*" passen, "*\tmp\" schließt
+            hingegen alle 'tmp'-Verzeichnisse aus. Da beide
+            Verzeichnismasken Wildcards enthalten, werden sie auf das
+            aktuelle Verzeichnis und dessen Unterverzeichnissen
+            angewendet.
+
+            Möchten Sie genau ein Verzeichnis von der Verarbeitung
+            ausschließen, geben Sie den genauen Verzeichnisnamen
+            einschließlich des absoluten oder relativen Pfades ohne
+            irgendwelche Wildcards an. In diesem Fall ist es nicht
+            erforderlich, das Pfadtrennzeichen an die Maske anzuhängen.
+            Nur bei Verzeichnismasken, die Wildcards enthalten, muss
+            das Pfadtrennzeichen angehängt werden, um sie von
+            Dateimasken unterscheiden zu können.
+
+            Beispiele:
+
+            1) rar a -r -x*.jpg -x*.avi rawfiles
+
+            Füge alle Dateien aus dem aktuellen Verzeichnis und dessen
+            Unterverzeichnissen zu dem Archiv rawfiles hinzu. Schließe
+            dabei jedoch alle Dateien mit der Dateiendung ".jpg"
+            und ".avi" aus;
+
+            2) rar a -r -x*\temp\ sicherungc c:\*
+
+            Komprimiere alle Dateien auf dem Laufwerk c: - außer
+            Verzeichnisse mit dem Namen 'temp' und Dateien, die sich in
+            Verzeichnissen mit dem Namen 'temp' befinden;
+
+            3) rar x -x*.txt dokumente
+
+            Entpacke alle Dateien außer *.txt aus dem
+            Archiv dokumente.rar.
+
+
+    -x@<ld> Schließt Dateien von der Verarbeitung aus, deren Dateinamen
+            in der Listendatei <ld> angegeben sind. Wird -x@ ohne Angabe
+            des Parameters <ld> verwendet, werden die Dateinamen von
+            stdin gelesen.
+
+            Beispiel:
+
+            rar a -x@exlist.txt archiv *.exe
+
+
+    -y      Alle Fragen mit "Ja" beantworten.
+
+
+    -z[Datei]
+            Archivkommentar aus der Datei <Datei> lesen.
+
+            Dieser Schalter kann bei allen Befehlen verwendet werden,
+            die ein Archiv verändern, um eine Archivkommentar aus einer
+            Datei einzulesen und einem Archiv hinzuzufügen. Möchten
+            Sie den Zeichensatz für die Kommentardatei angeben,
+            verwenden Sie den Schalter zusammen mit dem
+            Schalter "-sc". Wird <Datei> nicht angegeben, wird
+            der Kommentar von stdin gelesen.
+
+
+
+ Einschränkungen
+ ~~~~~~~~~~~~~~~
+
+    Einschränkungen bei Befehlen:
+
+    Die Befehle "d", "u", "f", "c", "cf" können nicht auf gesplittete
+    Archive angewendet werden.
+
+    Der Befehl "a" kann nicht zum Erneuern, sondern nur zum Erstellen
+    eines neuen gesplitteten Archivs verwendet werden.
+
+
+ Rückgabewerte
+ ~~~~~~~~~~~~~
+
+    Im Fall einer erfolgreichen Archivoperation beendet sich RAR mit
+    dem Fehlercode 0. Ein Exit-Code ungleich Null zeigt an, dass ein
+    Fehler aufgetreten ist:
+
+    Code   Beschreibung
+     0     Erfolgreicher Abschluss der Operation.
+     1     Nicht schwerwiegende(r) Fehler traten auf.
+     2     Ein schwerwiegender Fehler trat auf.
+     3     Falsche Prüfsumme. Die Daten sind beschädigt.
+     4     Es wurde versucht, ein Archiv zu ändern, das mit dem
+           Befehl "k" abgeschlossen wurde.
+     5     Fehler beim Schreiben auf einen Datenträger.
+     6     Fehler beim Öffnen einer Datei.
+     7     Fehler in einer Kommandozeilenoption.
+     8     Nicht genügend Speicher für die Operation.
+     9     Fehler beim Erstellen einer Datei.
+    10     Zu der angegebenen Dateimaske und den angegebenen
+           Optionen wurden keine Dateien gefunden.
+    11     Falsches Passwort.
+   255     Der Benutzer stoppte die Ausführung des Prozesses.
+
+
+ Glossar
+ ~~~~~~~
+
+    Archiv       Spezielle Datei, die eine oder mehrere Dateien
+                 enthält, die wahlweise komprimiert und/oder
+                 verschlüsselt sind.
+
+    Kompression  Eine Methode zur Kodierung von Daten, um deren
+                 Größe zu verkleinern.
+
+    Prüfsumme    Ein Wert, der aus einem Datenblock oder aus den
+                 Daten einer Datei berechnet wird. Damit lässt
+                 sich die Gültigkeit von Daten oder Dateiinhalten
+                 überprüfen.
+
+    SFX-Archiv   Selbstentpackendes Archiv (SelF-eXtracting archive).
+                 Ein Archiv im ausführbarer Format, das aus einem
+                 selbstentpackenden Modul (SFX-Modul) und aus
+                 komprimierten Daten besteht. Um so ein Archiv zu
+                 entpacken, reicht es aus, die ausführbare Datei
+                 zu starten.
+
+    Solide       Ein Archiv, dass mit einer speziellen Kompressionsmethode
+                 gepackt wurde, welche alle Dateien als einen
+                 kontinuierlichen Datenstrom ansieht. Diese Methode ist
+                 von Vorteil, wenn eine große Anzahl kleiner Dateien
+                 gepackt werden.
+
+    Volumen      Teil oder Teile eines gesplitteten Archivs. Ein Archiv
+                 in mehrere Volumen aufzuteilen bietet die Möglichkeit,
+                 diese Teile auf mehreren Wechseldatenträgern zu speichern.
+                 Um solide Volumen zu entpacken, muss das Entpacken
+                 beim ersten Volumen begonnen werden.
+
+
+
+ Copyrights
+
+    (c) 1993-2017 Alexander Roshal
+    (c) 2002-2017 Michael Leimer <http://leimer.name>
+                  für die deutsche Übersetzung

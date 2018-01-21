@@ -1,0 +1,136 @@
+[FileVersion]
+Version=1.3.0.0
+
+[Remembrancer]
+ShutdownTip=[Write here]
+
+[DupOptions]
+Find all files=False
+
+[JunkSelectedDrives]
+Drives=C:\
+[DupFileType]
+.jpg=True
+.jpeg=True
+.bmp=True
+.gif=True
+.png=True
+.tif=True
+.psd=True
+.mp3=True
+.wma=True
+.wav=True
+.mid=True
+.mpg=True
+.mpeg=True
+.mp4=True
+.avi=True
+.wmv=True
+.rm=True
+.rmvb=True
+.asf=True
+.ts=True
+.doc=True
+.docx=True
+.xls=True
+.xlsb=True
+.ppt=True
+.pptx=True
+.pdf=True
+.mdb=True
+.zip=True
+.rar=True
+.cab=True
+.exe=True
+.msi=True
+[DupSkipFolder]
+WINDOWS=
+Documents and Settings=
+System Volume Information=
+Program Files=
+ProgramData=
+AppData=
+Temporary Internet Files=
+RECYCLER=
+$RECYCLER=
+$Recycle.Bin=
+[DupOtherSet]
+Do not compare file name=True
+Do not compare file date=True
+Do not compare file size=False
+Do not compare file MD5=False
+Find system files=False
+Find readonly files=False
+Find 0 Byte files=False
+File Size=0
+[DupDelFile]
+Removal=Recycle
+[JunkFileType]
+*.tmp:Temporary file=True
+*.temp:Temporary file=True
+*.??$:Temporary file=True
+*.?$?:Temporary file=True
+*.??~:Temporary file=True
+*.?~?:Temporary file=True
+*.___:Temporary file=True
+*.---:Temporary file=True
+*.$$$:Temporary file=True
+*.@@@:Temporary file=True
+*.~*:Temporary file=True
+*._mp:Temporary file=True
+*.~mp:Temporary file=True
+~*.*:Temporary file=False
+*.^:Temporary file=False
+*._dd:Temporary file=False
+*._detmp:Temporary file=False
+*.$db:Temporary file=False
+*.db$:Temporary file=False
+*.fts:Temporary file of help=True
+*.gid:Temporary file of help=True
+*.ftg:Temporary file of help=False
+*.err:Error file=True
+mscreate.dir:Setting temp file=True
+*.chk:Recover file for lost cluster=True
+chklist.*:Recover file for lost cluster=True
+*.old:Old backup file=False
+*.wbk:Backup file of word=False
+Thumbs.db:Cache thumbnails file=False
+*.bak:Backup file=False
+*.dmp:Memory dump=False
+[JunkSkipFolder]
+i386=
+ProgramData\Microsoft=
+Program Files\Common Files=
+Program Files\WindowsApps=
+WINDOWS\security=
+WINDOWS\servicing=
+Windows\SoftwareDistribution=
+WINDOWS\winsxs=
+WINDOWS\system32\catroot=
+WINDOWS\system32\Config=
+WINDOWS\system32\drivers=
+WINDOWS\system32\DriverStore=
+WINDOWS\system32\Restore=
+Resources\Themes=
+Temporary Internet Files=
+System Volume Information=
+NetHood=
+RECYCLER=
+$RECYCLE.BIN=
+[JunkOtherSettings]
+Find invalid Start Menu=True
+Find files in temporary folder=True
+Find invalid Program Files Directory=True
+Find shortcuts that do not point to valid target=False
+Find invalid Windows Installer files=True
+Find invalid folder=True
+Find empty folder=False
+Find Zero length(empty) files=False
+Find downloaded program files=False
+Find temp burn folder=False
+Clear Hotfix backup files=False
+Clear Error Report files=False
+Skip System attribute files=True
+Skip Read Only attribute files=True
+[JunkDeleteType]
+Removal=Recycle

@@ -1,0 +1,25 @@
+Injector Error Codes
+
+0x1 Success
+
+0x2 Access Denied (Generic)
+0x3 Access Denied (Not Elevated)
+0x4 Access Denied (File Access)
+0x5 Missing Core Files
+0x6 Invalid Paramters
+0x7 Error Setting KMS IP
+0x8 Hook Engine is already loaded
+0x9 Hook Engine is not loaded
+0x10 No Svchost.exe process
+0x11 Operation System is not Windows 8.1
+0x12 Injection Error
+
+0x13 Failed installing the service
+0x14 Service is already installed
+0x15 Service has been already marked for delete
+0x16 Service does not exist
+0x17 Failed removing the service
+0x18 Failed starting the service
+0x19 Failed starting the service (Timeout)
+0x20 Failed stopping the service
+0x21 Failed stopping the service (Timeout)

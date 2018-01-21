@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] 
+"EnableLUA"=dword:00000001 
+"FilterAdministratorToken"=dword:00000001 
+"ConsentPromptBehaviorAdmin"=dword:00000000 
+"ConsentPromptBehaviorUser"=dword:00000000 
+"PromptOnSecureDesktop"=dword:00000000 

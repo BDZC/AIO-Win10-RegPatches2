@@ -1,0 +1,705 @@
+--------------------------------------------------------
+PC Wizard - History Notes
+Copyright (C) 1996-2012 Laurent KUTIL & Franck DELATTRE
+--------------------------------------------------------
+
+2012.2.11
+--------------------------------------------------------
+- Intel QM77, QS77 and NM70 chipsets support
+- Intel Q77 chipset support
+- AMD FX-4320, FX-6300, FX-8350
+- Via VX11 chipset support
+- Intel Xeon E3 Series V2 processors support
+- AMD FX 'Vishera' processors preliminary support
+- nVidia MCP79 chipset support
+- USB Enpoint information more detailed
+- Possibility to remove CPUID Partner advertising (menu Options)
+- Intel HD Graphics 3000/4000 clocks, voltage and temperature support
+
+2012.2.1
+--------------------------------------------------------
+- Filezilla passwords recovery support
+- AMD/ATI HD7750 and HD7770 video cards support
+- AMD A75, A760M and A70M Southbriges support
+- Intel Xeon E3 1200 Family processors support
+- Intel Atom Serie 2000 processors support
+- AMD FX-8140, FX-6200, FX-4150 processors support
+- AMD A10-4600M, A10-5800K, A10-5700, A8-5600K, A8-5500, A6-5400K, A4-5300
+- AMD A8, A6, A4, E2 (M, MX, ML, MZ, MC, MF, MG)
+- Intel Xeon E5 Series processors support
+- Optical Drive interface, serial number and streaming features detection support
+- nVidia GTX680, GT650M, GT640M (Kepler) video card preliminary support
+- nVidia GT675M, GT630M (Fermi) video card support
+- Java x86, x64 information support
+- SmartCard Reader detection support
+- Intel Z75, Z77, B75, UM77, HM70/75/76/77 Chipsets support
+- Intel Pentium G640 processor support
+- Intel Celeron G550, G540T processors support
+- Intel Core i7 2960XM, 2960QM processors support
+- AMD Sempron II X3, Athlon II X3 processors support
+- Windows Firewall Rules support
+- Intel Ivy Bridge family processors support
+- nVidia GTX670 video card support
+- RDP Sessions informations support
+- NEW processor benchmark to better reflect difference between models
+- NEW memory benchmark to better reflect difference between type and controllers
+
+2012.2.0
+--------------------------------------------------------
+- Apple geolocalisaton securiy report support
+- BIOS EFI support
+- New ATI video cards support
+- Disk ACS-3 support
+- New Windows Update report with more information
+- Devices Manager Enhancements (driver version, install date, INf file, ...)
+- Report devices manger tree with driver information support
+- Enumerate ODBC drivers installed
+- nVIDIA Optimus technology preliminary support
+- AMD K12 processors family support (A4, A6, A8, E2, Athlon II X2, Sempron II X2, Sempron X2, Sempron II X4, Athlon II X4)
+- AMD K14 processors family support (C, D, G Series)
+- AMD K15 processors family support (FX 4000, 6000, 8000 Series, Opteron Valencia)
+- AMD K12/K14/K15 chipset family support
+- VIA Nano 1000/2000/3000 Series, Eden X2, Nano X2/X3, QuadCore processors support
+- Microsoft Windows 8 preliminary support
+- Intel SandyBridge-E/EP processors family
+- NUVOTON NCT7802 sensor support
+- Fintek F71889A sensor support
+- Oracle Client Version information support
+- AMD SB710 and A75 Southbridge support
+- AMD A40/A45/A50 Northbridge support
+- AMD RD9x0 Northbridge support
+- Via VX900 SMBus support
+- Intel Z68, X79 Chipset support
+- AMD/ATI SB910, SB950, SP5100, A40/A50 FCH Southbridge support
+- nVidia Video Cards HDCP Mode detection support
+- nVidia Video Cards PStates support
+- nVidia Video Cards Voltages support
+- Intel SandyBridge processors family power GT, IACores and Package support
+- Intel SandyBridge processors family temperature Package support
+- Intel 2550K, 2450P, 2380P, 2670QM processors support
+- ITE IT8772E Sensor support
+
+
+2010.1.96
+--------------------------------------------------------
+- Intel Atom N455, N475 processors support
+- Intel Atom D425, D525 processors support
+- Intel Pentium E6700, E5700 processors support
+- Intel Core i3 330E, Core i7 660UE processors support
+- Intel Celeron U3400, U3405 processors support
+- Sony ACPI Thermal Zones support
+- nVidia SLI Ready Motherboard detection support
+- ATI HD6xxx Cayman, Antilles, BlackComb, Barts, Whistler, Onega, Turks, Seymour, Caicos video cards preliminary support
+- Intel SandyBridge improved support
+- Intel Core i7 2600K, 2600, 2600S, 2920XM, 2820QM, 2720QM, 2620M processors support
+- Intel Core i5 2500K, 2500, 2500S, 2500T, 2400, 2400S, 2390T, 2540M, 2520M processors support
+- Intel Core i3 2120, 2100T processors support
+- Nuvoton NCT6776 hardware sensor support
+- AMD Lightwieght Profiling processor support
+- AMD XOP, FMA4, TBM, F16C, BMI features processor support
+- nVIDIA GTS450, GTS455 video card support
+- Microsoft Internet Explorer 9 Beta support
+- Intel Core i7 680UM, 660LM, 640M processors support
+- Intel Core i5 580M, 560UM, 560M, 470UM, 460M processors support
+- Intel Core i3 380M, 380UM processor support
+- Intel Pentium P6100, P6200 processors support
+- Intel Celeron T3500, P4600, P4500 processors support
+- Intel Xeon X5690 processor support
+- nVidia GTX580 video card prelmiminary support
+- HP Hardware Sensor CMI support
+- Intel Core i7 995/995X processor support
+- Intel Core i3 560 processor support
+- nVidia Video Cards external connectors type detection support
+- nVidia Video Cards Activity Load support
+- ATI Eyefinity information support
+- Devices plugged or removed auto-detection support
+
+2010.1.95
+--------------------------------------------------------
+- Microsoft IIS Server Information support
+- UPnP Devices (NAS, Router,...) information support
+- Via Nano-E processor preliminary support
+- Webcam detection and information support
+- AMD Athlon II X2 Bxx Series processors support
+- AMD Phenom II X4 Bxx Series processors support
+- AMD Series "e and "u" processors support
+- AMD DH-C3, HY-D1, PH-E0 processor stepping support
+- AMD Phenom II X4 "Thuban" processor support
+- AMD Opteron "Magny-Cours" and "Lisbon" Series 61xx processors support
+- Intel Atom Z6 "Lincroft" processor preliminary support
+- Windows Hosts Config file support
+- nVidia GTX465 Video Card support
+- Intel Core i7/i5 Series K processors support
+- Intel Core i7 940QM processors support
+- VIA VX900, VN1000 Chipsets support
+- Winbond W83647HF sensor support
+- Intel core i7 990X, 980 processor support
+- Intel Core i7 740QM, 840QM and 940XM processors support
+- Intel Core i5 430UM, 450M, 540UM processors support
+- Intel Core i3 330UM, 370M processors support
+- Intel Pentium P6000 processor support
+- Intel Pentium T2390 processor support
+- Intel Atom D425, D525, N455 processors support
+- Microsoft XNA 3.1 Framework detection support
+- Microsoft Internet Explorer Cookies viewer
+- RAID controllers information support
+- nVidia GTX 460 video card support
+- Browser Helper Objects enumeration support
+- Microsoft IE7 and above password recovery support
+- Microsoft IE url history support
+- Microsoft Windows Error Reporting (WER) information support
+- AMD Opteron 41xx Series processor support
+- AMD Sempron II X2 Series processor support
+- AMD V Series processor support
+- AMD Turion II P, Turion II N Series processor support
+- AMD Athlon II P, Athlon II N Series processor support
+- AMD Phenom II X, Phenom II N, Phenom II P, Phenom II X  Series processor support
+- AMD Turion II Neo, Athlon II Neo Series processor support
+- Mozilla Firefox 3.5 and above password recovery support
+- Google Chrome password recovery support
+- DDR3L support
+- DDR3 Thermal Sensor preliminary support (JEDEC JC42.4)
+- Intel Core i3 330UM processor support
+- Intel Core i7 610E, 660UM processor support
+- SmBIOS/DMI 2.7 support
+- OpenCL 1.1 support
+- New commandline parameters (see readme.txt) support
+- Google Picasa password recovery support
+- Google Desktop password recovery support
+- Intel SandyBridge preliminary support
+- Windows Resources Monitor added (ToolBar ToolBox Icon)
+- Bluetooth controller manufacturer support
+
+
+2010.1.94
+--------------------------------------------------------
+- Sun VirtualBox virtual machine detection support
+- Intel Celeron 3400 processor support
+- Intel Pentium E6600, E5400, E5300 processors support
+- Fintek F75334DG sensor preliminary support
+- ATI Video Card Frequencies Min/Max support
+- AMD Sempron M1, Turion II M5/M6 and Ahtlon II M3 processors preliminary support
+- Intel Core i3 Mobile processors support
+- AMD Hudson-2 Southbridge preliminary support
+- ATI GPU activity monitoring support
+- Intel IMC Memory Rank Temperature support
+- nVIDIA GT305, GT310, GT335, GT350 and GT360 video cards support
+- Nuvoton W83627DHG-P, W83667HG-B and W83677HG-I
+- USB 3.0 detection support
+- Microsoft Browser Choice detection support
+- nVidia MCP89 and GeForce 320M chipset support
+- Sis 672 Chipset support
+- Intel Core2 Specification 'S' support
+- ATI HD5450, HD5570 and HD5830 video cards preliminary support
+- Intel Core i7 930 processor support
+- nVidia ION 2 Platform detection support
+- AMD Tigris Platform detection support
+- ACPI HPET detection support
+- Intel QST 2.0 (HECI 2) monitoring support
+- Intel VT-d information support
+- SATA 6Gb detection support
+- ATI HD5145, HD5165 and HD5470 video card support
+- Intel Chipset RAM Row Refresh Cycle Time support
+- Intel Atom N470 processor support
+- ATI HD4290 video card support
+- AMD 890GX chipset support
+- AMD SB800 southbridge support
+- nVidia CUDA improvments
+- New nVidia CUDA Benchmark module
+- Dell PowerEdge 1600sc support
+- nVidia I2C GPU NV3x (Rankine), NV4x (Curie), NV5x (Telsa) and NV6x (Fermi)
+- ATI I2C GPU Series R6xx, R7xx and R8xx
+- Microsoft Windows SEHOP security feature detection support
+- AMD 785G, 880G Chipset support
+- DVD Dual-RW and Dual-R features detecttion support
+- DVD-BD ver.1 and ver.2 reading/writing features detection support
+- Intel E6500K processor detection support
+- Intel Core i7 "Gulftown" processor support
+- nVidia GTX470, GTX480 video cards preliminary support
+- Intel Xeon "Westmere-EP" codename processors support
+- Intel Xeon L3406 processor support
+- Intel NM10 Chipset Timings support
+- VIA VX855 Chipset
+- Winbond W83L771W/G sensor support
+- ITE8721F/DX sensor support
+- AMD Processors socket G34 support
+- AMD Phenom II X6 "Thuban" preliminary support
+- Finte F81865 sensor preliminary support
+- Intel Xeon Series 6500 / 7500 processors support
+- Intel Core ix Series K detection support
+- UPS detection improved
+- CD/DVD Buffer Size detection support
+- S-ATA HotPlug Capabilities detection support
+- SMSC EMC2700P sensor preliminary support
+- ATI FirePro V8800 video card support
+- Bios AMD AGESA version detection support
+- ipV6 support
+- Teredo support
+- Boot Configuration Data (BCD) information support
+- Fintek F71889ED sensor support
+- Windows Search 4.0 information support
+- Intel Core i7 680 processor support
+- Intel Pentium E5500 processor support
+
+
+2010.1.93
+--------------------------------------------------------
+- Intel ATOM "Pineview" support
+- Intel NM10 Chipset support
+- Intel GMA 3150 video card support
+- DirectCompute information support
+- ComputeShaderModel version support
+- Double Precision Shader Compute support
+- Internet Gateway Router support
+- Processor Power Consumption support
+- Intel W5590, E5540, E5530, L5530, E5520, L5520, L5518, L5506, E5504, E5502 processors support
+- Intel W3565, W3530, 930 processors support
+- Intel Core i5 processors support
+- AMD SR5690/SR5650 Chipset support
+- DELL Computer Desktop Hardware Monitoring support
+- ITE IT8721F Sensor support
+- Gigabyte DES Sensor support
+- Network shared resources support
+- Intel Core i7-600, i5-500, i5-400, i3-300 Mobile Processors Series support
+- Intel Core i3-500 Desktop Processors Series support
+- Intel Pentium G6950 processor support
+- Intel HD Graphics video card support
+- Intel H55/HM55 Chipset support
+- Intel QM57/H57/Q57/HM57/QS57 Chipset support
+- Virtual Machine detection support
+- Asus EPU support
+- AMD Athlon II 1xxx processors support
+- AMD Phenom II X2 B processor support
+- AMD OPteron Quad-Core 13xx processors support
+
+2010.1.92
+--------------------------------------------------------
+- HardDisk Temperature Assembly, Airflow or Internal support
+- Via Nano 3000 Series processors preliminary support
+- AMD Phenom II X4 Stepping C3 support
+- Fintek F71869 sensor preliminary support
+- Fintek F71808E sensor preliminary support
+- Microsoft File Transfer Manager information support
+- Benchmark Processor and Memory correction
+- DirectX 11 support
+- Asus iROG 01/02 sensor support
+- Analog Devices ASP0800 sensor support
+- ATI SB900 southbridge preliminary support
+- AMD Phenom FX-5000 processor preliminary support
+- Intel Q9100, Q9000, Q8400, Q7600, SU300, Celeron 723/743/900/925, Pentium SU2700/T4500 support
+- Intel Xeon L5410/L5420/L5430 support
+- Microsoft Seven User Account Level information support
+- ATI R6xx and R7xx video card thermal diode support
+- Benchmark Processor Threads 3 and 6 Cores support 
+- Monitor HDMI-a, HDMI-b information support
+- Monitor DisplayPort information suport
+- Hardisk NV Cache size information support
+- Hardisk NV CAche PowerMode information support
+- AMD Athlon L110 processor support
+- Microsoft Windows 7 Taskbar Pinned Application information support
+- Windows Seven Network Enhanced information support
+- ATI HD5670 video card support
+- Windows Vista/Seven Wifi Native support
+- Network WiMax support
+- Windows Touch information support
+- Intel Xeon L3426 processor support
+- AMD RS740/RS740M chipset support
+- Windows Seven Biometric Sensor information support
+- ATI HD5650 video card preliminary support
+
+2009.1.91
+--------------------------------------------------------
+- Bug correction for processor benchmark with Intel Pentium 4
+- Bug correction for memory benchmark to support newest Intel Core 2 L2 Cache
+- Microsoft XNA Framework version detection support
+- MIcrosoft Surface information improvment
+- Intel Chassis Intrusion detection support from ICH9
+- Add HyperThreading parameter with processor benchmark test
+- Benchmark Memory latency new computation method
+- New benchark memory latency test
+- AMD 785GX chipset preliminary support
+- Intel "IbexPeak" southbridge preliminary support
+- Intel Core 2 Quad Q9505/9505S processors support
+- Intel Celeron E3200, E3300 processors support
+- Intel Chipset 3400 Series support
+- Intel Xeon L3426 processor support
+- Intel PCH Thermal Sensor preliminary support
+- AMB SBI Bus protocol support
+- Intel Core i7 Mobile processors support
+- AMD Opteron "Magny-Cours" processor preliminary support
+- Microsoft .NET Framework Component (WCF, WPF, WWF) version support
+- Microsoft Windows CardSpace version support
+- Intel Pentium SU4100 processor support
+- Intel Celeron 723 processor support
+- ATI HD5850, HD5870 video cards preliminary support
+- nVidia CUDA enhanced information support
+- OpenCL information preliminary support
+- Microsoft Security Essentials support
+- AMD Opteron 84xx and 24xx family processors preliminary support
+- AMD processors DA-C2 stepping support
+- AMD opteron "Istanbul" preliminary support
+- Intel Platform 'Calpella' detection preliminary support
+- Microsoft SharedView application detection support
+- AMD Sempron "Sargas" processor preliminary support
+- Intel P55, PM55 Chipsets preliminary support
+- Analog Devices ADP3228 Sensor support
+- Asus P5N-D Motherboard support
+- HardDisk Family database updated
+- Microsoft Vista SP2 support
+- Microsoft Windows Embedded improvments support
+- Analog Devices AD1984A audio codec support
+- Realtek ALC268 audio codec support
+- Dell hard disk specific partition support
+- ATI HD5900 video card prliminary support
+- AMD SB600/700/750 hardware monitoring support
+
+2009.1.90
+--------------------------------------------------------
+- Dell Optiflex 755 sensor support
+- Microsoft .Net Framework 4.0 detection support
+- AMD Sempron 2xxU ASB1 Family processors support
+- Fintek F71889FG hardware sensor preliminary support
+- nVidia nForce 980 chipset support
+- Intel Havendale/Clarkdale chipset preliminary support
+- Asus M3N78-VM mainboard support
+- Intel Core i7 Lynnfield 760S processor support
+- Intel Core i5 Lynnfield 750S processor support
+- Intel SCH Memory Timings support
+- Add x86-64 benchmarks
+- SMART improvments to support newer USB Disk controllers
+- Hard Disk USB controllers manufacturer name support
+- hard Disk PowerOnCount and PowerOnHours support
+- nVidia video card memory type report improvments
+- SLIC Motherboard support
+- Hard Disk Transport version support
+- ACPI v4.0 support
+- Nuvoton W83795G/ADG sensor preliminary support
+- AMD Socket AM3 socket detection improvment
+- Windows MSI Installer version detection
+- Intel Pentium E6500K processor support
+- Microsoft patches installed enumeration
+- Add F3 key to seach if a patch or hotfix has been installed.
+  (Just type the Microsoft KB reference)
+- Processor stability test improvment
+- Add new PCI Table to get most recent devices name
+- Add an USB Table to get vendor et product name
+- ATA/SATA Information on x64 OS support
+- SMART Information on x64 OS support
+- Hard disk temperature on x64 OS support
+- Windows Vista and Windows Seven License information support
+- Benchmark correction error with some configuration
+- Microsoft Surface detection support
+
+2009.1.88
+--------------------------------------------------------
+- USB 3.0 preliminary support
+- Intel T5870 processor support
+- Intel E7500, Q8300 processors support
+- Intel Celeron T1600, T1700 and 723 processor support
+- AMD Opteron "Shangai" processor support
+- AMD Phenom II "Deneb" processor support
+- Google Chrome information browser support
+- Intel Core i5 "Lynnfield" processor preliminary support
+- Intel P55 Souhtbridge support
+- ATI HD4550, HD4650,HD4670 video card support
+- Intel Q9000, T9800, T9550, P9600, P8700 processor support
+- Intel Celeron E1500 processor support
+- Intel Averill Fundamental, Averill Pro platform support
+- Intel 5500, 5520 "Tylersburg" chipset support
+- Intel P55 chipset preliminary support
+- SMSC SCH5017 sensor support
+- Microsoft .NET Framework version and service pack level detection
+- Improved support to newer nVIDIA video card
+- Microsoft Windows 7 preliminary support
+- Hungarian language support
+- Intel Core i3 processor preliminary support
+- AMD Athlon Neo preliminary support
+- Asus eeePC embedded controller sensor support
+- GPO support (view in File System panel)
+- Intel Q7500 processor support
+- SMSC SCH5327 sensor support
+- nVidia Platform ION support
+- Intel Core i7 D0 revision support
+- Microsoft Office 2007 preliminary support
+- Audio Codec Realtek ALC269
+- Intel Xeon W3520, W3540, W3570 Xeon processor support
+- Solid State Disk detection support or above support
+- Hard Disk Rotating Speed detection for ATA
+- nVidia MCP Hardware Monitor support
+- Audio Codec Realtek ALC22
+- OPenAL preliminary support
+- AMD Phenom II X3 support
+- Intel GMA 4500, X4500, X4500HD graphics chipset support
+- Intel Centrino Turbo Memory (Robson) detection support
+- Intel QPI bus information support
+- Acer Aspire One hardware sensor support
+- ATI SB750 SouthBridge support
+- Intel Xeon 5408, 5482, 5492 processor support
+- Fintek F75111R, F71858 and F8000 sensors preliminary support
+- Apple sensor for MacBook Pro, MacBook, MacMini and MacPro support
+- VIA VX800/VX820 SouthBridge support
+- Intel E3200 processor support
+- AMD Athlon "Rana" preliminary support
+- nVidia nForce 740, Geforce 8200, Quadro FX 470, Geforce 9100/9400 chipset support
+- Dell Latitude hardware monitorng support
+- Intel Atom Z515, Z550, N280 processors preliminary support
+- ATI HD4890, HD3410 video cards support
+- SMSC EMCT03 Sensor support
+- Microsoft .NET Global Assembly Cache (GAC) support
+- Intel HECI sensor support
+- Spanish language support
+- Intel and nVidia SMBus access time improvments (kernel mode)
+- Asus P5N32-SLI PREMIUM motherboard support
+- AMD SVM additionnal information support
+- nVidia CUDA information support
+- Intel Havendale processor preliminary support
+- Intel Clarkdake and Westmere preliminary support
+- Intel Xeon W5580, W5570, X5560, X5550 processors support
+- nVidia Ion platform support
+- Compal Embedded Controller sensor support
+- nVidia CUDA benchmarks support
+- Thread Benchmark improvment up to 32 threads
+- Lenovo Thinkpad T60p hardware sensor support
+- ATA TRIM feature support
+- ATI HD4770, HD4830 video cards support
+- New Processor benchmark to support newest technologies (completly multithreaded)
+- New Cache and Memory benchmark to support newest technologies
+- New Video benchmark to support newest technologies
+- New Performance Indice created :: CPUIDMark
+- Dell Latitude D400/D600 and XPS M1730 hardware monitoring support
+- Dell Latitude Cpx hardware monitoring support
+- New DirectX benchmark to support newest video cards
+- Intel T5670 processor support
+- Intel E1600 and E7600 processors support
+- Intel Core i7 stepping D0 processor support
+- AMD Athlon 2 X2 (Regor), Athlon 2 X4 (Propus), Phenom II X2 (Callisto), Phenom II FX
+- Hard Disk Health Status (Reallocated, Pending and Uncorrectable sectors) support
+- Fintek F71889FG sensor preliminary support
+- Intel Celeron T3000, T3100 processors support
+- Intel Core i7, i5 i3 and i9 processors new frequency computation method
+- Intel Core iFamily "Gulftown", "Beckton" preliminary support
+- AMD Phenom II TWRK processor preliminary support
+- AMD Opteron "Istanbul" preliminary support
+- Public IP, Location, ISP information behind a router
+- ATI 4550 video card support
+- Intel Core ix family new frequency computation method
+- Dell Latitude E6500 and XPS M1330 hardware sensor support
+
+2008.1.87
+--------------------------------------------------------
+- Intel T5850/5750 processor support
+- Intel Atom 330 processor support
+- Save and Print bug corrected
+- Intel Q43/Q45, G41 chipset preliminay support
+- Microsoft Windows 7 detection
+- JMicron and Cypress USB/ATA controller support
+- Gigabyte EP45-UD3R motherboard support
+- Microsoft Internet Explorer 8 Beta 2 support
+- Intel T5550 processor support
+
+2008.1.86
+--------------------------------------------------------
+- Gigabyte P35C-DS3R motherboard supported.
+- Intel Processor Thermal Diode measurement correction for Wolfdale, Penryn, Yorkfield
+- ATI HD4870 X2 (R700) video card support
+- Asus Oxford mianboard support
+- Intel X58 chipset preliminary support
+- Italian language support
+- New Webupdate module
+- Intel Turbo Memory support
+- FireFox password recovery support
+- MOVBE, x2APIC, PCLMULQDQ processor feature support
+- Network realtime resources support (Tab "Resources")
+- Intel Core 2 Duo T9400 mobile processor support
+- Intel Centrino 2 platform support
+- Network neighborghood add to toolbar
+- Ping supported (see above)
+- ITE IT8720F sensor preliminary support
+- ATI Catalyst Drivers 64-bit support
+- Intel Q9650, Q9400 processor support
+- AMD Athlon 2650e processor support
+- LAN Manager password support
+- Intel Core i7 processor support
+- Intel GM45/GS45/GL40 reliminary support
+- Intel GMA 4500MHD video card preliminary support
+- IBM Thinkpad Hardware Monitor support
+- AMD Sempron SI et Athlon QL processors preliminary support
+- Intel Q9100/X9100 processor support
+- Intel i945GSE chipset support
+- Windows Protected Files Enumeration support
+- Dutch language support
+- Disk USB-SATA with JMicron, Cypress controller support
+- Intel 5200, X5460, X5470 processor support
+- Intel T9600, P9700, P9500, SP9400, P8600, SP9300, P8400, P7350, T7400 processor support
+- Intel SL9400, SL9300, SU9400, SU9300 processor support
+- Intel Core i7 965, 940, 920 processor support
+- AMD 780D, 790G/GX chipset support
+- nVidia MCP79/7A chipset support
+- Intel L7445 processor support
+
+2008.1.85
+--------------------------------------------------------
+- ALC262 audio codec support
+- Intel Centrino Refresh platform support
+- SMSC EMC6D103-S sensor support
+- Memory EPP 2.0 preliminary support
+- Add WinPE 2.0 support
+- ATI Crossfire detection method rewritten
+- ATI HD3400/HD3430/HD3650/HD3850/HD3870/HD3850 X2/HD3870 X2/HD3300 Graphics/HD3200 Graphics video card support
+- Intel L7100 processor support
+- Processor load history graph
+- AMD NPT processors new revision support
+- Intel E4700 processor support
+- AMD Sempron Dual-Core processor preliminary support
+- Asus video card HD Trinity triGPU preliminary support
+- Intel DDR3 XMP 1.1 support
+- nVidia 9600GT/9800GT/9800GTX preliminary support
+- nVidia NVSU Monitoring interface support
+- Mozilla FireFox 2.0 detection support
+- Intel Atom "Silverthorne" Z500/Z510/Z520/Z530/Z540 processor preliminary support
+- Intel System Controller Hub (SCH) chipset preliminary support
+- Intel GMA 500 video preliminary support
+- Intel P7500 processor support (Apple MacBook Air)
+- NUMA support
+- AMD Phenom 8750/8650/8450 processor support
+- Intel P45, X58 and ICH10 preliminary support
+- AMD 780G chipset preliminary support
+- AMD Athlon X2 4850e processor support
+- Intel processor Temperature Juction (TjMax) customization
+- Temperature detection with some USB HardDisk support
+- Intel E2220 processor support
+- Microsoft Silverlight support
+- Skype support
+- AMD Phenom "Deneb" processor preliminary support
+- ANDIGILOG aSC7611/aSC7621 sensor preliminary support
+- nVIDIA MCP78 support
+- Disk Prediction Failure support
+- nVIDIA ESA preliminary support
+- HardDisk Family detection support
+- Analog Devices ADT7461 support
+- Intel Atom "Diamondville" processor preliminary support
+- New Dhrystone benchmark computation mode
+- Support Intel Atom processor B0 stepping
+- Intel P43/G43/G45 chipset preliminary support
+- ATI Radeon HD4850/HD4870/HD4870X2 (RV770) video card preliminary support
+- nVidia GT260/GT280X video card preliminary support
+- AVX, OSXSAVE, FMA processor set instructions support
+- AMD K10 Black Edition support
+- AMD Turion 64 'Griffin' preliminary support
+- Intel Core 2 "Bloomfield" and Xeon EX "Dunington" preliminary support
+
+
+2008.1.84
+--------------------------------------------------------
+- Intel Celeron Dual-Core E1400 processor support
+- AMD Athlon K6-2 "Chomper" processor bug fixed
+- AMD Phenom RB-C0 stepping support
+- AMD Opteron "Shangai" preliminary support
+- Intel "Nehalem", "Silverthorne" and "Dunnington" processor preliminary support
+- Intel E7200 processor support
+- Intel Trusted Execution Technology processor feature support
+- Memory Benchmark bug fixed
+- Intel 5400 Chipset support
+- ACPI Thermal Zone support
+- nVidia 750a/780a chipset support
+- nVidia 790i chipset preliminary support
+- VIA C7-D processor support
+- VIA CNA "Isaiah" processor preliminary support
+- nVidia nForce 610/620/630 support
+- nVidia nForce 750/780/790 support
+- FB-DIMM Memory temperature monitoring support
+- EPOX AD580XR motherboard support
+- NVidia NForce IGP detection support
+- ANalog Devices ADT7490 sensor preliminary support
+
+2008.1.83
+--------------------------------------------------------
+- Windows Security Center module updated
+- Multi monitors detection rewritten
+- SplashScreen rewritten to load faster
+- SATA enumeration on some Intel ICH5 bug fixed
+- nVidia Video Card Bios Message identification
+- Memory XMP Profile Timings support.
+- Intel Celeron Dual-Core E1200 processor support
+- Intel Pentium Dual-Core T2370 processor support
+- Intel Core 2 Duo E8190/U7700 processor support
+- SATA-600 support
+- Intel Celeron Dual-Core E1600 processor support
+- Microsoft .NET Framework 3.5 detection
+- More AT8-ACS device detailled information support
+- ADT7463 +12v computation mode corrected
+
+2008.1.82
+--------------------------------------------------------
+- Intel Chipset 5000 series and 7300 FB-DIMM Memory detection fixed
+- Intel Chipset 3200/3210 recognition
+- ASB100 sensor support bug fixed with some motherboard
+- Asus Blitz Extreme motherboard support
+- Intel Core 2 Solo U2200/U2100 processor support
+- Intel Centrino Solo Platform support
+- Intel 5100/5400 Chipset preliminary support
+- Intel X38 chipset preliminary support
+- Intel X5482/X5472/E5472/X5450/E5450 processor support
+- Hard Disk Temperature Monitoring fixed
+- Opera Internet browser support
+- Intel Xeon 5128/5138 processor preliminary support
+- EPP Memory profile bug fixed
+- Intel X9000/T9500/T9300/T8300/T8100 Mobile processor preliminary support
+- Intel QX9770 processor preliminary support
+- New voltage computation method for some AMD NPT Family
+- SMSC DME1737 sensor support on Intel D101GGC motherboard corrected
+- Intel Core 2 processor stepping B1/C0 support
+- AMD Phenom processor Voltage (VID/minVID/maxVID) computation support
+- AMD Phenom processor Temperature computation support
+- AMD PHenom processor minFID/maxFID and Northbridge multiplier support
+- New Jedec memory manufacturer code support
+- AMD K10 Northbridge frequency computation support
+- nVidia 8800GTX initial frequencies support
+- AMD K10 Northbridge PCI Extended Configuration Space (ECS) support
+- nVidia MCP68 chipset support
+- nVidia C51 and G8800GTS video information fixed
+- Intel Core 2 Duo T5470/T5300/T5270/T5250 processor support
+- Intel Core 2 Duo E2200 processor support
+- Gigabyte P35-DS4 motherboard support
+- Web Update application updated.
+- Sensors realtime resolution change to 2 sec.
+- Add BitDefender Internet Security 2008 support
+- AMD Athlon 64 LE processors support
+- ActiveX Controls enumeration support
+- Intel X48 Chipset preliminary support
+- AMD K10 UnGanging Memory Mode detection support
+
+2008.1.81
+--------------------------------------------------------
+- AMD X2 5000+ Black Edition processor support
+- IT8712F with Gigabyte nForce2 support fixed
+- 802.11 Network SSID enumeration bug fixed
+- 802.11 Network Encryption Status (WEP, TKIP, AES)
+- New High Definition Audio (HDA) Codec support
+- Intel C2D Core processor temperature updated for G0 stepping
+- Preliminary Asus Maximus Formula motherboard monitoring support
+- PC Wizard Settings application logo support
+- Pentium Dual-Core T2060, T2080, T2310, T2330 processor support
+- SSE5 detection fixed.
+- nVidia GeForce MCP61 Video card detection bug fixed
+- Intel Xeon "Cranford" processor detection bug fixed
+- prelimirary support to nVidia GeForce G78, G98 video card
+- Analog Devices AD1988B HDA Codec support
+- RTF report corrected to be compatible with Microsoft WORD format
+- DirectX 9.0c release month detection fixed
+- Intel 7300 chipset preliminary support
+- Gigabyte 965P-S3, 965P-DS3 motherboard support
+- Fixed some system freeze during hardware summary detection
+- Gigabyte ODIN Power Supply Hardware Monitoring preliminary support
+- AMD Athlon 64 X2 "Brisbane" BH-G2 processor support
+- AMD Phenom X3 "Toliman" processor preliminary support
+- Pentium M processor Model number bug fixed
+- AMD Athlon 64 LE processor preliminary support
+- Intel Tolapai chipset preliminary support
+- Changes into the commandline parameters (see readme.txt file)
+- Intel T5250 processor support
+- Intel T2050/T2250/T2350/T2450 processor support
+- ATI Radeon HD3870, HD3500, HD2900, HD2600, HD2400 premiminary support
+- RealTime Hardware Monitoring functions rewritten
+- Interface with MotherBoard Monitor application will no longer supported
+- DDR3 Memory detection bug fixed

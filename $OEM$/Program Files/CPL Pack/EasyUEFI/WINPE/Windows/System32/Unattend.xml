@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <Display>
+                <HorizontalResolution>1024</HorizontalResolution>
+                <VerticalResolution>768</VerticalResolution>
+                <RefreshRate>60</RefreshRate>
+                <ColorDepth>32</ColorDepth>
+            </Display>
+        </component>
+    </settings>
+</unattend>

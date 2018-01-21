@@ -1,0 +1,104 @@
+;;; rspCrash
+;;;
+;;; Copyright (c) 2005-2015, Resplendence Software Projects Sp
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+Provider    = Resplendence Software Projects
+DriverVer   = 08/25/2011,1.0.0.0
+
+[DestinationDirs]
+DefaultDestDir         = 12
+rspCrash.DriverFiles     = 12                            ;%windir%\system32\drivers
+rspCrash.UserFiles       = 10,FltMgr                     ;%windir%\FltMgr
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %rspCrashServiceDesc%
+CopyFiles           = rspCrash.DriverFiles, rspCrash.UserFiles
+
+[DefaultInstall.Services]
+AddService          = %rspCrashServiceName%,,rspCrash.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = rspCrash.DriverFiles, rspCrash.UserFiles
+
+
+
+[DefaultUninstall.Services]
+DelService = rspCrash,0x200      ;Ensure service is stopped before deleting
+
+;
+; Services Section
+;
+
+[rspCrash.Service]
+DisplayName      = %rspCrashServiceName%
+Description      = %rspCrashServiceDesc%
+ServiceBinary    = %12%\rspCrash32.sys        ;%windir%\system32\drivers\rspCrash32.sys
+ServiceType      = 2                        ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 3                        ;SERVICE_DEMAND_START
+ErrorControl     = 1                        ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = rspCrash.AddRegistry
+Dependencies     = FltMgr
+
+;
+; Registry Modifications
+;
+
+[rspCrash.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+HKR,%RegInstancesSubkeyName%"\"%Instance2.Name%,%RegAltitudeValueName%,0x00000000,%Instance2.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance2.Name%,%RegFlagsValueName%,0x00010001,%Instance2.Flags%
+HKR,%RegInstancesSubkeyName%"\"%Instance3.Name%,%RegAltitudeValueName%,0x00000000,%Instance3.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance3.Name%,%RegFlagsValueName%,0x00010001,%Instance3.Flags%
+
+;
+; Copy Files
+;
+
+[rspCrash.DriverFiles]
+rspCrash32.sys
+
+[rspCrash.UserFiles]
+;rspCrash32.inf
+
+;;
+;; String Section
+;;
+
+[Strings]
+rspCrashServiceDesc         = "rspCrash filter"
+rspCrashServiceName         = "rspCrash"
+RegInstancesSubkeyName      = "Instances"
+RegDefaultInstanceValueName = "DefaultInstance"
+RegAltitudeValueName        = "Altitude"
+RegFlagsValueName           = "Flags"
+
+;Instances specific information.
+;undelete: 340000-349999
+;monitor: 360000-389999
+
+DefaultInstance      = "rspCrash - Middle Instance"
+Instance1.Name       = "rspCrash - Middle Instance"
+Instance1.Altitude   = "366118"
+Instance1.Flags      = 0x1          ; Suppress automatic attachments
+Instance2.Name       = "rspCrash - Bottom Instance"
+Instance2.Altitude   = "366100"
+Instance3.Name       = "rspCrash - Top Instance"
+Instance2.Flags      = 0x1          ; Suppress automatic attachments
+Instance3.Altitude   = "366199"
+Instance3.Flags      = 0x1          ; Suppress automatic attachments
+

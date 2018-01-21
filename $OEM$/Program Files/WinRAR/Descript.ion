@@ -1,0 +1,29 @@
+7zxa.dll             7z Dekomprimierungs-Bibliothek
+Ace32Loader.exe      64-Bit Schnittstelle für die 32-Bit UNACEV2.DLL
+Default.SFX          RAR SFX-Modul mit GUI für Windows
+Default64.SFX        64-Bit RAR SFX-Modul mit GUI für Windows
+Descript.ion         Dateibeschreibungen (Diese Datei)
+License.txt          Lizenz für die Benutzung und Verbreitung
+Order.htm            Informationen zur Registrierung
+Rar.exe              Konsolenversion von RAR
+Rar.lng              Sprachdatei für RAR und UNRAR
+Rar.txt              Anleitung für die Konsolenversion von RAR
+RarLng.dll           Sprach-Ressourcen für RAR
+RarExt.dll           Explorererweiterung von WinRAR
+RarExt32.dll         Explorererweiterung von WinRAR für Windows x86
+RarExt64.dll         Explorererweiterung von WinRAR für Windows x64
+Rarext.lng           Sprachdatei für Explorererweiterung von WinRAR
+RarFiles.lst         Sortierreihenfolge für solide Archive
+ReadMe.txt           Kurzer Überblick über WinRAR
+UnRAR.exe            Freeware-Tool, um RAR-Archive zu entpacken
+Uninstall.exe        Deinstallationsprogramm
+Uninstall.lng        Sprachdatei für das (De)installationsprogramm
+Uninstall.lst        Dateiliste für die Deinstallation
+WhatsNew.txt         Was ist neu in dieser Version?
+WinCon.SFX           RAR SFX-Modul für die Windows-Konsole 
+WinRAR.chm           WinRAR-Hilfedatei
+WinRAR.exe           WinRAR-Programmdatei
+Winrar.lng           Sprachdatei für WinRAR
+Zip.SFX              ZIP SFX-Modul mit GUI für Windows
+Zip64.SFX            64-Bit ZIP SFX-Modul mit GUI für Windows
+UNACEV2.DLL          ACE Dekomprimierungs-Bibliothek

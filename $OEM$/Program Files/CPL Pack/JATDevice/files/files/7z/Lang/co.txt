@@ -1,0 +1,543 @@
+﻿;!@Lang@!UTF-8!
+; 7-Zip 9.07
+; Traduttu da Patriccollu di Santa Maria Sichè
+;
+;
+;
+;
+
+00000000="Corsican"
+00000001="Corsu"
+00000002="131"
+
+; 7-Zip Configuration
+
+; Title
+01000000="Cunfigurazione di 7-Zip"
+
+; Info Page
+01000100="Apprupositu di 7-Zip"
+01000103="Traduttu da Patriccollu di Santa Maria Sichè.\n\n7-Zip hè un prugrammu liberu. Ma, registrassi hè una manera di sustene u so sviluppu."
+01000104="Assistenza tecnica"
+01000105="Registrassi"
+
+; Folders Page
+01000200="Cartari"
+01000210="Cartariu di &travagliu"
+01000211="Cartariu timpurariu di u &sistemu"
+01000212="Cartariu &currente"
+01000213="Cartariu s&pecificatu :"
+01000214="Impiegà solu per i dischi amuvibili"
+
+01000281="Specificate un cartariu per i schedari timpurari."
+
+; System Page
+01000300="Sistemu"
+01000301="Integrà 7-Zip à u menu di u cuntestu"
+01000302="Menu di u cuntestu in cascata"
+01000310="Elementi di u menu di u cuntestu :"
+
+; Language Page
+01000400="Lingua"
+01000401="Lingua :"
+
+
+; 7-Zip Explorer extension
+
+; Context menu
+02000101="7-Zip"
+02000102="Cumande 7-Zip"
+02000103="Apre"
+02000104="Apre l'archiviu selezziunatu."
+02000105="Estrae i schedari..."
+02000106="Estrae i schedari di l'archiviu selezziunatu."
+02000107="Aghjunghje à l'archiviu..."
+02000108="Aghjunghje l'elementi selezziunati à l'archiviu."
+02000109="Verificà l'archiviu"
+0200010A="Verificà l'integrità di l'archiviu selezziunatu."
+0200010B="Estrae quì"
+0200010C="Extrae i schedari di l'archiviu selezziunatu in u cartariu currente."
+0200010D="Estrae verdi {0}"
+0200010E="Estrae ind'un sottucartariu."
+0200010F="Aghjunghje à {0}"
+02000110="Aghjunghje l'elementi selezziunati à l'archiviu."
+02000111="Stringhje è mandà da email..."
+02000112="Stringhje l'elementi selezziunati à l'archiviu è mandallu da email."
+02000113="Stringhje verdi {0} è mandà da email."
+02000114="Stringhje l'elementi selezziunati à l'archiviu è mandallu da email."
+
+02000140="<Cartariu>"
+02000141="<Archiviu>"
+
+; Properties
+02000203="Caminu"
+02000204="Nome"
+02000205="Stinzione"
+02000206="Cartariu"
+02000207="Maiurezza"
+02000208="Cumpressu"
+02000209="Attributi"
+0200020A="Criatu u"
+0200020B="Accessu u"
+0200020C="Mudificatu u"
+0200020D="Solidu"
+0200020E="Cummentatu"
+0200020F="Cifratu"
+02000210="Frazziunà avanti"
+02000211="Frazziunà dopu"
+02000212="Dizziunariu"
+02000213="CRC"
+02000214="Tipu"
+02000215="Anti"
+02000216="Metoda"
+02000217="OS ospite"
+02000218="Sistemu di schedari"
+02000219="Utilizatore"
+0200021A="Gruppu"
+0200021B="Bloccu"
+0200021C="Cummentariu"
+0200021D="Pusizione"
+0200021E="Prefissu"
+0200021F="Cartari"
+02000220="Schedari"
+02000221="Versione"
+02000222="Vulume"
+02000223="Multivulume"
+02000224="Offset"
+02000225="Liami"
+02000226="Blocchi"
+02000227="Vulumi"
+
+02000229="64-bits"
+0200022A="Big-endian"
+0200022B="CPU"
+0200022C="Dimensione fisica"
+0200022D="Dimensione di l'in-capi"
+0200022E="Somma di cuntrollu"
+0200022F="Caratteristiche"
+02000230="Indirizzu virtuale"
+02000231="ID"
+02000232="Nome cortu"
+02000233="Applizione di urigine"
+02000234="Dimensione di u settore"
+02000235="Modu"
+02000236="Liame"
+
+; Status bar
+02000301="{0} ughjettu(i) selezziunatu(i)"
+02000302="{0} ughjettu(i)"
+
+02000320="Schedari :"
+02000321="Cartari :"
+02000322="Dimensione :"
+02000323="Dimensione strinta :"
+02000324="Archivi :"
+
+; List Context Menu
+02000401="&Culonne..."
+
+02000411="&Apre"
+02000412="&Extrae..."
+
+; ToolBar
+02000501="Extrae"
+
+; Messages
+02000601="E azzione di mudificazione ùn sò micca pussibile per quessu archiviu."
+02000602="L'archiviu '{0}' ùn pò micca esse mudificatu"
+02000603="U schedariu '{0}' ùn pò micca esse criatu"
+02000604="U schedariu ùn hè micca un'archiviu sanu."
+02000605="Sbagliu"
+02000606="Troppu d'ughjetti"
+02000607="Alcuna applicazione ùn hè assuciata cù stu tipu di schedariu"
+02000608="Ùn c'hè micca sbagliu"
+02000609="U schedariu '{0}' ùn pò micca esse apertu tale un'archiviu"
+0200060A="L'archiviu cifratu '{0}' ùn pò esse apertu. Falsa parolla d'intesa ?"
+0200060B="U sistemu ùn pò micca dà a quantita di memoria richiesa"
+0200060C="Sbagliu scunnisciutu"
+0200060D="Stu tipu d'archiviu ùn hè micca accettatu"
+
+; Dialogs
+02000702="OK"
+02000705="&Ié"
+02000707="Ié per tutti"
+02000709="I&nnò"
+0200070B="Innò per tutti"
+
+02000710="Abbandunà"
+02000711="&Abbandunà"
+02000713="&Chjode"
+02000714="Fermà"
+02000715="Rilancià"
+
+02000720="Aiutu"
+
+; Extract dialog
+02000800="Extrae"
+02000801="E&xtrae nantu :"
+02000802="Parolla d'intesa"
+
+02000810="Camini"
+02000811="Nomi di camini cumpletti"
+02000812="Nomi di camini currenti"
+02000813="Alcunu nome di caminu"
+
+02000820="Modu di rimpiazzamentu"
+02000821="Cunfirmà nanzu à rimpiazzà"
+02000822="Rimpiazzà senza dumandà"
+02000823="Ignurà i schedari esistenti"
+02000824="Numinà autumaticamente"
+02000825="Numinà i schedari esistenti"
+
+02000830="Schedari"
+02000831="&Schedari selezziunati"
+02000832="&Tutti i schedari"
+
+02000881="Sciglite un cartariu per l'estrazzione di i schedari."
+
+02000890="Estrazzione in corsu"
+
+; Overwrite dialog
+02000900="Cunfirmà u rimpiazzamentu di schedariu"
+02000901="U cartariu di distinazione cuntene dighjà un schedariu cù stu nome."
+02000902="Vulete rimpiazzà u schedariu esistentu"
+02000903="cù quessu ?"
+
+02000911="Numinà &autumaticamente"
+
+02000982="{0} octets"
+02000983="modificatu u"
+
+; Messages dialog
+02000A00="Messaghji di diagnosticu"
+
+02000A80="Messaghjiu"
+
+02000A91="Metodu di cumpressione micca cugnisciutu per '{0}'."
+02000A92="Data gativa in u schedariu '{0}'. U schedariu hè alteratu."
+02000A93="Fiascu di a ispezzione CRC per u schedariu '{0}'. U schedariu hè alteratu."
+02000A94="Data gativa in u schedariu cifratu '{0}'. Falsa parolla d'intesa?"
+02000A95="Fiascu di a ispezzione CRC per u schedariu cifratu '{0}'. Falsa parolla d'intesa?"
+
+; Password dialog
+02000B00="Entrite a parolla d'intesa"
+02000B01="Entrite a parolla d'intesa :"
+02000B02="&Affissà a parolla d'intesa"
+02000B03="Entrite a parolla d'intesa un'altra volta :"
+02000B10="E parolle d'intesa ùn currispondenu micca"
+02000B11="Per a parolla d'intesa, pudete impiegà solu : lettere senza aletta, cifri è sti segni particulari (!, #, $, ...)"
+02000B12="A parolla d'intesa hè troppu longa"
+
+; Progress dialog
+02000C00="Prucede"
+02000C01="Tempu passatu :"
+02000C02="Tempu rimanentu :"
+02000C03="Dimensione :"
+02000C04="Velucità :"
+02000C05="Prucessu :"
+02000C06="Reditu di cumpressione :"
+
+02000C10="&Arci pianu"
+02000C11="P&rimu pianu"
+02000C12="&Pausa"
+02000C13="&Continuà"
+
+02000C20="In pausa"
+
+02000C30="Site sicuru di vulè annullà ?"
+
+; Compress dialog
+02000D00="Aghjunghje à l'archiviu"
+02000D01="&Archiviu :"
+02000D02="Modu di m&udificazione :"
+02000D03="&Trinca d'archiviu :"
+02000D04="&Metodu di cumpressione :"
+02000D05="Crià unu archiviu &Solidu"
+02000D06="&Parametri :"
+02000D07="Ozzione"
+02000D08="Crià unu archiviu SF&X"
+02000D09="Multi-threading"
+02000D0A="Cifrà i &nomi di schedari"
+02000D0B="&Livellu de cumpressione :"
+02000D0C="&Dimensione di u dizziunariu :"
+02000D0D="Dimensione di &e parolle :"
+02000D0E="Memoria per a cumpressione :"
+02000D0F="Memoria per a scumpressione :"
+02000D10="Cifratura"
+02000D11="Metodu di cifratura :"
+02000D12="Numeru di flussu CPU :"
+02000D13="Dimensione di bloccu solidu :"
+02000D14="Non-solidu"
+02000D15="Solidu"
+02000D16="Stringhje schedari sparti"
+
+02000D40="Taglià di &vulumi, octets :"
+02000D41="Dimensione di vulume false"
+02000D42="Dimensione di vulume specificata : {0} octets.\nSite sicuru di vulè taglià l'archiviu di tali vulumi ?"
+
+02000D81="Alcuna"
+02000D82="Nurmale"
+02000D83="Massima"
+02000D84="Veloce"
+02000D85="U più veloce"
+02000D86="Ultra"
+
+02000D90="Sceglie"
+
+02000DA1="Aghjunghje è rimpiazzà i schedari"
+02000DA2="Mudificà è aghjunghje i schedari"
+02000DA3="Rinfriscà i schedari esistenti"
+02000DA4="Sincrunizà i schedari"
+
+02000DB1="Tutti i schedari"
+
+02000DC0="Cumpressione"
+
+; Columns dialog
+02000E00="Culonne"
+02000E01="Marcà e culonne chì vulete affissà. Impiegate i buttoni Cullà è Fallà per cambià i so ordine."
+02000E02="A culonna selezziunata deve fà"
+02000E03="pixels in &larghezza."
+
+02000E10="C&ullà"
+02000E11="&Fallà"
+02000E12="&Affissà"
+02000E13="&Mascà"
+02000E14="Salvà"
+
+02000E81="Titulu"
+02000E82="Larghezza"
+
+; Testing
+02000F90="Cuntrollu"
+
+
+; File Manager
+
+03000000="Ghjestiunariu di schedari 7-Zip"
+
+; Menu
+03000102="&Schedariu"
+03000103="&Edition"
+03000104="&Affissu"
+03000105="A&ttrezzi"
+03000106="A&iutu"
+03000107="&Favuriti"
+
+; File
+03000210="&Apre"
+03000211="Apre &Dentru"
+03000212="Apre &Fora"
+03000220="&Vede"
+03000221="&Edizione"
+03000230="Rinu&mà"
+03000231="&Cupià versu..."
+03000232="&Dispiazzà versu..."
+03000233="&Toglie"
+03000240="P&ruprietà"
+03000241="Cumme&ntariu"
+03000242="Somma di cuntrollu"
+03000243="Comparazione sfarenza (Diff)"
+03000250="Crià unu cartariu"
+03000251="Crià unu schedariu"
+03000260="Esce"
+03000270="&Sparte u schedariu..."
+03000271="&Unisce i schedari..."
+
+; Edit
+03000310="&Annullà"
+03000311="&Rifà"
+03000320="&Taglià"
+03000321="&Cupià"
+03000322="&Incullà"
+03000323="&Toglie"
+03000330="&Selezziunà tuttu"
+03000331="Ùn selezziunà micca tuttu"
+03000332="Arritrusà a selezzione"
+03000333="Selezziunà..."
+03000334="Ùn selezziunà micca..."
+03000335="Selezziunà da u tipu"
+03000336="Ùn selezziunà da u tipu"
+
+; View
+03000410="Icone &maiò"
+03000411="Icone &chjuche"
+03000412="&Lista"
+03000413="&Ditagli"
+03000420="Non sceltu"
+03000430="Apre u cartariu di a radica"
+03000431="Livellu superiore"
+03000432="Crunulugia di i cartari..."
+03000440="Attuali&zà"
+03000449="Vistu semplice"
+03000450="&2 Finestre"
+03000451="Barre d'a&ttrezzi"
+03000460="Barra d'attrezzi d'archiviu"
+03000461="Barra d'attrezzi classica"
+03000462="Buttoni maiò"
+03000463="Prisentà u testu di i buttoni"
+
+; Tools
+03000510="&Ozzione..."
+03000511="Sperimentu di pussibilità"
+
+; Help
+03000610="&Cuntinutu in inglese..."
+03000620="&Apprupositu di 7-Zip..."
+
+; Favorites
+03000710="&Aghjunghje u cartariu à i favuriti"
+03000720="Indetta"
+
+; Options Dialog
+
+03010000="Ozzione"
+
+; Plugins
+03010100="Plugins"
+03010101="&Plugins :"
+03010110="Ozzione..."
+
+; Edit
+03010200="Editore"
+03010201="&Editore :"
+03010202="Comparà e sfarenze (Diff):"
+
+; System
+03010300="Sistemu"
+03010302="Assucià 7-Zip cù :"
+03010310="Plugin"
+
+; Settings
+03010400="Parametri"
+03010401="Affissà u elementu \"..\""
+03010402="Affissà e icone vere di i schedari"
+03010410="Affissà u menu sistemu"
+03010420="Selezziunà tutta a linea"
+03010421="Affissà a ferriata"
+03010422="Cliccu solu per aprire unu elementu"
+03010430="Modu di selezzione &Alternativa"
+03010440="Impiegà pagine maiò di memoria"
+
+; Strings
+
+03020201="Cupià"
+03020202="Dispiazzà"
+03020203="Cupià verdi :"
+03020204="Dispiazzà verdi :"
+03020205="Cupiendu..."
+03020206="Dispiazzendu..."
+03020207="Ùn pudete micca dispiazzà o cupià ughjetti per talì cartari."
+03020208="St'azzione ùn hè micca pussibile."
+03020209="Selezziunà u cartariu di distinazione."
+
+03020210="Cunfirmà l'eliminazione di u schedariu"
+03020211="Cunfirmà l'eliminazione di u cartariu"
+03020212="Cunfirmà l'eliminazione di tutti i schedari"
+03020213="Site sicuru di vulè eliminà '{0}'?"
+03020214="Site sicuru di vulè eliminà u cartariu '{0}' è tuttu u so cuntenutu ?"
+03020215="Site sicuru di vulè eliminà sti {0} ughetti ?"
+03020216="Eliminazione..."
+03020217="Problemu mentre l'eliminazione di u schedariu o di u cartariu"
+03020218="U sistemu ùn pò micca mette à a rumenzula unu schedariu cù u nome di caminu cusì longu"
+
+03020220="Cambiamentu di u nome..."
+03020221="Problemu mentre u cambiu di nome di u schedariu o di u cartariu"
+03020222="Cunfirmazione di a cupiatura di i schedari"
+03020223="Cunfirmà a cupiatura di u(i) schedariu(i)"
+
+03020230="Crià u cartariu"
+03020231="Nome di u cartariu :"
+03020232="Novu cartariu"
+03020233="Problemu mentre a creazione di u cartariu"
+
+03020240="Crià unu schedariu"
+03020241="Nome di u schedariu :"
+03020242="Novu schedariu"
+03020243="Problemu mentre a creazione di u schedariu"
+
+03020250="Selezziunà"
+03020251="Ùn selezziunà"
+03020252="Mascara :"
+
+03020260="Crunulugia di i cartari"
+
+03020280="U schedariu '{0}' hè statu mudificatu.\nVulete cambiallu in l'archiviu ?"
+03020281="Ùn hè pussibile di cambia u schedariu\n'{0}'"
+03020282="Ùn hè pussibile di avvià l'editore."
+03020283="Apertura..."
+03020284="U schedariu hè podasse infettatu da unu virus perchè u so nome pare bizzaru."
+
+03020290="Cummentariu"
+03020291="&Cummentariu :"
+
+030202A0="Sistemu"
+
+03020300="Ordinatore"
+03020301="Reda"
+03020302="Ducumenti"
+
+03020400="Aghjunghje"
+03020401="Extrae"
+03020402="Verificà"
+
+03020420="Cupià"
+03020421="Dispiazzà"
+03020422="Eliminà"
+03020423="Infurmazione"
+
+03020500="Sparte u schedariu"
+03020501="&Sparte in :"
+03020510="Spartimentu..."
+03020520="Cunfirmà u spartimentu"
+03020521="Site sicuru di vulè sparte u schedariu da {0} vulume ?"
+03020522="A dimensione di u vulume deve esse più chjucu chì u schedariu d'urighjine"
+
+03020600="Unisce i schedari"
+03020601="&Unisce verdi :"
+03020610="Unione..."
+03020620="Selezziunà solu u primu schedariu"
+03020621="Ùn c'hè micca di schedariu in l'archiviu divisu"
+03020622="C'hè solu unu schedariu in l'archiviu divisu"
+
+03020710="Calculu di a somma di cuntrollu..."
+03020720="Infurmazione nantu a somma di cuntrollu"
+03020721="Somma di cuntrollu CRC per i dati"
+03020722="Somma di cuntrollu CRC per i dati è di i nomi"
+
+03020800="Esplurazione..."
+
+03020900="Pruprietà"
+
+03020A01="St'azzione ùn pò micca fassi dapoi unu cartariu cù u nome di caminu cusì longu."
+03020A02="Duvete selezziunà unu schedariu"
+03020A03="Duvete selezziunà al menu unu schedariu"
+03020A04="U schedariu {0} esiste dighjà"
+
+; Computer
+03031100="Dimensione tutale"
+03031101="Spaziu liberu"
+03031102="Dimensione di u cluster"
+03031103="Nome di u vulume"
+
+; Network
+03031200="Nome lucale"
+03031201="Furnidore"
+
+; Benchmark Dialog
+
+03080000="Sperimentu di pussibilità"
+03080001="Memoria aduprata :"
+03080002="Cumprezzione in corsu"
+03080003="Scumprezzione in corsu"
+03080004="Velucità"
+03080005="Reditu"
+03080006="Reditu tutale"
+03080007="Currente"
+03080008="Risultante"
+03080009="Passagi :"
+0308000A="Sbagli :"
+0308000B="Utilizazione CPU"
+0308000C="Stima / Utilizazione"
+
+;!@LangEnd@!
